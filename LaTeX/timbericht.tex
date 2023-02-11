@@ -1,0 +1,80 @@
+\documentclass[12pt]{report}
+% Bibliotheken und Pfade
+\usepackage{xcolor} %Farben
+\usepackage{graphicx} %Bilder
+\usepackage{subfig} %Bilder erweiterung
+\usepackage{hyperref} %Links
+\usepackage{geometry} %margins
+\usepackage[utf8]{inputenc} %Standard!
+\usepackage{mathptmx} %Wir benutzen hier eine Mathebibiliothen um Times new Roman zu verwenden
+\usepackage[T1]{fontenc} %Standard!
+\usepackage{setspace} %zeilenabstände
+\usepackage{float}
+\usepackage{listings} %code darstellung
+\usepackage{blindtext} %Blindtext1
+\usepackage{lipsum} %blindtext2
+%für deutsch
+\usepackage[ngerman]{babel}
+
+\usepackage{titlesec} %zum entfernen der "Kapitel N" header
+
+%wir wollen formatieren{was genau?}[optionaler argument: im block satz.]{kapitel nummerierung und font}{der kapitelname mit angehängtem punkt .}{abstand zwischen nummer und name}{größe titel}
+\titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large}
+
+\titlespacing*{\chapter}{0pt}{40pt}{30pt} % this alters "before" spacing (the second length argument) to 0
+%\titlespacing*{\chapter}{0pt}{50pt}{40pt} % default
+
+\graphicspath{ {images/} }
+\geometry{top=3.0cm}
+
+
+\hypersetup{
+    colorlinks,
+    linkcolor={black!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
+% Baue die Titel Struktur + Inhalt
+\title{
+{Bachelorarbeit}\\
+{\vspace{10mm}}
+{\small Wave-Function-Collapse}\\
+{\small Function and Use-cases}\\
+{\small TH-Nürnberg Georg-Simon-Ohm}\\
+}
+% Setze Author und Datum
+\author{Davoud Tavakol}
+\date{29.12.2022}
+
+% Start Dokument
+\begin{document}
+
+% Erstelle den Titel (Dieser Befehlt setzt dann auch den Author und das Datum!)
+\maketitle
+
+% Automatisches Inhaltsverzeichniss
+\tableofcontents
+
+{\let\clearpage\relax\chapter{Introduction}}
+
+
+\chapter{Organisation}
+
+{\let\clearpage\relax\chapter{Planung}}
+
+
+
+\chapter{Backend}
+
+\section{Rest API}
+
+\section{DB-Modellierung}
+
+
+\section{Docker}
+
+\chapter{Abschluss}
+
+\end{document}

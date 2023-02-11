@@ -1,0 +1,9 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Organisation}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Planung}{2}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Backend}{3}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rest API}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.2}DB-Modellierung}{3}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Docker}{3}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Abschluss}{4}{chapter.5}%
