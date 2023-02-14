@@ -12,7 +12,7 @@ export class FrameComponent implements OnInit {
     const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
     const ctx = canvas.getContext('2d')!;
 
-    const DIM: number = 4;
+    const DIM: number = 2;
     const tileSize: number = 50;
     const canvasWidth: number = DIM * tileSize;
     const canvasHeight: number = DIM * tileSize;
@@ -22,15 +22,21 @@ export class FrameComponent implements OnInit {
 
     const tiles: any = [];
 
-    preload(whendone);
+    const srcUrl: string[] = [
+      'assets/images/0.png',
+      'assets/images/1.png',
+      'assets/images/2.png',
+      'assets/images/3.png',
+    ];
+
+    preload(srcUrl, whendone);
 
     function whendone(tiles: any) {
-
       ctx.drawImage(tiles[0], 0, 0);
-      ctx.drawImage(tiles[1], 0+tileSize, 0);
-      ctx.drawImage(tiles[2], 0+tileSize*2, 0);
-      ctx.drawImage(tiles[2], 0+tileSize*3, 0);
-/*
+      ctx.drawImage(tiles[1], 0 + tileSize, 0);
+      ctx.drawImage(tiles[2], 0, 0 + tileSize);
+      ctx.drawImage(tiles[3], tileSize, tileSize);
+      /*
       for (let i = 0; i < DIM; i++) {
         for (let j = 0; j < DIM; j++) {
           ctx.drawImage(tiles[1], 0 + i * tileSize, 0 + j * tileSize);
@@ -39,18 +45,19 @@ export class FrameComponent implements OnInit {
 */
     }
 
-    function preload(callback: any) {
-      let total = 0;
+    function preload(urls: string[], callback: any) {
       let loaded = 0;
-
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < srcUrl.length; i++) {
         tiles[i] = new Image();
+        tiles[i].src = srcUrl[i];
         tiles[i].onload = function () {
-          if (++loaded == total)
-            callback (tiles);
+          if (loaded === srcUrl.length) {
+            callback(tiles);
+            console.dir('ALL IMAGES PRELOADED');
+          }
         };
-        tiles[i].src = 'assets/images/' + i + '.png';
-        total++;
+        loaded++;
+       
       }
     }
   }
