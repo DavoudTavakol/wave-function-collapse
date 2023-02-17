@@ -20,7 +20,7 @@ export class FrameComponent implements OnInit {
     'assets/images/3.png',
   ];
   
-  DIM: number = 15;
+  DIM: number = 4;
   tileSize: number = 50;
   canvasWidth: number = this.DIM * this.tileSize;
   canvasHeight: number = this.DIM * this.tileSize;
@@ -28,9 +28,6 @@ export class FrameComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    //const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
-    //const ctx: CanvasRenderingContext2D = canvas.getContext('2d')!;
-
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext("2d")!;
 
@@ -39,39 +36,33 @@ export class FrameComponent implements OnInit {
     this.canvas.width = this.canvasWidth;
     this.canvas.height = this.canvasHeight;
     this.drawGrid(this.ctx);
+    this.preload(this.srcUrl, this.tiles);
+
   }
 
-  doSmth() {   
-
-    preload(this.srcUrl, this.tiles , () => {
-      this.ctx.drawImage(this.tiles[0], 0, 0);
-      this.ctx.drawImage(this.tiles[1], 0 + this.tileSize, 0);
-      this.ctx.drawImage(this.tiles[2], 0, 0 + this.tileSize);
-      this.ctx.drawImage(this.tiles[3], this.tileSize, this.tileSize);
-
-      for (let i = 0; i < this.DIM; i++) {
-        for (let j = 0; j < this.DIM; j++) {
-          //test with random tile
-          //ctx.drawImage(tiles[Math.floor(Math.random() * 4)],i * tileSize,j * tileSize);
-        }
-      }
-    });
-
-    function preload(urls: string[], tiles: any, callback: any) {
-      let loaded = 0;
-      for (let i = 0; i < urls.length; i++) {
-        tiles[i] = new Image();
-        tiles[i].src = urls[i];
-        tiles[i].onload = function () {
-          if (loaded === urls.length) {
-            callback(tiles);
-            console.dir('ALL IMAGES PRELOADED');
-          }
-        };
-        loaded++;
-      }
+  x: number = 0;
+  y: number = 0;
+  onClick() {
+    this.ctx.drawImage(this.tiles[Math.floor(Math.random() * 4)], this.x, this.y);
+    this.x = this.x+this.tileSize;
+    if(this.x >= this.tileSize*this.DIM) {
+      this.y = this.y + this.tileSize;
+      this.x = 0;
     }
-    
+  }
+
+  preload(urls: string[], tiles: any) {
+    let loaded = 0;
+    for (let i = 0; i < urls.length; i++) {
+      tiles[i] = new Image();
+      tiles[i].src = urls[i];
+      tiles[i].onload = function () {
+        if (loaded === urls.length) {
+          console.dir('ALL IMAGES PRELOADED');
+        }
+      };
+      loaded++;
+    }
   }
 
   drawGrid(ctx: CanvasRenderingContext2D) {
