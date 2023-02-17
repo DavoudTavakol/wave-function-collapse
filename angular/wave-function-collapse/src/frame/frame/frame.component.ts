@@ -6,9 +6,11 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./frame.component.css'],
 })
 export class FrameComponent implements OnInit {
-
   @ViewChild('canvas', { static: true }) myCanvas!: ElementRef;
 
+  ctx: CanvasRenderingContext2D;
+  canvas: HTMLCanvasElement;
+  
   tiles: any = [];
 
   srcUrl: string[] = [
@@ -17,41 +19,43 @@ export class FrameComponent implements OnInit {
     'assets/images/2.png',
     'assets/images/3.png',
   ];
+  
+  DIM: number = 15;
+  tileSize: number = 50;
+  canvasWidth: number = this.DIM * this.tileSize;
+  canvasHeight: number = this.DIM * this.tileSize;
 
+  constructor() {}
 
   ngOnInit(): void {
-    const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
-    const ctx = canvas.getContext('2d')!;
+    //const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
+    //const ctx: CanvasRenderingContext2D = canvas.getContext('2d')!;
 
-    const DIM: number = 15;
-    const tileSize: number = 50;
-    const canvasWidth: number = DIM * tileSize;
-    const canvasHeight: number = DIM * tileSize;
+    this.canvas = this.myCanvas.nativeElement;
+    this.ctx = this.canvas.getContext("2d")!;
 
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+    console.log(this.canvas);
+    console.log(this.ctx);
+    this.canvas.width = this.canvasWidth;
+    this.canvas.height = this.canvasHeight;
+    this.drawGrid(this.ctx);
+  }
 
-   
-    drawGrid();
-    preload(this.srcUrl, this.tiles ,whendone);
+  doSmth() {   
 
-    function whendone(tiles: any) {
-      //test
-      
-      ctx.drawImage(tiles[0], 0, 0);
-      ctx.drawImage(tiles[1], 0 + tileSize, 0);
-      ctx.drawImage(tiles[2], 0, 0 + tileSize);
-      ctx.drawImage(tiles[3], tileSize, tileSize);
+    preload(this.srcUrl, this.tiles , () => {
+      this.ctx.drawImage(this.tiles[0], 0, 0);
+      this.ctx.drawImage(this.tiles[1], 0 + this.tileSize, 0);
+      this.ctx.drawImage(this.tiles[2], 0, 0 + this.tileSize);
+      this.ctx.drawImage(this.tiles[3], this.tileSize, this.tileSize);
 
-      for (let i = 0; i < DIM; i++) {
-        for (let j = 0; j < DIM; j++) {
+      for (let i = 0; i < this.DIM; i++) {
+        for (let j = 0; j < this.DIM; j++) {
           //test with random tile
           //ctx.drawImage(tiles[Math.floor(Math.random() * 4)],i * tileSize,j * tileSize);
         }
       }
-      
-
-    }
+    });
 
     function preload(urls: string[], tiles: any, callback: any) {
       let loaded = 0;
@@ -67,22 +71,21 @@ export class FrameComponent implements OnInit {
         loaded++;
       }
     }
+    
+  }
 
-    function drawGrid() {
-      for (let i = 0; i < DIM; i++) {
-        for (let j = 0; j < DIM; j++) {
-          ctx.lineWidth = 1;
-          ctx.strokeStyle = 'rgba(255,255,255,0.1)';
-          ctx.strokeRect(i * tileSize, j * tileSize, tileSize, tileSize);
-        }
+  drawGrid(ctx: CanvasRenderingContext2D) {
+    for (let i = 0; i < this.DIM; i++) {
+      for (let j = 0; j < this.DIM; j++) {
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+        ctx.strokeRect(
+          i * this.tileSize,
+          j * this.tileSize,
+          this.tileSize,
+          this.tileSize
+        );
       }
     }
   }
-
-  doSmth() {
-    //const ctx = e.nativeElement;
-    //ctx.drawImage(this.tiles[3], 50, 50);
-    console.dir("CLICKED");
-  }
-  
 }
