@@ -6,7 +6,18 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./frame.component.css'],
 })
 export class FrameComponent implements OnInit {
+
   @ViewChild('canvas', { static: true }) myCanvas!: ElementRef;
+
+  tiles: any = [];
+
+  srcUrl: string[] = [
+    'assets/images/0.png',
+    'assets/images/1.png',
+    'assets/images/2.png',
+    'assets/images/3.png',
+  ];
+
 
   ngOnInit(): void {
     const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
@@ -20,20 +31,13 @@ export class FrameComponent implements OnInit {
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
 
-    const tiles: any = [];
-
-    const srcUrl: string[] = [
-      'assets/images/0.png',
-      'assets/images/1.png',
-      'assets/images/2.png',
-      'assets/images/3.png',
-    ];
-
+   
     drawGrid();
-    preload(srcUrl, whendone);
+    preload(this.srcUrl, this.tiles ,whendone);
 
     function whendone(tiles: any) {
       //test
+      
       ctx.drawImage(tiles[0], 0, 0);
       ctx.drawImage(tiles[1], 0 + tileSize, 0);
       ctx.drawImage(tiles[2], 0, 0 + tileSize);
@@ -45,15 +49,17 @@ export class FrameComponent implements OnInit {
           //ctx.drawImage(tiles[Math.floor(Math.random() * 4)],i * tileSize,j * tileSize);
         }
       }
+      
+
     }
 
-    function preload(urls: string[], callback: any) {
+    function preload(urls: string[], tiles: any, callback: any) {
       let loaded = 0;
-      for (let i = 0; i < srcUrl.length; i++) {
+      for (let i = 0; i < urls.length; i++) {
         tiles[i] = new Image();
-        tiles[i].src = srcUrl[i];
+        tiles[i].src = urls[i];
         tiles[i].onload = function () {
-          if (loaded === srcUrl.length) {
+          if (loaded === urls.length) {
             callback(tiles);
             console.dir('ALL IMAGES PRELOADED');
           }
@@ -72,4 +78,11 @@ export class FrameComponent implements OnInit {
       }
     }
   }
+
+  doSmth() {
+    //const ctx = e.nativeElement;
+    //ctx.drawImage(this.tiles[3], 50, 50);
+    console.dir("CLICKED");
+  }
+  
 }
