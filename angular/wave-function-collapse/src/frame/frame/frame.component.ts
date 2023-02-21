@@ -113,41 +113,57 @@ export class FrameComponent implements OnInit {
         let index = i + j * this.DIM;
         if (this.grid[index].collapsed) {
           nextGrid[index] = this.grid[index];
-          console.log(nextGrid[index]);
         } else {
           let validOptions: Tile[] = [];
+          let valid: Tile[] = [];
           //checktop
           if (j > 0) {
             let upCell = this.grid[i + (j - 1) * this.DIM];
             for (let options of upCell.options) {
-              validOptions.push(this.tiles[options.down]);
+              for(let i = 0; i < options.down.length; i++) {
+                if(!validOptions.includes(this.tiles[options.down[i]]) && options.down[i] !== -1) {
+                  validOptions.push(this.tiles[options.down[i]]);
+                }
+              }
+              
             }
           }
           //checkright
           if (i < this.DIM - 1) {
             let rightCell = this.grid[i + j + 1 * this.DIM];
             for (let options of rightCell.options) {
-              validOptions.push(this.tiles[options.left]);
+              for(let i = 0; i < options.left.length; i++) {
+                if(!validOptions.includes(this.tiles[options.left[i]]) && options.left[i] !== -1) {
+                validOptions.push(this.tiles[options.left[i]]);
+                }
+              }
             }
           }
           //checkdown
           if (j < this.DIM - 1) {
             let downCell = this.grid[i + (j + 1) * this.DIM];
             for (let options of downCell.options) {
-              validOptions.push(this.tiles[options.up]);
+              for(let i = 0; i < options.up.length; i++) {
+                if(!validOptions.includes(this.tiles[options.up[i]]) && options.up[i] !== -1) {
+                validOptions.push(this.tiles[options.up[i]]);
+                }
+              }
             }
           }
           //checkleft
           if (i > 1) {
             let leftCell = this.grid[i - 1 + j * this.DIM];
             for (let options of leftCell.options) {
-              validOptions.push(this.tiles[options.right]);
+              for(let i = 0; i < options.right.length; i++) {
+                if(!validOptions.includes(this.tiles[options.right[i]]) && options.right[i] !== -1) {
+                validOptions.push(this.tiles[options.right[i]]);
+                }
+              }
             }
           }
 
-          //validOption still wrong.
-          //TODO: Logic. Fill the new grid at index with all valid TILES/Options from the valid OPTIONS (up, right, down, left) inside the CHECKED cell!
-          console.log('meh: ' + validOptions);
+          //TODO: Refactor valid options double loop and for statement
+          console.log(validOptions);
 
           nextGrid[index] = {
             collapsed: false,
