@@ -36,17 +36,12 @@ export class FrameComponent implements OnInit {
   ngOnInit(): void {
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
-
-    console.log(this.canvas);
-    console.log(this.ctx);
     this.canvas.width = this.canvasWidth;
     this.canvas.height = this.canvasHeight;
     this.drawGrid(this.ctx);
     this.preload(this.srcUrl, this.tiles);
-  }
 
-  //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
-  init() {
+
     console.dir('STARTING..');
     //Filling Grid
     for (let i = 0; i < this.DIM * this.DIM; i++) {
@@ -62,12 +57,22 @@ export class FrameComponent implements OnInit {
       };
     }
 
+  }
+
+  //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
+  init() {
+   
+
     ////Pick cell/cells with least entropy (sort all the cells then pick. if all same => pick random)
     //sort grid by # of options
-    const gridCopy = [...this.grid];
+    let gridCopy = [...this.grid];
+    gridCopy = gridCopy.filter(((a) => !a.collapsed));
     gridCopy.sort((a: any, b: any) => {
       return a.options.length - b.options.length;
     });
+
+    console.table(gridCopy);
+
 
     //find index with all the lowest entropy cells
     //gridcopy[0] because we sorted it and the first cell should habe the fewest options.
@@ -108,108 +113,104 @@ export class FrameComponent implements OnInit {
 
     //update next gen tiles
     let nextGrid = [];
+    
     for (let i = 0; i < this.DIM; i++) {
       for (let j = 0; j < this.DIM; j++) {
         let index = i + j * this.DIM;
         if (this.grid[index].collapsed) {
           nextGrid[index] = this.grid[index];
         } else {
-          let validOptions: Tile[] = [];
-          let valid: Tile[] = [];
+          let allOptions: number[] = [0,1,2,3,4];
+    let validOptions: number[] = [];
+    let validTiles: Tile[] = [];
           //checktop
           if (j > 0) {
             let upCell = this.grid[i + (j - 1) * this.DIM];
             for (let options of upCell.options) {
-              for(let i = 0; i < options.down.length; i++) {
-                if(!validOptions.includes(this.tiles[options.down[i]]) && options.down[i] !== -1) {
-                  validOptions.push(this.tiles[options.down[i]]);
-                }
-              }
-              
+              let valid = options.down;
+              validOptions = validOptions.concat(valid);
             }
           }
           //checkright
           if (i < this.DIM - 1) {
             let rightCell = this.grid[i + j + 1 * this.DIM];
             for (let options of rightCell.options) {
-              for(let i = 0; i < options.left.length; i++) {
-                if(!validOptions.includes(this.tiles[options.left[i]]) && options.left[i] !== -1) {
-                validOptions.push(this.tiles[options.left[i]]);
-                }
-              }
+              let valid = options.left;
+              validOptions = validOptions.concat(valid);
             }
           }
           //checkdown
           if (j < this.DIM - 1) {
             let downCell = this.grid[i + (j + 1) * this.DIM];
             for (let options of downCell.options) {
-              for(let i = 0; i < options.up.length; i++) {
-                if(!validOptions.includes(this.tiles[options.up[i]]) && options.up[i] !== -1) {
-                validOptions.push(this.tiles[options.up[i]]);
-                }
-              }
+              let valid = options.up;
+              validOptions = validOptions.concat(valid);
             }
           }
           //checkleft
           if (i > 1) {
             let leftCell = this.grid[i - 1 + j * this.DIM];
             for (let options of leftCell.options) {
-              for(let i = 0; i < options.right.length; i++) {
-                if(!validOptions.includes(this.tiles[options.right[i]]) && options.right[i] !== -1) {
-                validOptions.push(this.tiles[options.right[i]]);
-                }
-              }
+              let valid = options.right;
+              validOptions = validOptions.concat(valid);
             }
           }
 
-          //TODO: Refactor valid options double loop and for statement
-          console.log(validOptions);
+          //TODO: Valid options still faulty...
+          //console.table(validOptions);
+
+          checkValid(allOptions, validOptions);
+          console.log("opt"+allOptions);
+          for(let i = 0; i<allOptions.length; i++) {
+            validTiles.push(this.tiles[i]);
+          }
+
+          console.log("vtiles"+validTiles);
 
           nextGrid[index] = {
             collapsed: false,
             options: [],
           };
-          nextGrid[index].options = validOptions;
+          nextGrid[index].options = validTiles;
           nextGrid[index].collapsed = false;
         }
       }
     }
-  }
 
-  checkValid(options: Tile[], valid: number[]) {
-    for (let i = options.length - 1; i >= 0; i--) {}
-  }
+    this.grid = nextGrid;
 
-  x: number = 0;
-  y: number = 0;
-  onClick() {
-    this.ctx.drawImage(
-      this.tiles[Math.floor(Math.random() * 4)].img,
-      this.x,
-      this.y
-    );
-    this.x = this.x + this.tileSize;
-    if (this.x >= this.tileSize * this.DIM) {
-      this.y = this.y + this.tileSize;
-      this.x = 0;
+
+    //TODO: remove elements from allOptions (tiles) whichs ids are not contained in valid
+    function checkValid(allOpt: number[] , valid: number[]) {
+      
+      for(let i of allOpt) {
+        if(!valid.includes(i)) {
+          allOpt.splice(i);
+        }
+      }
     }
+   
+  }
+
+  onClick() {
+    this.init();
   }
 
   preload(urls: string[], tiles: any) {
     let loaded = 1;
     let _this = this;
     //create tiles with sockets
-    tiles[0] = new Tile(new Image(), [0, 3], [0, 1, 2, 3, 4], [4], [2]);
-    tiles[1] = new Tile(new Image(), [1, 2, 4], [-1], [1, 2, 3], [0, 2, 3, 4]);
-    tiles[2] = new Tile(
+    tiles[0] = new Tile(0,new Image(), [0, 3], [0, 1, 2, 3, 4], [4], [2]);
+    tiles[1] = new Tile(1,new Image(), [1, 2, 4], [-1], [1, 2, 3], [0, 2, 3, 4]);
+    tiles[2] = new Tile(2,
       new Image(),
       [1, 2, 4],
       [0, 1, 2, 3, 4],
       [1, 2, 3],
       [0, 2]
     );
-    tiles[3] = new Tile(new Image(), [1, 2, 4], [-1], [0], [1]);
-    tiles[4] = new Tile(new Image(), [0, 3], [-1], [1, 2, 3], [0, 2]);
+    tiles[3] = new Tile(3,new Image(), [1, 2, 4], [-1], [0], [1]);
+    tiles[4] = new Tile(4,new Image(), [0, 3], [-1], [1, 2, 3], [0, 2]);
     //fill tiles with imgsrc
     for (let i = 0; i < urls.length; i++) {
       tiles[i].img.src = urls[i];
@@ -220,7 +221,6 @@ export class FrameComponent implements OnInit {
         }
         loaded++;
       };
-      console.dir(this.tiles[i]);
     }
   }
 
