@@ -100,7 +100,7 @@ export class FrameComponent implements OnInit {
 
     if(pick === undefined) {
       console.log("UNDEFINED PICK");
-      this.init();
+      this.ngOnInit();
       return;
     }
     //replace option in cell
