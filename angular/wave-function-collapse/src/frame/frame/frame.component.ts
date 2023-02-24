@@ -39,12 +39,12 @@ export class FrameComponent implements OnInit {
     this.canvas.width = this.canvasWidth;
     this.canvas.height = this.canvasHeight;
     this.drawGrid(this.ctx);
+
+    console.dir('STARTING..');    
     this.preload(this.srcUrl, this.tiles);
 
-
-    console.dir('STARTING..');
-    //Filling Grid
-    for (let i = 0; i < this.DIM * this.DIM; i++) {
+     //Filling Grid
+     for (let i = 0; i < this.DIM * this.DIM; i++) {
       this.grid[i] = {
         collapsed: false,
         options: [
@@ -56,50 +56,62 @@ export class FrameComponent implements OnInit {
         ],
       };
     }
-
   }
 
   //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
   init() {
-   
-
     ////Pick cell/cells with least entropy (sort all the cells then pick. if all same => pick random)
     //sort grid by # of options
+
     let gridCopy = [...this.grid];
-    gridCopy = gridCopy.filter(((a) => !a.collapsed));
+    gridCopy = gridCopy.filter((a) => !a.collapsed);
+    //all is collapsed
+    if(this.grid.length === 0) {
+      console.log("ALL COLAB");
+      return;
+    }
+
     gridCopy.sort((a: any, b: any) => {
       return a.options.length - b.options.length;
     });
 
+    console.table("THIS GRID");
+    console.table(this.grid);
+    console.table("COPY");
     console.table(gridCopy);
-
 
     //find index with all the lowest entropy cells
     //gridcopy[0] because we sorted it and the first cell should habe the fewest options.
-    let lowestOptionNr = gridCopy[0].length;
+    let lowestOptionNr = gridCopy[0].options.length;
     let cellPick = 0;
-    for (let i = 1; i < lowestOptionNr; i++) {
+    for (let i = 1; i < gridCopy.length; i++) {
       //i = 1 because we dont need to compare with himself at gridCopy[0] if i = 0 were used
-      if (gridCopy[i].option.length > lowestOptionNr) {
+      if (gridCopy[i].options.length > lowestOptionNr) {
         cellPick = i;
         break;
       }
     }
-
+ 
     //remove all other cells
-    if (lowestOptionNr > 0) gridCopy.splice(cellPick);
+    if (cellPick > 0) gridCopy.splice(cellPick);
     //pick random cell
     const cell = gridCopy[this.getRandomInt(gridCopy.length)];
     //collapse cell
-    cell.collapsed = true; //why is this happening first and manipulation the base grid???
+    cell.collapsed = true;
     //pick random option
     let pick = cell.options[this.getRandomInt(cell.options.length)];
+
+    if(pick === undefined) {
+      console.log("UNDEFINED PICK");
+      this.init();
+      return;
+    }
     //replace option in cell
     cell.options = [pick];
 
     //go through all of the grid and draw cell IF its collapsed!
-    for (let i = 0; i < this.DIM; i++) {
-      for (let j = 0; j < this.DIM; j++) {
+    for (let j = 0; j < this.DIM; j++) {
+      for (let i = 0; i < this.DIM; i++) {
         let tempCell = this.grid[i + j * this.DIM];
         if (tempCell.collapsed) {
           this.ctx.drawImage(
@@ -112,60 +124,61 @@ export class FrameComponent implements OnInit {
     }
 
     //update next gen tiles
-    let nextGrid = [];
-    
-    for (let i = 0; i < this.DIM; i++) {
-      for (let j = 0; j < this.DIM; j++) {
+    const nextGrid = [];
+    for (let j = 0; j < this.DIM; j++) {
+      for (let i = 0; i < this.DIM; i++) {
         let index = i + j * this.DIM;
         if (this.grid[index].collapsed) {
           nextGrid[index] = this.grid[index];
         } else {
-          let allOptions: number[] = [0,1,2,3,4];
-    let validOptions: number[] = [];
-    let validTiles: Tile[] = [];
+          let validTiles: Tile[] = [];
+          let allOptions: number[] = [0, 1, 2, 3, 4];
           //checktop
           if (j > 0) {
             let upCell = this.grid[i + (j - 1) * this.DIM];
+            let validOptions: number[] = [];
             for (let options of upCell.options) {
               let valid = options.down;
               validOptions = validOptions.concat(valid);
             }
+            checkValid(allOptions, validOptions);
           }
           //checkright
           if (i < this.DIM - 1) {
-            let rightCell = this.grid[i + j + 1 * this.DIM];
+            let rightCell = this.grid[i + 1 + j * this.DIM];
+            let validOptions: number[] = [];
             for (let options of rightCell.options) {
               let valid = options.left;
               validOptions = validOptions.concat(valid);
             }
+            checkValid(allOptions, validOptions);
           }
           //checkdown
           if (j < this.DIM - 1) {
             let downCell = this.grid[i + (j + 1) * this.DIM];
+            let validOptions: number[] = [];
             for (let options of downCell.options) {
               let valid = options.up;
               validOptions = validOptions.concat(valid);
             }
+            checkValid(allOptions, validOptions);
           }
           //checkleft
-          if (i > 1) {
+          if (i > 0) {
             let leftCell = this.grid[i - 1 + j * this.DIM];
+            let validOptions: number[] = [];
             for (let options of leftCell.options) {
               let valid = options.right;
               validOptions = validOptions.concat(valid);
             }
+            checkValid(allOptions, validOptions);
           }
 
-          //TODO: Valid options still faulty...
-          //console.table(validOptions);
-
-          checkValid(allOptions, validOptions);
-          console.log("opt"+allOptions);
-          for(let i = 0; i<allOptions.length; i++) {
-            validTiles.push(this.tiles[i]);
+          console.log("ALLOPT"+allOptions);
+          for (let i = 0; i < allOptions.length; i++) {
+            validTiles.push(this.tiles[allOptions[i]]);
+            console.log(validTiles[i].id);
           }
-
-          console.log("vtiles"+validTiles);
 
           nextGrid[index] = {
             collapsed: false,
@@ -176,20 +189,16 @@ export class FrameComponent implements OnInit {
         }
       }
     }
-
     this.grid = nextGrid;
 
-
     //TODO: remove elements from allOptions (tiles) whichs ids are not contained in valid
-    function checkValid(allOpt: number[] , valid: number[]) {
-      
-      for(let i of allOpt) {
-        if(!valid.includes(i)) {
-          allOpt.splice(i);
+    function checkValid(allOpt: number[], valid: number[]) {
+      for (let i = allOpt.length - 1; i >= 0; i--) {
+        if (!valid.includes(allOpt[i])) {
+          allOpt.splice(i, 1);
         }
       }
     }
-   
   }
 
   onClick() {
@@ -200,24 +209,25 @@ export class FrameComponent implements OnInit {
     let loaded = 1;
     let _this = this;
     //create tiles with sockets
-    tiles[0] = new Tile(0,new Image(), [0, 3], [0, 1, 2, 3, 4], [4], [2]);
-    tiles[1] = new Tile(1,new Image(), [1, 2, 4], [-1], [1, 2, 3], [0, 2, 3, 4]);
-    tiles[2] = new Tile(2,
+    tiles[0] = new Tile(
+      0,
       new Image(),
-      [1, 2, 4],
-      [0, 1, 2, 3, 4],
-      [1, 2, 3],
-      [0, 2]
+      [0, 1, 4],
+      [0, 1, 2],
+      [0, 2, 3],
+      [0, 3, 4]
     );
-    tiles[3] = new Tile(3,new Image(), [1, 2, 4], [-1], [0], [1]);
-    tiles[4] = new Tile(4,new Image(), [0, 3], [-1], [1, 2, 3], [0, 2]);
+    tiles[1] = new Tile(1, new Image(), [2, 3], [3, 4], [0, 2, 3], [0, 3, 4]);
+    tiles[2] = new Tile(2, new Image(), [0, 1, 4], [3, 4], [1, 4], [0, 3, 4]);
+    tiles[3] = new Tile(3, new Image(), [0, 1, 4], [0, 1, 2], [1, 4], [1, 2]);
+    tiles[4] = new Tile(4, new Image(), [2, 3], [0, 1, 2], [0, 2, 3], [1, 2]);
     //fill tiles with imgsrc
     for (let i = 0; i < urls.length; i++) {
       tiles[i].img.src = urls[i];
       tiles[i].img.onload = function () {
         if (loaded === urls.length) {
           console.dir('ALL IMAGES PRELOADED');
-          _this.init();
+          
         }
         loaded++;
       };
