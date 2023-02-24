@@ -15,19 +15,19 @@ export class FrameComponent implements OnInit {
   tiles: Tile[] = [];
 
   srcUrl: string[] = [
-    'assets/images/0.png',
-    'assets/images/1.png',
-    'assets/images/2.png',
-    'assets/images/3.png',
-    'assets/images/4.png',
+    'assets/images/base/0.png',
+    'assets/images/base/1.png',
+    'assets/images/base/2.png',
+    'assets/images/base/3.png',
+    'assets/images/base/4.png',
   ];
 
-  DIM: number = 3;
+  DIM: number = 10;
   tileSize: number = 50;
   canvasWidth: number = this.DIM * this.tileSize;
   canvasHeight: number = this.DIM * this.tileSize;
-
   grid: any = [];
+  done: boolean = false;
 
   constructor() {}
 
@@ -65,8 +65,10 @@ export class FrameComponent implements OnInit {
 
     let gridCopy = [...this.grid];
     gridCopy = gridCopy.filter((a) => !a.collapsed);
+
     //all is collapsed
-    if(this.grid.length === 0) {
+    if(gridCopy.length === 0) {
+      this.done = true;
       console.log("ALL COLAB");
       return;
     }
@@ -74,11 +76,6 @@ export class FrameComponent implements OnInit {
     gridCopy.sort((a: any, b: any) => {
       return a.options.length - b.options.length;
     });
-
-    console.table("THIS GRID");
-    console.table(this.grid);
-    console.table("COPY");
-    console.table(gridCopy);
 
     //find index with all the lowest entropy cells
     //gridcopy[0] because we sorted it and the first cell should habe the fewest options.
@@ -174,10 +171,8 @@ export class FrameComponent implements OnInit {
             checkValid(allOptions, validOptions);
           }
 
-          console.log("ALLOPT"+allOptions);
           for (let i = 0; i < allOptions.length; i++) {
             validTiles.push(this.tiles[allOptions[i]]);
-            console.log(validTiles[i].id);
           }
 
           nextGrid[index] = {
@@ -191,7 +186,6 @@ export class FrameComponent implements OnInit {
     }
     this.grid = nextGrid;
 
-    //TODO: remove elements from allOptions (tiles) whichs ids are not contained in valid
     function checkValid(allOpt: number[], valid: number[]) {
       for (let i = allOpt.length - 1; i >= 0; i--) {
         if (!valid.includes(allOpt[i])) {
@@ -202,7 +196,9 @@ export class FrameComponent implements OnInit {
   }
 
   onClick() {
-    this.init();
+    while(this.done === false) {
+      this.init();
+    }
   }
 
   preload(urls: string[], tiles: any) {
