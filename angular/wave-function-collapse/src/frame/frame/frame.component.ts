@@ -20,9 +20,10 @@ export class FrameComponent implements OnInit {
     'assets/images/base/2.png',
     'assets/images/base/3.png',
     'assets/images/base/4.png',
+    'assets/images/base/5.png',
   ];
 
-  DIM: number = 10;
+  DIM: number = 4;
   tileSize: number = 50;
   canvasWidth: number = this.DIM * this.tileSize;
   canvasHeight: number = this.DIM * this.tileSize;
@@ -40,11 +41,11 @@ export class FrameComponent implements OnInit {
     this.canvas.height = this.canvasHeight;
     this.drawGrid(this.ctx);
 
-    console.dir('STARTING..');    
+    console.dir('STARTING..');
     this.preload(this.srcUrl, this.tiles);
 
-     //Filling Grid
-     for (let i = 0; i < this.DIM * this.DIM; i++) {
+    //Filling Grid
+    for (let i = 0; i < this.DIM * this.DIM; i++) {
       this.grid[i] = {
         collapsed: false,
         options: [
@@ -53,6 +54,7 @@ export class FrameComponent implements OnInit {
           this.tiles[2],
           this.tiles[3],
           this.tiles[4],
+          this.tiles[5],
         ],
       };
     }
@@ -67,9 +69,9 @@ export class FrameComponent implements OnInit {
     gridCopy = gridCopy.filter((a) => !a.collapsed);
 
     //all is collapsed
-    if(gridCopy.length === 0) {
+    if (gridCopy.length === 0) {
       this.done = true;
-      console.log("ALL COLAB");
+      console.log('ALL COLAB');
       return;
     }
 
@@ -88,7 +90,7 @@ export class FrameComponent implements OnInit {
         break;
       }
     }
- 
+
     //remove all other cells
     if (cellPick > 0) gridCopy.splice(cellPick);
     //pick random cell
@@ -98,8 +100,8 @@ export class FrameComponent implements OnInit {
     //pick random option
     let pick = cell.options[this.getRandomInt(cell.options.length)];
 
-    if(pick === undefined) {
-      console.log("UNDEFINED PICK");
+    if (pick === undefined) {
+      console.log('UNDEFINED PICK');
       this.ngOnInit();
       return;
     }
@@ -111,8 +113,8 @@ export class FrameComponent implements OnInit {
       for (let i = 0; i < this.DIM; i++) {
         let tempCell = this.grid[i + j * this.DIM];
         if (tempCell.collapsed) {
-          this.ctx.drawImage(
-            tempCell.options[0].img,
+          this.imageDraw(
+            tempCell.options[0],
             i * this.tileSize,
             j * this.tileSize
           );
@@ -129,15 +131,19 @@ export class FrameComponent implements OnInit {
           nextGrid[index] = this.grid[index];
         } else {
           let validTiles: Tile[] = [];
-          let allOptions: number[] = [0, 1, 2, 3, 4];
+          let allOptions: number[] = [0, 1, 2, 3, 4, 5];
           //checktop
           if (j > 0) {
             let upCell = this.grid[i + (j - 1) * this.DIM];
             let validOptions: number[] = [];
+            //get valid sockets from cell ontop
             for (let options of upCell.options) {
               let valid = options.down;
               validOptions = validOptions.concat(valid);
             }
+
+            //allOpt (id of tiles) = 0,1,2,3,4,5
+            //validOptions(sockets: numbers) all allowed sockets
             checkValid(allOptions, validOptions);
           }
           //checkright
@@ -175,6 +181,7 @@ export class FrameComponent implements OnInit {
             validTiles.push(this.tiles[allOptions[i]]);
           }
 
+          //create new cell with new options at current pos.
           nextGrid[index] = {
             collapsed: false,
             options: [],
@@ -186,44 +193,63 @@ export class FrameComponent implements OnInit {
     }
     this.grid = nextGrid;
 
-    function checkValid(allOpt: number[], valid: number[]) {
+    function checkValid(allOpt: number[], validOptions: number[]) {
       for (let i = allOpt.length - 1; i >= 0; i--) {
-        if (!valid.includes(allOpt[i])) {
+        if (!validOptions.includes(allOpt[i])) {
           allOpt.splice(i, 1);
         }
       }
     }
   }
 
+  imageDraw(tile: Tile, x: number, y: number) {
+    if (tile.rotation === 90) {
+      let temp = x;
+      x = y;
+      y = -temp - this.tileSize;
+      this.ctx.rotate((tile.rotation * Math.PI) / 180);
+    }
+    if (tile.rotation === 180) {
+      x = -x - this.tileSize;
+      y = -y - this.tileSize;
+      this.ctx.rotate((tile.rotation * Math.PI) / 180);
+    }
+    if (tile.rotation === 270) {
+      let temp = x;
+      x = -y - this.tileSize;
+      y = temp;
+      this.ctx.rotate((tile.rotation * Math.PI) / 180);
+    }
+    this.ctx.drawImage(tile.img, x, y);
+    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+  }
+
   onClick() {
-    while(this.done === false) {
+    while (this.done === false) {
       this.init();
     }
   }
 
+  //TODO: CREATE NEW CHECKVALID METHOD FOR NEW SOCKETS!
+  //TODO2: Check rotated tile creation + constraints!
+  //rework preload
+
   preload(urls: string[], tiles: any) {
     let loaded = 1;
-    let _this = this;
     //create tiles with sockets
-    tiles[0] = new Tile(
-      0,
-      new Image(),
-      [0, 1, 4],
-      [0, 1, 2],
-      [0, 2, 3],
-      [0, 3, 4]
-    );
-    tiles[1] = new Tile(1, new Image(), [2, 3], [3, 4], [0, 2, 3], [0, 3, 4]);
-    tiles[2] = new Tile(2, new Image(), [0, 1, 4], [3, 4], [1, 4], [0, 3, 4]);
-    tiles[3] = new Tile(3, new Image(), [0, 1, 4], [0, 1, 2], [1, 4], [1, 2]);
-    tiles[4] = new Tile(4, new Image(), [2, 3], [0, 1, 2], [0, 2, 3], [1, 2]);
+    tiles[0] = new Tile(0, new Image(), 0, 0, 0, 0);
+    tiles[1] = new Tile(1, new Image(), 1, 1, 0, 0);
+    tiles[2] = new Tile(2, new Image(), 1, 1, 1, 0);
+    tiles[3] = new Tile(3, new Image(), 0, 1, 0, 0);
+    tiles[4] = new Tile(4, new Image(), 1, 0, 1, 0);
+    tiles[5] = new Tile(5, new Image(), 0, 1, 0, 1);
+
     //fill tiles with imgsrc
     for (let i = 0; i < urls.length; i++) {
       tiles[i].img.src = urls[i];
       tiles[i].img.onload = function () {
         if (loaded === urls.length) {
           console.dir('ALL IMAGES PRELOADED');
-          
         }
         loaded++;
       };
