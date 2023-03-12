@@ -23,7 +23,7 @@ export class FrameComponent implements OnInit {
     'assets/images/base/5.png',
   ];
 
-  DIM: number = 4;
+  DIM: number = 10;
   tileSize: number = 50;
   canvasWidth: number = this.DIM * this.tileSize;
   canvasHeight: number = this.DIM * this.tileSize;
@@ -137,9 +137,15 @@ export class FrameComponent implements OnInit {
             let upCell = this.grid[i + (j - 1) * this.DIM];
             let validOptions: number[] = [];
             //get valid sockets from cell ontop
+            //change: get valid TILES which are those with correct SOCKETS
             for (let options of upCell.options) {
               let valid = options.down;
-              validOptions = validOptions.concat(valid);
+              //get tiles with valid socket
+              for(let i = 0; i < this.tiles.length; i++) {
+                if(this.tiles[i].up === valid) {
+                  validOptions = validOptions.concat(this.tiles[i].id);
+                }
+              }
             }
 
             //allOpt (id of tiles) = 0,1,2,3,4,5
@@ -152,7 +158,11 @@ export class FrameComponent implements OnInit {
             let validOptions: number[] = [];
             for (let options of rightCell.options) {
               let valid = options.left;
-              validOptions = validOptions.concat(valid);
+              for(let i = 0; i < this.tiles.length; i++) {
+                if(this.tiles[i].right === valid) {
+                  validOptions = validOptions.concat(this.tiles[i].id);
+                }
+              }
             }
             checkValid(allOptions, validOptions);
           }
@@ -162,7 +172,11 @@ export class FrameComponent implements OnInit {
             let validOptions: number[] = [];
             for (let options of downCell.options) {
               let valid = options.up;
-              validOptions = validOptions.concat(valid);
+              for(let i = 0; i < this.tiles.length; i++) {
+                if(this.tiles[i].down === valid) {
+                  validOptions = validOptions.concat(this.tiles[i].id);
+                }
+              }
             }
             checkValid(allOptions, validOptions);
           }
@@ -172,7 +186,11 @@ export class FrameComponent implements OnInit {
             let validOptions: number[] = [];
             for (let options of leftCell.options) {
               let valid = options.right;
-              validOptions = validOptions.concat(valid);
+              for(let i = 0; i < this.tiles.length; i++) {
+                if(this.tiles[i].left === valid) {
+                  validOptions = validOptions.concat(this.tiles[i].id);
+                }
+              }
             }
             checkValid(allOptions, validOptions);
           }
