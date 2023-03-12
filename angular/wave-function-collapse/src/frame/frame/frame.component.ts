@@ -21,6 +21,9 @@ export class FrameComponent implements OnInit {
     'assets/images/base/3.png',
     'assets/images/base/4.png',
     'assets/images/base/5.png',
+    'assets/images/base/6.png',
+    'assets/images/base/7.png',
+    'assets/images/base/8.png',
   ];
 
   DIM: number = 10;
@@ -55,6 +58,9 @@ export class FrameComponent implements OnInit {
           this.tiles[3],
           this.tiles[4],
           this.tiles[5],
+          this.tiles[6],
+          this.tiles[7],
+          this.tiles[8],
         ],
       };
     }
@@ -141,8 +147,8 @@ export class FrameComponent implements OnInit {
             for (let options of upCell.options) {
               let valid = options.down;
               //get tiles with valid socket
-              for(let i = 0; i < this.tiles.length; i++) {
-                if(this.tiles[i].up === valid) {
+              for (let i = 0; i < this.tiles.length; i++) {
+                if (this.tiles[i].up === valid) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -158,8 +164,8 @@ export class FrameComponent implements OnInit {
             let validOptions: number[] = [];
             for (let options of rightCell.options) {
               let valid = options.left;
-              for(let i = 0; i < this.tiles.length; i++) {
-                if(this.tiles[i].right === valid) {
+              for (let i = 0; i < this.tiles.length; i++) {
+                if (this.tiles[i].right === valid) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -172,8 +178,8 @@ export class FrameComponent implements OnInit {
             let validOptions: number[] = [];
             for (let options of downCell.options) {
               let valid = options.up;
-              for(let i = 0; i < this.tiles.length; i++) {
-                if(this.tiles[i].down === valid) {
+              for (let i = 0; i < this.tiles.length; i++) {
+                if (this.tiles[i].down === valid) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -186,8 +192,8 @@ export class FrameComponent implements OnInit {
             let validOptions: number[] = [];
             for (let options of leftCell.options) {
               let valid = options.right;
-              for(let i = 0; i < this.tiles.length; i++) {
-                if(this.tiles[i].left === valid) {
+              for (let i = 0; i < this.tiles.length; i++) {
+                if (this.tiles[i].left === valid) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -257,10 +263,13 @@ export class FrameComponent implements OnInit {
     //create tiles with sockets
     tiles[0] = new Tile(0, new Image(), 0, 0, 0, 0);
     tiles[1] = new Tile(1, new Image(), 1, 1, 0, 0);
-    tiles[2] = new Tile(2, new Image(), 1, 1, 1, 0);
-    tiles[3] = new Tile(3, new Image(), 0, 1, 0, 0);
-    tiles[4] = new Tile(4, new Image(), 1, 0, 1, 0);
-    tiles[5] = new Tile(5, new Image(), 0, 1, 0, 1);
+    tiles[2] = new Tile(2, new Image(), 0, 1, 1, 0);
+    tiles[3] = new Tile(3, new Image(), 0, 0, 1, 1);
+    tiles[4] = new Tile(4, new Image(), 1, 0, 0, 1);
+    tiles[5] = new Tile(5, new Image(), 1, 1, 1, 0);
+    tiles[6] = new Tile(6, new Image(), 0, 1, 1, 1);
+    tiles[7] = new Tile(7, new Image(), 1, 0, 1, 1);
+    tiles[8] = new Tile(8, new Image(), 1, 1, 0, 1);
 
     //fill tiles with imgsrc
     for (let i = 0; i < urls.length; i++) {
