@@ -14,18 +14,6 @@ export class FrameComponent implements OnInit {
 
   tiles: Tile[] = [];
 
-  srcUrl: string[] = [
-    'assets/images/base/0.png',
-    'assets/images/base/1.png',
-    'assets/images/base/2.png',
-    'assets/images/base/3.png',
-    'assets/images/base/4.png',
-    'assets/images/base/5.png',
-    'assets/images/base/6.png',
-    'assets/images/base/7.png',
-    'assets/images/base/8.png',
-  ];
-
   DIM: number = 10;
   tileSize: number = 50;
   canvasWidth: number = this.DIM * this.tileSize;
@@ -45,25 +33,36 @@ export class FrameComponent implements OnInit {
     this.drawGrid(this.ctx);
 
     console.dir('STARTING..');
-    this.preload(this.srcUrl, this.tiles);
+    this.preload(this.tiles);
 
     //Filling Grid
     for (let i = 0; i < this.DIM * this.DIM; i++) {
       this.grid[i] = {
         collapsed: false,
-        options: [
-          this.tiles[0],
-          this.tiles[1],
-          this.tiles[2],
-          this.tiles[3],
-          this.tiles[4],
-          this.tiles[5],
-          this.tiles[6],
-          this.tiles[7],
-          this.tiles[8],
-        ],
+        options: this.tiles
       };
     }
+  }
+
+  //TODO: rework tile rotation. better is if rotateTile returns a new tile. Problem. how to give new id?
+  preload(tiles: any) {
+    //create tiles with sockets
+    tiles[0] = new Tile(0, 'assets/images/base/0.png', 0, 0, 0, 0);
+    tiles[1] = new Tile(1, 'assets/images/base/1.png', 1, 1, 0, 0);
+    tiles[2] = new Tile(2, 'assets/images/base/1.png', 1, 1, 0, 0);
+    tiles[2].rotateTile(90);
+    tiles[3] = new Tile(3, 'assets/images/base/1.png', 1, 1, 0, 0);
+    tiles[3].rotateTile(180);
+    tiles[4] = new Tile(4, 'assets/images/base/1.png', 1, 1, 0, 0);
+    tiles[4].rotateTile(270);
+    tiles[5] = new Tile(5, 'assets/images/base/2.png', 1, 1, 1, 0);
+    tiles[6] = new Tile(6, 'assets/images/base/2.png', 1, 1, 1, 0);
+    tiles[6].rotateTile(90);
+    tiles[7] = new Tile(7, 'assets/images/base/2.png', 1, 1, 1, 0);
+    tiles[7].rotateTile(180);
+    tiles[8] = new Tile(8, 'assets/images/base/2.png', 1, 1, 1, 0);
+    tiles[8].rotateTile(270);
+
   }
 
   //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
@@ -137,7 +136,10 @@ export class FrameComponent implements OnInit {
           nextGrid[index] = this.grid[index];
         } else {
           let validTiles: Tile[] = [];
-          let allOptions: number[] = [0, 1, 2, 3, 4, 5];
+          let allOptions: number[] = [];
+          this.tiles.forEach((element) => {
+            allOptions.push(element.id);
+          });
           //checktop
           if (j > 0) {
             let upCell = this.grid[i + (j - 1) * this.DIM];
@@ -153,9 +155,6 @@ export class FrameComponent implements OnInit {
                 }
               }
             }
-
-            //allOpt (id of tiles) = 0,1,2,3,4,5
-            //validOptions(sockets: numbers) all allowed sockets
             checkValid(allOptions, validOptions);
           }
           //checkright
@@ -251,35 +250,6 @@ export class FrameComponent implements OnInit {
   onClick() {
     while (this.done === false) {
       this.init();
-    }
-  }
-
-  //TODO: CREATE NEW CHECKVALID METHOD FOR NEW SOCKETS!
-  //TODO2: Check rotated tile creation + constraints!
-  //rework preload
-
-  preload(urls: string[], tiles: any) {
-    let loaded = 1;
-    //create tiles with sockets
-    tiles[0] = new Tile(0, new Image(), 0, 0, 0, 0);
-    tiles[1] = new Tile(1, new Image(), 1, 1, 0, 0);
-    tiles[2] = new Tile(2, new Image(), 0, 1, 1, 0);
-    tiles[3] = new Tile(3, new Image(), 0, 0, 1, 1);
-    tiles[4] = new Tile(4, new Image(), 1, 0, 0, 1);
-    tiles[5] = new Tile(5, new Image(), 1, 1, 1, 0);
-    tiles[6] = new Tile(6, new Image(), 0, 1, 1, 1);
-    tiles[7] = new Tile(7, new Image(), 1, 0, 1, 1);
-    tiles[8] = new Tile(8, new Image(), 1, 1, 0, 1);
-
-    //fill tiles with imgsrc
-    for (let i = 0; i < urls.length; i++) {
-      tiles[i].img.src = urls[i];
-      tiles[i].img.onload = function () {
-        if (loaded === urls.length) {
-          console.dir('ALL IMAGES PRELOADED');
-        }
-        loaded++;
-      };
     }
   }
 

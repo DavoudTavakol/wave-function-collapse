@@ -9,13 +9,14 @@ class Tile {
 
   constructor(
     id: number,
-    img: HTMLImageElement,
+    src: string,
     up: number,
     right: number,
     down: number,
     left: number
   ) {
-    this.img = img;
+    this.img = new Image();
+    this.img.src = src;
     this.id = id;
     this.up = up;
     this.right = right;
