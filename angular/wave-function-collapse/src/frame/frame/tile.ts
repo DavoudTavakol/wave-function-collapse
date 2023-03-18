@@ -1,5 +1,5 @@
 class Tile {
-  img: HTMLImageElement;
+  img: HTMLImageElement = new Image();
   id: number;
   up: number;
   right: number;
@@ -15,7 +15,6 @@ class Tile {
     down: number,
     left: number
   ) {
-    this.img = new Image();
     this.img.src = src;
     this.id = id;
     this.up = up;
@@ -24,31 +23,55 @@ class Tile {
     this.left = left;
   }
 
-  rotateTile(rotation: number) {
-    if (rotation === 90) {
-      this.rotation = rotation;
-      this.rotateSockets();
-    } else if (rotation === 180) {
-      this.rotation = rotation;
-      this.rotateSockets();
-      this.rotateSockets();
-    } else if (rotation === 270) {
-      this.rotation = rotation;
-      this.rotateSockets();
-      this.rotateSockets();
-      this.rotateSockets();
-    } else {
-      console.log('WRONG ROTATION! 90,180,270 allowed!');
+  rotateTile(id: number, rotation: number) {
+    let newTile;
+    switch (rotation) {
+      case 90:
+        newTile = new Tile(
+          id,
+          this.img.src,
+          this.left,
+          this.up,
+          this.right,
+          this.down
+        );
+        this.checkRotation(newTile, rotation);
+        break;
+      case 180:
+        newTile = new Tile(
+          id,
+          this.img.src,
+          this.down,
+          this.left,
+          this.up,
+          this.right
+        );
+        this.checkRotation(newTile, rotation);
+        break;
+      case 270:
+        newTile = new Tile(
+          id,
+          this.img.src,
+          this.right,
+          this.down,
+          this.left,
+          this.up
+        );
+        this.checkRotation(newTile, rotation);
+        break;
     }
+    return newTile;
   }
 
-  rotateSockets() {
-    const tmpLeft = this.left;
-    this.left = this.down;
-    this.down = this.right;
-    this.right = this.up;
-    this.up = tmpLeft;
+  checkRotation(newTile: Tile, rotation: number) {
+    if(this.rotation + rotation >= 360) {
+      newTile.rotation = this.rotation + rotation - 360;
+    } else {
+      newTile.rotation = this.rotation + rotation;
+    }
   }
+  
 }
+
 
 export { Tile };

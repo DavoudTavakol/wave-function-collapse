@@ -44,25 +44,17 @@ export class FrameComponent implements OnInit {
     }
   }
 
-  //TODO: rework tile rotation. better is if rotateTile returns a new tile. Problem. how to give new id?
   preload(tiles: any) {
     //create tiles with sockets
     tiles[0] = new Tile(0, 'assets/images/base/0.png', 0, 0, 0, 0);
     tiles[1] = new Tile(1, 'assets/images/base/1.png', 1, 1, 0, 0);
-    tiles[2] = new Tile(2, 'assets/images/base/1.png', 1, 1, 0, 0);
-    tiles[2].rotateTile(90);
-    tiles[3] = new Tile(3, 'assets/images/base/1.png', 1, 1, 0, 0);
-    tiles[3].rotateTile(180);
-    tiles[4] = new Tile(4, 'assets/images/base/1.png', 1, 1, 0, 0);
-    tiles[4].rotateTile(270);
+    tiles[2] = tiles[1].rotateTile(2, 90);
+    tiles[3] = tiles[2].rotateTile(3, 90);
+    tiles[4] = tiles[3].rotateTile(4, 90);
     tiles[5] = new Tile(5, 'assets/images/base/2.png', 1, 1, 1, 0);
-    tiles[6] = new Tile(6, 'assets/images/base/2.png', 1, 1, 1, 0);
-    tiles[6].rotateTile(90);
-    tiles[7] = new Tile(7, 'assets/images/base/2.png', 1, 1, 1, 0);
-    tiles[7].rotateTile(180);
-    tiles[8] = new Tile(8, 'assets/images/base/2.png', 1, 1, 1, 0);
-    tiles[8].rotateTile(270);
-
+    tiles[6] = tiles[5].rotateTile(6, 90);
+    tiles[7] = tiles[5].rotateTile(7, 180);
+    tiles[8] = tiles[5].rotateTile(8, 270);
   }
 
   //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
