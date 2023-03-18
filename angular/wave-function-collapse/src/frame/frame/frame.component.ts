@@ -14,7 +14,7 @@ export class FrameComponent implements OnInit {
 
   tiles: Tile[] = [];
 
-  DIM: number = 10;
+  DIM: number = 18;
   tileSize: number = 50;
   canvasWidth: number = this.DIM * this.tileSize;
   canvasHeight: number = this.DIM * this.tileSize;
@@ -39,13 +39,15 @@ export class FrameComponent implements OnInit {
     for (let i = 0; i < this.DIM * this.DIM; i++) {
       this.grid[i] = {
         collapsed: false,
-        options: this.tiles
+        options: this.tiles,
       };
     }
   }
 
   preload(tiles: any) {
     //create tiles with sockets
+
+    /*
     tiles[0] = new Tile(0, 'assets/images/base/0.png', 0, 0, 0, 0);
     tiles[1] = new Tile(1, 'assets/images/base/1.png', 1, 1, 0, 0);
     tiles[2] = tiles[1].rotateTile(2, 90);
@@ -55,10 +57,39 @@ export class FrameComponent implements OnInit {
     tiles[6] = tiles[5].rotateTile(6, 90);
     tiles[7] = tiles[5].rotateTile(7, 180);
     tiles[8] = tiles[5].rotateTile(8, 270);
+   */
+    tiles[0] = new Tile(0, 'assets/images/circuit/0.png', 0, 0, 0, 0);
+    tiles[1] = new Tile(1, 'assets/images/circuit/1.png', 1, 1, 1, 1);
+    tiles[2] = new Tile(2, 'assets/images/circuit/2.png', 1, 2, 1, 1);
+    tiles[3] = tiles[2].rotateTile(3, 90);
+    tiles[4] = tiles[2].rotateTile(4, 180);
+    tiles[5] = tiles[2].rotateTile(5, 270);
+    tiles[6] = new Tile(6, 'assets/images/circuit/3.png', 1, 3, 1, 3);
+    tiles[7] = tiles[6].rotateTile(7, 90);
+    tiles[8] = new Tile(8, 'assets/images/circuit/6.png', 1, 2, 1, 2);
+    tiles[9] = tiles[8].rotateTile(9, 90);
+    tiles[10] = new Tile(10, 'assets/images/circuit/7.png', 3, 2, 3, 2);
+    tiles[11] = tiles[10].rotateTile(11, 90);
+    tiles[12] = new Tile(12, 'assets/images/circuit/8.png', 3, 1, 2, 1);
+    tiles[13] = tiles[12].rotateTile(13, 90);
+    tiles[14] = tiles[12].rotateTile(14, 180);
+    tiles[15] = tiles[12].rotateTile(15, 270);
+    tiles[16] = new Tile(16, 'assets/images/circuit/9.png', 2, 2, 1, 2);
+    tiles[17] = tiles[16].rotateTile(17, 90);
+    tiles[18] = tiles[16].rotateTile(18, 180);
+    tiles[19] = tiles[16].rotateTile(19, 270);
+    tiles[20] = new Tile(20, 'assets/images/circuit/10.png', 2, 2, 2, 2);
+    tiles[21] = tiles[20].rotateTile(21, 90);
+    tiles[22] = new Tile(22, 'assets/images/circuit/11.png', 2, 2, 1, 1);
+    tiles[23] = tiles[22].rotateTile(23, 90);
+    tiles[24] = tiles[22].rotateTile(24, 180);
+    tiles[25] = tiles[22].rotateTile(25, 270);
+    tiles[26] = new Tile(26, 'assets/images/circuit/12.png', 1, 2, 1, 2);
+    tiles[27] = tiles[26].rotateTile(27, 90);
   }
 
   //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
-  init() {
+  startwfc() {
     ////Pick cell/cells with least entropy (sort all the cells then pick. if all same => pick random)
     //sort grid by # of options
 
@@ -137,7 +168,6 @@ export class FrameComponent implements OnInit {
             let upCell = this.grid[i + (j - 1) * this.DIM];
             let validOptions: number[] = [];
             //get valid sockets from cell ontop
-            //change: get valid TILES which are those with correct SOCKETS
             for (let options of upCell.options) {
               let valid = options.down;
               //get tiles with valid socket
@@ -235,14 +265,27 @@ export class FrameComponent implements OnInit {
       y = temp;
       this.ctx.rotate((tile.rotation * Math.PI) / 180);
     }
-    this.ctx.drawImage(tile.img, x, y);
+    this.ctx.drawImage(tile.img, x, y, this.tileSize, this.tileSize);
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
   }
 
   onClick() {
     while (this.done === false) {
-      this.init();
+      this.startwfc();
     }
+
+    /*
+    const sleep = (time: number) => {
+      return new Promise((resolve) => setTimeout(resolve, time))
+    }
+    const doSomething = async () => {
+      for (let i = 0; i < this.DIM* this.DIM; i++) {
+        //await sleep(0);
+        this.startwfc();
+      }
+    }
+    doSomething()
+    */
   }
 
   drawGrid(ctx: CanvasRenderingContext2D) {
