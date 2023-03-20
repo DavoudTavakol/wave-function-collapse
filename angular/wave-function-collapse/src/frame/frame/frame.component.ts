@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Tile } from './tile';
+import { Cell } from './cell';
 
 @Component({
   selector: 'app-frame',
@@ -37,10 +38,7 @@ export class FrameComponent implements OnInit {
 
     //Filling Grid
     for (let i = 0; i < this.DIM * this.DIM; i++) {
-      this.grid[i] = {
-        collapsed: false,
-        options: this.tiles,
-      };
+      this.grid[i] = new Cell(this.tiles);
     }
   }
 
@@ -92,7 +90,6 @@ export class FrameComponent implements OnInit {
   startwfc() {
     ////Pick cell/cells with least entropy (sort all the cells then pick. if all same => pick random)
     //sort grid by # of options
-
     let gridCopy = [...this.grid];
     gridCopy = gridCopy.filter((a) => !a.collapsed);
 
@@ -227,11 +224,7 @@ export class FrameComponent implements OnInit {
           }
 
           //create new cell with new options at current pos.
-          nextGrid[index] = {
-            collapsed: false,
-            options: [],
-          };
-          nextGrid[index].options = validTiles;
+          nextGrid[index] = new Cell(validTiles);
           nextGrid[index].collapsed = false;
         }
       }
