@@ -1,19 +1,19 @@
 class Tile {
   img: HTMLImageElement = new Image();
   id: number;
-  up: number;
-  right: number;
-  down: number;
-  left: number;
+  up: string;
+  right: string;
+  down: string;
+  left: string;
   rotation: number = 0;
 
   constructor(
     id: number,
     src: string,
-    up: number,
-    right: number,
-    down: number,
-    left: number
+    up: string,
+    right: string,
+    down: string,
+    left: string
   ) {
     this.img.src = src;
     this.id = id;

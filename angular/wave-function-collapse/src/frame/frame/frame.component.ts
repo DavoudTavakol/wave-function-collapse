@@ -43,47 +43,44 @@ export class FrameComponent implements OnInit {
   }
 
   preload(tiles: any) {
+    //TODO: LOOP TO CREATE NEW TILES
     //create tiles with sockets
-
-    /*
-    tiles[0] = new Tile(0, 'assets/images/base/0.png', 0, 0, 0, 0);
-    tiles[1] = new Tile(1, 'assets/images/base/1.png', 1, 1, 0, 0);
-    tiles[2] = tiles[1].rotateTile(2, 90);
-    tiles[3] = tiles[2].rotateTile(3, 90);
-    tiles[4] = tiles[3].rotateTile(4, 90);
-    tiles[5] = new Tile(5, 'assets/images/base/2.png', 1, 1, 1, 0);
-    tiles[6] = tiles[5].rotateTile(6, 90);
-    tiles[7] = tiles[5].rotateTile(7, 180);
-    tiles[8] = tiles[5].rotateTile(8, 270);
-   */
-    tiles[0] = new Tile(0, 'assets/images/circuit/0.png', 0, 0, 0, 0);
-    tiles[1] = new Tile(1, 'assets/images/circuit/1.png', 1, 1, 1, 1);
-    tiles[2] = new Tile(2, 'assets/images/circuit/2.png', 1, 2, 1, 1);
-    tiles[3] = tiles[2].rotateTile(3, 90);
-    tiles[4] = tiles[2].rotateTile(4, 180);
-    tiles[5] = tiles[2].rotateTile(5, 270);
-    tiles[6] = new Tile(6, 'assets/images/circuit/3.png', 1, 3, 1, 3);
-    tiles[7] = tiles[6].rotateTile(7, 90);
-    tiles[8] = new Tile(8, 'assets/images/circuit/6.png', 1, 2, 1, 2);
-    tiles[9] = tiles[8].rotateTile(9, 90);
-    tiles[10] = new Tile(10, 'assets/images/circuit/7.png', 3, 2, 3, 2);
-    tiles[11] = tiles[10].rotateTile(11, 90);
-    tiles[12] = new Tile(12, 'assets/images/circuit/8.png', 3, 1, 2, 1);
-    tiles[13] = tiles[12].rotateTile(13, 90);
-    tiles[14] = tiles[12].rotateTile(14, 180);
-    tiles[15] = tiles[12].rotateTile(15, 270);
-    tiles[16] = new Tile(16, 'assets/images/circuit/9.png', 2, 2, 1, 2);
-    tiles[17] = tiles[16].rotateTile(17, 90);
-    tiles[18] = tiles[16].rotateTile(18, 180);
-    tiles[19] = tiles[16].rotateTile(19, 270);
-    tiles[20] = new Tile(20, 'assets/images/circuit/10.png', 2, 2, 2, 2);
-    tiles[21] = tiles[20].rotateTile(21, 90);
-    tiles[22] = new Tile(22, 'assets/images/circuit/11.png', 2, 2, 1, 1);
-    tiles[23] = tiles[22].rotateTile(23, 90);
-    tiles[24] = tiles[22].rotateTile(24, 180);
-    tiles[25] = tiles[22].rotateTile(25, 270);
-    tiles[26] = new Tile(26, 'assets/images/circuit/12.png', 1, 2, 1, 2);
-    tiles[27] = tiles[26].rotateTile(27, 90);
+    tiles[0] = new Tile(0, 'assets/images/circuit/0.png', "AAA", "AAA", "AAA", "AAA");
+    tiles[1] = new Tile(1, 'assets/images/circuit/1.png', "BBB", "BBB", "BBB", "BBB");
+    tiles[2] = new Tile(2, 'assets/images/circuit/2.png', "BBB", "BCB", "BBB", "BBB");
+    tiles[3] = new Tile(3, 'assets/images/circuit/3.png', "BBB", "BDB", "BBB", "BDB");
+    tiles[4] = new Tile(4, 'assets/images/circuit/4.png', "ABB", "BCB", "BBA", "AAA");
+    tiles[5] = new Tile(5, 'assets/images/circuit/5.png', "ABB", "BBB", "BBB", "BBA");
+    tiles[6] = new Tile(6, 'assets/images/circuit/6.png', "BBB", "BCB", "BBB", "BCB");
+    tiles[7] = new Tile(7, 'assets/images/circuit/7.png', "BDB", "BCB", "BDB", "BCB");
+    tiles[8] = new Tile(8, 'assets/images/circuit/8.png', "BDB", "BBB", "BCB", "BBB");
+    tiles[9] = new Tile(9, 'assets/images/circuit/9.png', "BCB", "BCB", "BBB", "BCB");
+    tiles[10] = new Tile(10, 'assets/images/circuit/10.png', "BCB", "BCB", "BCB", "BCB");
+    tiles[11] = new Tile(11, 'assets/images/circuit/11.png', "BCB", "BCB", "BBB", "BBB");
+    tiles[12] = new Tile(12, 'assets/images/circuit/12.png', "BBB", "BCB", "BBB", "BCB");
+    tiles[13] = tiles[2].rotateTile(13, 90);
+    tiles[14] = tiles[2].rotateTile(14, 180);
+    tiles[15] = tiles[2].rotateTile(15, 270);
+    tiles[16] = tiles[3].rotateTile(16, 90);
+    tiles[17] = tiles[4].rotateTile(17, 90);
+    tiles[18] = tiles[4].rotateTile(18, 180);
+    tiles[19] = tiles[4].rotateTile(19, 270);
+    tiles[20] = tiles[5].rotateTile(20, 90);
+    tiles[21] = tiles[5].rotateTile(21, 180);
+    tiles[22] = tiles[5].rotateTile(22, 270);
+    tiles[23] = tiles[6].rotateTile(23, 90);
+    tiles[24] = tiles[7].rotateTile(24, 90);
+    tiles[25] = tiles[8].rotateTile(25, 90);
+    tiles[26] = tiles[8].rotateTile(26, 180);
+    tiles[27] = tiles[8].rotateTile(27, 270);
+    tiles[28] = tiles[9].rotateTile(28, 90);
+    tiles[29] = tiles[9].rotateTile(29, 180);
+    tiles[30] = tiles[9].rotateTile(30, 270);
+    tiles[31] = tiles[10].rotateTile(31, 90);
+    tiles[32] = tiles[11].rotateTile(32, 90);
+    tiles[33] = tiles[11].rotateTile(33, 180);
+    tiles[34] = tiles[11].rotateTile(34, 270);
+    tiles[35] = tiles[12].rotateTile(35, 90);
   }
 
   //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
@@ -169,7 +166,7 @@ export class FrameComponent implements OnInit {
               let valid = options.down;
               //get tiles with valid socket
               for (let i = 0; i < this.tiles.length; i++) {
-                if (this.tiles[i].up === valid) {
+                if (this.tiles[i].up === this.reverseString(valid)) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -183,7 +180,7 @@ export class FrameComponent implements OnInit {
             for (let options of rightCell.options) {
               let valid = options.left;
               for (let i = 0; i < this.tiles.length; i++) {
-                if (this.tiles[i].right === valid) {
+                if (this.tiles[i].right === this.reverseString(valid)) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -197,7 +194,7 @@ export class FrameComponent implements OnInit {
             for (let options of downCell.options) {
               let valid = options.up;
               for (let i = 0; i < this.tiles.length; i++) {
-                if (this.tiles[i].down === valid) {
+                if (this.tiles[i].down === this.reverseString(valid)) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -211,7 +208,7 @@ export class FrameComponent implements OnInit {
             for (let options of leftCell.options) {
               let valid = options.right;
               for (let i = 0; i < this.tiles.length; i++) {
-                if (this.tiles[i].left === valid) {
+                if (this.tiles[i].left === this.reverseString(valid)) {
                   validOptions = validOptions.concat(this.tiles[i].id);
                 }
               }
@@ -263,22 +260,24 @@ export class FrameComponent implements OnInit {
   }
 
   onClick() {
+
+    /*
     while (this.done === false) {
       this.startwfc();
     }
-
-    /*
+    */
+    
     const sleep = (time: number) => {
       return new Promise((resolve) => setTimeout(resolve, time))
     }
     const doSomething = async () => {
       for (let i = 0; i < this.DIM* this.DIM; i++) {
-        //await sleep(0);
+        await sleep(0);
         this.startwfc();
       }
     }
     doSomething()
-    */
+    
   }
 
   drawGrid(ctx: CanvasRenderingContext2D) {
@@ -299,4 +298,8 @@ export class FrameComponent implements OnInit {
   getRandomInt(max: number): number {
     return Math.floor(Math.random() * max);
   }
+
+  reverseString(str: string) {
+    return str.split("").reverse().join("");
+}
 }
