@@ -45,19 +45,110 @@ export class FrameComponent implements OnInit {
   preload(tiles: any) {
     //TODO: LOOP TO CREATE NEW TILES
     //create tiles with sockets
-    tiles[0] = new Tile(0, 'assets/images/circuit/0.png', "AAA", "AAA", "AAA", "AAA");
-    tiles[1] = new Tile(1, 'assets/images/circuit/1.png', "BBB", "BBB", "BBB", "BBB");
-    tiles[2] = new Tile(2, 'assets/images/circuit/2.png', "BBB", "BCB", "BBB", "BBB");
-    tiles[3] = new Tile(3, 'assets/images/circuit/3.png', "BBB", "BDB", "BBB", "BDB");
-    tiles[4] = new Tile(4, 'assets/images/circuit/4.png', "ABB", "BCB", "BBA", "AAA");
-    tiles[5] = new Tile(5, 'assets/images/circuit/5.png', "ABB", "BBB", "BBB", "BBA");
-    tiles[6] = new Tile(6, 'assets/images/circuit/6.png', "BBB", "BCB", "BBB", "BCB");
-    tiles[7] = new Tile(7, 'assets/images/circuit/7.png', "BDB", "BCB", "BDB", "BCB");
-    tiles[8] = new Tile(8, 'assets/images/circuit/8.png', "BDB", "BBB", "BCB", "BBB");
-    tiles[9] = new Tile(9, 'assets/images/circuit/9.png', "BCB", "BCB", "BBB", "BCB");
-    tiles[10] = new Tile(10, 'assets/images/circuit/10.png', "BCB", "BCB", "BCB", "BCB");
-    tiles[11] = new Tile(11, 'assets/images/circuit/11.png', "BCB", "BCB", "BBB", "BBB");
-    tiles[12] = new Tile(12, 'assets/images/circuit/12.png', "BBB", "BCB", "BBB", "BCB");
+    tiles[0] = new Tile(
+      0,
+      'assets/images/circuit/0.png',
+      'AAA',
+      'AAA',
+      'AAA',
+      'AAA'
+    );
+    tiles[1] = new Tile(
+      1,
+      'assets/images/circuit/1.png',
+      'BBB',
+      'BBB',
+      'BBB',
+      'BBB'
+    );
+    tiles[2] = new Tile(
+      2,
+      'assets/images/circuit/2.png',
+      'BBB',
+      'BCB',
+      'BBB',
+      'BBB'
+    );
+    tiles[3] = new Tile(
+      3,
+      'assets/images/circuit/3.png',
+      'BBB',
+      'BDB',
+      'BBB',
+      'BDB'
+    );
+    tiles[4] = new Tile(
+      4,
+      'assets/images/circuit/4.png',
+      'ABB',
+      'BCB',
+      'BBA',
+      'AAA'
+    );
+    tiles[5] = new Tile(
+      5,
+      'assets/images/circuit/5.png',
+      'ABB',
+      'BBB',
+      'BBB',
+      'BBA'
+    );
+    tiles[6] = new Tile(
+      6,
+      'assets/images/circuit/6.png',
+      'BBB',
+      'BCB',
+      'BBB',
+      'BCB'
+    );
+    tiles[7] = new Tile(
+      7,
+      'assets/images/circuit/7.png',
+      'BDB',
+      'BCB',
+      'BDB',
+      'BCB'
+    );
+    tiles[8] = new Tile(
+      8,
+      'assets/images/circuit/8.png',
+      'BDB',
+      'BBB',
+      'BCB',
+      'BBB'
+    );
+    tiles[9] = new Tile(
+      9,
+      'assets/images/circuit/9.png',
+      'BCB',
+      'BCB',
+      'BBB',
+      'BCB'
+    );
+    tiles[10] = new Tile(
+      10,
+      'assets/images/circuit/10.png',
+      'BCB',
+      'BCB',
+      'BCB',
+      'BCB'
+    );
+    tiles[11] = new Tile(
+      11,
+      'assets/images/circuit/11.png',
+      'BCB',
+      'BCB',
+      'BBB',
+      'BBB'
+    );
+    tiles[12] = new Tile(
+      12,
+      'assets/images/circuit/12.png',
+      'BBB',
+      'BCB',
+      'BBB',
+      'BCB'
+    );
     tiles[13] = tiles[2].rotateTile(13, 90);
     tiles[14] = tiles[2].rotateTile(14, 180);
     tiles[15] = tiles[2].rotateTile(15, 270);
@@ -116,7 +207,7 @@ export class FrameComponent implements OnInit {
     //remove all other cells
     if (cellPick > 0) gridCopy.splice(cellPick);
     //pick random cell
-    const cell = gridCopy[this.getRandomInt(gridCopy.length)];
+    const cell: Cell = gridCopy[this.getRandomInt(gridCopy.length)];
     //collapse cell
     cell.collapsed = true;
     //pick random option
@@ -133,12 +224,27 @@ export class FrameComponent implements OnInit {
     //go through all of the grid and draw cell IF its collapsed!
     for (let j = 0; j < this.DIM; j++) {
       for (let i = 0; i < this.DIM; i++) {
-        let tempCell = this.grid[i + j * this.DIM];
+        let tempCell: Cell = this.grid[i + j * this.DIM];
         if (tempCell.collapsed) {
           this.imageDraw(
             tempCell.options[0],
             i * this.tileSize,
             j * this.tileSize
+          );
+        } else {
+          this.ctx.clearRect(
+            i * this.tileSize + this.tileSize / 4,
+            j * this.tileSize + this.tileSize / 4,
+            this.tileSize / 2,
+            this.tileSize / 2
+          );
+          this.ctx.fillStyle = 'white';
+          this.ctx.font = '15px Arial';
+          this.ctx.textAlign = 'center';
+          this.ctx.fillText(
+            tempCell.options.length.toString(),
+            i * this.tileSize + this.tileSize / 2,
+            j * this.tileSize + this.tileSize / 2 + 5
           );
         }
       }
@@ -260,24 +366,22 @@ export class FrameComponent implements OnInit {
   }
 
   onClick() {
-
     /*
     while (this.done === false) {
       this.startwfc();
     }
     */
-    
+
     const sleep = (time: number) => {
-      return new Promise((resolve) => setTimeout(resolve, time))
-    }
+      return new Promise((resolve) => setTimeout(resolve, time));
+    };
     const doSomething = async () => {
-      for (let i = 0; i < this.DIM* this.DIM; i++) {
+      for (let i = 0; i < this.DIM * this.DIM; i++) {
         await sleep(0);
         this.startwfc();
       }
-    }
-    doSomething()
-    
+    };
+    doSomething();
   }
 
   drawGrid(ctx: CanvasRenderingContext2D) {
@@ -300,6 +404,6 @@ export class FrameComponent implements OnInit {
   }
 
   reverseString(str: string) {
-    return str.split("").reverse().join("");
-}
+    return str.split('').reverse().join('');
+  }
 }
