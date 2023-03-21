@@ -174,7 +174,9 @@ export class FrameComponent implements OnInit {
     tiles[35] = tiles[12].rotateTile(35, 90);
   }
 
-  //YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
+  /////
+  /////YOU CAN DRAW IMAGES HERE NOW SINCE ALL PRELOADED
+  /////
   startwfc() {
     ////Pick cell/cells with least entropy (sort all the cells then pick. if all same => pick random)
     //sort grid by # of options
@@ -232,20 +234,7 @@ export class FrameComponent implements OnInit {
             j * this.tileSize
           );
         } else {
-          this.ctx.clearRect(
-            i * this.tileSize + this.tileSize / 4,
-            j * this.tileSize + this.tileSize / 4,
-            this.tileSize / 2,
-            this.tileSize / 2
-          );
-          this.ctx.fillStyle = 'white';
-          this.ctx.font = '15px Arial';
-          this.ctx.textAlign = 'center';
-          this.ctx.fillText(
-            tempCell.options.length.toString(),
-            i * this.tileSize + this.tileSize / 2,
-            j * this.tileSize + this.tileSize / 2 + 5
-          );
+          this.drawOptions(tempCell, i, j);
         }
       }
     }
@@ -265,7 +254,7 @@ export class FrameComponent implements OnInit {
           });
           //checktop
           if (j > 0) {
-            let upCell = this.grid[i + (j - 1) * this.DIM];
+            let upCell: Cell = this.grid[i + (j - 1) * this.DIM];
             let validOptions: number[] = [];
             //get valid sockets from cell ontop
             for (let options of upCell.options) {
@@ -281,7 +270,7 @@ export class FrameComponent implements OnInit {
           }
           //checkright
           if (i < this.DIM - 1) {
-            let rightCell = this.grid[i + 1 + j * this.DIM];
+            let rightCell: Cell = this.grid[i + 1 + j * this.DIM];
             let validOptions: number[] = [];
             for (let options of rightCell.options) {
               let valid = options.left;
@@ -295,7 +284,7 @@ export class FrameComponent implements OnInit {
           }
           //checkdown
           if (j < this.DIM - 1) {
-            let downCell = this.grid[i + (j + 1) * this.DIM];
+            let downCell: Cell = this.grid[i + (j + 1) * this.DIM];
             let validOptions: number[] = [];
             for (let options of downCell.options) {
               let valid = options.up;
@@ -309,7 +298,7 @@ export class FrameComponent implements OnInit {
           }
           //checkleft
           if (i > 0) {
-            let leftCell = this.grid[i - 1 + j * this.DIM];
+            let leftCell: Cell = this.grid[i - 1 + j * this.DIM];
             let validOptions: number[] = [];
             for (let options of leftCell.options) {
               let valid = options.right;
@@ -397,6 +386,30 @@ export class FrameComponent implements OnInit {
         );
       }
     }
+  }
+
+
+  drawOptions(tempCell: Cell, x: number, y: number) {
+    //calcualte color code and style
+    const maxNum = this.tiles.length;
+    this.ctx.font = ''+this.tileSize*0.4+'px Arial';
+    this.ctx.textAlign = 'center';
+    let percent =  tempCell.options.length / maxNum;
+    this.ctx.fillStyle = 'rgba('+255*(1-percent)+','+200*percent+',0)';
+    //clear previous text
+    this.ctx.clearRect(
+      x * this.tileSize + this.tileSize / 4,
+      y * this.tileSize + this.tileSize / 4,
+      this.tileSize / 2,
+      this.tileSize / 2
+    );
+
+    //draw new text
+    this.ctx.fillText(
+      tempCell.options.length.toString(),
+      x * this.tileSize + this.tileSize / 2,
+      y * this.tileSize + this.tileSize / 2 + 5
+    );
   }
 
   getRandomInt(max: number): number {
