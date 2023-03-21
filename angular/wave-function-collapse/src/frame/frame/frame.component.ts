@@ -223,21 +223,7 @@ export class FrameComponent implements OnInit {
     //replace option in cell
     cell.options = [pick];
 
-    //go through all of the grid and draw cell IF its collapsed!
-    for (let j = 0; j < this.DIM; j++) {
-      for (let i = 0; i < this.DIM; i++) {
-        let tempCell: Cell = this.grid[i + j * this.DIM];
-        if (tempCell.collapsed) {
-          this.imageDraw(
-            tempCell.options[0],
-            i * this.tileSize,
-            j * this.tileSize
-          );
-        } else {
-          this.drawOptions(tempCell, i, j);
-        }
-      }
-    }
+    
 
     //update next gen tiles
     const nextGrid = [];
@@ -323,10 +309,49 @@ export class FrameComponent implements OnInit {
     }
     this.grid = nextGrid;
 
+    //go through all of the grid and draw cell IF its collapsed!
+   this.draw();
+
     function checkValid(allOpt: number[], validOptions: number[]) {
       for (let i = allOpt.length - 1; i >= 0; i--) {
         if (!validOptions.includes(allOpt[i])) {
           allOpt.splice(i, 1);
+        }
+      }
+    }
+  }
+
+  onClick() {
+    /*
+    while (this.done === false) {
+      this.startwfc();
+    }
+    */
+
+    const sleep = (time: number) => {
+      return new Promise((resolve) => setTimeout(resolve, time));
+    };
+    const doSomething = async () => {
+      for (let i = 0; i < this.DIM * this.DIM; i++) {
+        await sleep(0);
+        this.startwfc();
+      }
+    };
+    doSomething();
+  }
+
+  draw() {
+    for (let j = 0; j < this.DIM; j++) {
+      for (let i = 0; i < this.DIM; i++) {
+        let tempCell: Cell = this.grid[i + j * this.DIM];
+        if (tempCell.collapsed) {
+          this.imageDraw(
+            tempCell.options[0],
+            i * this.tileSize,
+            j * this.tileSize
+          );
+        } else {
+          this.drawOptions(tempCell, i, j);
         }
       }
     }
@@ -354,24 +379,7 @@ export class FrameComponent implements OnInit {
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
   }
 
-  onClick() {
-    /*
-    while (this.done === false) {
-      this.startwfc();
-    }
-    */
-
-    const sleep = (time: number) => {
-      return new Promise((resolve) => setTimeout(resolve, time));
-    };
-    const doSomething = async () => {
-      for (let i = 0; i < this.DIM * this.DIM; i++) {
-        await sleep(0);
-        this.startwfc();
-      }
-    };
-    doSomething();
-  }
+ 
 
   drawGrid(ctx: CanvasRenderingContext2D) {
     for (let i = 0; i < this.DIM; i++) {
