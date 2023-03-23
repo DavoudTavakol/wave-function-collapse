@@ -1,0 +1,14 @@
+.example-container {
+    background-color: rgb(255, 215, 129);
+}
+
+#slider-container{
+    background-color: gray;
+    height: inherit;
+}
+
+#wfc-container {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
