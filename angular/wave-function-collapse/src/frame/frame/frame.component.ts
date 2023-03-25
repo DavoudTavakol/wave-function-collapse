@@ -22,7 +22,7 @@ export class FrameComponent implements AfterViewInit {
   constructor() {
     
   }
-
+  //TODO: method call order
   //YOU CANT DRAW IMAGES HERE SINCE NOT PRELOADED
   //BUT YOU CAN DO LOGIC
   ngAfterViewInit(): void {
