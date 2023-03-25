@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wave-function-collapse';
+
+  value: number = 2;
+
+  updateSetting($event: any) {
+    this.value = $event.value;
+    console.log(this.value);
+  }
+  
 }
+

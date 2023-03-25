@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { Tile } from './tile';
 import { Cell } from './cell';
 
@@ -7,30 +7,30 @@ import { Cell } from './cell';
   templateUrl: './frame.component.html',
   styleUrls: ['./frame.component.css'],
 })
-export class FrameComponent implements OnInit {
-  @ViewChild('canvas', { static: true }) myCanvas!: ElementRef;
+export class FrameComponent implements AfterViewInit {
+  @ViewChild('canvas', { static: false }) myCanvas!: ElementRef;
 
   ctx: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
 
   tiles: Tile[] = [];
 
-  DIM: number = 18;
+  @Input() DIM: number = 2;
   tileSize: number = 50;
-  canvasWidth: number = this.DIM * this.tileSize;
-  canvasHeight: number = this.DIM * this.tileSize;
-  grid: any = [];
-  done: boolean = false;
+  grid: Cell[] = [];
 
-  constructor() {}
+  constructor() {
+    
+  }
 
   //YOU CANT DRAW IMAGES HERE SINCE NOT PRELOADED
   //BUT YOU CAN DO LOGIC
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    console.log("INITITAL DIM: "+this.DIM);
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
-    this.canvas.width = this.canvasWidth;
-    this.canvas.height = this.canvasHeight;
+    this.canvas.width = this.DIM * this.tileSize;
+    this.canvas.height = this.DIM * this.tileSize;
     this.drawGrid(this.ctx);
 
     console.dir('STARTING..');
@@ -40,6 +40,11 @@ export class FrameComponent implements OnInit {
     for (let i = 0; i < this.DIM * this.DIM; i++) {
       this.grid[i] = new Cell(this.tiles);
     }
+  }
+
+  ngOnChanges(): void {
+    console.log("DIM: "+this.DIM);
+    this.ngAfterViewInit();
   }
 
   preload(tiles: any) {
@@ -185,7 +190,6 @@ export class FrameComponent implements OnInit {
 
     //all is collapsed
     if (gridCopy.length === 0) {
-      this.done = true;
       console.log('ALL COLAB');
       return;
     }
@@ -217,7 +221,7 @@ export class FrameComponent implements OnInit {
 
     if (pick === undefined) {
       console.log('UNDEFINED PICK');
-      this.ngOnInit();
+      this.ngAfterViewInit();
       return;
     }
     //replace option in cell

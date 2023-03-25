@@ -1,10 +1,11 @@
-.example-container {
+.main-container {
     background-color: rgb(255, 215, 129);
 }
 
-#slider-container{
+#side-nav{
     background-color: gray;
     height: inherit;
+    width: 200px;
 }
 
 #wfc-container {
@@ -12,3 +13,7 @@
     justify-content:center;
     align-items:center;
 }
+
+mat-slider {
+    width: 200px;
+  }

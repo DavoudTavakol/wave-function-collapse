@@ -1,14 +1,17 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container >
+
   <mat-sidenav mode="side" opened>
-    <div id="slider-container">
-      <mat-slider min="1" max="5" step="0.5" value="1.5">
+    <div id="side-nav">
+      <div>Wave-function-collapse</div>
+      <mat-slider (change)="updateSetting($event)" min="2" max="18" step="1">
         <input matSliderThumb />
       </mat-slider>
-      <div id="value">test</div>
+      <div>DIM: {{value}}</div>
     </div>
   </mat-sidenav>
 
-  <mat-sidenav-content>
-    <app-frame id="wfc-container"></app-frame>
+  <mat-sidenav-content class="main-container">
+    <app-frame [DIM]="value" id="wfc-container"></app-frame>
   </mat-sidenav-content>
+
 </mat-sidenav-container>
