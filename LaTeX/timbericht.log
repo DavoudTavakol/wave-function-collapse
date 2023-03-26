@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  26 MAR 2023 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  26 MAR 2023 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -455,56 +455,40 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
  [1
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./timbericht.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-)
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60 \tableofcontents
+                      [1] (./timbericht.toc)
 \tf@toc=\write4
 \openout4 = `timbericht.toc'.
 
 
 Chapter 1.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.63 \chapter
-             {Organisation} [1
-
-]
 Chapter 2.
 Chapter 3.
+Chapter 4.
+Chapter 5.
 [2
 
-]
-Chapter 4.
-[3
-
-]
-Chapter 5.
-[4
-
-] (./timbericht.aux)
+] [3] (./timbericht.aux)
 Package rerunfilecheck Info: File `timbericht.out' has not changed.
-(rerunfilecheck)             Checksum: B465E2B55974C7F8945E897DEEECCC40;760.
+(rerunfilecheck)             Checksum: 4AF9241A6B19D1C04F5A02050C794F73;435.
  ) 
 Here is how much of TeX's memory you used:
- 13392 strings out of 474971
- 216764 string characters out of 5780120
- 650508 words of memory out of 5000000
- 34702 multiletter control sequences out of 15000+600000
- 503955 words of font info for 78 fonts, out of 8000000 for 9000
+ 13362 strings out of 474971
+ 216339 string characters out of 5780120
+ 649508 words of memory out of 5000000
+ 34675 multiletter control sequences out of 15000+600000
+ 495825 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,6n,79p,343b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on timbericht.pdf (5 pages, 30903 bytes).
+Output written on timbericht.pdf (4 pages, 28806 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

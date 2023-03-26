@@ -54,27 +54,21 @@
 % Erstelle den Titel (Dieser Befehlt setzt dann auch den Author und das Datum!)
 \maketitle
 
+{\let\clearpage\relax\chapter*{Abstract}}
+
 % Automatisches Inhaltsverzeichniss
 \tableofcontents
 
+{\let\clearpage\relax\chapter{Appendix}}
+
 {\let\clearpage\relax\chapter{Introduction}}
 
+{\let\clearpage\relax\chapter{"Theorie"}}
 
-\chapter{Organisation}
+{\let\clearpage\relax\chapter{"Methodik"}}
 
-{\let\clearpage\relax\chapter{Planung}}
-
-
-
-\chapter{Backend}
-
-\section{Rest API}
-
-\section{DB-Modellierung}
+{\let\clearpage\relax\chapter{Fazit}}
 
 
-\section{Docker}
-
-\chapter{Abschluss}
 
 \end{document}
