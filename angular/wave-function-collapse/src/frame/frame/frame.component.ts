@@ -1,4 +1,10 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  Input,
+} from '@angular/core';
 import { Tile } from './tile';
 import { Cell } from './cell';
 
@@ -16,17 +22,16 @@ export class FrameComponent implements AfterViewInit {
   tiles: Tile[] = [];
 
   @Input() DIM: number = 2;
+  @Input() SLEEP: number = 0;
+  @Input() showOption: boolean = false;
   tileSize: number = 50;
   grid: Cell[] = [];
 
-  constructor() {
-    
-  }
-  //TODO: method call order
+  constructor() {}
   //YOU CANT DRAW IMAGES HERE SINCE NOT PRELOADED
   //BUT YOU CAN DO LOGIC
   ngAfterViewInit(): void {
-    console.log("INITITAL DIM: "+this.DIM);
+    console.log('INITITAL DIM: ' + this.DIM);
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.canvas.width = this.DIM * this.tileSize;
@@ -43,7 +48,8 @@ export class FrameComponent implements AfterViewInit {
   }
 
   ngOnChanges(): void {
-    console.log("DIM: "+this.DIM);
+    console.dir('ONCHANGE..');
+    console.log('DIM: ' + this.DIM);
     this.ngAfterViewInit();
   }
 
@@ -227,8 +233,6 @@ export class FrameComponent implements AfterViewInit {
     //replace option in cell
     cell.options = [pick];
 
-    
-
     //update next gen tiles
     const nextGrid = [];
     for (let j = 0; j < this.DIM; j++) {
@@ -314,7 +318,7 @@ export class FrameComponent implements AfterViewInit {
     this.grid = nextGrid;
 
     //go through all of the grid and draw cell IF its collapsed!
-   this.draw();
+    this.draw();
 
     function checkValid(allOpt: number[], validOptions: number[]) {
       for (let i = allOpt.length - 1; i >= 0; i--) {
@@ -326,18 +330,12 @@ export class FrameComponent implements AfterViewInit {
   }
 
   onClick() {
-    /*
-    while (this.done === false) {
-      this.startwfc();
-    }
-    */
-
     const sleep = (time: number) => {
       return new Promise((resolve) => setTimeout(resolve, time));
     };
     const doSomething = async () => {
       for (let i = 0; i < this.DIM * this.DIM; i++) {
-        await sleep(0);
+        await sleep(this.SLEEP);
         this.startwfc();
       }
     };
@@ -355,7 +353,9 @@ export class FrameComponent implements AfterViewInit {
             j * this.tileSize
           );
         } else {
-          this.drawOptions(tempCell, i, j);
+          if (this.showOption) {
+            this.drawOptions(tempCell, i, j);
+          }
         }
       }
     }
@@ -383,8 +383,6 @@ export class FrameComponent implements AfterViewInit {
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
   }
 
- 
-
   drawGrid(ctx: CanvasRenderingContext2D) {
     for (let i = 0; i < this.DIM; i++) {
       for (let j = 0; j < this.DIM; j++) {
@@ -400,14 +398,14 @@ export class FrameComponent implements AfterViewInit {
     }
   }
 
-
   drawOptions(tempCell: Cell, x: number, y: number) {
     //calcualte color code and style
     const maxNum = this.tiles.length;
-    this.ctx.font = ''+this.tileSize*0.4+'px Arial';
+    this.ctx.font = '' + this.tileSize * 0.4 + 'px Arial';
     this.ctx.textAlign = 'center';
-    let percent =  tempCell.options.length / maxNum;
-    this.ctx.fillStyle = 'rgba('+255*(1-percent)+','+200*percent+',0)';
+    let percent = tempCell.options.length / maxNum;
+    this.ctx.fillStyle =
+      'rgba(' + 255 * (1 - percent) + ',' + 200 * percent + ',0)';
     //clear previous text
     this.ctx.clearRect(
       x * this.tileSize + this.tileSize / 4,
