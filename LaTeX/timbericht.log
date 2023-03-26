@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  11 FEB 2023 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  26 MAR 2023 13:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,33 +326,17 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count311
 \l__lipsum_a_int=\count312
 \l__lipsum_b_int=\count313
- (c:/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/10/23 3.82 The Babel package
-\babel@savecnt=\count314
-\U@D=\dimen168
-\l@unhyphenated=\language87
- (c:/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count315
- (c:/texlive/2022/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthography)
- (c:/texlive/2022/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthography)
-Package babel Info: Making " an active character on input line 122.
-))) (c:/texlive/2022/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
-Package babel Info: Importing font and identification data for ngerman
-(babel)             from babel-de.ini. Reported on input line 11.
-) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box56
 \beforetitleunit=\skip55
 \aftertitleunit=\skip56
-\ttl@plus=\dimen169
-\ttl@minus=\dimen170
+\ttl@plus=\dimen168
+\ttl@minus=\dimen169
 \ttl@toksa=\toks23
-\titlewidth=\dimen171
-\titlewidthlast=\dimen172
-\titlewidthfirst=\dimen173
+\titlewidth=\dimen170
+\titlewidthlast=\dimen171
+\titlewidthfirst=\dimen172
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 36.
  (./timbericht.aux)
@@ -378,16 +362,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
-\scratchdimen=\dimen174
+\scratchcounter=\count314
+\scratchdimen=\dimen173
 \scratchbox=\box57
-\nofMPsegments=\count317
-\nofMParguments=\count318
+\nofMPsegments=\count315
+\nofMParguments=\count316
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count319
-\MPscratchDim=\dimen175
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
+\MPscratchCnt=\count317
+\MPscratchDim=\dimen174
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
 \everyMPtoPDFconversion=\toks25
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -441,8 +425,8 @@ Package hyperref Info: Link coloring ON on input line 52.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\big@size=\dimen176
-\c@lstlisting=\count322
+\big@size=\dimen175
+\c@lstlisting=\count320
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 56.
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -473,17 +457,17 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./timbericht.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 )
 \tf@toc=\write4
 \openout4 = `timbericht.toc'.
 
 
-Kapitel 1.
+Chapter 1.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -492,16 +476,16 @@ l.63 \chapter
              {Organisation} [1
 
 ]
-Kapitel 2.
-Kapitel 3.
+Chapter 2.
+Chapter 3.
 [2
 
 ]
-Kapitel 4.
+Chapter 4.
 [3
 
 ]
-Kapitel 5.
+Chapter 5.
 [4
 
 ] (./timbericht.aux)
@@ -509,15 +493,15 @@ Package rerunfilecheck Info: File `timbericht.out' has not changed.
 (rerunfilecheck)             Checksum: B465E2B55974C7F8945E897DEEECCC40;760.
  ) 
 Here is how much of TeX's memory you used:
- 14418 strings out of 474971
- 234971 string characters out of 5780120
- 683129 words of memory out of 5000000
- 35707 multiletter control sequences out of 15000+600000
+ 13392 strings out of 474971
+ 216764 string characters out of 5780120
+ 650508 words of memory out of 5000000
+ 34702 multiletter control sequences out of 15000+600000
  503955 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,79p,343b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,79p,343b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on timbericht.pdf (5 pages, 31003 bytes).
+Output written on timbericht.pdf (5 pages, 30903 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
