@@ -26,11 +26,14 @@ export class FrameComponent implements AfterViewInit {
   @Input() showOption: boolean = false;
   tileSize: number = 50;
   grid: Cell[] = [];
+  ready: boolean = false;
 
   constructor() {}
   //YOU CANT DRAW IMAGES HERE SINCE NOT PRELOADED
   //BUT YOU CAN DO LOGIC
   ngAfterViewInit(): void {
+    this.grid = [];
+    this.ready = false;
     console.log('INITITAL DIM: ' + this.DIM);
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
@@ -330,13 +333,16 @@ export class FrameComponent implements AfterViewInit {
   }
 
   onClick() {
+    this.ready = true;
     const sleep = (time: number) => {
       return new Promise((resolve) => setTimeout(resolve, time));
     };
     const doSomething = async () => {
       for (let i = 0; i < this.DIM * this.DIM; i++) {
         await sleep(this.SLEEP);
+        if(this.ready) {
         this.startwfc();
+        }
       }
     };
     doSomething();
