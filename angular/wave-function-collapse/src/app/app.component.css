@@ -1,20 +1,38 @@
 .main-container {
-    background-color: rgb(255, 215, 129);
+  background-color: rgb(27, 27, 27);
 }
 
-#side-nav{
-    background-color: gray;
-    height: inherit;
-    width: 200px;
+#side-nav {
+  background-color: rgb(27, 27, 27);
+  height: inherit;
+  width: 200px;
 }
 
 #wfc-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content:center;
-    align-items:center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 mat-slider {
-    width: 200px;
-  }
+  width: 200px;
+}
+
+.checkbox {
+  color: rgb(214, 214, 214);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: rgb(214, 214, 214);
+}
+
+#title {
+  text-align: center;
+}
+
+#startButton {
+  background-color: rgb(214, 214, 214);
+}

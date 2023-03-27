@@ -4,19 +4,19 @@
 
     <div id="side-nav">
 
-      <div>Wave-function-collapse</div>
+      <div class="text" id="title">Wave-function-collapse</div>
       <mat-slider (change)="updateDIM($event)" min="2" max="18" step="1">
         <input matSliderThumb />
       </mat-slider>
-      <div>DIM: {{value}}</div>
+      <div class="text" >DIM: {{value}}</div>
       <mat-slider (change)="updateSLEEP($event)" min="0" max="10000" step="100">
         <input matSliderThumb />
       </mat-slider>
-      <div>SLEEP in ms: {{sleep}}</div>
+      <div class="text" >SLEEP in ms: {{sleep}}</div>
 
-      <mat-checkbox (change)="updateCHECK($event)" class="example-margin">Show possible options</mat-checkbox>
+      <mat-checkbox  class="checkbox" (change)="updateCHECK($event)">Show possible options</mat-checkbox>
       
-      <button (click)="do()" mat-raised-button color="accent">START</button>
+      <button id="startButton" (click)="do()" mat-raised-button>START</button>
       
     </div>
 
