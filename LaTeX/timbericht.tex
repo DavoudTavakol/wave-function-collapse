@@ -82,9 +82,17 @@ In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithm
 
 {\let\clearpage\relax\chapter{Generierung von Inhalten mit Textursynthese}}
 
-Textursynthese kann auf verschiedenen Arten mit verschiedenen Algorithmen erfolgen.
-Jedoch verfolgen alle Methoden zur Synthese das Grundprinzip größere Images mit aus kleinen Input Images zu generieren welche das Muster der kleineren konsistent verfolgt.
-Dieser Effekt wird meistens dadurch erreicht, in dem aus dem kleineren Input Image zusätzlich kleiner Subimages generiert werden {(z.B. 5 x 5 Fenster)}. {[1]}
+Es gibt viele Möglichkeiten Textursynthese mit Algorithmen.
+Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
+Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
+Das wird meistens dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Fenster)}.
+Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
+Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
+Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
+Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
+
+
+
 
 
 {\let\clearpage\relax\chapter{Begriffserklärung}}
@@ -97,6 +105,7 @@ Dieser Effekt wird meistens dadurch erreicht, in dem aus dem kleineren Input Ima
 {\let\clearpage\relax\chapter{Fazit}}
 
 {\let\clearpage\relax\chapter{Literaturverzeichnis}}
+{[1]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
 \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
@@ -104,7 +113,6 @@ Dieser Effekt wird meistens dadurch erreicht, in dem aus dem kleineren Input Ima
 \url{https://www.youtube.com/watch?v=rI_y2GAlQFM&t=1135s&ab_channel=TheCodingTrain}\\
 \url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_westfalen.pdf}\\
 \url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_dzaebel.pdf}\\
-\url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
 \url{http://people.csail.mit.edu/celiu/Patch-based%20Texture%20Synthesis/Index.htm}\\
 \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
 
