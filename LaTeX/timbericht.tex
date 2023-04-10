@@ -90,8 +90,12 @@ Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau statt
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
 Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
-
-
+Der WFC von Gumin ist lose an der Quantenmechanik angelehnt.
+Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / Pixelwert vorkommen kann bevor sie final festgelegt wird.
+Dieser Status nennt sich Superposition.
+Jede Zelle hat mehrere Eigenwerte \textit{(eigenstates)} und somit auch eine maximale Entropie bzw. einen maximalen Informationsgehalt.
+Sobald eine Zelle bekannt \textit{(Observation)} wird und damit nur einen Eigenwert besitzt, dann wird die Entropie aller anderen Zellen angepasst.
+{(Auf dieses Verhalten wird später tiefer eingegangen)}.
 
 
 
@@ -115,6 +119,7 @@ Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von g
 \url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_dzaebel.pdf}\\
 \url{http://people.csail.mit.edu/celiu/Patch-based%20Texture%20Synthesis/Index.htm}\\
 \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
+\url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 
 
 {\let\clearpage\relax\chapter{Anhang}}
