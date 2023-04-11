@@ -69,7 +69,7 @@ WFC\dotfill{Wave-Function-Collapse}\\
 PCG\dotfill{Procedural-Content-Generation}\\
 CSP\dotfill{Constraint-Satisfaction-Problem}\\
 
-{\let\clearpage\relax\chapter{Einleitung}}
+\chapter{Einleitung}
 
 TODO AM ENDE.
 Die automatische Generierung von Inhalten wie Texte, Images oder Modellen ist heutzutage Standard in vielen Bereichen der Industrie.
@@ -80,22 +80,44 @@ um die Ergebnisse für ihren gebrauch anzupassen.
 In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Funktionsweise und Anwendungsfälle fokussieren.
 
 
-{\let\clearpage\relax\chapter{Generierung von Inhalten mit Textursynthese}}
+\chapter{Hintergrund}
 
-Es gibt viele Möglichkeiten Textursynthese mit Algorithmen.
+\section{Textursynthesen im Vergleich}
+
+Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
 Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
-Das wird meistens dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Fenster)}.
+Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.
 Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
 Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
+{[1]}
 Der WFC von Gumin ist lose an der Quantenmechanik angelehnt.
-Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / Pixelwert vorkommen kann bevor sie final festgelegt wird.
-Dieser Status nennt sich Superposition.
+Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / Pixelwert vorkommen kann bevor sie final festgelegt werden.
+Dieser Zustand nennt sich \textit{Superposition}.
 Jede Zelle hat mehrere Eigenwerte \textit{(eigenstates)} und somit auch eine maximale Entropie bzw. einen maximalen Informationsgehalt.
-Sobald eine Zelle bekannt \textit{(Observation)} wird und damit nur einen Eigenwert besitzt, dann wird die Entropie aller anderen Zellen angepasst.
-{(Auf dieses Verhalten wird später tiefer eingegangen)}.
+Sobald eine Zelle bekannt wird \textit{(Observation)} und damit nur einen Eigenwert besitzt, dann wird die Entropie aller anderen Zellen angepasst.
+{(Auf dieses Verhalten wird später tiefer eingegangen)}. {[2]}
+Gumin hat sich von der Arbeit von Paul Merell Inspirieren lassen, obwohl dieser sich Hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
+Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
+Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden.
+Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merell nicht möglich da es sich um eine diskrete Synthese handelt.
+Jedes lokale Muster ist immer im Input wiederzufinden. {[1]}{[3]}{[4]}
+
+\section{Constraint-Satisfaction-Problem}
+
+Was ist ein Constraint-Satisfaction-Problem? {(CSP)}
+Grundsätzlich beschreiben CSP's Gruppen von Objekten denen variablen zugeteilt sind.
+Diesen variablen sind Regeln, sogenannte \textit{(constraints)} Auferlegt sind die erfüllt werden müssen.
+Jeder dieser variablen hat zu Beginn eine Superposition und kann damit jeden wert enthalten.
+Aufgabe ist es einen Zustand \textit{(State)} zu finden in denen alle constraints erfüllt sind und jeder variable nur noch ein wert zugeordnet ist.
+Für solche Probleme finden sich oft bei der Künstlichen Intelligenz und aus dem Operations Research. {[5]}
+Im Fall von WFC sind die Objekte denen die variablen zugeteilt sind die einzelnen Bereiche im Output-Image.
+Jeder diese Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
+Immer, wenn ein Bereich eine wert zugeteilt wird, dann werden auch die benachbarten Bereiche damit beeinflusst.
+Der Prozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
+nennt sich Wave-Function-Collapse. {[6]}
 
 
 
@@ -110,16 +132,19 @@ Sobald eine Zelle bekannt \textit{(Observation)} wird und damit nur einen Eigenw
 
 {\let\clearpage\relax\chapter{Literaturverzeichnis}}
 {[1]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
+{[2]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
+{[3]} \url{https://paulmerrell.org/wp-content/uploads/2021/06/thesis.pdf}\\
+{[4]} \url{https://github.com/mxgmn/WaveFunctionCollapse}\\
+{[5]} \url{https://en.wikipedia.org/wiki/Constraint_satisfaction_problem}\\
+{[6]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
+\url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
-\url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
-\url{https://github.com/mxgmn/WaveFunctionCollapse}\\
 \url{https://www.youtube.com/watch?v=rI_y2GAlQFM&t=1135s&ab_channel=TheCodingTrain}\\
 \url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_westfalen.pdf}\\
 \url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_dzaebel.pdf}\\
 \url{http://people.csail.mit.edu/celiu/Patch-based%20Texture%20Synthesis/Index.htm}\\
 \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
-\url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 
 
 {\let\clearpage\relax\chapter{Anhang}}
