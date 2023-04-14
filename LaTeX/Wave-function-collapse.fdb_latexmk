@@ -1,6 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1681233606 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/timbericht.tex" "timbericht.pdf" "timbericht" 1681233608
-  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/timbericht.tex" 1681233605 8110 c10ded23f8760079c577feb184d6506b ""
+["pdflatex"] 1681486420 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1681486431
+  "Wave-function-collapse.aux" 1681486429 3372 11c54e6fc9ec984750c4c2c2e9b1190d "pdflatex"
+  "Wave-function-collapse.out" 1681486429 1987 298e5105990c35ab202f86860d19b005 "pdflatex"
+  "Wave-function-collapse.tex" 1681486416 9057 f0e7072603fd8782eb65aa397b1d5033 ""
+  "Wave-function-collapse.toc" 1681486429 1145 a3d2b7bd6bcd0dd92f0f66c480620bad "pdflatex"
+  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1681486416 9057 f0e7072603fd8782eb65aa397b1d5033 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1668252256 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1668251688 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1668252680 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -115,13 +119,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1668257525 4645761 4123604570e0c45243886bbbed7ce94b ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1668257709 3063419 6217aca0530bf94e5cd6663d0df9606f ""
   "c:/texlive/2022/texmf.cnf" 1668257498 713 e69b156964470283e0530f5060668171 ""
-  "timbericht.aux" 1681233608 3372 11c54e6fc9ec984750c4c2c2e9b1190d "pdflatex"
-  "timbericht.out" 1681233608 1987 298e5105990c35ab202f86860d19b005 "pdflatex"
-  "timbericht.tex" 1681233605 8110 c10ded23f8760079c577feb184d6506b ""
-  "timbericht.toc" 1681233608 1145 a3d2b7bd6bcd0dd92f0f66c480620bad "pdflatex"
   (generated)
-  "timbericht.aux"
-  "timbericht.log"
-  "timbericht.out"
-  "timbericht.pdf"
-  "timbericht.toc"
+  "Wave-function-collapse.aux"
+  "Wave-function-collapse.log"
+  "Wave-function-collapse.out"
+  "Wave-function-collapse.pdf"
+  "Wave-function-collapse.toc"
