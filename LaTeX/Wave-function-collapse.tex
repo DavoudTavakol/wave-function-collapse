@@ -118,14 +118,22 @@ Jeder diese Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
 Immer, wenn einem Bereich ein wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst.
 Der Prozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
 nennt sich Wave-Function-Collapse. {[6]}
-Während dem Prozess einen gültigen State für das CSP zu finden,dann gibt es immer Situationen in dem es mehrere gültige Optionen für eine Variable gibt.
+Während dem Prozess einen gültigen State für das CSP zu finden, dann gibt es immer Situationen in dem es mehrere gültige Optionen für eine Variable gibt.
 Wenn so eine Situation auftritt, dann haben verschiedene Solver verschiedene Ansätze.
 Einige Algorithmen wähle zufällig eine der möglichen Werte von momentan zulässigen Optionen.
 Bei so einem Ansatz kann es sein das der Algorithmus nicht auf einen Zustand kommen kann, in dem alle constraints erfüllt werden können.
-In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)} bei dem der Algortihmus zu seinem letzten Ergebniss zurückfällt und ein anderen Wert für die Variable setzt um aus dem
+In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)} bei dem der Algorithmus zu seinem letzten Ergebnis zurückfällt und ein anderen Wert für die Variable setzt, um aus dem
 ungültigen Zustand zu kommen.
-Andere Algorithmen verwenden sogenannte Heuristiken um die möglichkeit eines ungültigen Zustandes zu reduzieren und das verwenden eines Backtrackings zu beschleunigen. {[1]} 
+Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. {[1]} 
 
+\section{Wave-Function-Collapse in Game Development}
+
+In Abschnitt 4.1 wurde bereits auf mögliche Vorteile einer pixelgenauen Textursynthese hingewiesen.
+Der große Vorteil einer solchen Synthese ist, das dadurch der generierte Content auch Interaktiv genutzt werden kann, da wir vollen Kontrolle über den Output haben.
+Dadurch bietet sich WFC gerade in der Spiele-Entwicklung an, da keine unvorhersehbaren Artefakte entstehen können.
+Bereits am nächsten Tag der Veröffentlichung von WFC von Gumin am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
+Grund dafür sind nicht nur die bereits erwähnten Vorteile wie die Pixelgenauigkeit, sondern auch der Fakt das die Generierung eines Outputs mit WFC ein sehr schön anzusehender Prozess ist.
+Viele PCG's Methoden variieren in ihrer Laufzeit was zu einem {[1]}
 
 
 
