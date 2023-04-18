@@ -129,11 +129,22 @@ Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits 
 \section{Wave-Function-Collapse in Game Development}
 
 In Abschnitt 4.1 wurde bereits auf mögliche Vorteile einer pixelgenauen Textursynthese hingewiesen.
-Der große Vorteil einer solchen Synthese ist, das dadurch der generierte Content auch Interaktiv genutzt werden kann, da wir vollen Kontrolle über den Output haben.
-Dadurch bietet sich WFC gerade in der Spiele-Entwicklung an, da keine unvorhersehbaren Artefakte entstehen können.
-Bereits am nächsten Tag der Veröffentlichung von WFC von Gumin am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
-Grund dafür sind nicht nur die bereits erwähnten Vorteile wie die Pixelgenauigkeit, sondern auch der Fakt das die Generierung eines Outputs mit WFC ein sehr schön anzusehender Prozess ist.
-Viele PCG's Methoden variieren in ihrer Laufzeit was zu einem {[1]}
+Der große Vorteil einer solchen Synthese ist, das dadurch der generierte Content auch Interaktiv genutzt werden kann, da wir vollen Kontrolle über die lokalen Muster des Outputs haben.
+Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da keine unvorhersehbaren Artefakte entstehen können.
+Viele PCG Methoden Garantieren häufig Ergebnisse, wobei die Kosten für diese Garantie in Form einer unvorhersehbaren Gesamtlaufzeit einhergeht.
+Diese Backtracking Löser liefern bei ihren Aufgaben für die Lösung Ihrer CSP's oft gute Leistungen, wobei diese Ergebnisse in Theorie aber nur schwer zu charakterisieren sind.
+%Diese Zeilen noch Umschreiben
+Horswill und Foged [14] beschreiben eine "schnelle" Methode, um ein Leveldesign mit Inhalten zu füllen, die eine starke Spielbarkeit garantieren.
+Ihr Algorithmus basiert auf Backtrackingsearch mit (AC3) Constraint Propagation. Obwohl dieser Algorithmus nur geringe Anforderungen an Prozessor- und Speicherressourcen stellt,
+wird erwartet, dass er von Programmierern verwendet werden kann, die zumindest mäßige Kenntnisse im Design von Suchalgorithmen haben.
+%
+
+Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
+Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit, sondern auch die live Generierung des Outputs selbst.
+
+%Erklärung warum WFC overlappig so gut aussieht
+Viele PCG's Methoden variieren in ihrer Laufzeit bei der Generierung ihres Outputs.
+Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert werden dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. {[1]}
 
 
 
