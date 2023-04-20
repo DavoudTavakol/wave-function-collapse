@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  19 APR 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  20 APR 2023 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -504,7 +504,7 @@ Kapitel 3.
 ]
 Kapitel 4.
 
-Overfull \hbox (7.1137pt too wide) in paragraph at lines 110--128
+Overfull \hbox (7.1137pt too wide) in paragraph at lines 114--132
 \T1/ptm/m/n/12 Was ist ein Constraint-Satisfaction-Problem? (CSP) Grund-sätz-lich be-schrei-ben CSP's Grup-
  []
 
@@ -518,56 +518,61 @@ Kapitel 8.
 Kapitel 9.
 Kapitel 10.
 Kapitel 11.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 158.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 162.
 (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-Overfull \hbox (11.34264pt too wide) in paragraph at lines 158--173
+Overfull \hbox (11.34264pt too wide) in paragraph at lines 162--178
 []\T1/ptm/m/n/12 [1] [][]$\T1/cmtt/m/n/12 https : / / adamsmith . as / papers / wfc _ is _ constraint _ solving _ in _ the _ wild .
  []
 
 
-Overfull \hbox (14.98683pt too wide) in paragraph at lines 158--173
+Overfull \hbox (18.41179pt too wide) in paragraph at lines 162--178
+\T1/ptm/m/n/12 [8] [][]$\T1/cmtt/m/n/12 http : / / rajvishah . weebly . com / uploads / 6 / 3 / 0 / 9 / 6309814 / texture _ synthesis _
+ []
+
+
+Overfull \hbox (14.98683pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / www . cv-[]foundation . org / openaccess / content _ cvpr _ 2016 / papers / Gatys _
  []
 
 
-Overfull \hbox (27.33382pt too wide) in paragraph at lines 158--173
+Overfull \hbox (27.33382pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / www . th-[]nuernberg . de / fileadmin / global / Gelenkte _ Doks / Fak / SW / SW _ 0600 _
  []
 
 
-Overfull \hbox (54.02779pt too wide) in paragraph at lines 158--173
+Overfull \hbox (54.02779pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / www . ghost-[]writing . net / wissenschaftliche-[]arbeit-[]auf-[]englisch-[]verfassen/$[][] 
  []
 
 
-Overfull \hbox (45.3543pt too wide) in paragraph at lines 158--173
+Overfull \hbox (45.3543pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / www . youtube . com / watch ? v = rI _ y2GAlQFM & t = 1135s & ab _ channel = TheCodingTrain$[][] 
  []
 
 
-Overfull \hbox (58.20128pt too wide) in paragraph at lines 158--173
+Overfull \hbox (58.20128pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / users . informatik . haw-[]hamburg . de / ~abo781 / abschlussarbeiten / ba _ westfalen .
  []
 
 
-Overfull \hbox (45.8543pt too wide) in paragraph at lines 158--173
+Overfull \hbox (45.8543pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / users . informatik . haw-[]hamburg . de / ~abo781 / abschlussarbeiten / ba _ dzaebel .
  []
 
 
-Overfull \hbox (27.33382pt too wide) in paragraph at lines 158--173
+Overfull \hbox (27.33382pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 http : / / people . csail . mit . edu / celiu / Patch-[]based % 20Texture % 20Synthesis / Index .
  []
 
 
-Overfull \hbox (58.20128pt too wide) in paragraph at lines 158--173
+Overfull \hbox (58.20128pt too wide) in paragraph at lines 162--178
 [][]$\T1/cmtt/m/n/12 https : / / www2 . eecs . berkeley . edu / Research / Projects / CS / vision / papers / efros-[]iccv99 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--173
+Underfull \hbox (badness 10000) in paragraph at lines 162--178
 
  []
 
@@ -584,16 +589,16 @@ Package rerunfilecheck Info: File `Wave-function-collapse.out' has not changed.
 Here is how much of TeX's memory you used:
  14477 strings out of 474971
  236224 string characters out of 5780120
- 689189 words of memory out of 5000000
+ 690189 words of memory out of 5000000
  35741 multiletter control sequences out of 15000+600000
  508596 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,6n,79p,409b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (10 pages, 105487 bytes).
+Output written on Wave-function-collapse.pdf (10 pages, 105853 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+ 192 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
  28 named destinations out of 1000 (max. 500000)
  129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

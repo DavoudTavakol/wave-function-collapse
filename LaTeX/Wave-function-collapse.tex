@@ -90,6 +90,10 @@ Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleic
 Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.
 Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
+
+%TODO PDF von {[8]} lesen und in diesem abschnitt einarbeiten!
+
+
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
 Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
 {[1]}
@@ -115,8 +119,8 @@ Die Aufgabe von Algorithmen zum Lösen von CSP's \textit{(solver)} ist es einen 
 Für solche Probleme finden sich oft bei der Künstlichen Intelligenz und aus dem Operations Research. {[5]}
 Im Fall von WFC sind die Objekte, denen die Variablen zugeteilt sind, die einzelnen Bereiche im Output-Image.
 Jeder diese Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
-Immer, wenn einem Bereich ein wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst.
-Der Prozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
+Immer, wenn einem Bereich ein wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst \textit{(Propagation)}.
+Der Gesamtprozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
 nennt sich Wave-Function-Collapse. {[6]}
 Während dem Prozess einen gültigen State für das CSP zu finden, dann gibt es immer Situationen in dem es mehrere gültige Optionen für eine Variable gibt.
 Wenn so eine Situation auftritt, dann haben verschiedene Solver verschiedene Ansätze.
@@ -134,10 +138,10 @@ Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da keine unvorher
 Viele PCG Methoden Garantieren häufig Ergebnisse, wobei die Kosten für diese Garantie in Form einer unvorhersehbaren Gesamtlaufzeit einhergeht.
 Diese Backtracking Löser liefern bei ihren Aufgaben für die Lösung Ihrer CSP's oft gute Leistungen, wobei diese Ergebnisse in Theorie aber nur schwer zu charakterisieren sind.
 Eine "schnelle" Methode von Horswill und Foged [7] um eine spielbares Leveldesign zu generieren ist der {(AC3)} Algorithmus.
-Dieser Algorithmus basierend auf Backtrackingsearch mit Constraint Propagation %Propagation noch erklären?
-stellt zwar geringe Anforderungen an Prozessor- und Speicherressourcen, allerdings wird erwartet, das er von Programmierern verwendet werden die sich wenigstens mäßig mit Suchalgorithmen und Design auskennen.
+Dieser Algorithmus basierend auf Backtrackingsearch mit Constraint Propagation stellt zwar geringe Anforderungen an Prozessor- und Speicherressourcen,
+allerdings wird erwartet, dass er von Programmierern verwendet werden die sich wenigstens mäßig mit Suchalgorithmen und Design auskennen.
 Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
-Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit, sondern auch die live Generierung des Outputs selbst.
+Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit, sondern auch die live Generierung des Outputs selbst. {[1]}
 
 %Erklärung warum WFC overlappig so gut aussieht
 Viele PCG's Methoden variieren in ihrer Laufzeit bei der Generierung ihres Outputs.
@@ -162,6 +166,7 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 {[5]} \url{https://en.wikipedia.org/wiki/Constraint_satisfaction_problem}\\
 {[6]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 {[7]} \url{https://ojs.aaai.org/index.php/AIIDE/article/view/12511/12364}\\
+{[8]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
