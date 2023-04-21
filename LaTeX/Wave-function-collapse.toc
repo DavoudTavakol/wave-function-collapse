@@ -4,8 +4,8 @@
 \contentsline {chapter}{\numberline {3}Einleitung}{4}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Hintergrund}{5}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Textursynthesen im Vergleich}{5}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Constraint-Satisfaction-Problem}{5}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Wave-Function-Collapse in Game Development}{6}{section.4.3}%
+\contentsline {section}{\numberline {4.2}Constraint-Satisfaction-Problem}{6}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Wave-Function-Collapse in Game Development}{7}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Begriffserklärung}{8}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Theorie}{8}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Stand der Forschung}{8}{chapter.7}%

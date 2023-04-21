@@ -86,14 +86,36 @@ In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithm
 
 Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
-Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
+Nach D.Gomathi und Rajvi Shah {([8], S.1)}, kann die Textursynthese wie folgt definiert werden.\\\\
+Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu generieren die, "wenn sie von einem menschlichen Beobachter wahrgenommen wird,
+durch denselben zugrundeliegenden Prozess erzeugt wird."
+Das Ergebnis muss der Texturprobe ähnlich sein aber dennoch in der Wahrnehmung genügend Variation enthalten.
+So eine Synthese ist nicht möglich, wenn man die Eingabetextur einfach mehrfach kachelt.
+Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abb. 4.1)}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{texture-blocky.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{texture-correct.JPG}}%
+    \caption{(a) Blockartige Textur, (b) Textursynthese}%
+\end{figure}
+
+\noindent Dadurch ergeben sich folgende Metriken die erfüllt werden müssen.
+
+\begin{itemize}
+    \item Wenn Texturprobe gegeben, generiere eine neue Textur, die der Probe gleicht.
+    \item Die neue Textur kann eine beliebige Größe haben die vom Benutzer festgelegt wird.
+    \item Es sollen keine sichtbaren Übergänge, Artefakte oder fehlerhafte Kanten sichtbar sein.
+    \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([8], S.2)}
+\end{itemize}
+
+%TODO PDF von {[8] Punkt IV} lesen und in diesem abschnitt einarbeiten und rest umschreiben!
+
+\noindent Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
 Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.
 Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
-
-%TODO PDF von {[8]} lesen und in diesem abschnitt einarbeiten!
-
-
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
 Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
 {[1]}
