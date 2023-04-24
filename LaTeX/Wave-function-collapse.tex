@@ -41,7 +41,7 @@
 {Bachelorarbeit}\\
 {\vspace{10mm}}
 {\small Wave-Function-Collapse}\\
-{\small Funktionalität und Anwendungsfälle des WFC-Algorithmus}\\
+{\small Funktionsweise und Anwendungsfälle}\\
 {\small TH-Nürnberg Georg-Simon-Ohm}\\
 }
 % Setze Author und Datum
@@ -61,8 +61,6 @@ zum schluss..
 % Automatisches Inhaltsverzeichniss
 \tableofcontents
 
-{\let\clearpage\relax\chapter{Abbildungsverzeichnis}}
-
 {\let\clearpage\relax\chapter{Abkürzungsverzeichnis}}
 
 WFC\dotfill{Wave-Function-Collapse}\\
@@ -79,10 +77,7 @@ Der logische Vorteil von solchen Tools ist es, das diese in kürzester Zeit qual
 um die Ergebnisse für ihren gebrauch anzupassen.
 In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Funktionsweise und Anwendungsfälle fokussieren.
 
-
-\chapter{Hintergrund}
-
-\section{Textursynthesen im Vergleich}
+\chapter{Textursynthesen im Vergleich}
 
 Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
@@ -91,7 +86,7 @@ Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu gener
 durch denselben zugrundeliegenden Prozess erzeugt wird."
 Das Ergebnis muss der Texturprobe ähnlich sein aber dennoch in der Wahrnehmung genügend Variation enthalten.
 So eine Synthese ist nicht möglich, wenn man die Eingabetextur einfach mehrfach kachelt.
-Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abb. 4.1)}
+Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abb. 3.1)}
 
 \begin{figure}[H]
     \centering
@@ -110,7 +105,34 @@ Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind
     \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([8], S.2)}
 \end{itemize}
 
-%TODO PDF von {[8] Punkt IV} lesen und in diesem abschnitt einarbeiten und rest umschreiben!
+\noindent Im Folgenden werde ich auf drei verschiedene Textursynthese verfahren eingehen da diese sich fundamental voneinander unterscheiden.
+
+\section{Pixel basierende Methoden}
+
+Bei dieser Methode werden neue Texturen Pixel für Pixel generiert.
+Jeder neue Pixelwert wird von seinen lokalen Nachbarn festgelegt.
+Dieser verfahren verwenden meistens Markow-Netzwerke \textit{(Markov-Random-Fields)} die relativ gute Resultate liefern mit wenig Rechenlast.
+Markov-Random-Fields Methoden beurteilen jeden Pixel nach einer kleinen Menge von Nachbarn.
+Voraussetzung hierfür ist, dass das Input-Image stationär und lokal ist.
+Ein Image wird als stationär bezeichnet wenn, unter korrekter Fenstergröße,
+jeder betrachtete Bereich ähnlich zueinander aussehen.
+Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt werden kann.{[8]}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-nicht-stationärlokal.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-stationärlokal.JPG}}%
+    \caption{(a) Nicht stationär und lokal, (b) stationär und lokal}%
+\end{figure}
+
+\noindent Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abb. 3.2 (b))}.
+Dies ist nicht der Fall für normale Images wie wir bei Abb. 3.2 {(a)} erkennen können.
+Zudem ist es möglich jeden Pixel in {(b)} allein durch seine benachbarten Pixel zu bestimmen.
+Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
+
+%TODO
+
 
 \noindent Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
 Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.

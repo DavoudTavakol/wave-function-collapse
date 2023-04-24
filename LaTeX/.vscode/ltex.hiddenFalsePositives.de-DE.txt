@@ -1,2 +1,3 @@
 {"rule":"DE_DOUBLE_PUNCTUATION","sentence":"^\\QDas wird meistens dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden (z.B. 5 x 5 Fenster)..\\E$"}
 {"rule":"FRAGEZEICHEN_STATT_PUNKT","sentence":"^\\Qkann die Textursynthese wie folgt definiert werden.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QPixel basierende Methoden generieren neue Texturen in dem sie jeden Pixel nach einander\\E$"}
