@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1682361668 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1682361670
-  "Wave-function-collapse.aux" 1682361670 3690 4b29ccf0125dcff869e2df3fc25ac6a1 "pdflatex"
-  "Wave-function-collapse.out" 1682361670 2187 5957206407ecc162bb7b7b246f3b07da "pdflatex"
-  "Wave-function-collapse.tex" 1682361667 13995 9abbf3e21ad08c0852f671aa15253fa9 ""
-  "Wave-function-collapse.toc" 1682361670 1184 2249829fdb19ed80e12946bb36c8c99a "pdflatex"
-  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1682361667 13995 9abbf3e21ad08c0852f671aa15253fa9 ""
+["pdflatex"] 1682428902 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1682428905
+  "Wave-function-collapse.aux" 1682428904 3873 709bd6fff1e53ca4e88d0ec6e34949bf "pdflatex"
+  "Wave-function-collapse.out" 1682428904 2187 5957206407ecc162bb7b7b246f3b07da "pdflatex"
+  "Wave-function-collapse.tex" 1682428899 14510 31b75661d47ecf654163e0567a7f0ca0 ""
+  "Wave-function-collapse.toc" 1682428904 1191 79f0206cc2719bee7fa90c7c9096bb6f "pdflatex"
+  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1682428899 14510 31b75661d47ecf654163e0567a7f0ca0 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1668252256 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1668251688 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1668252680 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -122,10 +122,12 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1668257525 4645761 4123604570e0c45243886bbbed7ce94b ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1668257709 3063419 6217aca0530bf94e5cd6663d0df9606f ""
   "c:/texlive/2022/texmf.cnf" 1668257498 713 e69b156964470283e0530f5060668171 ""
-  "images//Textur-nicht-stationärlokal.JPG" 1682360464 14987 b1e346b4983babc8ca0b546f033a7fcb ""
-  "images//Textur-stationärlokal.JPG" 1682360494 17441 088938b0664af9cec301af6297f74ba6 ""
+  "images//Textur-nicht-stationärlokal-2.JPG" 1682425911 136719 91987f675e289f4e7021c0c2e66d7e22 ""
+  "images//Textur-stationärlokal-2.JPG" 1682425445 121513 6df302bc5a7e3f5e948136afb092ca5e ""
   "images//texture-blocky.JPG" 1682096717 31140 463073dc4bc2d5a7bb72f3f2850dd4a0 ""
   "images//texture-correct.JPG" 1682096757 30376 3ea459198d447f69d323604a8a002f25 ""
+  "images/Wall-sample.JPG" 1682428714 108457 f11464aef8906f008f1282c4632f47eb ""
+  "images/synthezising-pixel.JPG" 1682428450 55274 e3e281d637d0cfcb55745020ea43ac01 ""
   (generated)
   "Wave-function-collapse.aux"
   "Wave-function-collapse.log"

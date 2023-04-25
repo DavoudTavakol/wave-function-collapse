@@ -120,9 +120,9 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-nicht-stationärlokal.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-nicht-stationärlokal-2.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-stationärlokal.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-stationärlokal-2.JPG}}%
     \caption{(a) Nicht stationär und lokal, (b) stationär und lokal}%
 \end{figure}
 
@@ -130,6 +130,16 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
 Dies ist nicht der Fall für normale Images wie wir bei Abb. 3.2 {(a)} erkennen können.
 Zudem ist es möglich jeden Pixel in {(b)} allein durch seine benachbarten Pixel zu bestimmen.
 Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
+
+\noindent Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros und T. Leung: {[9]}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/synthezising-pixel.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/Wall-sample.JPG}}%
+    \caption{(a) Pixelsynthese, (b) Sampling des Input-Images}%
+\end{figure}
 
 %TODO
 
@@ -211,6 +221,7 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 {[6]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 {[7]} \url{https://ojs.aaai.org/index.php/AIIDE/article/view/12511/12364}\\
 {[8]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
+{[9]} \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
