@@ -1,3 +1,4 @@
 Textursynthese
 constraints
 Texturprobe
+Sampling
