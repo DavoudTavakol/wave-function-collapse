@@ -143,10 +143,12 @@ Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
 
 
 \begin{itemize}
-    \item Wenn Texturprobe gegeben, generiere eine neue Textur, die der Probe gleicht.
-    \item Die neue Textur kann eine beliebige Größe haben die vom Benutzer festgelegt wird.
-    \item Es sollen keine sichtbaren Übergänge, Artefakte oder fehlerhafte Kanten sichtbar sein.
-    \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([8], S.4)}
+    \item Zuerst wird vom Input-Image eine Teiltextur einer bestimmten Größe {(z.B. 5 x 5 Pixel Fenster)} ausgewählt. Von diesem Feld aus werden Spiralförmig neue Pixel generiert.
+    \item Für jeden Pixel der betrachtet wird, wird ein Fenster einer selbst bestimmten Größe zentral über das Pixel gelegt.
+    Die Größe des Fensters muss nach Größe der einzelnen Elemente der Textur gewählt werden.
+    \item Mit dieser Gruppe von Pixeln {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht.
+    \item Danach wird zufällig von einer dieser Kandidaten ausgewählt und der betrachtete Pixel im Output wird aus diesem Kandidaten kopiert.
+    \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden.{([8], S.4)}
 \end{itemize}
 
 
