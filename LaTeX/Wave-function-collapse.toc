@@ -3,14 +3,15 @@
 \contentsline {chapter}{\numberline {2}Einleitung}{4}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Textursynthesen im Vergleich}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Pixel basierende Methoden}{6}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Constraint-Satisfaction-Problem}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Wave-Function-Collapse in Game Development}{9}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Begriffserklärung}{10}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Theorie}{10}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Stand der Forschung}{10}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Ergebnisse}{10}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Diskussion der Ergebnisse}{10}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Fazit}{10}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Literaturverzeichnis}{10}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Anhang}{11}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Eidesstattliche Erklärung}{11}{chapter.12}%
+\contentsline {section}{\numberline {3.2}Pyramid basierende Textur Analyse / Synthese}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Constraint-Satisfaction-Problem}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Wave-Function-Collapse in Game Development}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Begriffserklärung}{12}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Theorie}{12}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Stand der Forschung}{12}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Ergebnisse}{12}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Diskussion der Ergebnisse}{12}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Fazit}{12}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Literaturverzeichnis}{12}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Anhang}{13}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Eidesstattliche Erklärung}{13}{chapter.12}%

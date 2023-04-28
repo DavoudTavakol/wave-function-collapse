@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1682430252 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1682430254
-  "Wave-function-collapse.aux" 1682430254 3873 d8e2ecaa69841a64332ef2e4e17834f4 "pdflatex"
-  "Wave-function-collapse.out" 1682430254 2187 5957206407ecc162bb7b7b246f3b07da "pdflatex"
-  "Wave-function-collapse.tex" 1682430249 15385 004900f6aa118ac4c9e13618e34b733c ""
-  "Wave-function-collapse.toc" 1682430254 1191 45116c9cfdc006b344285d238d417847 "pdflatex"
-  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1682430249 15385 004900f6aa118ac4c9e13618e34b733c ""
+["pdflatex"] 1682682027 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1682682030
+  "Wave-function-collapse.aux" 1682682029 4371 dd6aa2842892248c611f73450796d675 "pdflatex"
+  "Wave-function-collapse.out" 1682682029 2477 693e4737d4573570976ee0ade3962743 "pdflatex"
+  "Wave-function-collapse.tex" 1682682026 16877 871a4b2e642ae69e43e8a39012073a1c ""
+  "Wave-function-collapse.toc" 1682682029 1297 5db9078e3c03af708b8c90a8d097969e "pdflatex"
+  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1682682026 16877 871a4b2e642ae69e43e8a39012073a1c ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1668252256 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1668251688 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1668252680 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -127,6 +127,10 @@
   "images//texture-blocky.JPG" 1682096717 31140 463073dc4bc2d5a7bb72f3f2850dd4a0 ""
   "images//texture-correct.JPG" 1682096757 30376 3ea459198d447f69d323604a8a002f25 ""
   "images/Wall-sample.JPG" 1682428714 108457 f11464aef8906f008f1282c4632f47eb ""
+  "images/pyramid-input.JPG" 1682678409 11583 c621be5b8d629feec82243f46b19a979 ""
+  "images/pyramid-matching.JPG" 1682681147 40782 e08a0bb147d9a41c8fc2f090403f1dd8 ""
+  "images/pyramid-noise.JPG" 1682678394 20722 9f179c8fc8e0dd6df0d9cd5911dc6101 ""
+  "images/pyramid.JPG" 1682678342 58495 7c662c064b5d8304f29753cde1a398df ""
   "images/synthezising-pixel.JPG" 1682428450 55274 e3e281d637d0cfcb55745020ea43ac01 ""
   (generated)
   "Wave-function-collapse.aux"

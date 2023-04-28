@@ -106,6 +106,7 @@ Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind
 \end{itemize}
 
 \noindent Im Folgenden werde ich auf drei verschiedene Textursynthese verfahren eingehen da diese sich fundamental voneinander unterscheiden.
+Es wird nicht in Detail auf alle verfahren eingegangen da dieser Abschnitt nur Hintergrundinformationen darlegen soll.
 
 \section{Pixel basierende Methoden}
 
@@ -151,6 +152,32 @@ Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
     \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden.{([8], S.4)}
 \end{itemize}
 
+\section{Pyramid basierende Textur Analyse / Synthese}
+
+Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {([8][10])}\\
+Zudem wird ein Bildrauschen, \textit{(noise-Image)} der in der regel uniform Weiß ist, verwendet.
+Das noise-Image wir dann mithilfe von Histogram-Matching so verändert, das es dem Input-Image ähnlich ist.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid.JPG}}%
+    \caption{(a) Bildpyramide}%
+\end{figure}
+
+\noindent Es gibt mehrere Arten von Pyramiden die verwendet werden können.
+Für unsere zwecken konzentrieren wir uns nur auf eine der Methoden.
+Die Steuerbaren Pyramide \textit{(Steerable-Pyramid)}.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-noise.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-input.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-matching.JPG}}%
+    \caption{(a) Pixelsynthese, (b) Sampling des Input-Images, (c) Sampling des Input-Images}%
+\end{figure}
 
 %TODO
 
@@ -233,6 +260,7 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 {[7]} \url{https://ojs.aaai.org/index.php/AIIDE/article/view/12511/12364}\\
 {[8]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
 {[9]} \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
+{[10]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
