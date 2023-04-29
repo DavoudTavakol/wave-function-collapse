@@ -2,3 +2,10 @@ Textursynthese
 constraints
 Texturprobe
 Sampling
+Pyramid-Methode
+Histogram-Matching
+Downsampling
+Markov-Random-Fields
+Wave-Function-Collapse
+Histogrammäqualisation
+Grauwertverteilung

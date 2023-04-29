@@ -157,7 +157,25 @@ Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
 Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {([8][10])}\\
 Zudem wird ein Bildrauschen, \textit{(noise-Image)} der in der regel uniform Weiß ist, verwendet.
-Das noise-Image wir dann mithilfe von Histogram-Matching so verändert, das es dem Input-Image ähnlich ist.
+Das Noise-Image wir dann mithilfe von Histogram-Matching so verändert, das es dem Input-Image ähnlich ist.\\\\
+Histogram-Matching ist die Generalisierung des Punktoperators, mehr spezifisch der Histogrammäqualisation.
+Bei der Histogrammäqualisation {(auch Histogrammausgleich, Histogrammeinebnung, Histogrammegalisierung oder Histogrammequalisierung genannt)}
+werden die Kontraste von Grauwertbildern derart verbessert, sodass sie über eine bloße Kontrastverstärkung hinausgeht.
+Dabei wird die Gleichverteilung mithilfe der Grauwertverteilung berechnet, damit der gesamte zur Verfügung stehende Wertebereich optimal ausgenutzt wird.{[11]}
+Bei dem Fall von der Pyramid-Methode nimmt der Algorithmus ein Input-Image und zwingt es über ein Paar von Nachschlagetabellen, ein bestimmtes Histogramm zu haben.
+Die beiden Nachschlagetabellen Tabellen sind:
+
+\begin{enumerate}
+    \item die kumulative Verteilungsfunktion \textit{(cumulative distribution function (CDF))} eines Bildes und
+    \item die inverse kumulative Verteilungsfunktion eines Bildes.
+  \end{enumerate}
+
+  \noindent Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet. Die inverse CDF ist eine Nachschlagetabelle,
+die von {[0, 1]} auf {[0, 256]} zurückführt.
+Sie wird {(mit linearer Interpolation)} neu abgetastet, sodass die Stichproben gleichmäßig
+auf dem Intervall {[0, 1]} verteilt sind.{([8][12])}
+
+%Genau erklären was hier passiert!
 
 \begin{figure}[H]
     \centering
@@ -261,6 +279,8 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 {[8]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
 {[9]} \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
 {[10]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
+{[11]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
+{[12]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
