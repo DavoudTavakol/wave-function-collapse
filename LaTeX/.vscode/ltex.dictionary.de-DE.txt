@@ -9,3 +9,5 @@ Markov-Random-Fields
 Wave-Function-Collapse
 Histogrammäqualisation
 Grauwertverteilung
+Patch-Based
+Pixel-Based

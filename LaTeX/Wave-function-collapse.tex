@@ -121,9 +121,9 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-nicht-stationärlokal-2.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{Textur-nicht-stationärlokal-2.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{Textur-stationärlokal-2.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{Textur-stationärlokal-2.JPG}}%
     \caption{(a) Nicht stationär und lokal, (b) stationär und lokal}%
 \end{figure}
 
@@ -136,9 +136,9 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/synthezising-pixel.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/synthezising-pixel.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/Wall-sample.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Wall-sample.JPG}}%
     \caption{(a) Pixelsynthese, (b) Sampling des Input-Images}%
 \end{figure}
 
@@ -194,14 +194,24 @@ Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht ha
     \caption{(a) Projektion der Bildpyramide, (b) Input-Image, (c) Teilband-Bilder vom Input-Image}%
 \end{figure}
 
-Obwohk die Pyramid-Methode ist im Detail viel komplizierter ist,
-werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständniss dieser Arbeit keine relevanz hat und nur eine weitere Synthesemethode darstellen soll.
+Obwohl die Pyramid-Methode ist im Detail viel komplizierter ist,
+werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständnis dieser Arbeit keine Relevanz hat und nur eine weitere Synthesemethode darstellen soll.
 
 \section{Patch basierende Textursynthese}
 
 Die Patch-Based Textursynthese ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
-Hier wird statt einem Pixelabgleich direkt ganze Felder \textit{(Patches)} verglichen und generiert.
+Hier werden statt Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert.
+Dadruch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
 
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Pixel-based.jpg}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Patch-based.jpg}}%
+    \caption{(a) Pixel-Based, (b) Patch-Based}%
+\end{figure}
+
+Ein Problem der Patch-Based Synthese im Vergleich zur Pixel-Based ist das hier die neuen Patches sich mit bereits vorhandenen Patches überschneiden. {([8])}
 
 
 Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
