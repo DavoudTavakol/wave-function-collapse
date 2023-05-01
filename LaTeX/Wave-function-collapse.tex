@@ -105,10 +105,10 @@ Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind
     \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([8], S.2)}
 \end{itemize}
 
-\noindent Im Folgenden werde ich auf drei verschiedene Textursynthese verfahren eingehen da diese sich fundamental voneinander unterscheiden.
+Im Folgenden werde ich auf drei verschiedene Textursynthese verfahren eingehen da diese sich fundamental voneinander unterscheiden.
 Es wird nicht in Detail auf alle verfahren eingegangen da dieser Abschnitt nur Hintergrundinformationen darlegen soll.
 
-\section{Pixel basierende Methoden}
+\section{Pixel basierende Textursynthese}
 
 Bei dieser Methode werden neue Texturen Pixel für Pixel generiert.
 Jeder neue Pixelwert wird von seinen lokalen Nachbarn festgelegt.
@@ -127,12 +127,12 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
     \caption{(a) Nicht stationär und lokal, (b) stationär und lokal}%
 \end{figure}
 
-\noindent Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abb. 3.2 (b))}.
+Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abb. 3.2 (b))}.
 Dies ist nicht der Fall für normale Images wie wir bei Abb. 3.2 {(a)} erkennen können.
 Zudem ist es möglich jeden Pixel in {(b)} allein durch seine benachbarten Pixel zu bestimmen.
 Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
 
-\noindent Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros und T. Leung: {[9]}
+Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros und T. Leung: {[9]}
 
 \begin{figure}[H]
     \centering
@@ -157,7 +157,14 @@ Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
 Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {([8][10])}\\
 Zudem wird ein Bildrauschen, \textit{(noise-Image)} der in der regel uniform Weiß ist, verwendet.
-Das Noise-Image wir dann mithilfe von Histogram-Matching so verändert, das es dem Input-Image ähnlich ist.\\\\
+Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid.JPG}}%
+    \caption{(a) Bildpyramide}%
+\end{figure}
+
 Histogram-Matching ist die Generalisierung des Punktoperators, mehr spezifisch der Histogrammäqualisation.
 Bei der Histogrammäqualisation {(auch Histogrammausgleich, Histogrammeinebnung, Histogrammegalisierung oder Histogrammequalisierung genannt)}
 werden die Kontraste von Grauwertbildern derart verbessert, sodass sie über eine bloße Kontrastverstärkung hinausgeht.
@@ -170,22 +177,12 @@ Die beiden Nachschlagetabellen Tabellen sind:
     \item die inverse kumulative Verteilungsfunktion eines Bildes.
   \end{enumerate}
 
-  \noindent Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet. Die inverse CDF ist eine Nachschlagetabelle,
-die von {[0, 1]} auf {[0, 256]} zurückführt.
-Sie wird {(mit linearer Interpolation)} neu abgetastet, sodass die Stichproben gleichmäßig
-auf dem Intervall {[0, 1]} verteilt sind.{([8][12])}
-
-%Genau erklären was hier passiert!
-
-\begin{figure}[H]
-    \centering
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid.JPG}}%
-    \caption{(a) Bildpyramide}%
-\end{figure}
-
-\noindent Es gibt mehrere Arten von Pyramiden die verwendet werden können.
-Für unsere zwecken konzentrieren wir uns nur auf eine der Methoden.
-Die Steuerbaren Pyramide \textit{(Steerable-Pyramid)}.
+Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet.
+Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zurückführt.
+Sie wird {(mit linearer Interpolation)} neu abgetastet,
+sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{([8][12])}\\
+Während der Algorithmus weiter Iteriert, beginnt das noise-Image dem Input-Image zu ähneln.
+Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
 
 \begin{figure}[H]
     \centering
@@ -194,13 +191,20 @@ Die Steuerbaren Pyramide \textit{(Steerable-Pyramid)}.
     \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-input.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-matching.JPG}}%
-    \caption{(a) Pixelsynthese, (b) Sampling des Input-Images, (c) Sampling des Input-Images}%
+    \caption{(a) Projektion der Bildpyramide, (b) Input-Image, (c) Teilband-Bilder vom Input-Image}%
 \end{figure}
 
-%TODO
+Obwohk die Pyramid-Methode ist im Detail viel komplizierter ist,
+werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständniss dieser Arbeit keine relevanz hat und nur eine weitere Synthesemethode darstellen soll.
+
+\section{Patch basierende Textursynthese}
+
+Die Patch-Based Textursynthese ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
+Hier wird statt einem Pixelabgleich direkt ganze Felder \textit{(Patches)} verglichen und generiert.
 
 
-\noindent Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
+
+Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
 Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.
 Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
