@@ -147,7 +147,7 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
     \item Zuerst wird vom Input-Image eine Teiltextur einer bestimmten Größe {(z.B. 5 x 5 Pixel Fenster)} ausgewählt. Von diesem Feld aus werden Spiralförmig neue Pixel generiert.
     \item Für jeden Pixel der betrachtet wird, wird ein Fenster einer selbst bestimmten Größe zentral über das Pixel gelegt.
     Die Größe des Fensters muss nach Größe der einzelnen Elemente der Textur gewählt werden.
-    \item Mit dieser Gruppe von Pixeln {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht.
+    \item Mit dieser Gruppe von Pixel {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht.
     \item Danach wird zufällig von einer dieser Kandidaten ausgewählt und der betrachtete Pixel im Output wird aus diesem Kandidaten kopiert.
     \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden.{([8], S.4)}
 \end{itemize}
@@ -156,7 +156,7 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
 Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {([8][10])}\\
-Zudem wird ein Bildrauschen, \textit{(noise-Image)} der in der regel uniform Weiß ist, verwendet.
+Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der in der regel uniform Weiß ist, verwendet.
 Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
 
 \begin{figure}[H]
@@ -181,7 +181,7 @@ Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Interva
 Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zurückführt.
 Sie wird {(mit linearer Interpolation)} neu abgetastet,
 sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{([8][12])}\\
-Während der Algorithmus weiter Iteriert, beginnt das noise-Image dem Input-Image zu ähneln.
+Während der Algorithmus weiter Iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
 Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
 
 \begin{figure}[H]
@@ -199,8 +199,9 @@ werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständnis d
 
 \section{Patch basierende Textursynthese}
 
-Die Patch-Based Textursynthese ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
-Hier werden statt Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert.
+Die Patch-Based Textursynthese \textit{(auch Quilten genannt)} ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
+Hier werden statt einzelne Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abb. 3.6)}.
+Auch hier werden die Patches mithilfe ihrer benachbarten Pixel bestimmt und ausgewertet.
 Dadruch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
 
 \begin{figure}[H]
@@ -211,7 +212,14 @@ Dadruch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
     \caption{(a) Pixel-Based, (b) Patch-Based}%
 \end{figure}
 
-Ein Problem der Patch-Based Synthese im Vergleich zur Pixel-Based ist das hier die neuen Patches sich mit bereits vorhandenen Patches überschneiden. {([8])}
+Ein Problem dieser Synthese im Vergleich zur Pixel-Based Synthese ist, das hier die neuen Patches mit bereits vorhandenen Patches überschneiden.
+Es gibt viele Methoden, um dieses Problem zu lösen.
+Eine davon ist es Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
+\textit{(Visual Masking)} verringert wird.
+Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse. {([8])}
+
+
+
 
 
 Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
