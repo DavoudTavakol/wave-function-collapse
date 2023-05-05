@@ -5,14 +5,15 @@
 \contentsline {section}{\numberline {3.1}Pixel basierende Textursynthese}{6}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Pyramid basierende Textur Analyse / Synthese}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Patch basierende Textursynthese}{9}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Constraint-Satisfaction-Problem}{12}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Wave-Function-Collapse in Game Development}{12}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Begriffserklärung}{14}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Theorie}{14}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Stand der Forschung}{14}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Ergebnisse}{14}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Diskussion der Ergebnisse}{14}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Fazit}{14}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Literaturverzeichnis}{14}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Anhang}{16}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Eidesstattliche Erklärung}{16}{chapter.12}%
+\contentsline {chapter}{\numberline {4}Wave-Function-Collapse im Vergleich}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Constraint-Satisfaction-Problem}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Wave-Function-Collapse in Game Development}{13}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Begriffserklärung}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Theorie}{14}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Stand der Forschung}{14}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ergebnisse}{14}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{14}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Fazit}{14}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{14}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Anhang}{16}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{16}{chapter.13}%

@@ -11,3 +11,4 @@ Histogrammäqualisation
 Grauwertverteilung
 Patch-Based
 Pixel-Based
+Textursynthesen

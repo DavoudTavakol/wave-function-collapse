@@ -155,7 +155,7 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
 \section{Pyramid basierende Textur Analyse / Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
-Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {([8][10])}\\
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {[8][10]}\\
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der in der regel uniform Weiß ist, verwendet.
 Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
 
@@ -180,7 +180,7 @@ Die beiden Nachschlagetabellen Tabellen sind:
 Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet.
 Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zurückführt.
 Sie wird {(mit linearer Interpolation)} neu abgetastet,
-sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{([8][12])}\\
+sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[8][12]}\\
 Während der Algorithmus weiter Iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
 Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
 
@@ -249,14 +249,14 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
     \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt. Nach Alexei A. Efros and Thomas K. Leung [9]}%
 \end{figure}
 
+\chapter{Wave-Function-Collapse im Vergleich}
 
-Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
-Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.
+Wichtig bei allen Textursynthesen ist, das die Muster des Output-Images immer lokal ähnlich oder gleich dem des Input-Images sind.
+Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimages, Patches oder Pixel extrahiert werden {(z.B. 5 x 5 Pixel Fenster)}.
 Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
-Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
-{[1]}
+Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können. {[1]}
 Der WFC von Gumin ist lose an der Quantenmechanik angelehnt.
 Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / Pixelwert vorkommen kann bevor sie final festgelegt werden.
 Dieser Zustand nennt sich \textit{Superposition}.
@@ -267,7 +267,7 @@ Gumin hat sich von der Arbeit von Paul Merell Inspirieren lassen, obwohl dieser 
 Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
 Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden.
 Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merell nicht möglich da es sich um eine diskrete Synthese handelt.
-Jedes lokale Muster ist immer im Input wiederzufinden. {[1]}{[3]}{[4]}
+Jedes lokale Muster ist immer im Input wiederzufinden. {[1][3][4]}
 
 \section{Constraint-Satisfaction-Problem}
 
@@ -292,7 +292,7 @@ Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits 
 
 \section{Wave-Function-Collapse in Game Development}
 
-In Abschnitt 4.1 wurde bereits auf mögliche Vorteile einer pixelgenauen Textursynthese hingewiesen.
+In Abschnitt 4.0 wurde bereits auf mögliche Vorteile einer pixelgenauen Textursynthese hingewiesen.
 Der große Vorteil einer solchen Synthese ist, das dadurch der generierte Content auch Interaktiv genutzt werden kann, da wir vollen Kontrolle über die lokalen Muster des Outputs haben.
 Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da keine unvorhersehbaren Artefakte entstehen können.
 Viele PCG Methoden Garantieren häufig Ergebnisse, wobei die Kosten für diese Garantie in Form einer unvorhersehbaren Gesamtlaufzeit einhergeht.
