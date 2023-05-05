@@ -212,14 +212,42 @@ Dadruch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
     \caption{(a) Pixel-Based, (b) Patch-Based}%
 \end{figure}
 
-Ein Problem dieser Synthese im Vergleich zur Pixel-Based Synthese ist, das hier die neuen Patches mit bereits vorhandenen Patches überschneiden.
+Ein Problem dieser Synthese im Vergleich zur Pixel-Based Synthese ist, das sich hier die neuen Patches mit bereits vorhandenen Patches überschneiden.
 Es gibt viele Methoden, um dieses Problem zu lösen.
 Eine davon ist es Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
-\textit{(Visual Masking)} verringert wird.
-Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse. {([8])}
+\textit{(Visual Masking)} reduziert werden.
+Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse.{[8]}
 
+Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
 
+\begin{enumerate}
+    \item Generierung des ersten Patches in der oberen-linken Ecke des Output-Images. Der Patch wird zufällig aus dem Input-Image ausgewählt.
+    \item Von links-nach-rechts und von oben-nach-unten werden folgende Aufgaben im Output-Image ausgeführt.
+    \begin{itemize}
+        \item Auswahl des nächsten hinzuzufügenden Feldes aus dem Input-Image aus den am besten passenden Patches.
+        \item Berechnen der Fehlerfläche zwischen diesem neuen Patch und seinem Überlappungsbereich mit bereits
+        verarbeiteten Patches.
+        \item Berechnen des Pfades mit den geringsten Kosten durch die Fehlerfläche, um die Patchgrenze zu bestimmen, und fügen Sie dann den neuen Patch zum Bild hinzu.
+    \end{itemize}
+\end{enumerate}
 
+%Images basteln
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\linewidth]{images/Random-blocks.jpg}%
+    \qquad
+    \includegraphics[width=0.25\linewidth]{images/overlap-blocks.jpg}%
+    \qquad
+    \includegraphics[width=0.25\linewidth]{images/minimum-boundary-blocks.jpg}%
+    \qquad
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-random-block.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-overlap-blocks.jpg}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-minimum-boundary-blocks.jpg}}%
+    \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt}%
+\end{figure}
 
 
 Wichtig hierbei ist, dass das Muster des Output-Images lokal ähnlich oder gleich ist.
