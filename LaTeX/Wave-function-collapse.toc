@@ -6,8 +6,8 @@
 \contentsline {section}{\numberline {3.2}Pyramid basierende Textur Analyse / Synthese}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Patch basierende Textursynthese}{9}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Wave-Function-Collapse im Vergleich}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Constraint-Satisfaction-Problem}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Wave-Function-Collapse in Game Development}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.1}Constraint-Satisfaction-Problem}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Wave-Function-Collapse in Game Development}{14}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Begriffserklärung}{15}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Theorie}{15}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Stand der Forschung}{15}{chapter.7}%

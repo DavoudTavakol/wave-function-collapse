@@ -857,6 +857,11 @@ INPUT ./images/texture-minimum-boundary-blocks.jpg
 INPUT images/texture-minimum-boundary-blocks.jpg
 INPUT ./images/texture-minimum-boundary-blocks.jpg
 INPUT ./images/texture-minimum-boundary-blocks.jpg
+INPUT ./images/wfc-pattern.png
+INPUT ./images/wfc-pattern.png
+INPUT images/wfc-pattern.png
+INPUT ./images/wfc-pattern.png
+INPUT ./images/wfc-pattern.png
 INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
