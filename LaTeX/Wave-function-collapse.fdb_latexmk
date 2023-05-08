@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1683367608 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1683367610
-  "Wave-function-collapse.aux" 1683367610 5323 506a5b779d134b4e9e93f8bd102c829b "pdflatex"
-  "Wave-function-collapse.out" 1683367610 2949 837807f565b7a212837b9aebf39ef516 "pdflatex"
-  "Wave-function-collapse.tex" 1683367607 22708 9e0f9a7b1dc50467b3346e9dc1e8373e ""
-  "Wave-function-collapse.toc" 1683367610 1488 ab125022d36477e3c19e23148f12c19e "pdflatex"
-  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1683367607 22708 9e0f9a7b1dc50467b3346e9dc1e8373e ""
+["pdflatex"] 1683559085 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1683559088
+  "Wave-function-collapse.aux" 1683559088 6204 6c4eed191dca7a44ede5c6c6a337548b "pdflatex"
+  "Wave-function-collapse.out" 1683559088 3386 b9054d1f04ea11c97c75174fbbc401f0 "pdflatex"
+  "Wave-function-collapse.tex" 1683559084 25349 c3abe31bf375d9f5c47fa3fb898af524 ""
+  "Wave-function-collapse.toc" 1683559088 1691 c7bc5c9941c31f70e25c7f2f6696111d "pdflatex"
+  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1683559084 25349 c3abe31bf375d9f5c47fa3fb898af524 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1668252256 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1668251688 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1668252680 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -136,6 +136,9 @@
   "images/pyramid-matching.JPG" 1682681147 40782 e08a0bb147d9a41c8fc2f090403f1dd8 ""
   "images/pyramid-noise.JPG" 1682678394 20722 9f179c8fc8e0dd6df0d9cd5911dc6101 ""
   "images/pyramid.JPG" 1682678342 58495 7c662c064b5d8304f29753cde1a398df ""
+  "images/sudoku-observed-heurisitk.png" 1683558958 89710 dd1f5432cc83bfcb1eb6229fe19ccce6 ""
+  "images/sudoku-observed.png" 1683556005 83800 67c2a8db6277a9c755d4a7ac1c8ecdb7 ""
+  "images/sudoku-superposition.png" 1683554941 81399 34519526db91e078398b739f02e725d5 ""
   "images/synthezising-pixel.JPG" 1682428450 55274 e3e281d637d0cfcb55745020ea43ac01 ""
   "images/texture-minimum-boundary-blocks.jpg" 1683283702 29940 c29f65a1721a616f269415c7f60b3f24 ""
   "images/texture-overlap-blocks.jpg" 1683283672 30107 0afd696bc4dfd8a5af1377c3e3f20378 ""

@@ -5,15 +5,17 @@
 \contentsline {section}{\numberline {3.1}Pixel basierende Textursynthese}{6}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Pyramid basierende Textur Analyse / Synthese}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Patch basierende Textursynthese}{9}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Wave-Function-Collapse im Vergleich}{12}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Wave-Function-Collapse}{12}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Constraint-Satisfaction-Problem}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Wave-Function-Collapse in Game Development}{14}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Begriffserklärung}{15}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Theorie}{15}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Stand der Forschung}{15}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Ergebnisse}{15}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{15}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Fazit}{15}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{15}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Anhang}{17}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{17}{chapter.13}%
+\contentsline {subsection}{\numberline {4.1.1}Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}{13}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}CSP-Beispiel an Sudoku}{14}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Wave-Function-Collapse in Game Development}{17}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Begriffserklärung}{18}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Theorie}{18}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Stand der Forschung}{18}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ergebnisse}{18}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{18}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Fazit}{18}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{18}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Anhang}{20}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{20}{chapter.13}%

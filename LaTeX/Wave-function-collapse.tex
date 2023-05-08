@@ -249,7 +249,7 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
     \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt. Nach Alexei A. Efros and Thomas K. Leung [9]}%
 \end{figure}
 
-\chapter{Wave-Function-Collapse im Vergleich}
+\chapter{Wave-Function-Collapse}
 
 Wichtig bei allen Textursynthesen ist,
 das die Muster des Output-Images immer lokal ähnlich oder gleich dem des Input-Images sind.
@@ -272,8 +272,6 @@ Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abb. 4.1)}. {[1][3
     \caption{(a) WFC generiertes Muster}%
 \end{figure}
 
-%TODO Beispielt simpler nur mit tiles. (oder vielleicht später gleich tile-model vs overlapping model erklären. Siehe https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
-
 \section{Constraint-Satisfaction-Problem}
 
 Der WFC von Gumin ist lose an der Quantenmechanik angelehnt.
@@ -289,7 +287,8 @@ dann wird die Entropie aller anderen Zellen angepasst. {[2]}
 Da der WFC Algorithmus genau auf diese Art und Weise seine Synthese durchführt,
 dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.\\
 
-Was ist ein Constraint-Satisfaction-Problem {(CSP)}?
+\subsection{Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}
+
 Grundsätzlich beschreiben CSP's Gruppen von Objekten denen Variablen zugeteilt sind.
 Diesen Variablen sind Regeln, sogenannte \textit{(constraints)}, auferlegt die erfüllt werden müssen.
 Jeder dieser Variablen hat zu Beginn eine Superposition und kann damit jeden wert enthalten.
@@ -306,7 +305,54 @@ Einige Algorithmen wähle zufällig eine der möglichen Werte von momentan zulä
 Bei so einem Ansatz kann es sein das der Algorithmus nicht auf einen Zustand kommen kann, in dem alle constraints erfüllt werden können.
 In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)} bei dem der Algorithmus zu seinem letzten Ergebnis zurückfällt und ein anderen Wert für die Variable setzt, um aus dem
 ungültigen Zustand zu kommen.
-Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. {[1]} 
+Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. {[1]}
+
+\subsection{CSP-Beispiel an Sudoku}
+
+Es gibt viele verschiedene CSP Probleme.
+Eines der bekanntesten Probleme, welchen viele Menschen schon fast täglich selbst lösen, ist Sudoku.
+Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumins WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.\\\\
+Wenn wir ein Sudoku Feld ohne initiale Zahlen betrachten \textit{(unobserved)}, dann kann in jedem einzelnen Feld theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.9\linewidth]{images/sudoku-superposition.png}}%
+    \caption{(a) Sudoku Feld unbeobachtet in einer Superposition}%
+\end{figure}
+
+Die Regeln \textit{(constraints)} dieses CPS sind wie folgt:
+\begin{enumerate}
+    \item Jede Zeile, Spalte und jedes Quadrat {(je 9 Felder)} muss mit den Zahlen 1-9 ausgefüllt werden.
+    \item Keine Zahl innerhalb der Zeile, Spalte oder des Quadrats darf sich wiederholen.
+\end{enumerate}
+
+Der nächste Schritt ist die \textit{Observation}, sprich das erste Feld mit seinen vielen Eigenwerten einen festen wert Zuordnen.
+Dadurch treten für die benachbarten die Constraints ein, die bestimmen welche Werte sie nun noch einnehmen können.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.9\linewidth]{images/sudoku-observed.png}}%
+    \caption{(a) Sudoku Feld mit dem ersten Input}%
+\end{figure}
+
+Nach dem ersten Input reduziert sich die Entropie aller Zellen in jeder betroffenen Zeile,
+Spalte und Quadrat bzw. ihre Anzahl an möglichen Eigenwerten reduziert sich.
+Als nächsten Schritt könnte man jetzt eine beliebige Zelle auswählen und diese auf einen Zufälligen möglichen Eigenwert setzten.
+Allerdings besteht so immer die Möglichkeit, dass der Prozess an einen Punkt kommt, an dem kein gültiger Zustand erreicht werden kann.
+Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)} können wir uns Heuristiken zu nutzen machen,
+um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
+In diesem Fall können wir uns eine Zelle aussuchen die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
+Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert setzten, der später zu einem ungültigen Endzustand führt.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.9\linewidth]{images/sudoku-observed-heurisitk.png}}%
+    \caption{(a) Sudoku Feld mit mehreren festgelegten Zellen. Blau markierte Zellen sind mögliche Kandidaten für nächsten Zyklus}%
+\end{figure}
+
+Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
+
+% TODO: Nächster Abschnitt. WFC overlapping / tile erklären wie Sudoku?
 
 \section{Wave-Function-Collapse in Game Development}
 
