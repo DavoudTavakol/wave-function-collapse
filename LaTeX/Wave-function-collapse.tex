@@ -260,10 +260,10 @@ Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokal
 Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können. {[1]}
 Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der Patch-Based Methode am ähnlichsten.\\
 
-Gumin hat sich von der Arbeit von Paul Merell Inspirieren lassen, obwohl dieser sich Hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
+Gumin hat sich von der Arbeit von Paul Merrell Inspirieren lassen, obwohl dieser sich Hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
 Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
 Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden können.
-Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merell nicht möglich da es sich um eine diskrete Synthese handelt.
+Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merrell nicht möglich da es sich um eine diskrete Synthese handelt.
 Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abb. 4.1)}. {[1][3][4]}
 
 \begin{figure}[H]
@@ -352,10 +352,44 @@ Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert s
 
 Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
 
-% TODO: Nächster Abschnitt. WFC overlapping / tile erklären wie Sudoku?
+% TODO: Nächster Abschnitt. WFC overlapping / tile und vergleich zu paul merrells modell synthese. Siehe video https://www.youtube.com/watch?v=zIRTOgfsjl0&t=1s&ab_channel=DVGen
 
-\section{Wave-Function-Collapse in Game Development}
+\section{WFC und die Model Synthese}
 
+Wir hatten bereits erwähnt das Gumins Wave-Function-Collapse Algorithmus von Paul Merrell's diskreter Model Synthese inspiriert ist.
+Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch-Based Synthese inspiriert.
+Textursynthese funktionierte im Allgemeinen relativ gut in vielen Bereichen.
+Allerdings taten sich einige Synthesen schwer damit, mit festen Strukturen als Input zu arbeiten, als auch Objekte im 3D-Raum zu generieren.
+Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.1\linewidth]{images/input-shape.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Efros-Leung-1999.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Kwatra-2005.JPG}}%
+    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005}%
+\end{figure}
+
+In Abbildung 4.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.
+Paul Merrell erkannte das viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
+Deswegen kam er auf die Idee, anstatt mit einzelnen Pixel, lieber mit ganzen Komponenten zu Arbeiten.
+Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.1\linewidth]{images/Beispiel-textur.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Efros-Leung-textur.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Paul-merrells-Model-synthese.JPG}}%
+    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung, (c) Paul Merrell Model Synthese}%
+\end{figure}
+
+%beispiel textur aufteilung. overlapping und tiled vorteile nachteile etc.
+
+% Mal schauen was ich mit diesem teil mache!
 In Abschnitt 4.0 wurde bereits auf mögliche Vorteile einer pixelgenauen Textursynthese hingewiesen.
 Der große Vorteil einer solchen Synthese ist, das dadurch der generierte Content auch Interaktiv genutzt werden kann, da wir vollen Kontrolle über die lokalen Muster des Outputs haben.
 Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da keine unvorhersehbaren Artefakte entstehen können.
@@ -386,12 +420,41 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 {[1]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
 {[2]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 {[3]} \url{https://paulmerrell.org/wp-content/uploads/2021/06/thesis.pdf}\\
+
+@article{DBLP:journals/tvcg/MerrellM11,
+  author       = {Paul Merrell and
+                  Dinesh Manocha},
+  title        = {Model Synthesis: {A} General Procedural Modeling Algorithm},
+  journal      = {{IEEE} Trans. Vis. Comput. Graph.},
+  volume       = {17},
+  number       = {6},
+  pages        = {715--728},
+  year         = {2011},
+  url          = {https://doi.org/10.1109/TVCG.2010.112},
+  doi          = {10.1109/TVCG.2010.112},
+  timestamp    = {Sun, 02 Oct 2022 15:52:18 +0200},
+  biburl       = {https://dblp.org/rec/journals/tvcg/MerrellM11.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
 {[4]} \url{https://github.com/mxgmn/WaveFunctionCollapse}\\
 {[5]} \url{https://en.wikipedia.org/wiki/Constraint_satisfaction_problem}\\
 {[6]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 {[7]} \url{https://ojs.aaai.org/index.php/AIIDE/article/view/12511/12364}\\
 {[8]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
 {[9]} \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
+
+BIBTEX:
+@inproceedings{Efros99,
+    AUTHOR  = {Alexei A. Efros and Thomas K. Leung},
+    TITLE   = {Texture Synthesis by Non-parametric Sampling},
+    BOOKTITLE = {IEEE International Conference on Computer Vision},
+    YEAR    = {1999},
+    ADDRESS = {Corfu, Greece},
+    MONTH   = {September},
+    PAGES   = {1033-1038}
+}
+
 {[10]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
 {[11]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
 {[12]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
