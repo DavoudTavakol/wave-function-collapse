@@ -343,6 +343,7 @@ Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)} k�
 um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
 In diesem Fall können wir uns eine Zelle aussuchen die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
 Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert setzten, der später zu einem ungültigen Endzustand führt.
+{(Achtung! Dies ist nicht zwingend der fall für WFC. Dazu später mehr.)}
 
 \begin{figure}[H]
     \centering
@@ -351,8 +352,6 @@ Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert s
 \end{figure}
 
 Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
-
-% TODO: Nächster Abschnitt. WFC overlapping / tile und vergleich zu paul merrells modell synthese. Siehe video https://www.youtube.com/watch?v=zIRTOgfsjl0&t=1s&ab_channel=DVGen
 
 \section{WFC und die Model Synthese}
 
@@ -400,8 +399,41 @@ Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusamm
     \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingung nicht ein, [3]}%
 \end{figure}
 
-Der Grundsätzliche ablauf der Model Synthese ist wie folg:
+Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
 
+\begin{enumerate}
+    \item Erstelle Module.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{images/modules-cells.JPG}
+    \end{figure}
+    \item Wähle Zelle unter eventueller Berücksichtigung von Heuristiken.
+    \item Kollabiere Zelle auf einen Eigenwert.
+    \item Errechne neue mögliche Eigenwerte der benachbarten Zellen \textit{(Propagation)}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{images/collapse-cells.JPG}
+    \end{figure}
+    \item Wiederhole Schritte 2 - 4.
+\end{enumerate}
+
+An diesem Punkt ist es wichtig zu erwähnen,
+dass es sich hierbei bereits um die "Simple-Tiled" Version des WFC Algorithmus handelt.
+
+\subsection{Unterschiede zwischen }
+
+Tatsächlich ist der WFC Algorithmus von Gumin und die Model Synthese von Merrell, in der Ausführung der oben genannten Schritte, exakt derselbe Algorithmus.
+
+Der Unterschied zwischen den beiden Algorithmen besteht lediglich in der Implementierung der einzelnen Schritte sowie in zusätzlichen Optimierungen,
+die die Model Synthese im Vergleich zu WFC besitzt.
+Laut Paul Marrell gibt es mehrere Unterschiede in der Implementierung.\\
+Eine davon ist die Reihenfolge der Auswahl der nächsten Zelle.
+Während WFC nach der niedrigsten Entropie Heuristik seine Zelle auswählt,
+wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zelle aus.
+Interessanterweise verursacht die Zellenauswahl von WFC mehr Fehlerzustände bei großen Output-Images.
+Auch die Komplexität des Inputs kann dazu beitragen das WFC nicht zu einem Ergebnis kommt, während das bei der Model Synthese wesentlich unwahrscheinlicher ist.\\
+Ein weiterer Grund warum die Model Synthese gerade bei großen Modellen wesentlich öfter zu Ergebnissen kommt, ist die Blockweise Generierung vom Output-Image.
+% HIER GEHTS WEITER DAVID {[13]}
 
 %beispiel textur aufteilung. overlapping und tiled vorteile nachteile etc.
 
@@ -411,7 +443,7 @@ Der große Vorteil einer solchen Synthese ist, das dadurch der generierte Conten
 Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da keine unvorhersehbaren Artefakte entstehen können.
 Viele PCG Methoden Garantieren häufig Ergebnisse, wobei die Kosten für diese Garantie in Form einer unvorhersehbaren Gesamtlaufzeit einhergeht.
 Diese Backtracking Löser liefern bei ihren Aufgaben für die Lösung Ihrer CSP's oft gute Leistungen, wobei diese Ergebnisse in Theorie aber nur schwer zu charakterisieren sind.
-Eine "schnelle" Methode von Horswill und Foged [7] um eine spielbares Leveldesign zu generieren ist der {(AC3)} Algorithmus.
+Eine schnelle Methode von Horswill und Foged [7] um eine spielbares Leveldesign zu generieren ist der {(AC3)} Algorithmus.
 Dieser Algorithmus basierend auf Backtrackingsearch mit Constraint Propagation stellt zwar geringe Anforderungen an Prozessor- und Speicherressourcen,
 allerdings wird erwartet, dass er von Programmierern verwendet werden die sich wenigstens mäßig mit Suchalgorithmen und Design auskennen.
 Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
@@ -474,6 +506,7 @@ BIBTEX:
 {[10]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
 {[11]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
 {[12]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
+{[13]} \url{https://paulmerrell.org/wp-content/uploads/2021/07/comparison.pdf}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
