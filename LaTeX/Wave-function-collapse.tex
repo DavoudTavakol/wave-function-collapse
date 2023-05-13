@@ -186,11 +186,11 @@ Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht ha
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-noise.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.2\linewidth]{images/pyramid-noise.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-input.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.2\linewidth]{images/pyramid-input.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/pyramid-matching.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.3\linewidth]{images/pyramid-matching.JPG}}%
     \caption{(a) Projektion der Bildpyramide, (b) Input-Image, (c) Teilband-Bilder vom Input-Image}%
 \end{figure}
 
@@ -369,10 +369,10 @@ Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Efros-Leung-1999.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Kwatra-2005.JPG}}%
-    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005}%
+    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005, [3]}%
 \end{figure}
 
-In Abbildung 4.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.
+In Abbildung 4.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.\\
 Paul Merrell erkannte das viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
 Deswegen kam er auf die Idee, anstatt mit einzelnen Pixel, lieber mit ganzen Komponenten zu Arbeiten.
 Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
@@ -384,8 +384,24 @@ Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Efros-Leung-textur.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Paul-merrells-Model-synthese.JPG}}%
-    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung, (c) Paul Merrell Model Synthese}%
+    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung, (c) Paul Merrell Model Synthese, [3]}%
 \end{figure}
+
+Anders als bei Sudoku, gibt es hier die Regel der Adjazenz-Bedingung \textit{(adjacency constraint)}.
+Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusammenpassen und dass das neue Modell dem Input ähnelt.
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.1\linewidth]{images/model-divided.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/seamless-model.JPG}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/modell-conflicts.JPG}}%
+    \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingung nicht ein, [3]}%
+\end{figure}
+
+Der Grundsätzliche ablauf der Model Synthese ist wie folg:
+
 
 %beispiel textur aufteilung. overlapping und tiled vorteile nachteile etc.
 

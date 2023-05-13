@@ -13,3 +13,4 @@ Patch-Based
 Pixel-Based
 Textursynthesen
 Merrell
+Adjazenz-Bedingung

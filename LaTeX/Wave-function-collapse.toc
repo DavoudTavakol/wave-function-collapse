@@ -5,17 +5,17 @@
 \contentsline {section}{\numberline {3.1}Pixel basierende Textursynthese}{6}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Pyramid basierende Textur Analyse / Synthese}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Patch basierende Textursynthese}{9}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Wave-Function-Collapse}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Constraint-Satisfaction-Problem}{13}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}{13}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}CSP-Beispiel an Sudoku}{14}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}WFC und die Model Synthese}{17}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Begriffserklärung}{19}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Theorie}{19}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Stand der Forschung}{19}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Ergebnisse}{19}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{19}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Fazit}{19}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{19}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Anhang}{21}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{21}{chapter.13}%
+\contentsline {chapter}{\numberline {4}Wave-Function-Collapse}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Constraint-Satisfaction-Problem}{12}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}{12}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}CSP-Beispiel an Sudoku}{13}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}WFC und die Model Synthese}{16}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Begriffserklärung}{18}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Theorie}{18}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Stand der Forschung}{18}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ergebnisse}{18}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{18}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Fazit}{18}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{18}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Anhang}{20}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{20}{chapter.13}%
