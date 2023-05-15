@@ -10,13 +10,14 @@
 \contentsline {subsection}{\numberline {4.1.1}Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}{12}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}CSP-Beispiel an Sudoku}{13}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}WFC und die Model Synthese}{16}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Unterschiede zwischen }{18}{subsection.4.2.1}%
-\contentsline {chapter}{\numberline {5}Begriffserklärung}{20}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Theorie}{20}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Stand der Forschung}{20}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Ergebnisse}{20}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{20}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Fazit}{20}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{20}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Anhang}{22}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{22}{chapter.13}%
+\contentsline {subsection}{\numberline {4.2.1}Unterschiede zwischen WFC und Model Synthese}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Simple Tile Model und Overlapping Model}{19}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Begriffserklärung}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Theorie}{21}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Stand der Forschung}{21}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ergebnisse}{21}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{21}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Fazit}{21}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{21}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Anhang}{23}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{23}{chapter.13}%

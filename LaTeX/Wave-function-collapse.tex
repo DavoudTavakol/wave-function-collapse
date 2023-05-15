@@ -418,9 +418,9 @@ Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
 \end{enumerate}
 
 An diesem Punkt ist es wichtig zu erwähnen,
-dass es sich hierbei bereits um die "Simple-Tiled" Version des WFC Algorithmus handelt.
+dass es sich hierbei bereits um die \glqq Simple Tile\grqq{} Version des WFC Algorithmus handelt.
 
-\subsection{Unterschiede zwischen }
+\subsection{Unterschiede zwischen WFC und Model Synthese}
 
 Tatsächlich ist der WFC Algorithmus von Gumin und die Model Synthese von Merrell, in der Ausführung der oben genannten Schritte, exakt derselbe Algorithmus.
 
@@ -433,9 +433,25 @@ wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reih
 Interessanterweise verursacht die Zellenauswahl von WFC mehr Fehlerzustände bei großen Output-Images.
 Auch die Komplexität des Inputs kann dazu beitragen das WFC nicht zu einem Ergebnis kommt, während das bei der Model Synthese wesentlich unwahrscheinlicher ist.\\
 Ein weiterer Grund warum die Model Synthese gerade bei großen Modellen wesentlich öfter zu Ergebnissen kommt, ist die Blockweise Generierung vom Output-Image.
-% HIER GEHTS WEITER DAVID {[13]}
+In Paul Merrells Model Synthese wird der Output Blockweise generiert und nicht komplett in einem Durchgang.
+Das ist für die Generierung von großen Outputs, vor allem bei 3D-Modellen, von großer Bedeutung da dadurch die Fehlerquote bei einigen Inputs signifikant reduziert wird.
+WFC teilt sein CSP nicht in kleinere Blöcke auf, da der Output von WFC in der Regel kleiner ist, und die Verarbeitung im 2D-Raum wesentlich einfacher.
+Das bedeutet nicht das WFC von so einer Implementierung nicht profitieren würde, vor allem wenn man WFC im 3D-Raum verwenden möchte.
+Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. {[13]}
 
-%beispiel textur aufteilung. overlapping und tiled vorteile nachteile etc.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/3D-model-synthese.JPG}%
+    \caption{3D-Modell generiert mit Model Synthese}%
+\end{figure}
+
+Neben weiteren Unterschieden wie die Laufzeit und der Erweiterbarkeit der beiden Algorithmen so gibt es noch einen weiteren Unterschied den WFC implementiert.
+
+\subsection{Simple Tile Model und Overlapping Model}
+
+
+
+%vor und nachteile overlapping, tiled, und modell synthese nicht vergessen!
 
 % Mal schauen was ich mit diesem teil mache!
 In Abschnitt 4.0 wurde bereits auf mögliche Vorteile einer pixelgenauen Textursynthese hingewiesen.
