@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  16 MAY 2023 12:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  16 MAY 2023 13:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,28 +555,28 @@ File: images/pyramid.JPG Graphic file (type jpg)
 Package pdftex.def Info: images/pyramid.JPG  used on input line 164.
 (pdftex.def)             Requested size: 171.99922pt x 172.80984pt.
  [7 <./images/synthezising-pixel.JPG> <./images/Wall-sample.JPG>]
-<images/pyramid-noise.JPG, id=169, 338.01282pt x 255.95625pt>
+<images/pyramid-noise.JPG, id=170, 338.01282pt x 255.95625pt>
 File: images/pyramid-noise.JPG Graphic file (type jpg)
 <use images/pyramid-noise.JPG>
 Package pdftex.def Info: images/pyramid-noise.JPG  used on input line 189.
 (pdftex.def)             Requested size: 85.9996pt x 65.1215pt.
-<images/pyramid-input.JPG, id=170, 172.39406pt x 171.64125pt>
+<images/pyramid-input.JPG, id=171, 172.39406pt x 171.64125pt>
 File: images/pyramid-input.JPG Graphic file (type jpg)
 <use images/pyramid-input.JPG>
 Package pdftex.def Info: images/pyramid-input.JPG  used on input line 191.
 (pdftex.def)             Requested size: 85.9996pt x 85.62396pt.
-<images/pyramid-matching.JPG, id=171, 673.76718pt x 321.45094pt>
+<images/pyramid-matching.JPG, id=172, 673.76718pt x 321.45094pt>
 File: images/pyramid-matching.JPG Graphic file (type jpg)
 <use images/pyramid-matching.JPG>
 Package pdftex.def Info: images/pyramid-matching.JPG  used on input line 193.
 (pdftex.def)             Requested size: 129.00269pt x 61.54718pt.
  [8 <./images/pyramid.JPG>]
-<images/Pixel-based.jpg, id=180, 602.25pt x 401.5pt>
+<images/Pixel-based.jpg, id=181, 602.25pt x 401.5pt>
 File: images/Pixel-based.jpg Graphic file (type jpg)
 <use images/Pixel-based.jpg>
 Package pdftex.def Info: images/Pixel-based.jpg  used on input line 209.
 (pdftex.def)             Requested size: 193.50076pt x 129.00336pt.
-<images/Patch-based.jpg, id=181, 602.25pt x 401.5pt>
+<images/Patch-based.jpg, id=182, 602.25pt x 401.5pt>
 File: images/Patch-based.jpg Graphic file (type jpg)
 <use images/Patch-based.jpg>
 Package pdftex.def Info: images/Patch-based.jpg  used on input line 211.
@@ -586,32 +586,32 @@ Overfull \hbox (12.6116pt too wide) in paragraph at lines 225--226
 []\T1/ptm/m/n/12 Von links-nach-rechts und von oben-nach-unten wer-den fol-gen-de Auf-ga-ben im Output-
  []
 
-<images/Random-blocks.jpg, id=193, 602.25pt x 401.5pt>
+<images/Random-blocks.jpg, id=194, 602.25pt x 401.5pt>
 File: images/Random-blocks.jpg Graphic file (type jpg)
 <use images/Random-blocks.jpg>
 Package pdftex.def Info: images/Random-blocks.jpg  used on input line 237.
 (pdftex.def)             Requested size: 107.50114pt x 71.66649pt.
-<images/overlap-blocks.jpg, id=194, 602.25pt x 401.5pt>
+<images/overlap-blocks.jpg, id=195, 602.25pt x 401.5pt>
 File: images/overlap-blocks.jpg Graphic file (type jpg)
 <use images/overlap-blocks.jpg>
 Package pdftex.def Info: images/overlap-blocks.jpg  used on input line 239.
 (pdftex.def)             Requested size: 107.50114pt x 71.66649pt.
-<images/minimum-boundary-blocks.jpg, id=195, 602.25pt x 401.5pt>
+<images/minimum-boundary-blocks.jpg, id=196, 602.25pt x 401.5pt>
 File: images/minimum-boundary-blocks.jpg Graphic file (type jpg)
 <use images/minimum-boundary-blocks.jpg>
 Package pdftex.def Info: images/minimum-boundary-blocks.jpg  used on input line 241.
 (pdftex.def)             Requested size: 107.50114pt x 71.66649pt.
-<images/texture-random-block.JPG, id=196, 213.79875pt x 214.55156pt>
+<images/texture-random-block.JPG, id=197, 213.79875pt x 214.55156pt>
 File: images/texture-random-block.JPG Graphic file (type jpg)
 <use images/texture-random-block.JPG>
 Package pdftex.def Info: images/texture-random-block.JPG  used on input line 244.
 (pdftex.def)             Requested size: 107.50114pt x 107.87788pt.
-<images/texture-overlap-blocks.jpg, id=197, 214.55156pt x 215.30438pt>
+<images/texture-overlap-blocks.jpg, id=198, 214.55156pt x 215.30438pt>
 File: images/texture-overlap-blocks.jpg Graphic file (type jpg)
 <use images/texture-overlap-blocks.jpg>
 Package pdftex.def Info: images/texture-overlap-blocks.jpg  used on input line 246.
 (pdftex.def)             Requested size: 107.50114pt x 107.8786pt.
-<images/texture-minimum-boundary-blocks.jpg, id=198, 213.79875pt x 213.79875pt>
+<images/texture-minimum-boundary-blocks.jpg, id=199, 213.79875pt x 213.79875pt>
 File: images/texture-minimum-boundary-blocks.jpg Graphic file (type jpg)
 <use images/texture-minimum-boundary-blocks.jpg>
 Package pdftex.def Info: images/texture-minimum-boundary-blocks.jpg  used on input line 248.
@@ -623,7 +623,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--262
 
  []
 
-<images/wfc-pattern.png, id=209, 532.99126pt x 144.54pt>
+<images/wfc-pattern.png, id=210, 532.99126pt x 144.54pt>
 File: images/wfc-pattern.png Graphic file (type png)
 <use images/wfc-pattern.png>
 Package pdftex.def Info: images/wfc-pattern.png  used on input line 271.
@@ -714,20 +714,25 @@ Package pdftex.def Info: images/modules-cells.JPG  used on input line 408.
 File: images/collapse-cells.JPG Graphic file (type jpg)
 <use images/collapse-cells.JPG>
 Package pdftex.def Info: images/collapse-cells.JPG  used on input line 415.
-(pdftex.def)             Requested size: 171.99922pt x 171.47107pt.
- [17 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.JPG>]
-<images/3D-model-synthese.JPG, id=285, 853.68938pt x 497.60907pt>
+(pdftex.def)             Requested size: 258.00539pt x 257.22156pt.
+ [17 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.JPG>] [18 <./images/collapse-cells.JPG>]
+<images/3D-model-synthese.JPG, id=292, 853.68938pt x 497.60907pt>
 File: images/3D-model-synthese.JPG Graphic file (type jpg)
 <use images/3D-model-synthese.JPG>
 Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 444.
 (pdftex.def)             Requested size: 430.00462pt x 250.64899pt.
- [18 <./images/collapse-cells.JPG>]
 <images/red-maze.jpg, id=293, 602.25pt x 602.25pt>
 File: images/red-maze.jpg Graphic file (type jpg)
 <use images/red-maze.jpg>
 Package pdftex.def Info: images/red-maze.jpg  used on input line 461.
 (pdftex.def)             Requested size: 215.0023pt x 214.99948pt.
- [19 <./images/3D-model-synthese.JPG>] [20 <./images/red-maze.jpg>]
+ [19 <./images/3D-model-synthese.JPG>]
+<images/red-maze-modules.jpg, id=299, 1355.0625pt x 1003.75pt>
+File: images/red-maze-modules.jpg Graphic file (type jpg)
+<use images/red-maze-modules.jpg>
+Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 468.
+(pdftex.def)             Requested size: 215.0023pt x 159.25548pt.
+ [20 <./images/red-maze.jpg> <./images/red-maze-modules.jpg>]
 Kapitel 5.
 Kapitel 6.
 Kapitel 7.
@@ -735,16 +740,16 @@ Kapitel 8.
 Kapitel 9.
 Kapitel 10.
 Kapitel 11.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 507.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 516.
 (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-Overfull \hbox (11.34264pt too wide) in paragraph at lines 507--510
+Overfull \hbox (11.34264pt too wide) in paragraph at lines 516--519
 []\T1/ptm/m/n/12 [1] [][]$\T1/cmtt/m/n/12 https : / / adamsmith . as / papers / wfc _ is _ constraint _ solving _ in _ the _ wild .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
+Underfull \hbox (badness 10000) in paragraph at lines 516--519
 
  []
 
@@ -752,72 +757,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--510
 Overfull \vbox (57.71701pt too high) has occurred while \output is active []
 
  [22]
-Overfull \hbox (18.41179pt too wide) in paragraph at lines 527--533
+Overfull \hbox (18.41179pt too wide) in paragraph at lines 536--542
 \T1/ptm/m/n/12 [8] [][]$\T1/cmtt/m/n/12 http : / / rajvishah . weebly . com / uploads / 6 / 3 / 0 / 9 / 6309814 / texture _ synthesis _
  []
 
 
-Overfull \hbox (74.47322pt too wide) in paragraph at lines 527--533
+Overfull \hbox (74.47322pt too wide) in paragraph at lines 536--542
 \T1/ptm/m/n/12 [9] [][]$\T1/cmtt/m/n/12 https : / / www2 . eecs . berkeley . edu / Research / Projects / CS / vision / papers / efros-[]iccv99 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 536--542
 
  []
 
 
-Overfull \hbox (3.15308pt too wide) in paragraph at lines 534--544
+Overfull \hbox (3.15308pt too wide) in paragraph at lines 543--553
 []\T1/ptm/m/n/12 BIBTEX: @in-pro-cee-dings-Efros99, AU-T-HOR = Ale-xei A. Efros and Tho-mas K. Leung,
  []
 
 
-Overfull \hbox (43.43227pt too wide) in paragraph at lines 545--557
+Overfull \hbox (43.43227pt too wide) in paragraph at lines 554--566
 \T1/ptm/m/n/12 [12] [][]$\T1/cmtt/m/n/12 https : / / www . cns . nyu . edu / heegerlab / content / publications / Heeger-[]siggraph95 .
  []
 
 
-Overfull \hbox (14.98683pt too wide) in paragraph at lines 545--557
+Overfull \hbox (14.98683pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / www . cv-[]foundation . org / openaccess / content _ cvpr _ 2016 / papers / Gatys _
  []
 
 
-Overfull \hbox (27.33382pt too wide) in paragraph at lines 545--557
+Overfull \hbox (27.33382pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / www . th-[]nuernberg . de / fileadmin / global / Gelenkte _ Doks / Fak / SW / SW _ 0600 _
  []
 
 
-Overfull \hbox (54.02779pt too wide) in paragraph at lines 545--557
+Overfull \hbox (54.02779pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / www . ghost-[]writing . net / wissenschaftliche-[]arbeit-[]auf-[]englisch-[]verfassen/$[][] 
  []
 
 
-Overfull \hbox (45.3543pt too wide) in paragraph at lines 545--557
+Overfull \hbox (45.3543pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / www . youtube . com / watch ? v = rI _ y2GAlQFM & t = 1135s & ab _ channel = TheCodingTrain$[][] 
  []
 
 
-Overfull \hbox (58.20128pt too wide) in paragraph at lines 545--557
+Overfull \hbox (58.20128pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / users . informatik . haw-[]hamburg . de / ~abo781 / abschlussarbeiten / ba _ westfalen .
  []
 
 
-Overfull \hbox (45.8543pt too wide) in paragraph at lines 545--557
+Overfull \hbox (45.8543pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / users . informatik . haw-[]hamburg . de / ~abo781 / abschlussarbeiten / ba _ dzaebel .
  []
 
 
-Overfull \hbox (27.33382pt too wide) in paragraph at lines 545--557
+Overfull \hbox (27.33382pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 http : / / people . csail . mit . edu / celiu / Patch-[]based % 20Texture % 20Synthesis / Index .
  []
 
 
-Overfull \hbox (58.20128pt too wide) in paragraph at lines 545--557
+Overfull \hbox (58.20128pt too wide) in paragraph at lines 554--566
 [][]$\T1/cmtt/m/n/12 https : / / www2 . eecs . berkeley . edu / Research / Projects / CS / vision / papers / efros-[]iccv99 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--557
+Underfull \hbox (badness 10000) in paragraph at lines 554--566
 
  []
 
@@ -828,18 +833,18 @@ Package rerunfilecheck Info: File `Wave-function-collapse.out' has not changed.
 (rerunfilecheck)             Checksum: F4FA2086A85A9D373AA607556C9B7587;3878.
  ) 
 Here is how much of TeX's memory you used:
- 14863 strings out of 474971
- 245795 string characters out of 5780120
+ 14872 strings out of 474971
+ 246030 string characters out of 5780120
  695168 words of memory out of 5000000
- 36003 multiletter control sequences out of 15000+600000
- 514435 words of font info for 91 fonts, out of 8000000 for 9000
+ 36009 multiletter control sequences out of 15000+600000
+ 514735 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,10n,79p,470b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (25 pages, 1698083 bytes).
+Output written on Wave-function-collapse.pdf (25 pages, 1766491 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 106 named destinations out of 1000 (max. 500000)
- 352 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 408 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

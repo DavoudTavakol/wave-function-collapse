@@ -144,7 +144,7 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
 
 
 \begin{itemize}
-    \item Zuerst wird vom Input-Image eine Teiltextur einer bestimmten Größe {(z.B. 5 x 5 Pixel Fenster)} ausgewählt. Von diesem Feld aus werden Spiralförmig neue Pixel generiert.
+    \item Zuerst wird vom Input-Image eine Teiltextur einer bestimmten Größe {(z.B. $5\times 5$ Pixel Fenster)} ausgewählt. Von diesem Feld aus werden Spiralförmig neue Pixel generiert.
     \item Für jeden Pixel der betrachtet wird, wird ein Fenster einer selbst bestimmten Größe zentral über das Pixel gelegt.
     Die Größe des Fensters muss nach Größe der einzelnen Elemente der Textur gewählt werden.
     \item Mit dieser Gruppe von Pixel {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht.
@@ -412,7 +412,7 @@ Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
     \item Errechne neue mögliche Eigenwerte der benachbarten Zellen \textit{(Propagation)}.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\linewidth]{images/collapse-cells.JPG}
+        \includegraphics[width=0.6\linewidth]{images/collapse-cells.JPG}
     \end{figure}
     \item Wiederhole Schritte 2 - 4.
 \end{enumerate}
@@ -459,8 +459,17 @@ Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze.jpg}%
-    \caption{4 x 4 Pixel Red-Maze Beispiel Input}%
+    \caption{$4\times 4$ Pixel Red-Maze Beispiel Input}%
 \end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/red-maze-modules.jpg}%
+    \caption{Alle Red-Maze Module der Größe $N$ = 2 mit ihren Spiegelungen und Rotationen}%
+\end{figure}
+
+
 
 
 
