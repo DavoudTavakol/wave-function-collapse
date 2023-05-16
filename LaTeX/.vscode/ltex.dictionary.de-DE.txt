@@ -14,3 +14,4 @@ Pixel-Based
 Textursynthesen
 Merrell
 Adjazenz-Bedingung
+Overlapping

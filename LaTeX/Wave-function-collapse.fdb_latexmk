@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1684168737 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1684168740
-  "Wave-function-collapse.aux" 1684168740 7379 e2b36cc2918bc38e7f073068ce2afb53 "pdflatex"
-  "Wave-function-collapse.out" 1684168740 3878 f4fa2086a85a9d373aa607556c9b7587 "pdflatex"
-  "Wave-function-collapse.tex" 1684168736 32221 1125624eac2615b0320ce9643bd050f4 ""
-  "Wave-function-collapse.toc" 1684168740 1900 0698a3c85c235c5dc10f53dbac717a34 "pdflatex"
-  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1684168736 32221 1125624eac2615b0320ce9643bd050f4 ""
+["pdflatex"] 1684234760 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1684234763
+  "Wave-function-collapse.aux" 1684234763 7544 15ea855b2aa9b4d12c75d4c124f5eba6 "pdflatex"
+  "Wave-function-collapse.out" 1684234763 3878 f4fa2086a85a9d373aa607556c9b7587 "pdflatex"
+  "Wave-function-collapse.tex" 1684234760 33950 fda3ae7a55e657aca07578aae312e3e9 ""
+  "Wave-function-collapse.toc" 1684234763 1900 9c0f249e5e189da66a27736e0ab0d4a7 "pdflatex"
+  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1684234760 33950 fda3ae7a55e657aca07578aae312e3e9 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1668252256 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1668251688 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1668252680 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -147,6 +147,7 @@
   "images/pyramid-matching.JPG" 1682681147 40782 e08a0bb147d9a41c8fc2f090403f1dd8 ""
   "images/pyramid-noise.JPG" 1682678394 20722 9f179c8fc8e0dd6df0d9cd5911dc6101 ""
   "images/pyramid.JPG" 1682678342 58495 7c662c064b5d8304f29753cde1a398df ""
+  "images/red-maze.jpg" 1684234681 29106 bc3fa46290e48653f229ee6c2f14c993 ""
   "images/seamless-model.JPG" 1683973103 20975 509faf04928c9abb83c40e8b68a93778 ""
   "images/sudoku-observed-heurisitk.png" 1683558958 89710 dd1f5432cc83bfcb1eb6229fe19ccce6 ""
   "images/sudoku-observed.png" 1683556005 83800 67c2a8db6277a9c755d4a7ac1c8ecdb7 ""
