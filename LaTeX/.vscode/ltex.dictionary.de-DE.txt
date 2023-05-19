@@ -15,3 +15,5 @@ Textursynthesen
 Merrell
 Adjazenz-Bedingung
 Overlapping
+Gumin
+Tile
