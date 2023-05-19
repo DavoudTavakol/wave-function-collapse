@@ -466,10 +466,11 @@ Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze-modules.jpg}%
-    \caption{Alle Red-Maze Module der Größe $N$ = 2 mit Spiegelungen und Rotationen.}%
+    \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen.}%
 \end{figure}
 
 Bei einem $N$ = 2 Patch gibt es insgesamt 9 verschiedene Möglichkeiten wie diese übereinander liegen können.
+{(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}
 Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschriebt, wie ein die Muster nebeneinander platziert werden können.
 Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Patches, die an einem anderen Index mit $x,y$-Offset platziert werden darf. 
 Man kann sich vorstellen das jede Zelle im Sudoku Feld ein bestimmte $x,y$ Koordinate besitzt damit durch diese Iteriert werden kann.
@@ -482,7 +483,7 @@ Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die
 \end{figure}
 
 In Abbildung 4.12 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
-Angemerkt sei das bei Offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Patch nutzbar ist, der betrachtete Patch {(bzw. die Zelle mit bereits einzelnem Eigenwert)} selbst.
+Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Patch nutzbar ist, der betrachtete Patch {(bzw. die Zelle mit bereits einzelnem Eigenwert)} selbst.
 {(Siehe z.B. Offset $(-1,0)$. Dort sind nur Patches möglich die Rechts 2 weiße Pixel besitzen damit sie sich nahtlos mit den 2 weißen Pixel bei $(0,0)$ überlappen können)}{[1]}
 
 \begin{figure}[H]
