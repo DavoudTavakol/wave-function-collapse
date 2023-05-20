@@ -469,7 +469,7 @@ Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden 
     \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen.}%
 \end{figure}
 
-Bei einem $N$ = 2 Patch gibt es insgesamt 9 verschiedene Möglichkeiten wie diese übereinander liegen können.
+Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten wie diese übereinander liegen können.
 {(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}
 Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschriebt, wie ein die Muster nebeneinander platziert werden können.
 Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Patches, die an einem anderen Index mit $x,y$-Offset platziert werden darf. 
@@ -491,6 +491,31 @@ Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Pa
     \includegraphics[width=0.5\linewidth]{images/red-maze-offset-example.png}%
     \caption{Ausschnitt einer Zelle. Von 12 möglichen Patches sind nur die gültigen Optionen für die benachbarten Zellen mit $x,y$-Offset möglich.}%
 \end{figure}
+
+In diesem Beispiel wurden mit $N = 2$, also eine Fenstergröße von 2 Pixel, die Module aus dem Input generiert.
+Die Fenstergröße wir selbst von Entwickler festgelegt und hat direkten Einfluss auf den Output.
+Falls $N = 1$ festgelegt wird dann befinden wir uns wieder beim Simple Tile Model.
+Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem "Patch" wird die wir selbstverständlich nicht mehr überlappen können.
+Bei zu kleiner Fenstergröße kann der Output nicht dem Input ähneln.
+Andersrum bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein.
+Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu erhalten.
+
+\begin{figure}[H]
+    \centering
+    \frame{\includegraphics[width=0.25\linewidth]{images/input-example-overlapping.png}}%
+    \caption{Beispiel Input-Image ($8\times8$ Pixel) für Overlapping Model}%
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n2.png}}}%
+    \qquad
+    \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n3.png}}}%
+    \qquad
+    \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n4.png}}}%
+    \caption{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model [14]}%
+\end{figure}
+
 
 %wichtige punkte!
 It is also important to understand how model synthesis / WFC compares to other texture synthesis algorithms. This is
@@ -574,6 +599,7 @@ BIBTEX:
 {[11]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
 {[12]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
 {[13]} \url{https://paulmerrell.org/wp-content/uploads/2021/07/comparison.pdf}\\
+{[14]} \url{http://www.kchapelier.com/wfc-example/overlapping-model.html}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\

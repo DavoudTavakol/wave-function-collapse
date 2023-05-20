@@ -12,12 +12,12 @@
 \contentsline {section}{\numberline {4.2}WFC und die Model Synthese}{16}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Unterschiede zwischen WFC und Model Synthese}{18}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Simple Tile Model und Overlapping Model}{19}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Begriffserklärung}{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Theorie}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Stand der Forschung}{23}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Ergebnisse}{23}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{23}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Fazit}{23}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{23}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Anhang}{25}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{25}{chapter.13}%
+\contentsline {chapter}{\numberline {5}Begriffserklärung}{24}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Theorie}{24}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Stand der Forschung}{24}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Ergebnisse}{24}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Diskussion der Ergebnisse}{24}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Fazit}{24}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Literaturverzeichnis}{24}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Anhang}{26}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Eidesstattliche Erklärung}{26}{chapter.13}%
