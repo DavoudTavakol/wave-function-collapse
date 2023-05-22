@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1684593481 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1684593483
-  "Wave-function-collapse.aux" 1684593483 8686 e07b28bf859fcdd32b158686c02b3e79 "pdflatex"
-  "Wave-function-collapse.out" 1684593483 3878 f4fa2086a85a9d373aa607556c9b7587 "pdflatex"
-  "Wave-function-collapse.tex" 1684593480 37471 9f7e78a0c27c4a4d7d358ae1d4d7efb2 ""
-  "Wave-function-collapse.toc" 1684593483 1900 de8cec76485b07b89f8f1e4900736a38 "pdflatex"
-  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1684593480 37471 9f7e78a0c27c4a4d7d358ae1d4d7efb2 ""
+["pdflatex"] 1684766731 "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" "Wave-function-collapse.pdf" "Wave-function-collapse" 1684766734
+  "Wave-function-collapse.aux" 1684766733 9537 66a29e412c00d0e1ef7861966f7e5c9e "pdflatex"
+  "Wave-function-collapse.out" 1684766733 3878 f4fa2086a85a9d373aa607556c9b7587 "pdflatex"
+  "Wave-function-collapse.tex" 1684766727 37750 9ded3ce5015e8fe038d7d015a0c05f98 ""
+  "Wave-function-collapse.toc" 1684766733 1900 0c00042a1d15945dfe03914f127f9f74 "pdflatex"
+  "c:/Users/Davoud/Desktop/Studium/GitHub/Bachelor/wave-function-collapse/LaTeX/Wave-function-collapse.tex" 1684766727 37750 9ded3ce5015e8fe038d7d015a0c05f98 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1668252256 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1668251688 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1668252680 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -158,6 +158,8 @@
   "images/red-maze-modules.jpg" 1684235790 68005 405c749e1e3d4b2448b7b83dcac316ba ""
   "images/red-maze-offset-example.png" 1684529368 91029 ee7240ae33bf68b5ecf2198a93f61119 ""
   "images/red-maze-offset.png" 1684529398 105483 93fa02a28367a2a69be186722a806488 ""
+  "images/red-maze-overlapping-step1.png" 1684765591 437 7e37cef450f1a3a0d4b3e0bd7f6baada ""
+  "images/red-maze-overlapping-steps.png" 1684765570 5189 c0943d089e31e71cf294d49ce979e876 ""
   "images/red-maze.jpg" 1684234681 29106 bc3fa46290e48653f229ee6c2f14c993 ""
   "images/seamless-model.JPG" 1683973103 20975 509faf04928c9abb83c40e8b68a93778 ""
   "images/sudoku-observed-heurisitk.png" 1683558958 89710 dd1f5432cc83bfcb1eb6229fe19ccce6 ""

@@ -990,6 +990,16 @@ INPUT ./images/output-overlapping-n4.png
 INPUT images/output-overlapping-n4.png
 INPUT ./images/output-overlapping-n4.png
 INPUT ./images/output-overlapping-n4.png
+INPUT ./images/red-maze-overlapping-step1.png
+INPUT ./images/red-maze-overlapping-step1.png
+INPUT images/red-maze-overlapping-step1.png
+INPUT ./images/red-maze-overlapping-step1.png
+INPUT ./images/red-maze-overlapping-step1.png
+INPUT ./images/red-maze-overlapping-steps.png
+INPUT ./images/red-maze-overlapping-steps.png
+INPUT images/red-maze-overlapping-steps.png
+INPUT ./images/red-maze-overlapping-steps.png
+INPUT ./images/red-maze-overlapping-steps.png
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
