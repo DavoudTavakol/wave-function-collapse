@@ -61,11 +61,12 @@ zum schluss..
 % Automatisches Inhaltsverzeichniss
 \tableofcontents
 
-{\let\clearpage\relax\chapter{Abkürzungsverzeichnis}}
 
-WFC\dotfill{Wave-Function-Collapse}\\
-PCG\dotfill{Procedural-Content-Generation}\\
-CSP\dotfill{Constraint-Satisfaction-Problem}\\
+%{\let\clearpage\relax\chapter{Abkürzungsverzeichnis}}
+
+%WFC\dotfill{Wave-Function-Collapse}\\
+%PCG\dotfill{Procedural-Content-Generation}\\
+%CSP\dotfill{Constraint-Satisfaction-Problem}\\
 
 \chapter{Einleitung}
 
@@ -86,7 +87,7 @@ Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu gener
 durch denselben zugrundeliegenden Prozess erzeugt wird."
 Das Ergebnis muss der Texturprobe ähnlich sein aber dennoch in der Wahrnehmung genügend Variation enthalten.
 So eine Synthese ist nicht möglich, wenn man die Eingabetextur einfach mehrfach kachelt.
-Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abb. 3.1)}
+Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abbildung 2.1)}
 
 \begin{figure}[H]
     \centering
@@ -127,8 +128,8 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
     \caption{(a) Nicht stationär und lokal, (b) stationär und lokal.}%
 \end{figure}
 
-Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abb. 3.2 (b))}.
-Dies ist nicht der Fall für normale Images wie wir bei Abb. 3.2 {(a)} erkennen können.
+Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abbildung 2.2 (b))}.
+Dies ist nicht der Fall für normale Images wie wir bei Abbildung 2.2 {(a)} erkennen können.
 Zudem ist es möglich jeden Pixel in {(b)} allein durch seine benachbarten Pixel zu bestimmen.
 Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
 
@@ -155,7 +156,7 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
 \section{Pyramid basierende Textur Analyse / Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
-Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abb. 3.4 (a))}. {[8][10]}\\
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.4 (a))}. {[8][10]}\\
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der in der regel uniform Weiß ist, verwendet.
 Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
 
@@ -200,7 +201,7 @@ werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständnis d
 \section{Patch basierende Textursynthese}
 
 Die Patch-Based Textursynthese \textit{(auch Quilten genannt)} ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
-Hier werden statt einzelne Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abb. 3.6)}.
+Hier werden statt einzelne Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abbildung 2.6)}.
 Auch hier werden die Patches mithilfe ihrer benachbarten Pixel bestimmt und ausgewertet.
 Dadruch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
 
@@ -264,7 +265,7 @@ Gumin hat sich von der Arbeit von Paul Merrell Inspirieren lassen, obwohl dieser
 Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
 Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden können.
 Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merrell nicht möglich da es sich um eine diskrete Synthese handelt.
-Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abb. 4.1)}. {[1][3][4]}
+Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)}. {[1][3][4]}
 
 \begin{figure}[H]
     \centering
@@ -371,7 +372,7 @@ Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
     \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005. [3]}%
 \end{figure}
 
-In Abbildung 4.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.\\
+In Abbildung 3.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.\\
 Paul Merrell erkannte das viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
 Deswegen kam er auf die Idee, anstatt mit einzelnen Pixel, lieber mit ganzen Komponenten zu Arbeiten.
 Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
@@ -426,7 +427,7 @@ Tatsächlich ist der WFC Algorithmus von Gumin und die Model Synthese von Merrel
 
 Der Unterschied zwischen den beiden Algorithmen besteht lediglich in der Implementierung der einzelnen Schritte sowie in zusätzlichen Optimierungen,
 die die Model Synthese im Vergleich zu WFC besitzt.
-Laut Paul Marrell gibt es mehrere Unterschiede in der Implementierung.\\
+Laut Paul Merrell gibt es mehrere Unterschiede in der Implementierung.\\
 Eine davon ist die Reihenfolge der Auswahl der nächsten Zelle.
 Während WFC nach der niedrigsten Entropie Heuristik seine Zelle auswählt,
 wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zelle aus.
@@ -482,7 +483,7 @@ Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die
     \caption{Die 9 Möglichkeiten wie die Patches übereinander liegen können.}%
 \end{figure}
 
-In Abbildung 4.12 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
+In Abbildung 3.12 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
 Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Patch nutzbar ist, der betrachtete Patch {(bzw. die Zelle mit bereits einzelnem Eigenwert)} selbst.
 {(Siehe z.B. Offset $(-1,0)$. Dort sind nur Patches möglich die Rechts 2 weiße Pixel besitzen damit sie sich nahtlos mit den 2 weißen Pixel bei $(0,0)$ überlappen können)}{[1]}
 
@@ -522,10 +523,10 @@ da wir vollen Kontrolle über die lokalen Muster des Outputs haben.
 Gerade der Simple Tile Model bietet sich deswegen für Procedural-Content-Generation {(PCG)} an, da wir hier auch volle Kontrolle über die einzelnen Module / Patches haben,
 dann zusammengesetzt werden für den Output.
 Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da dadurch keine unvorhersehbaren Artefakte entstehen können.
-Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 3.2)} Input ein Foto verwendet wird,
+Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 2.2)} Input ein Foto verwendet wird,
 dann würden die anderen Synthesemethoden passendere Ergebnisse liefern im Gegensatz zur Model Synthese und WFC.
-Es sei erwähnt das der Input für WFC nicht \glqq strikt\grqq{} eine Textur wie in Abbildung 3.2 {(b)} sein muss.
-Sie sollte allerdings Selbstähnlichkeit haben und nur wenige unterschiedliche Pixelfarben verwenden.\\
+Es sei erwähnt das der Input für WFC nicht \glqq strikt\grqq{} eine Textur wie in Abbildung 2.2 {(b)} sein muss.
+Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.\\
 Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
 Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
 sondern auch die live Generierung des Outputs selbst.
@@ -553,14 +554,20 @@ alle möglichen Pixelwerte enthält, dann führt das zu einer sehr schön anzuse
     \caption{Die nächsten Zyklen für das Red-Maze Input. {[1]}}%
 \end{figure}
 
+\section{Beispiel Implementierung}
 
+Joseph Parker war einer der ersten, die WFC verwendet haben.
+In seinem \textit{Proc Skater 2016} [15] verwendete er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
+Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren.
+Trotzdem benutze er den Overlapping Ansatz zum Platzieren der einzelnen Blöcke, um saubere Übergänge zu garantieren.
 
-{\let\clearpage\relax\chapter{Begriffserklärung}}
+\begin{figure}[H]
+    \centering
+    \frame{\includegraphics[width=1\linewidth]{images/proc-skater.png}}%
+    \caption{Level generierung in \textit{Proc Skater 2016} {[15]}}%
+\end{figure}
 
-{\let\clearpage\relax\chapter{Theorie}}
-{\let\clearpage\relax\chapter{Stand der Forschung}}
-{\let\clearpage\relax\chapter{Ergebnisse}}
-{\let\clearpage\relax\chapter{Diskussion der Ergebnisse}}
+Eine weitere Implementierung von WFC ist \textit{Caves of Qud} entwickelt von Freehold Games.
 
 {\let\clearpage\relax\chapter{Fazit}}
 
@@ -608,6 +615,8 @@ BIBTEX:
 {[12]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
 {[13]} \url{https://paulmerrell.org/wp-content/uploads/2021/07/comparison.pdf}\\
 {[14]} \url{http://www.kchapelier.com/wfc-example/overlapping-model.html}\\
+{[15]}  {Joseph Parker, Ryan Jones, and Oscar Morante. 2016. Proc Skater 2016. (2016)}\\
+
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
