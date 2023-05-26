@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  26 MAY 2023 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  26 MAY 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -751,18 +751,24 @@ File: images/red-maze-overlapping-steps.png Graphic file (type png)
 Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 552.
 (pdftex.def)             Requested size: 430.00462pt x 60.34982pt.
  [22 <./images/red-maze-overlapping-step1.png>]
-<images/proc-skater-ruleset.png, id=312, 696.35156pt x 517.18219pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 561.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 561.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 561.
+<images/proc-skater-ruleset.png, id=313, 696.35156pt x 517.18219pt>
 File: images/proc-skater-ruleset.png Graphic file (type png)
 <use images/proc-skater-ruleset.png>
 Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 565.
 (pdftex.def)             Requested size: 430.00462pt x 319.36331pt.
-<images/proc-skate-level.png, id=313, 895.09406pt x 514.92375pt>
+<images/proc-skate-level.png, id=314, 895.09406pt x 514.92375pt>
 File: images/proc-skate-level.png Graphic file (type png)
 <use images/proc-skate-level.png>
 Package pdftex.def Info: images/proc-skate-level.png  used on input line 573.
 (pdftex.def)             Requested size: 430.00462pt x 247.37273pt.
  [23 <./images/red-maze-overlapping-steps.png> <./images/proc-skater-ruleset.png>]
-<images/proc-skate-backdrop.png, id=321, 878.53218pt x 534.49687pt>
+<images/proc-skate-backdrop.png, id=323, 878.53218pt x 534.49687pt>
 File: images/proc-skate-backdrop.png Graphic file (type png)
 <use images/proc-skate-backdrop.png>
 Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 578.
@@ -773,7 +779,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 582--587
  []
 
 [24 <./images/proc-skate-level.png> <./images/proc-skate-backdrop.png>]
-<images/caves-of-qud.jpg, id=331, 1557.98906pt x 1486.47978pt>
+<images/caves-of-qud.jpg, id=335, 1557.98906pt x 1486.47978pt>
 File: images/caves-of-qud.jpg Graphic file (type jpg)
 <use images/caves-of-qud.jpg>
 Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 596.
@@ -872,18 +878,24 @@ Package rerunfilecheck Info: File `Wave-function-collapse.out' has not changed.
 (rerunfilecheck)             Checksum: E3643BC24E9E20631F96AE85AC310323;3275.
  ) 
 Here is how much of TeX's memory you used:
- 14483 strings out of 474971
- 237487 string characters out of 5780120
- 595248 words of memory out of 5000000
- 35604 multiletter control sequences out of 15000+600000
- 516443 words of font info for 95 fonts, out of 8000000 for 9000
+ 14509 strings out of 474971
+ 237868 string characters out of 5780120
+ 594248 words of memory out of 5000000
+ 35627 multiletter control sequences out of 15000+600000
+ 528939 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,10n,79p,796b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (28 pages, 4983476 bytes).
+Output written on Wave-function-collapse.pdf (28 pages, 4983839 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 118 named destinations out of 1000 (max. 500000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 120 named destinations out of 1000 (max. 500000)
  377 words of extra memory for PDF output out of 10000 (max. 10000000)
 
