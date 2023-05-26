@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Unterschiede zwischen WFC und Model Synthese}{17}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Simple Tile Model und Overlapping Model}{18}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Beispiel Implementierung}{23}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Fazit}{25}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Literaturverzeichnis}{25}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Anhang}{26}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Eidesstattliche Erklärung}{26}{chapter.7}%
+\contentsline {chapter}{\numberline {4}Fazit}{26}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Literaturverzeichnis}{26}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Anhang}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Eidesstattliche Erklärung}{27}{chapter.7}%
