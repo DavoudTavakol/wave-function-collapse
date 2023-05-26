@@ -82,11 +82,11 @@ In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithm
 Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
 Nach D.Gomathi und Rajvi Shah {([8], S.1)}, kann die Textursynthese wie folgt definiert werden.\\\\
-Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu generieren die, "wenn sie von einem menschlichen Beobachter wahrgenommen wird,
-durch denselben zugrundeliegenden Prozess erzeugt wird."
+Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu generieren die, \say{wenn sie von einem menschlichen Beobachter wahrgenommen wird,
+durch denselben zugrundeliegenden Prozess erzeugt wird.}
 Das Ergebnis muss der Texturprobe ähnlich sein aber dennoch in der Wahrnehmung genügend Variation enthalten.
 So eine Synthese ist nicht möglich, wenn man die Eingabetextur einfach mehrfach kachelt.
-Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abbildung 2.1)}
+Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke sind klar erkennbar. {(siehe Abbildung 2.1)}
 
 \begin{figure}[H]
     \centering
@@ -105,7 +105,7 @@ Dadurch erhält man keine "sauberen" Übergänge, und die einzelnen Blöcke sind
     \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([8], S.2)}
 \end{itemize}
 
-Im Folgenden werde ich auf drei verschiedene Textursynthese verfahren eingehen da diese sich fundamental voneinander unterscheiden.
+Im Folgenden werde ich auf drei verschiedene Textursyntheseverfahren eingehen da diese sich fundamental voneinander unterscheiden und verschiedene Ansätze von Synthesen aufzeigen.
 Es wird nicht in Detail auf alle verfahren eingegangen da dieser Abschnitt nur Hintergrundinformationen darlegen soll.
 
 \section{Pixel basierende Textursynthese}
@@ -118,6 +118,8 @@ Voraussetzung hierfür ist, dass das Input-Image stationär und lokal ist.
 Ein Image wird als stationär bezeichnet wenn, unter korrekter Fenstergröße,
 jeder betrachtete Bereich ähnlich zueinander aussehen.
 Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt werden kann.{[8]}
+
+%MARKOV FELDER HIER IN DIESEM ABSCHNITT EINFÜGEN!
 
 \begin{figure}[H]
     \centering
@@ -343,7 +345,7 @@ Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)} k�
 um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
 In diesem Fall können wir uns eine Zelle aussuchen die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
 Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert setzten, der später zu einem ungültigen Endzustand führt.
-{(Achtung! Dies ist nicht zwingend der fall für WFC. Dazu später mehr.)}
+\footnote[1]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
 
 \begin{figure}[H]
     \centering
@@ -418,7 +420,7 @@ Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
 \end{enumerate}
 
 An diesem Punkt ist es wichtig zu erwähnen,
-dass es sich hierbei bereits um die \glqq Simple Tile Model\grqq{} des WFC Algorithmus handelt.
+dass es sich hierbei bereits um die \say{Simple Tile Model} des WFC Algorithmus handelt.
 
 \subsection{Unterschiede zwischen WFC und Model Synthese}
 
@@ -495,9 +497,9 @@ Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Pa
 In diesem Beispiel wurden mit $N = 2$, also eine Fenstergröße von 2 Pixel, die Module aus dem Input generiert.
 Die Fenstergröße wir selbst von Entwickler festgelegt und hat direkten Einfluss auf den Output.
 Falls $N = 1$ festgelegt wird dann befinden wir uns wieder beim Simple Tile Model.
-Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem "Patch" wird die wir diese selbstverständlich nicht mehr überlappen können.
-Bei zu kleiner Fenstergröße kann der Output nicht dem Input ähneln.
-Andersrum bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein.
+Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem \say{Patch} wird die wir diese selbstverständlich nicht mehr überlappen können.
+Bei zu kleiner Fenstergröße kann es sein, das der Output nicht dem Input ähneln.
+Andersrum bei einer zu großen Fenstergröße dem Input zu ähnlich.
 Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu erhalten.
 
 \begin{figure}[H]
@@ -513,7 +515,7 @@ Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu er
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n3.png}}}%
     \qquad
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n4.png}}}%
-    \caption{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model [14]}%
+    \caption{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model. [14]}%
 \end{figure}
 
 Es ist wichtig anzumerken das viele der hier gezeigten Texturen auch mit aktuellen Textursynthese-Algorithmen generiert werden können.
@@ -524,7 +526,7 @@ dann zusammengesetzt werden für den Output.
 Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da dadurch keine unvorhersehbaren Artefakte entstehen können.
 Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 2.2)} Input ein Foto verwendet wird,
 dann würden die anderen Synthesemethoden passendere Ergebnisse liefern im Gegensatz zur Model Synthese und WFC.
-Es sei erwähnt das der Input für WFC nicht \glqq strikt\grqq{} eine Textur wie in Abbildung 2.2 {(b)} sein muss.
+Es sei erwähnt das der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.2 {(b)} sein muss.
 Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.\\
 Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
 Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
@@ -533,7 +535,13 @@ Viele PCG's Methoden variieren in ihrer Laufzeit bei der Generierung ihres Outpu
 Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert werden,
 dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. {[1]}
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
-alle möglichen Pixelwerte enthält, dann führt das zu einer sehr schön anzusehenden Generierung des Outputs.
+alle möglichen Pixelwerte enthalten, dann führt das zu einer sehr schön anzusehenden Generierung des Outputs.
+\footnote[2]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
+example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}\\
+\url{https://twitter.com/ExUtumno/status/781833475884277760}\\
+und Danny Wynne’s \say{3d tile placement with WFC.This algorithm is amazing. Inspired
+by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev}\\
+\url{https://twitter.com/dwtw/status/810166761270243328} [1]}
 
 \begin{figure}[H]
     \centering
@@ -558,7 +566,7 @@ alle möglichen Pixelwerte enthält, dann führt das zu einer sehr schön anzuse
 Joseph Parker war einer der ersten, die WFC verwendet haben.
 In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
 Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. [15]
-J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark \footnote[1]{persönliche Kommunikation, 23. Mai 2023}.
+J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[3]{persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
@@ -583,7 +591,8 @@ Proc Skater 2016 verwendet allerdings nicht nur das Simple Tile Model, sondern a
 Der umliegende Hintergrund \textit{(backdrop)} ist mit dem Overlapping Model erstellt.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
-Overlapping Model für plattformartige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.\footnote[1]{persönliche Kommunikation, 23. Mai 2023}}\\
+Overlapping Model für plattformartige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.
+\footnote[3]{persönliche Kommunikation, 23. Mai 2023}}\\
 
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
 Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} ein Mehrfachdurchlauf \textit{multipass} von WFC.
