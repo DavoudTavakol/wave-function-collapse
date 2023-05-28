@@ -2,17 +2,18 @@
 \contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Textursynthesen im Vergleich}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Pixel basierende Textursynthese}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Pyramid basierende Textur Analyse / Synthese}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Patch basierende Textursynthese}{8}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Wave-Function-Collapse}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Constraint-Satisfaction-Problem}{11}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}{11}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}CSP-Beispiel an Sudoku}{12}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}WFC und die Model Synthese}{15}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Unterschiede zwischen WFC und Model Synthese}{17}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Simple Tile Model und Overlapping Model}{18}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Beispiel Implementierung}{23}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Fazit}{26}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Literaturverzeichnis}{26}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Anhang}{27}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Eidesstattliche Erklärung}{27}{chapter.7}%
+\contentsline {subsubsection}{Markow-Netzwerk und Markov-Kette}{6}{figure.caption.5}%
+\contentsline {section}{\numberline {2.2}Pyramid basierende Textur Analyse / Synthese}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Patch basierende Textursynthese}{9}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Wave-Function-Collapse}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Constraint-Satisfaction-Problem}{12}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}{12}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}CSP-Beispiel an Sudoku}{13}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}WFC und die Model Synthese}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Unterschiede zwischen WFC und Model Synthese}{18}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Simple Tile Model und Overlapping Model}{19}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Beispiel Implementierung}{24}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Fazit}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Literaturverzeichnis}{27}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Anhang}{28}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Eidesstattliche Erklärung}{28}{chapter.7}%

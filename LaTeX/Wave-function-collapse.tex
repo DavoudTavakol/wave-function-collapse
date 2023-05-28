@@ -1,4 +1,5 @@
 \documentclass[12pt]{report}
+\usepackage[ngerman]{babel} %für deutsch
 % Bibliotheken und Pfade
 \usepackage{xcolor} %Farben
 \usepackage{graphicx, wrapfig} %Bilder
@@ -12,8 +13,7 @@
 \usepackage{float}
 \usepackage{listings} %code darstellung
 \usepackage{dirtytalk} %zitieren
-%für deutsch
-\usepackage[ngerman]{babel}
+
 
 \usepackage{titlesec} %zum entfernen der "Kapitel N" header
 
@@ -81,7 +81,8 @@ In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithm
 
 Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
-Nach D.Gomathi und Rajvi Shah {([8], S.1)}, kann die Textursynthese wie folgt definiert werden.\\\\
+Nach D.Gomathi und Rajvi Shah {([8], S.1)}, kann die Textursynthese wie folgt definiert werden.
+\newline
 Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu generieren die, \say{wenn sie von einem menschlichen Beobachter wahrgenommen wird,
 durch denselben zugrundeliegenden Prozess erzeugt wird.}
 Das Ergebnis muss der Texturprobe ähnlich sein aber dennoch in der Wahrnehmung genügend Variation enthalten.
@@ -112,29 +113,28 @@ Es wird nicht in Detail auf alle verfahren eingegangen da dieser Abschnitt nur H
 
 Bei dieser Methode werden neue Texturen Pixel für Pixel generiert.
 Jeder neue Pixelwert wird von seinen lokalen Nachbarn festgelegt.
-Dieser verfahren verwenden meistens Markow-Netzwerke \textit{(Markov-Random-Fields)} die relativ gute Resultate liefern mit wenig Rechenlast.
-Markov-Random-Fields Methoden beurteilen jeden Pixel nach einer kleinen Menge von Nachbarn.
+Dieser verfahren verwenden meistens Markow-Netzwerke \textit{(Markov Random Field)}
+\footnote[1]{Auf Markow-Netzwerke und Markow-Ketten wird am Ende dieses Abschnitts genauer eingegangen.}
+die relativ gute Resultate liefern mit wenig Rechenlast.
+Markov Random Fields Methoden beurteilen jeden Pixel nach einer kleinen Menge von Nachbarn.
 Voraussetzung hierfür ist, dass das Input-Image stationär und lokal ist.
 Ein Image wird als stationär bezeichnet wenn, unter korrekter Fenstergröße,
 jeder betrachtete Bereich ähnlich zueinander aussehen.
 Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt werden kann.{[8]}
 
-%MARKOV FELDER HIER IN DIESEM ABSCHNITT EINFÜGEN!
-
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.45\linewidth]{Textur-nicht-stationärlokal-2.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Textur-nicht-stationärlokal.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.45\linewidth]{Textur-stationärlokal-2.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Textur-stationärlokal.JPG}}%
     \caption{(a) Nicht stationär und lokal, (b) stationär und lokal.}%
 \end{figure}
 
 Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abbildung 2.2 (b))}.
 Dies ist nicht der Fall für normale Images wie wir bei Abbildung 2.2 {(a)} erkennen können.
 Zudem ist es möglich jeden Pixel in {(b)} allein durch seine benachbarten Pixel zu bestimmen.
-Diese Attribute bezeichnet man als Stationär und Lokal.{[8]} \\
-
-Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros und T. Leung: {[9]}
+Diese Attribute bezeichnet man als Stationär und Lokal.{[8]}
+Im Folgenden die Funktionsweise eines Algorithmus basierend auf Markov Random Fields nach Efros und T. Leung: {[9]}
 
 \begin{figure}[H]
     \centering
@@ -154,10 +154,38 @@ Funktionsweise eines Algorithmus basierend auf Markov-Random-Fields nach Efros u
     \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden.{([8], S.4)}
 \end{itemize}
 
+\subsubsection{Markow-Netzwerk und Markov-Kette}
+
+Wie bereits erwähnt basieren einige Textursynthesen auf sogenannte Markow-Netwerke oder Markov-Ketten \textit{(Markov Chain)}.
+In diesem Abschnitt möchte ich kurz erklären, um was es sich genau bei diesen beiden Begriffen handelt.
+Ein Markow-Netwerk kann als Generalisierung einer Markow-Kette im 3D-Raum angesehen werden.
+Eine Markow-Kette dient dazu Wahrscheinlichkeiten zukünftiger Ereignisse anzugeben.
+Sie basiert auf die Theorie, das bereits begrenzte Informationen über den vergangenen Zustand eines Systems ausreicht,
+um Prognosen für die zukünftige Entwicklung des Systems zu erstellen.
+Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
+\say{Der zukünftige Zustand des Prozesses ist nur durch den aktuellen Zustand bedingt und wird nicht durch vergangene Zustände beeinflusst. {[18]}}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/markow-kette.png}}}%
+    \qquad
+    \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/Markov-netzwerk.png}}}%
+    \caption{(a) Markow-Kette mit 2 möglichen Zuständen und deren Wahrscheinlichkeiten.
+    Beispiel: Falls zustand $E$, dann gibt es eine $30\%$ Chance das der Zustand $E$ wieder Eintritt oder eine $70\%$ Chance das $A$ Eintritt.
+    Falls wir den Zustand $A$ haben dann sind es $60\%$ für $A$ und $40\%$ für $E$. (b) Ein Markow-Netzwerk mit seinen Abhängigkeiten.
+    Beispiel: $A$ ist abhängig von $B$ und $D$. $B$ von $A$ und $D$. $D$ von $A$, $B$ und $E$. $E$ von $D$ und $C$. Und zuletzt ist $C$ nur von $E$ abhängig.}%
+\end{figure}
+
+In einer Markow-Kette erster Ordnung hängt der Zustand nur vom vorhergehenden Zustand ab,
+während in einer in einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. {[19]}
+Ein Markow-Netzwerk kann als Feld oder Graph von Zufallsvariablen dargestellt werden,
+wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.2)}.
+
 \section{Pyramid basierende Textur Analyse / Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
-Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.4 (a))}. {[8][10]}\\
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))}. {[8][10]}
+\newline
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der in der regel uniform Weiß ist, verwendet.
 Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
 
@@ -182,7 +210,8 @@ Die beiden Nachschlagetabellen Tabellen sind:
 Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet.
 Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zurückführt.
 Sie wird {(mit linearer Interpolation)} neu abgetastet,
-sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[8][12]}\\
+sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[8][12]}
+\newline
 Während der Algorithmus weiter Iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
 Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
 
@@ -202,7 +231,7 @@ werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständnis d
 \section{Patch basierende Textursynthese}
 
 Die Patch-Based Textursynthese \textit{(auch Quilten genannt)} ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
-Hier werden statt einzelne Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abbildung 2.6)}.
+Hier werden statt einzelne Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abbildung 2.7)}.
 Auch hier werden die Patches mithilfe ihrer benachbarten Pixel bestimmt und ausgewertet.
 Dadruch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
 
@@ -260,8 +289,8 @@ Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau statt
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
 Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können. {[1]}
-Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der Patch-Based Methode am ähnlichsten.\\
-
+Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der Patch-Based Methode am ähnlichsten.
+\newline
 Gumin hat sich von der Arbeit von Paul Merrell Inspirieren lassen, obwohl dieser sich Hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
 Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
 Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden können.
@@ -287,7 +316,7 @@ Sie müssen sich schließlich an den Nachbarn anpassen damit die Synthese nahtlo
 Sobald eine Zelle bekannt wird \textit{(Observation)} und damit nur einen Eigenwert besitzt,
 dann wird die Entropie aller anderen Zellen angepasst. {[2]}
 Da der WFC Algorithmus genau auf diese Art und Weise seine Synthese durchführt,
-dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.\\
+dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.
 
 \subsection{Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}
 
@@ -313,7 +342,8 @@ Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits 
 
 Es gibt viele verschiedene CSP Probleme.
 Eines der bekanntesten Probleme, welchen viele Menschen schon fast täglich selbst lösen, ist Sudoku.
-Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumins WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.\\\\
+Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumins WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.
+\newline
 Wenn wir ein Sudoku Feld ohne initiale Zahlen betrachten \textit{(unobserved)}, dann kann in jedem einzelnen Feld theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
 
 \begin{figure}[H]
@@ -345,7 +375,7 @@ Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)} k�
 um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
 In diesem Fall können wir uns eine Zelle aussuchen die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
 Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert setzten, der später zu einem ungültigen Endzustand führt.
-\footnote[1]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
+\footnote[2]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
 
 \begin{figure}[H]
     \centering
@@ -373,7 +403,8 @@ Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
     \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005. [3]}%
 \end{figure}
 
-In Abbildung 3.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.\\
+In Abbildung 3.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.
+\newline
 Paul Merrell erkannte das viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
 Deswegen kam er auf die Idee, anstatt mit einzelnen Pixel, lieber mit ganzen Komponenten zu Arbeiten.
 Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
@@ -428,12 +459,14 @@ Tatsächlich ist der WFC Algorithmus von Gumin und die Model Synthese von Merrel
 
 Der Unterschied zwischen den beiden Algorithmen besteht lediglich in der Implementierung der einzelnen Schritte sowie in zusätzlichen Optimierungen,
 die die Model Synthese im Vergleich zu WFC besitzt.
-Laut Paul Merrell gibt es mehrere Unterschiede in der Implementierung.\\
+Laut Paul Merrell gibt es mehrere Unterschiede in der Implementierung.
+\newline
 Eine davon ist die Reihenfolge der Auswahl der nächsten Zelle.
 Während WFC nach der niedrigsten Entropie Heuristik seine Zelle auswählt,
 wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zelle aus.
 Interessanterweise verursacht die Zellenauswahl von WFC mehr Fehlerzustände bei großen Output-Images.
-Auch die Komplexität des Inputs kann dazu beitragen das WFC nicht zu einem Ergebnis kommt, während das bei der Model Synthese wesentlich unwahrscheinlicher ist.\\
+Auch die Komplexität des Inputs kann dazu beitragen das WFC nicht zu einem Ergebnis kommt, während das bei der Model Synthese wesentlich unwahrscheinlicher ist.
+\newline
 Ein weiterer Grund warum die Model Synthese gerade bei großen Modellen wesentlich öfter zu Ergebnissen kommt, ist die Blockweise Generierung vom Output-Image.
 In Paul Merrells Model Synthese wird der Output Blockweise generiert und nicht komplett in einem Durchgang.
 Das ist für die Generierung von großen Outputs, vor allem bei 3D-Modellen, von großer Bedeutung da dadurch die Fehlerquote bei einigen Inputs signifikant reduziert wird.
@@ -484,7 +517,7 @@ Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die
     \caption{Die 9 Möglichkeiten wie die Patches übereinander liegen können.}%
 \end{figure}
 
-In Abbildung 3.12 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
+In Abbildung 3.11 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
 Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Patch nutzbar ist, der betrachtete Patch {(bzw. die Zelle mit bereits einzelnem Eigenwert)} selbst.
 {(Siehe z.B. Offset $(-1,0)$. Dort sind nur Patches möglich die Rechts 2 weiße Pixel besitzen damit sie sich nahtlos mit den 2 weißen Pixel bei $(0,0)$ überlappen können)}{[1]}
 
@@ -524,10 +557,11 @@ da wir vollen Kontrolle über die lokalen Muster des Outputs haben.
 Gerade der Simple Tile Model bietet sich deswegen für Procedural-Content-Generation {(PCG)} an, da wir hier auch volle Kontrolle über die einzelnen Module / Patches haben,
 dann zusammengesetzt werden für den Output.
 Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da dadurch keine unvorhersehbaren Artefakte entstehen können.
-Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 2.2)} Input ein Foto verwendet wird,
+Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 2.3)} Input ein Foto verwendet wird,
 dann würden die anderen Synthesemethoden passendere Ergebnisse liefern im Gegensatz zur Model Synthese und WFC.
-Es sei erwähnt das der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.2 {(b)} sein muss.
-Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.\\
+Es sei erwähnt das der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.3 {(b)} sein muss.
+Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.
+\newline
 Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
 Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
 sondern auch die live Generierung des Outputs selbst.
@@ -536,11 +570,14 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. {[1]}
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
 alle möglichen Pixelwerte enthalten, dann führt das zu einer sehr schön anzusehenden Generierung des Outputs.
-\footnote[2]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
-example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}\\
-\url{https://twitter.com/ExUtumno/status/781833475884277760}\\
+\footnote[3]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
+example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
+\newline
+\url{https://twitter.com/ExUtumno/status/781833475884277760}
+\newline
 und Danny Wynne’s \say{3d tile placement with WFC.This algorithm is amazing. Inspired
-by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev}\\
+by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev}
+\newline
 \url{https://twitter.com/dwtw/status/810166761270243328} [1]}
 
 \begin{figure}[H]
@@ -551,7 +588,7 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
         Da der Algorithmus bereits die möglichen Patches der benachbarten Zellen ausgewertet hat, werden die Zellen mit allen verwendbaren Patches eingefärbt.
         {(Die Pixelfarben werden dann gemischt)}.
         Dadurch ist der Bereich direkt um der Anfangszelle nicht in einer einheitlichen Farbe dargestellt, da es dort bereits weniger Optionen gibt die verwendet werden können.
-        {(Siehe Abbildung 4.12)} {[1]}.
+        {(Siehe Abbildung 3.12)} {[1]}.
     }%
 \end{figure}
 
@@ -566,7 +603,7 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 Joseph Parker war einer der ersten, die WFC verwendet haben.
 In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
 Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. [15]
-J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[3]{persönliche Kommunikation, 23. Mai 2023}
+J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[4]{persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
@@ -592,8 +629,8 @@ Der umliegende Hintergrund \textit{(backdrop)} ist mit dem Overlapping Model ers
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
 Overlapping Model für plattformartige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.
-\footnote[3]{persönliche Kommunikation, 23. Mai 2023}}\\
-
+\footnote[4]{persönliche Kommunikation, 23. Mai 2023}}
+\newline
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
 Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} ein Mehrfachdurchlauf \textit{multipass} von WFC.
 Dadruch können größere Komplexitäten bei der Generierung erreicht werden.
@@ -657,6 +694,8 @@ BIBTEX:
 {[15]} {Joseph Parker, Ryan Jones, and Oscar Morante. 2016. Proc Skater 2016. (2016)}\\
 {[16]} {Joseph Parker Email mit mir}\\
 {[17]} \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23#post467126402}\\
+{[18]} \url{https://de.wikipedia.org/wiki/Markow-Kette}\\
+{[19]} \url{https://en.wikipedia.org/wiki/Markov_model}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
 \url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
 \url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
