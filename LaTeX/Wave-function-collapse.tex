@@ -60,22 +60,18 @@ zum schluss..
 % Automatisches Inhaltsverzeichniss
 \tableofcontents
 
-
-%{\let\clearpage\relax\chapter{Abkürzungsverzeichnis}}
-
-%WFC\dotfill{Wave-Function-Collapse}\\
-%PCG\dotfill{Procedural-Content-Generation}\\
-%CSP\dotfill{Constraint-Satisfaction-Problem}\\
-
 \chapter{Einleitung}
 
-TODO AM ENDE.
 Die automatische Generierung von Inhalten wie Texte, Images oder Modellen ist heutzutage Standard in vielen Bereichen der Industrie.
-Um solche Inhalte vordefinierten Parametern zu erstellen werden vor allem zwei Methoden zur Generierung verwendend.
+Um solche Inhalte mit vordefinierten Parametern zu erstellen werden vor allem zwei Methoden zur Generierung verwendend.
 AI's {(Künstliche Intelligenzen)} wie ChatGPT und Algorithmen.
-Der logische Vorteil von solchen Tools ist es, das diese in kürzester Zeit qualitative Resultate Generieren können und auch wie oben erwähnt vordefinierte Parameter als Input erhalten können,
+Der Vorteil von solchen Tools ist es, das diese in kürzester Zeit qualitative Resultate Generieren können und auch wie oben erwähnt vordefinierte Parameter als Input erhalten können,
 um die Ergebnisse für ihren gebrauch anzupassen.
-In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Funktionsweise und Anwendungsfälle fokussieren.
+In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle fokussieren.
+Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erklärt.
+Daraufhin wird auf Constraint-Satisfaction-Problem eingegangen und die Eigenschaft vom WFC Algorithmus solche Probleme zu lösen und
+anhand von Sudoku wird im Detail die Funktionsweise von CSP's selbst aufgezeigt.
+Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation...
 
 \chapter{Textursynthesen im Vergleich}
 
@@ -352,7 +348,7 @@ Wenn wir ein Sudoku Feld ohne initiale Zahlen betrachten \textit{(unobserved)}, 
     \caption{(a) Sudoku Feld unbeobachtet in einer Superposition.}%
 \end{figure}
 
-Die Regeln \textit{(constraints)} dieses CPS sind wie folgt:
+Die Regeln \textit{(constraints)} dieses CSP sind wie folgt:
 \begin{enumerate}
     \item Jede Zeile, Spalte und jedes Quadrat {(je 9 Felder)} muss mit den Zahlen 1-9 ausgefüllt werden.
     \item Keine Zahl innerhalb der Zeile, Spalte oder des Quadrats darf sich wiederholen.
@@ -603,7 +599,7 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 Joseph Parker war einer der ersten, die WFC verwendet haben.
 In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
 Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. [15]
-J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[4]{persönliche Kommunikation, 23. Mai 2023}
+J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[4]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
@@ -611,7 +607,7 @@ J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote
     \caption{Blöcke zu Generierung des Skateparks in \textit{Proc Skater 2016.} {[15]}}%
 \end{figure}
 
-Die adjacency constraint für diese Blöcke werden laut Parker aus einem ruleset $.xml$ ausgelesen und angewandt.
+Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ ausgelesen und angewendet.
 
 \begin{figure}[H]
     \centering
@@ -624,28 +620,37 @@ Die adjacency constraint für diese Blöcke werden laut Parker aus einem ruleset
     \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016.} {[15]}}%
 \end{wrapfigure}
 
-Proc Skater 2016 verwendet allerdings nicht nur das Simple Tile Model, sondern auch das Overlapping Model.
+Parker verwendete allerdings nicht nur das Simple Tile Model, sondern auch das Overlapping Model in Proc Skater 2016.
 Der umliegende Hintergrund \textit{(backdrop)} ist mit dem Overlapping Model erstellt.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
-Overlapping Model für plattformartige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.
-\footnote[4]{persönliche Kommunikation, 23. Mai 2023}}
+Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.
+\footnote[4]{Persönliche Kommunikation, 23. Mai 2023}}
 \newline
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
-Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} ein Mehrfachdurchlauf \textit{multipass} von WFC.
+Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} ein Mehrfachdurchlauf \textit{(multipass)} von WFC.
 Dadruch können größere Komplexitäten bei der Generierung erreicht werden.
 Ein weiterer Vorteil, der sich dadurch ergeben hat, ist die einfache Handhabung von WFC.
-Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach Input-Images einspielen und Spielbaren Content generieren.{[1][17]}
+Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach Input-Images einspielen und Spielbaren Content generieren.
+\footnote[5]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} {[1]}
 
 \begin{figure}[H]
     \centering
     \frame{\includegraphics[width=1\linewidth]{images/caves-of-qud.jpg}}%
-    \caption{Zwei Spielbare Karten von \textit{Caves of Qud.} {[1][17]}}%
+    \caption{Zwei Spielbare Karten von \textit{Caves of Qud.} {[1]}}%
 \end{figure}
 
-Wave-Function-Collapse kann nicht nur auf Planaren ebenen mit quadratischen zellen verwenden werden...
+Wave-Function-Collapse kann nicht nur auf flachen Ebenen mit quadratischen Zellen verwenden werden.
+Oskar Stålberg verwendete WFC nicht nur im 2D und 3D-Raum, sondern auch auf irregulären Rastern.
+In einem Beispiel implementiert Stålberg WFC auf einer Sphäre mit einem Dreiecks-Raster.
+\footnote[6]{Beispiele auf seiner Website
+\url{https://oskarstalberg.tumblr.com/}
+oder seinem Twitter
+\url{https://twitter.com/OskSta/status/784847588893814785}}
 
 {\let\clearpage\relax\chapter{Fazit}}
+
+
 
 {\let\clearpage\relax\chapter{Literaturverzeichnis}}
 {[1]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
@@ -693,7 +698,6 @@ BIBTEX:
 {[14]} \url{http://www.kchapelier.com/wfc-example/overlapping-model.html}\\
 {[15]} {Joseph Parker, Ryan Jones, and Oscar Morante. 2016. Proc Skater 2016. (2016)}\\
 {[16]} {Joseph Parker Email mit mir}\\
-{[17]} \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23#post467126402}\\
 {[18]} \url{https://de.wikipedia.org/wiki/Markow-Kette}\\
 {[19]} \url{https://en.wikipedia.org/wiki/Markov_model}\\
 \url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
