@@ -21,7 +21,7 @@ export class FrameComponent implements AfterViewInit {
 
   tiles: Tile[] = [];
 
-  @Input() DIM: number = 2;
+  @Input() DIM: number = 9;
   @Input() SLEEP: number = 0;
   @Input() showOption: boolean = false;
   tileSize: number = 50;

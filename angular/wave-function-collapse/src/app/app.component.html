@@ -5,11 +5,11 @@
     <div id="side-nav">
 
       <div class="text" id="title">Wave-function-collapse</div>
-      <mat-slider (change)="updateDIM($event)" min="2" max="18" step="1">
+      <mat-slider (change)="updateDIM($event)" min="2" max="18" step="1" value="9">
         <input matSliderThumb />
       </mat-slider>
       <div class="text" >DIM: {{value}}</div>
-      <mat-slider (change)="updateSLEEP($event)" min="0" max="10000" step="100">
+      <mat-slider (change)="updateSLEEP($event)" min="0" max="2000" step="100">
         <input matSliderThumb />
       </mat-slider>
       <div class="text" >SLEEP in ms: {{sleep}}</div>

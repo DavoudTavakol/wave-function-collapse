@@ -12,7 +12,7 @@ export class AppComponent {
 
   title = 'wave-function-collapse';
 
-  value: number = 2;
+  value: number = 9;
   sleep: number = 0;
   showOption: boolean = false;
 
