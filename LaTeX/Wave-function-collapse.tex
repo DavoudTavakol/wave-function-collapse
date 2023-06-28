@@ -13,6 +13,7 @@
 \usepackage{float}
 \usepackage{listings} %code darstellung
 \usepackage{dirtytalk} %zitieren
+\usepackage{pdfpages} %pdf hinzufügen
 
 
 \usepackage{titlesec} %zum entfernen der "Kapitel N" header
@@ -42,7 +43,7 @@
 {\large Funktionsweise und Anwendungsfälle}\\
 {\vspace{10mm}}
 {\large Bachelorarbeit}\\
-{\large Leitung: Prof. Dr. rer. nat. Hopf Matthias}\\
+{\large Betreuer: Prof. Dr. rer. nat. Hopf Matthias}\\
 {\vspace{10mm}}
 {\large Studiengang: Bachelor Media Engineering}\\
 {\large Fakultät: Elektrotechnik Feinwerktechnik Informationstechnik}\\
@@ -60,6 +61,8 @@
 
 % Erstelle den Titel (Dieser Befehlt setzt dann auch den Author und das Datum!)
 \maketitle
+
+\includepdf[pages=-]{Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf}
 
 {\let\clearpage\relax\chapter*{Abstract}}
 
@@ -79,7 +82,7 @@ In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithm
 Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert.
 Daraufhin wird das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} eingegangen und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen.
 Anhand von Sudoku wird im Detail die Funktionsweise von solchen CSP's selbst aufgezeigt.
-Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation...
+Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation {(PCG)}
 
 \chapter{Textursynthesen im Vergleich}
 
