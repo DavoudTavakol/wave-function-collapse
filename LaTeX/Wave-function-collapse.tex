@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[12pt, a4paper,twoside,openright]{report}
 \usepackage[ngerman]{babel} %für deutsch
 % Bibliotheken und Pfade
 \usepackage{xcolor} %Farben
@@ -24,7 +24,8 @@
 %\titlespacing*{\chapter}{0pt}{50pt}{40pt} % default
 
 \graphicspath{ {images/} }
-\geometry{top=3.0cm}
+%\geometry{top=3.0cm}
+\geometry{paper=a4paper,left=2.5cm,top=3.0cm,bindingoffset=0.8cm}
 
 
 \hypersetup{
@@ -37,15 +38,22 @@
 
 % Baue die Titel Struktur + Inhalt
 \title{
-{Bachelorarbeit}\\
+{\huge Wave-Function-Collapse}\\
+{\large Funktionsweise und Anwendungsfälle}\\
 {\vspace{10mm}}
-{\small Wave-Function-Collapse}\\
-{\small Funktionsweise und Anwendungsfälle}\\
-{\small TH-Nürnberg Georg-Simon-Ohm}\\
-}
+{\large Bachelorarbeit}\\
+{\large Leitung: Prof. Dr. rer. nat. Hopf Matthias}\\
+{\vspace{10mm}}
+{\large Studiengang: Bachelor Media Engineering}\\
+{\large Fakultät: Elektrotechnik Feinwerktechnik Informationstechnik}\\
+
 % Setze Author und Datum
-\author{Davoud Tavakol}
-\date{29.12.2022}
+\author{
+    Davoud Tavakol \\ Matrikelnummer: 3540912
+}
+\date{Sommersemseter 2023 \\ Abgabedatum: 20 Juli 2023}
+}
+
 
 % Start Dokument
 \begin{document}
@@ -63,14 +71,14 @@ zum schluss..
 \chapter{Einleitung}
 
 Die automatische Generierung von Inhalten wie Texte, Images oder Modellen ist heutzutage Standard in vielen Bereichen der Industrie.
-Um solche Inhalte mit vordefinierten Parametern zu erstellen werden vor allem zwei Methoden zur Generierung verwendend.
+Um solche Inhalte mit vordefinierten Parametern zu erstellen, werden oft zwei Methoden zur Generierung verwendend.
 AI's {(Künstliche Intelligenzen)} wie ChatGPT und Algorithmen.
-Der Vorteil von solchen Tools ist es, das diese in kürzester Zeit qualitative Resultate Generieren können und auch wie oben erwähnt vordefinierte Parameter als Input erhalten können,
-um die Ergebnisse für ihren gebrauch anzupassen.
+Der Vorteil von solchen Tools ist es, das diese in kurzer Zeit qualitative Resultate Generieren können und auch, wie oben erwähnt, vordefinierte Parameter als Input erhalten können
+um die Resultate für ihren gebrauch anzupassen.
 In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle fokussieren.
-Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erklärt.
-Daraufhin wird auf Constraint-Satisfaction-Problem eingegangen und die Eigenschaft vom WFC Algorithmus solche Probleme zu lösen und
-anhand von Sudoku wird im Detail die Funktionsweise von CSP's selbst aufgezeigt.
+Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert.
+Daraufhin wird das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} eingegangen und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen.
+Anhand von Sudoku wird im Detail die Funktionsweise von solchen CSP's selbst aufgezeigt.
 Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation...
 
 \chapter{Textursynthesen im Vergleich}
@@ -709,7 +717,4 @@ BIBTEX:
 \url{http://people.csail.mit.edu/celiu/Patch-based%20Texture%20Synthesis/Index.htm}\\
 \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
 
-
-{\let\clearpage\relax\chapter{Anhang}}
-{\let\clearpage\relax\chapter{Eidesstattliche Erklärung}}
 \end{document}

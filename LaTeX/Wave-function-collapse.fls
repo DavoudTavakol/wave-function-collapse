@@ -706,8 +706,6 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT ./Wave-function-collapse.toc
 INPUT Wave-function-collapse.toc
 INPUT Wave-function-collapse.toc
@@ -882,13 +880,13 @@ INPUT images/wfc-pattern.png
 INPUT ./images/wfc-pattern.png
 INPUT ./images/wfc-pattern.png
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./images/sudoku-superposition.png
 INPUT ./images/sudoku-superposition.png
 INPUT images/sudoku-superposition.png
 INPUT ./images/sudoku-superposition.png
 INPUT ./images/sudoku-superposition.png
+INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./images/sudoku-observed.png
 INPUT ./images/sudoku-observed.png
 INPUT images/sudoku-observed.png
