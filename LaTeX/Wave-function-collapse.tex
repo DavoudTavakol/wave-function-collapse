@@ -28,14 +28,12 @@
 %\geometry{top=3.0cm}
 \geometry{paper=a4paper,left=2.5cm,top=3.0cm,bindingoffset=0.8cm}
 
-
 \hypersetup{
     colorlinks,
     linkcolor={black!50!black},
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
-
 
 % Baue die Titel Struktur + Inhalt
 \title{
@@ -55,13 +53,13 @@
 \date{Sommersemseter 2023 \\ Abgabedatum: 20 Juli 2023}
 }
 
-
 % Start Dokument
 \begin{document}
 
 % Erstelle den Titel (Dieser Befehlt setzt dann auch den Author und das Datum!)
 \maketitle
 
+%Eidesstaatliche Erklärung
 \includepdf[pages=-]{Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf}
 
 {\let\clearpage\relax\chapter*{Abstract}}
@@ -75,14 +73,17 @@ zum schluss..
 
 Die automatische Generierung von Inhalten wie Texte, Images oder Modellen ist heutzutage Standard in vielen Bereichen der Industrie.
 Um solche Inhalte mit vordefinierten Parametern zu erstellen, werden oft zwei Methoden zur Generierung verwendend.
-AI's {(Künstliche Intelligenzen)} wie ChatGPT und Algorithmen.
+AI's {(Künstliche Intelligenzen)} wie DALL-E2, Midjourney und Algorithmen wie die Patch Synthese.
 Der Vorteil von solchen Tools ist es, das diese in kurzer Zeit qualitative Resultate Generieren können und auch, wie oben erwähnt, vordefinierte Parameter als Input erhalten können
 um die Resultate für ihren gebrauch anzupassen.
 In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle fokussieren.
-Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert.
+Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert
+und wie Wave-Function-Collape sowie andere Textursynthesen davon inspiriert wurden.
 Daraufhin wird das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} eingegangen und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen.
 Anhand von Sudoku wird im Detail die Funktionsweise von solchen CSP's selbst aufgezeigt.
-Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation {(PCG)}
+Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation {(PCG)} wird mit der Model Synthese von Paul Merrell verglichen und deren Unterschiede genauer betrachtet.
+Es wird deutlich, dass der Wave-Function-Collapse Algorithmus sowie die Model Synthese beide sowohl in Ihrer Verwendung von Pixelganuer / diskreten Synthese sowie im Lösen von
+CSP ähnliche Methoden verwenden und beide sich dadurch als PCG's verwenden lassen und dadurch interaktiv verwendet werden können wie beispielsweise in Videospielen.
 
 \chapter{Textursynthesen im Vergleich}
 
@@ -661,6 +662,7 @@ oder seinem Twitter
 
 {\let\clearpage\relax\chapter{Fazit}}
 
+Wave-Function-Collapse
 
 
 {\let\clearpage\relax\chapter{Literaturverzeichnis}}
