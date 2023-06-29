@@ -89,7 +89,7 @@ CSP ähnliche Methoden verwenden und beide sich dadurch als PCG's verwenden lass
 
 Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
-Nach D.Gomathi und Rajvi Shah {([8], S.1)}, kann die Textursynthese wie folgt definiert werden.
+Nach D.Gomathi und Rajvi Shah {([AAA], S.1)}, kann die Textursynthese wie folgt definiert werden.
 \newline
 Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu generieren die, \say{wenn sie von einem menschlichen Beobachter wahrgenommen wird,
 durch denselben zugrundeliegenden Prozess erzeugt wird.}
@@ -111,7 +111,7 @@ Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke 
     \item Wenn Texturprobe gegeben, generiere eine neue Textur, die der Probe gleicht.
     \item Die neue Textur kann eine beliebige Größe haben die vom Benutzer festgelegt wird.
     \item Es sollen keine sichtbaren Übergänge, Artefakte oder fehlerhafte Kanten sichtbar sein.
-    \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([8], S.2)}
+    \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. {([AAA], S.2)}
 \end{itemize}
 
 Im Folgenden werde ich auf drei verschiedene Textursyntheseverfahren eingehen da diese sich fundamental voneinander unterscheiden und verschiedene Ansätze von Synthesen aufzeigen.
@@ -128,7 +128,7 @@ Markov Random Fields Methoden beurteilen jeden Pixel nach einer kleinen Menge vo
 Voraussetzung hierfür ist, dass das Input-Image stationär und lokal ist.
 Ein Image wird als stationär bezeichnet wenn, unter korrekter Fenstergröße,
 jeder betrachtete Bereich ähnlich zueinander aussehen.
-Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt werden kann.{[8]}
+Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt werden kann.{[AAA]}
 
 \begin{figure}[H]
     \centering
@@ -141,8 +141,8 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
 Unterschiedliche Bereiche einer Textur sehen sich immer ähnlich {(siehe Abbildung 2.2 (b))}.
 Dies ist nicht der Fall für normale Images wie wir bei Abbildung 2.2 {(a)} erkennen können.
 Zudem ist es möglich jeden Pixel in {(b)} allein durch seine benachbarten Pixel zu bestimmen.
-Diese Attribute bezeichnet man als Stationär und Lokal.{[8]}
-Im Folgenden die Funktionsweise eines Algorithmus basierend auf Markov Random Fields nach Efros und T. Leung: {[9]}
+Diese Attribute bezeichnet man als Stationär und Lokal.{[AAA]}
+Im Folgenden die Funktionsweise eines Algorithmus basierend auf Markov Random Fields nach Efros und T. Leung: {[BBB]}
 
 \begin{figure}[H]
     \centering
@@ -159,7 +159,7 @@ Im Folgenden die Funktionsweise eines Algorithmus basierend auf Markov Random Fi
     Die Größe des Fensters muss nach Größe der einzelnen Elemente der Textur gewählt werden.
     \item Mit dieser Gruppe von Pixel {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht.
     \item Danach wird zufällig von einer dieser Kandidaten ausgewählt und der betrachtete Pixel im Output wird aus diesem Kandidaten kopiert.
-    \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden.{([8], S.4)}
+    \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden.{([AAA], S.4)}
 \end{itemize}
 
 \subsubsection{Markow-Netzwerk und Markov-Kette}
@@ -171,7 +171,7 @@ Eine Markow-Kette dient dazu Wahrscheinlichkeiten zukünftiger Ereignisse anzuge
 Sie basiert auf die Theorie, das bereits begrenzte Informationen über den vergangenen Zustand eines Systems ausreicht,
 um Prognosen für die zukünftige Entwicklung des Systems zu erstellen.
 Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
-\say{Der zukünftige Zustand des Prozesses ist nur durch den aktuellen Zustand bedingt und wird nicht durch vergangene Zustände beeinflusst. {[18]}}
+\say{Der zukünftige Zustand des Prozesses ist nur durch den aktuellen Zustand bedingt und wird nicht durch vergangene Zustände beeinflusst. {[CCC]}}
 
 \begin{figure}[H]
     \centering
@@ -185,14 +185,14 @@ Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
 \end{figure}
 
 In einer Markow-Kette erster Ordnung hängt der Zustand nur vom vorhergehenden Zustand ab,
-während in einer in einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. {[19]}
+während in einer in einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. {[DDD]}
 Ein Markow-Netzwerk kann als Feld oder Graph von Zufallsvariablen dargestellt werden,
 wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.2)}.
 
 \section{Pyramid basierende Textur Analyse / Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
-Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))}. {[8][10]}
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))}. {[AAA][EEE]}
 \newline
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der in der regel uniform Weiß ist, verwendet.
 Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
@@ -206,7 +206,7 @@ Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid s
 Histogram-Matching ist die Generalisierung des Punktoperators, mehr spezifisch der Histogrammäqualisation.
 Bei der Histogrammäqualisation {(auch Histogrammausgleich, Histogrammeinebnung, Histogrammegalisierung oder Histogrammequalisierung genannt)}
 werden die Kontraste von Grauwertbildern derart verbessert, sodass sie über eine bloße Kontrastverstärkung hinausgeht.
-Dabei wird die Gleichverteilung mithilfe der Grauwertverteilung berechnet, damit der gesamte zur Verfügung stehende Wertebereich optimal ausgenutzt wird.{[11]}
+Dabei wird die Gleichverteilung mithilfe der Grauwertverteilung berechnet, damit der gesamte zur Verfügung stehende Wertebereich optimal ausgenutzt wird.{[FFF]}
 Bei dem Fall von der Pyramid-Methode nimmt der Algorithmus ein Input-Image und zwingt es über ein Paar von Nachschlagetabellen, ein bestimmtes Histogramm zu haben.
 Die beiden Nachschlagetabellen Tabellen sind:
 
@@ -218,7 +218,7 @@ Die beiden Nachschlagetabellen Tabellen sind:
 Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet.
 Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zurückführt.
 Sie wird {(mit linearer Interpolation)} neu abgetastet,
-sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[8][12]}
+sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[AAA][GGG]}
 \newline
 Während der Algorithmus weiter Iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
 Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
@@ -255,7 +255,7 @@ Ein Problem dieser Synthese im Vergleich zur Pixel-Based Synthese ist, das sich 
 Es gibt viele Methoden, um dieses Problem zu lösen.
 Eine davon ist es Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
 \textit{(Visual Masking)} reduziert werden.
-Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse.{[8]}
+Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse.{[AAA]}
 
 Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
 
@@ -285,7 +285,7 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-overlap-blocks.jpg}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-minimum-boundary-blocks.jpg}}%
-    \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt. Nach Alexei A. Efros and Thomas K. Leung. [9]}%
+    \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt. Nach Alexei A. Efros and Thomas K. Leung. [BBB]}%
 \end{figure}
 
 \chapter{Wave-Function-Collapse}
@@ -296,14 +296,14 @@ Das wird größtenteils dadurch erzielt das aus dem Input-Image kleinere Subimag
 Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet, werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
-Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können. {[1]}
+Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können. {[HHH]}
 Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der Patch-Based Methode am ähnlichsten.
 \newline
 Gumin hat sich von der Arbeit von Paul Merrell Inspirieren lassen, obwohl dieser sich Hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
 Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
 Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden können.
 Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merrell nicht möglich da es sich um eine diskrete Synthese handelt.
-Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)}. {[1][3][4]}
+Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)}. {[HHH][III][JJJ]}
 
 \begin{figure}[H]
     \centering
@@ -322,7 +322,7 @@ Denn nicht jede Zelle kann an jeder Position auftauchen, sobald bereits eine Zel
 {(Siehe Patch-Based Textursynthese. Nicht jeder Patch kann an einer beliebigen Position sein.
 Sie müssen sich schließlich an den Nachbarn anpassen damit die Synthese nahtlos ist.)}
 Sobald eine Zelle bekannt wird \textit{(Observation)} und damit nur einen Eigenwert besitzt,
-dann wird die Entropie aller anderen Zellen angepasst. {[2]}
+dann wird die Entropie aller anderen Zellen angepasst. {[KKK]}
 Da der WFC Algorithmus genau auf diese Art und Weise seine Synthese durchführt,
 dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.
 
@@ -332,19 +332,19 @@ Grundsätzlich beschreiben CSP's Gruppen von Objekten denen Variablen zugeteilt 
 Diesen Variablen sind Regeln, sogenannte \textit{(constraints)}, auferlegt die erfüllt werden müssen.
 Jeder dieser Variablen hat zu Beginn eine Superposition und kann damit jeden wert enthalten.
 Die Aufgabe von Algorithmen zum Lösen von CSP's \textit{(solver)} ist es einen Zustand \textit{(State)} zu finden in denen alle constraints erfüllt sind und jeder Variable nur noch ein wert zugeordnet ist.
-Für solche Probleme finden sich oft bei der Künstlichen Intelligenz und aus dem Operations Research. {[5]}
+Für solche Probleme finden sich oft bei der Künstlichen Intelligenz und aus dem Operations Research. {[LLL]}
 Im Fall von WFC sind die Objekte, denen die Variablen zugeteilt sind, die einzelnen Bereiche im Output-Image.
 Jeder diese Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
 Immer, wenn einem Bereich ein wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst \textit{(Propagation)}.
 Der Gesamtprozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
-nennt sich Wave-Function-Collapse. {[6]}
+nennt sich Wave-Function-Collapse. {[MMM]}
 Während dem Prozess einen gültigen State für das CSP zu finden, dann gibt es immer Situationen in dem es mehrere gültige Optionen für eine Variable gibt.
 Wenn so eine Situation auftritt, dann haben verschiedene Solver verschiedene Ansätze.
 Einige Algorithmen wähle zufällig eine der möglichen Werte von momentan zulässigen Optionen.
 Bei so einem Ansatz kann es sein das der Algorithmus nicht auf einen Zustand kommen kann, in dem alle constraints erfüllt werden können.
 In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)} bei dem der Algorithmus zu seinem letzten Ergebnis zurückfällt und ein anderen Wert für die Variable setzt, um aus dem
 ungültigen Zustand zu kommen.
-Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. {[1]}
+Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. {[HHH]}
 
 \subsection{CSP-Beispiel an Sudoku}
 
@@ -408,7 +408,7 @@ Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Efros-Leung-1999.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Kwatra-2005.JPG}}%
-    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005. [3]}%
+    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005. [III]}%
 \end{figure}
 
 In Abbildung 3.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.
@@ -424,7 +424,7 @@ Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Efros-Leung-textur.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/Paul-merrells-Model-synthese.JPG}}%
-    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung, (c) Paul Merrell Model Synthese. [3]}%
+    \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung, (c) Paul Merrell Model Synthese. [III]}%
 \end{figure}
 
 Anders als bei Sudoku, gibt es hier die Regel der Adjazenz-Bedingung \textit{(adjacency constraint)}.
@@ -437,7 +437,7 @@ Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusamm
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/seamless-model.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/modell-conflicts.JPG}}%
-    \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingung nicht ein. [3]}%
+    \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingung nicht ein. [III]}%
 \end{figure}
 
 Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
@@ -480,7 +480,7 @@ In Paul Merrells Model Synthese wird der Output Blockweise generiert und nicht k
 Das ist für die Generierung von großen Outputs, vor allem bei 3D-Modellen, von großer Bedeutung da dadurch die Fehlerquote bei einigen Inputs signifikant reduziert wird.
 WFC teilt sein CSP nicht in kleinere Blöcke auf, da der Output von WFC in der Regel kleiner ist, und die Verarbeitung im 2D-Raum wesentlich einfacher.
 Das bedeutet nicht das WFC von so einer Implementierung nicht profitieren würde, vor allem wenn man WFC im 3D-Raum verwenden möchte.
-Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. {[13]}
+Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. {[NNN]}
 
 \begin{figure}[H]
     \centering
@@ -497,7 +497,7 @@ Anders als bei der Simple Tile Model von WFC, wo die einzelnen Module / Patches 
 benötigt das Overlapping Model von WFC ein komplettes Input-Image welches Analysiert wird.
 Aus dieser Analyse werden die Module automatisch generiert.
 Zudem haben sich die Patches bei der Simple Tile Model nicht überschnitten was bei dem Overlapping Model, offensichtlich, der Fall ist.
-Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden können und der Output sieht dem Input ähnlicher da die Patches enger aneinander liegen. {[13]}
+Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden können und der Output sieht dem Input ähnlicher da die Patches enger aneinander liegen. {[NNN]}
 
 \begin{figure}[H]
     \centering
@@ -517,7 +517,7 @@ Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten wie dies
 Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschriebt, wie ein die Muster nebeneinander platziert werden können.
 Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Patches, die an einem anderen Index mit $x,y$-Offset platziert werden darf. 
 Man kann sich vorstellen das jede Zelle im Sudoku Feld ein bestimmte $x,y$ Koordinate besitzt damit durch diese Iteriert werden kann.
-Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die Patches entfernt, die nicht nutzbar sind. {[1]}
+Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die Patches entfernt, die nicht nutzbar sind. {[HHH]}
 
 \begin{figure}[H]
     \centering
@@ -527,7 +527,7 @@ Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die
 
 In Abbildung 3.11 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
 Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Patch nutzbar ist, der betrachtete Patch {(bzw. die Zelle mit bereits einzelnem Eigenwert)} selbst.
-{(Siehe z.B. Offset $(-1,0)$. Dort sind nur Patches möglich die Rechts 2 weiße Pixel besitzen damit sie sich nahtlos mit den 2 weißen Pixel bei $(0,0)$ überlappen können)}{[1]}
+{(Siehe z.B. Offset $(-1,0)$. Dort sind nur Patches möglich die Rechts 2 weiße Pixel besitzen damit sie sich nahtlos mit den 2 weißen Pixel bei $(0,0)$ überlappen können)}{[HHH]}
 
 \begin{figure}[H]
     \centering
@@ -556,7 +556,7 @@ Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu er
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n3.png}}}%
     \qquad
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n4.png}}}%
-    \caption{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model. [14]}%
+    \caption{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model. [OOO]}%
 \end{figure}
 
 Es ist wichtig anzumerken das viele der hier gezeigten Texturen auch mit aktuellen Textursynthese-Algorithmen generiert werden können.
@@ -575,7 +575,7 @@ Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pi
 sondern auch die live Generierung des Outputs selbst.
 Viele PCG's Methoden variieren in ihrer Laufzeit bei der Generierung ihres Outputs.
 Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert werden,
-dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. {[1]}
+dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. {[HHH]}
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
 alle möglichen Pixelwerte enthalten, dann führt das zu einer sehr schön anzusehenden Generierung des Outputs.
 \footnote[3]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
@@ -586,7 +586,7 @@ example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
 und Danny Wynne’s \say{3d tile placement with WFC.This algorithm is amazing. Inspired
 by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev}
 \newline
-\url{https://twitter.com/dwtw/status/810166761270243328} [1]}
+\url{https://twitter.com/dwtw/status/810166761270243328} [HHH]}
 
 \begin{figure}[H]
     \centering
@@ -596,27 +596,27 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
         Da der Algorithmus bereits die möglichen Patches der benachbarten Zellen ausgewertet hat, werden die Zellen mit allen verwendbaren Patches eingefärbt.
         {(Die Pixelfarben werden dann gemischt)}.
         Dadurch ist der Bereich direkt um der Anfangszelle nicht in einer einheitlichen Farbe dargestellt, da es dort bereits weniger Optionen gibt die verwendet werden können.
-        {(Siehe Abbildung 3.12)} {[1]}.
+        {(Siehe Abbildung 3.12)} {[HHH]}.
     }%
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \frame{\includegraphics[width=1\linewidth]{images/red-maze-overlapping-steps.png}}%
-    \caption{Die nächsten Zyklen für das Red-Maze Input. {[1]}}%
+    \caption{Die nächsten Zyklen für das Red-Maze Input. {[HHH]}}%
 \end{figure}
 
 \section{Beispiel Implementierung}
 
 Joseph Parker war einer der ersten, die WFC verwendet haben.
 In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
-Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. [15]
+Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. {[PPP]}
 J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[4]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/proc-skater-ruleset.png}%
-    \caption{Blöcke zu Generierung des Skateparks in \textit{Proc Skater 2016.} {[15]}}%
+    \caption{Blöcke zu Generierung des Skateparks in \textit{Proc Skater 2016.} {[PPP]}}%
 \end{figure}
 
 Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ ausgelesen und angewendet.
@@ -624,12 +624,12 @@ Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ aus
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/proc-skate-level.png}%
-    \caption{Typisches Level in \textit{Proc Skater 2016.} {[15]}}%
+    \caption{Typisches Level in \textit{Proc Skater 2016.} {[PPP]}}%
 \end{figure}
 
 \begin{wrapfigure}{r}{8cm}
     \includegraphics[width=1\linewidth]{images/proc-skate-backdrop.png}%
-    \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016.} {[15]}}%
+    \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016.} {[PPP]}}%
 \end{wrapfigure}
 
 Parker verwendete allerdings nicht nur das Simple Tile Model, sondern auch das Overlapping Model in Proc Skater 2016.
@@ -644,12 +644,12 @@ Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{C
 Dadruch können größere Komplexitäten bei der Generierung erreicht werden.
 Ein weiterer Vorteil, der sich dadurch ergeben hat, ist die einfache Handhabung von WFC.
 Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach Input-Images einspielen und Spielbaren Content generieren.
-\footnote[5]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} {[1]}
+\footnote[5]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} {[HHH]}
 
 \begin{figure}[H]
     \centering
     \frame{\includegraphics[width=1\linewidth]{images/caves-of-qud.jpg}}%
-    \caption{Zwei Spielbare Karten von \textit{Caves of Qud.} {[1]}}%
+    \caption{Zwei Spielbare Karten von \textit{Caves of Qud.} {[HHH]}}%
 \end{figure}
 
 Wave-Function-Collapse kann nicht nur auf flachen Ebenen mit quadratischen Zellen verwenden werden.
@@ -666,9 +666,29 @@ Wave-Function-Collapse
 
 
 {\let\clearpage\relax\chapter{Literaturverzeichnis}}
-{[1]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
-{[2]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
-{[3]} \url{https://paulmerrell.org/wp-content/uploads/2021/06/thesis.pdf}\\
+
+
+{[AAA]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
+
+{[BBB]} \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
+
+{[CCC]} \url{https://de.wikipedia.org/wiki/Markow-Kette}\\
+
+{[DDD]} \url{https://en.wikipedia.org/wiki/Markov_model}\\
+
+{[EEE]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
+
+{[FFF]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
+
+{[GGG]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
+
+{[HHH]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
+
+{[III]} \url{https://paulmerrell.org/wp-content/uploads/2021/06/thesis.pdf}\\
+
+{[JJJ]} \url{https://github.com/mxgmn/WaveFunctionCollapse}\\
+
+{[KKK]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 
 @article{DBLP:journals/tvcg/MerrellM11,
   author       = {Paul Merrell and
@@ -686,12 +706,9 @@ Wave-Function-Collapse
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 
-{[4]} \url{https://github.com/mxgmn/WaveFunctionCollapse}\\
-{[5]} \url{https://en.wikipedia.org/wiki/Constraint_satisfaction_problem}\\
-{[6]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
-{[7]} \url{https://ojs.aaai.org/index.php/AIIDE/article/view/12511/12364}\\
-{[8]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
-{[9]} \url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
+{[LLL]} \url{https://en.wikipedia.org/wiki/Constraint_satisfaction_problem}\\
+
+{[MMM]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 
 BIBTEX:
 @inproceedings{Efros99,
@@ -704,22 +721,13 @@ BIBTEX:
     PAGES   = {1033-1038}
 }
 
-{[10]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
-{[11]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
-{[12]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
-{[13]} \url{https://paulmerrell.org/wp-content/uploads/2021/07/comparison.pdf}\\
-{[14]} \url{http://www.kchapelier.com/wfc-example/overlapping-model.html}\\
-{[15]} {Joseph Parker, Ryan Jones, and Oscar Morante. 2016. Proc Skater 2016. (2016)}\\
-{[16]} {Joseph Parker Email mit mir}\\
-{[18]} \url{https://de.wikipedia.org/wiki/Markow-Kette}\\
-{[19]} \url{https://en.wikipedia.org/wiki/Markov_model}\\
-\url{https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf}\\
-\url{https://www.th-nuernberg.de/fileadmin/global/Gelenkte_Doks/Fak/SW/SW_0600_HR_Leitfaden_WA_public.pdf}\\
-\url{https://www.ghost-writing.net/wissenschaftliche-arbeit-auf-englisch-verfassen/}\\
-\url{https://www.youtube.com/watch?v=rI_y2GAlQFM&t=1135s&ab_channel=TheCodingTrain}\\
-\url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_westfalen.pdf}\\
-\url{https://users.informatik.haw-hamburg.de/~abo781/abschlussarbeiten/ba_dzaebel.pdf}\\
-\url{http://people.csail.mit.edu/celiu/Patch-based%20Texture%20Synthesis/Index.htm}\\
-\url{https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf}\\
+{[NNN]} \url{https://paulmerrell.org/wp-content/uploads/2021/07/comparison.pdf}\\
+
+{[OOO]} \url{http://www.kchapelier.com/wfc-example/overlapping-model.html}\\
+
+{[PPP]} {Joseph Parker, Ryan Jones, and Oscar Morante. 2016. Proc Skater 2016. (2016)}\\
+
+
+
 
 \end{document}
