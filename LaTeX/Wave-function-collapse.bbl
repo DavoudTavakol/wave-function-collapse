@@ -1,0 +1,384 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{GomathiShah2009}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=c119037aa48148e748a3e9cda65faeb0}{%
+           family={Gomathi},
+           familyi={G\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=49d11dd121b16b018e6c1cc188883c9b}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Rajvi},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bfb43b7565841a7b80cd5459efda7aef}
+      \strng{fullhash}{bfb43b7565841a7b80cd5459efda7aef}
+      \strng{bibnamehash}{bfb43b7565841a7b80cd5459efda7aef}
+      \strng{authorbibnamehash}{bfb43b7565841a7b80cd5459efda7aef}
+      \strng{authornamehash}{bfb43b7565841a7b80cd5459efda7aef}
+      \strng{authorfullhash}{bfb43b7565841a7b80cd5459efda7aef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Texture Synthesis}
+      \field{year}{2009}
+    \endentry
+    \entry{Efros99}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=373c88f551e828c5c4514475f34f3588}{%
+           family={Leung},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima K.},
+           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Corfu, Greece}%
+      }
+      \strng{namehash}{cae0bad5845fc5531442e21fc6509f3d}
+      \strng{fullhash}{cae0bad5845fc5531442e21fc6509f3d}
+      \strng{bibnamehash}{cae0bad5845fc5531442e21fc6509f3d}
+      \strng{authorbibnamehash}{cae0bad5845fc5531442e21fc6509f3d}
+      \strng{authornamehash}{cae0bad5845fc5531442e21fc6509f3d}
+      \strng{authorfullhash}{cae0bad5845fc5531442e21fc6509f3d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Conference on Computer Vision}
+      \field{title}{Texture Synthesis by Non-parametric Sampling}
+      \field{year}{1999}
+      \field{pages}{1033\bibrangedash 1038}
+      \range{pages}{6}
+    \endentry
+    \entry{Heeger}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=a5ef994b506c088c939d5ae8a80112d8}{%
+           family={Heeger},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=12ddea87597f333ab627fe712980ee20}{%
+           family={Bergen},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{433309e903e4586c7340213060a9a4a3}
+      \strng{fullhash}{433309e903e4586c7340213060a9a4a3}
+      \strng{bibnamehash}{433309e903e4586c7340213060a9a4a3}
+      \strng{authorbibnamehash}{433309e903e4586c7340213060a9a4a3}
+      \strng{authornamehash}{433309e903e4586c7340213060a9a4a3}
+      \strng{authorfullhash}{433309e903e4586c7340213060a9a4a3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques}
+      \field{isbn}{0897917014}
+      \field{series}{SIGGRAPH '95}
+      \field{title}{Pyramid-Based Texture Analysis/Synthesis}
+      \field{year}{1995}
+      \field{pages}{229\bibrangedash 238}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/218380.218446
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/218380.218446
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/218380.218446
+      \endverb
+    \endentry
+    \entry{Lehmann2013}{book}{}
+      \name{author}{4}{}{%
+        {{hash=817ec26d9e01fd6d8586ceccbda31c90}{%
+           family={Lehmann},
+           familyi={L\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9c566b48608b3c7d16b4a181736d01ce}{%
+           family={Oberschelp},
+           familyi={O\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c685d9c090d2b0aee696825b7ba832d2}{%
+           family={Pelikan},
+           familyi={P\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8352d8569faf2ae47c2e8b86a4d50b41}{%
+           family={Repges},
+           familyi={R\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{15b28590eac1d82e1c8f19e4f45dbdc5}
+      \strng{fullhash}{5a24d8fcb452cf1302a2320d5bdf646d}
+      \strng{bibnamehash}{15b28590eac1d82e1c8f19e4f45dbdc5}
+      \strng{authorbibnamehash}{15b28590eac1d82e1c8f19e4f45dbdc5}
+      \strng{authornamehash}{15b28590eac1d82e1c8f19e4f45dbdc5}
+      \strng{authorfullhash}{5a24d8fcb452cf1302a2320d5bdf646d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-642-60487-4}
+      \field{title}{Bildverarbeitung für die Medizin - Grundlagen, Modelle, Methoden, Anwendungen}
+      \field{year}{2013}
+    \endentry
+    \entry{EfrosQuilt}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3cfd34e389ca31c6581913f35af138c8}{%
+           family={Freeman},
+           familyi={F\bibinitperiod},
+           given={William\bibnamedelima T.},
+           giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{3cf56a733c12e837882374c55e1d304c}
+      \strng{fullhash}{3cf56a733c12e837882374c55e1d304c}
+      \strng{bibnamehash}{3cf56a733c12e837882374c55e1d304c}
+      \strng{authorbibnamehash}{3cf56a733c12e837882374c55e1d304c}
+      \strng{authornamehash}{3cf56a733c12e837882374c55e1d304c}
+      \strng{authorfullhash}{3cf56a733c12e837882374c55e1d304c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a simple image-based method of generating novel visual appearance in which a new image is synthesized by stitching together small patches of existing images. We call this process image quilting. First, we use quilting as a fast and very simple texture synthesis algorithm which produces surprisingly good results for a wide range of textures. Second, we extend the algorithm to perform texture transfer — rendering an object with a texture taken from a different object. More generally, we demonstrate how an image can be re-rendered in the style of a different image. The method works directly on the images and does not require 3D information.}
+      \field{booktitle}{Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques}
+      \field{isbn}{158113374X}
+      \field{series}{SIGGRAPH '01}
+      \field{title}{Image Quilting for Texture Synthesis and Transfer}
+      \field{year}{2001}
+      \field{pages}{341\bibrangedash 346}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/383259.383296
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/383259.383296
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/383259.383296
+      \endverb
+      \keyw{texture synthesis,image-based rendering,texture mapping}
+    \endentry
+    \entry{Karth2017WaveFunctionCollapseIC}{article}{}
+      \name{author}{2}{}{%
+        {{hash=40164fe78eb5370b5d7502de2836f402}{%
+           family={Karth},
+           familyi={K\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod}}}%
+        {{hash=4583dcb4e8a01076f4883b6c03635381}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Adam\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f9f5309cb73fdd910932005e06e03a5}
+      \strng{fullhash}{6f9f5309cb73fdd910932005e06e03a5}
+      \strng{bibnamehash}{6f9f5309cb73fdd910932005e06e03a5}
+      \strng{authorbibnamehash}{6f9f5309cb73fdd910932005e06e03a5}
+      \strng{authornamehash}{6f9f5309cb73fdd910932005e06e03a5}
+      \strng{authorfullhash}{6f9f5309cb73fdd910932005e06e03a5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 12th International Conference on the Foundations of Digital Games}
+      \field{title}{WaveFunctionCollapse is constraint solving in the wild}
+      \field{year}{2017}
+    \endentry
+    \entry{merrell2009model}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=c1e8f36c537b67931de8cac36326fc96}{%
+           family={Merrell},
+           familyi={M\bibinitperiod},
+           given={Paul\bibnamedelima C},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {The University of North Carolina at Chapel Hill}%
+      }
+      \strng{namehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{fullhash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{bibnamehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{authorbibnamehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{authornamehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{authorfullhash}{c1e8f36c537b67931de8cac36326fc96}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Model synthesis}
+      \field{type}{phdthesis}
+      \field{year}{2009}
+    \endentry
+    \entry{Gumin_Wave_Function_Collapse_2016}{software}{}
+      \name{author}{1}{}{%
+        {{hash=46c2caad2d1433d5a224bdbf82de6ffb}{%
+           family={Gumin},
+           familyi={G\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{46c2caad2d1433d5a224bdbf82de6ffb}
+      \strng{fullhash}{46c2caad2d1433d5a224bdbf82de6ffb}
+      \strng{bibnamehash}{46c2caad2d1433d5a224bdbf82de6ffb}
+      \strng{authorbibnamehash}{46c2caad2d1433d5a224bdbf82de6ffb}
+      \strng{authornamehash}{46c2caad2d1433d5a224bdbf82de6ffb}
+      \strng{authorfullhash}{46c2caad2d1433d5a224bdbf82de6ffb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Wave Function Collapse Algorithm}
+      \field{version}{1.0}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://github.com/mxgmn/WaveFunctionCollapse
+      \endverb
+      \verb{url}
+      \verb https://github.com/mxgmn/WaveFunctionCollapse
+      \endverb
+    \endentry
+    \entry{Zinkernagel_2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6b0de5b0d4072b7b15ff0f8a5517c249}{%
+           family={Zinkernagel},
+           familyi={Z\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \strng{namehash}{6b0de5b0d4072b7b15ff0f8a5517c249}
+      \strng{fullhash}{6b0de5b0d4072b7b15ff0f8a5517c249}
+      \strng{bibnamehash}{6b0de5b0d4072b7b15ff0f8a5517c249}
+      \strng{authorbibnamehash}{6b0de5b0d4072b7b15ff0f8a5517c249}
+      \strng{authornamehash}{6b0de5b0d4072b7b15ff0f8a5517c249}
+      \strng{authorfullhash}{6b0de5b0d4072b7b15ff0f8a5517c249}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Studies in History and Philosophy of Science Part B: Studies in History and Philosophy of Modern Physics}
+      \field{month}{2}
+      \field{title}{Niels Bohr on the wave function and the classical/quantum divide}
+      \field{volume}{53}
+      \field{year}{2016}
+      \field{pages}{9\bibrangedash 19}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.shpsb.2015.11.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016%2Fj.shpsb.2015.11.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016%2Fj.shpsb.2015.11.001
+      \endverb
+    \endentry
+    \entry{Lecoutre2009ConstraintNT}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=568f5ae8ee8be960c3c35bc34a2c8f4d}{%
+           family={Lecoutre},
+           familyi={L\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
+      \strng{fullhash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
+      \strng{bibnamehash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
+      \strng{authorbibnamehash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
+      \strng{authornamehash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
+      \strng{authorfullhash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Constraint Networks: Techniques and Algorithms}
+      \field{year}{2009}
+    \endentry
+    \entry{merrell2018compare}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=c1e8f36c537b67931de8cac36326fc96}{%
+           family={Merrell},
+           familyi={M\bibinitperiod},
+           given={Paul\bibnamedelima C},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{fullhash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{bibnamehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{authorbibnamehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{authornamehash}{c1e8f36c537b67931de8cac36326fc96}
+      \strng{authorfullhash}{c1e8f36c537b67931de8cac36326fc96}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Comparing Model Synthesis and Wave Function Collapse}
+      \field{type}{phdthesis}
+      \field{year}{2018}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

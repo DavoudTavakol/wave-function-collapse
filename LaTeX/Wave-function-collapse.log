@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  30 JUN 2023 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  30 JUN 2023 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -39,7 +39,30 @@ Package babel Info: Making " an active character on input line 122.
 ))) (c:/texlive/2022/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
 Package babel Info: Importing font and identification data for ngerman
 (babel)             from babel-de.ini. Reported on input line 11.
-) (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
+ (c:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+) (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\csq@reset=\count197
+\csq@gtype=\count198
+\csq@glevel=\count199
+\csq@qlevel=\count266
+\csq@maxlvl=\count267
+\csq@tshold=\count268
+\csq@ltx@everypar=\toks17
+ (c:/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (c:/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
  (c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -59,10 +82,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 ) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-) (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
@@ -76,9 +96,9 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 ) (c:/texlive/2022/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen144
 \WF@size=\dimen145
-\c@WF@wrappedlines=\count196
+\c@WF@wrappedlines=\count269
 \WF@box=\box51
-\WF@everypar=\toks17
+\WF@everypar=\toks18
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -96,21 +116,21 @@ Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@hangindent=\dimen153
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count197
-\c@continuedfloat=\count198
+\c@caption@flags=\count270
+\c@continuedfloat=\count271
 Package caption Info: wrapfig package is loaded.
 )
-\c@KVtest=\count199
+\c@KVtest=\count272
 \sf@farskip=\skip49
 \sf@captopadj=\dimen154
 \sf@capskip=\skip50
 \sf@nearskip=\skip51
-\c@subfigure=\count266
-\c@subfigure@save=\count267
-\c@lofdepth=\count268
-\c@subtable=\count269
-\c@subtable@save=\count270
-\c@lotdepth=\count271
+\c@subfigure=\count273
+\c@subfigure@save=\count274
+\c@lofdepth=\count275
+\c@subtable=\count276
+\c@subtable@save=\count277
+\c@lotdepth=\count278
 \sf@top=\skip52
 \sf@bottom=\skip53
 ) (c:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -148,11 +168,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count272
+\c@section@level=\count279
 )
 \@linkdim=\dimen155
-\Hy@linkcounter=\count273
-\Hy@pagecounter=\count274
+\Hy@linkcounter=\count280
+\Hy@pagecounter=\count281
  (c:/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -162,7 +182,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (c:/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count275
+\Hy@SavedSpaceFactor=\count282
  (c:/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -175,7 +195,7 @@ Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4410.
-\c@Hy@tempcnt=\count276
+\c@Hy@tempcnt=\count283
  (c:/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -187,7 +207,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (c:/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count277
+\Fld@menulength=\count284
 \Field@Width=\dimen157
 \Fld@charsize=\dimen158
 Package hyperref Info: Hyper figures OFF on input line 6027.
@@ -201,9 +221,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6057.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count278
-\c@Item=\count279
-\c@Hfootnote=\count280
+\Hy@abspage=\count285
+\c@Item=\count286
+\c@Hfootnote=\count287
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (c:/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -212,8 +232,8 @@ File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count281
-\c@bookmark@seq@number=\count282
+\Fld@listcount=\count288
+\c@bookmark@seq@number=\count289
  (c:/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (c:/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -227,9 +247,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count283
-\Gm@cntv=\count284
-\c@Gm@tempcnt=\count285
+\Gm@cnth=\count290
+\Gm@cntv=\count291
+\c@Gm@tempcnt=\count292
 \Gm@bindingoffset=\dimen159
 \Gm@wd@mp=\dimen160
 \Gm@odd@mp=\dimen161
@@ -238,11 +258,11 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen164
 \Gm@layouthoffset=\dimen165
 \Gm@layoutvoffset=\dimen166
-\Gm@dimlist=\toks18
+\Gm@dimlist=\toks19
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks19
-\inpenc@posthook=\toks20
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
 ) (c:/texlive/2022/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
@@ -287,28 +307,28 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count286
-\float@exts=\toks21
+\c@float@type=\count293
+\float@exts=\toks22
 \float@box=\box52
-\@float@everytoks=\toks22
+\@float@everytoks=\toks23
 \@floatcapt=\box53
 ) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count287
+\lst@mode=\count294
 \lst@gtempboxa=\box54
-\lst@token=\toks23
-\lst@length=\count288
+\lst@token=\toks24
+\lst@length=\count295
 \lst@currlwidth=\dimen167
-\lst@column=\count289
-\lst@pos=\count290
+\lst@column=\count296
+\lst@pos=\count297
 \lst@lostspace=\dimen168
 \lst@width=\dimen169
-\lst@newlines=\count291
-\lst@lineno=\count292
+\lst@newlines=\count298
+\lst@lineno=\count299
 \lst@maxwidth=\dimen170
  (c:/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count293
-\lst@skipnumbers=\count294
+\c@lstnumber=\count300
+\lst@skipnumbers=\count301
 \lst@framebox=\box55
 ) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -319,20 +339,20 @@ Package: dirtytalk 2010/11/21 A package making "quoting" easier
  (c:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\c@dirtytalk@qdepth=\count295
+\c@dirtytalk@qdepth=\count302
 ) (c:/texlive/2022/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2022/10/09 v0.5w Insert pages of external PDF documents (AM)
  (c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count296
-\calc@Bcount=\count297
+\calc@Acount=\count303
+\calc@Bcount=\count304
 \calc@Adimen=\dimen171
 \calc@Bdimen=\dimen172
 \calc@Askip=\skip55
 \calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count298
+\calc@Ccount=\count305
 \calc@Cskip=\skip57
 ) (c:/texlive/2022/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
@@ -345,64 +365,296 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
  (c:/texlive/2022/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2022/10/09 v0.5w Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count299
+\pdfpages@includegraphics@status=\count306
 \AM@pagebox=\box56
-\AM@global@opts=\toks24
-\AM@pagecnt=\count300
-\AM@toc@title=\toks25
-\c@AM@survey=\count301
+\AM@global@opts=\toks25
+\AM@pagecnt=\count307
+\AM@toc@title=\toks26
+\c@AM@survey=\count308
 \AM@templatesizebox=\box57
-) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
+ (c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count309
+ (c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count310
+\c@listtotal=\count311
+\c@listcount=\count312
+\c@liststart=\count313
+\c@liststop=\count314
+\c@citecount=\count315
+\c@citetotal=\count316
+\c@multicitecount=\count317
+\c@multicitetotal=\count318
+\c@instcount=\count319
+\c@maxnames=\count320
+\c@minnames=\count321
+\c@maxitems=\count322
+\c@minitems=\count323
+\c@citecounter=\count324
+\c@maxcitecounter=\count325
+\c@savedcitecounter=\count326
+\c@uniquelist=\count327
+\c@uniquename=\count328
+\c@refsection=\count329
+\c@refsegment=\count330
+\c@maxextratitle=\count331
+\c@maxextratitleyear=\count332
+\c@maxextraname=\count333
+\c@maxextradate=\count334
+\c@maxextraalpha=\count335
+\c@abbrvpenalty=\count336
+\c@highnamepenalty=\count337
+\c@lownamepenalty=\count338
+\c@maxparens=\count339
+\c@parenlevel=\count340
+\blx@tempcnta=\count341
+\blx@tempcntb=\count342
+\blx@tempcntc=\count343
+\c@blx@maxsection=\count344
+\blx@maxsegment@0=\count345
+\blx@notetype=\count346
+\blx@parenlevel@text=\count347
+\blx@parenlevel@foot=\count348
+\blx@sectionciteorder@0=\count349
+\blx@sectionciteorderinternal@0=\count350
+\blx@entrysetcounter=\count351
+\blx@biblioinstance=\count352
+\labelnumberwidth=\skip58
+\labelalphawidth=\skip59
+\biblabelsep=\skip60
+\bibitemsep=\skip61
+\bibnamesep=\skip62
+\bibinitsep=\skip63
+\bibparsep=\skip64
+\bibhang=\skip65
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language88
+\c@mincomprange=\count353
+\c@maxcomprange=\count354
+\c@mincompwidth=\count355
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count356
+\c@savedafterword=\count357
+\c@annotator=\count358
+\c@savedannotator=\count359
+\c@author=\count360
+\c@savedauthor=\count361
+\c@bookauthor=\count362
+\c@savedbookauthor=\count363
+\c@commentator=\count364
+\c@savedcommentator=\count365
+\c@editor=\count366
+\c@savededitor=\count367
+\c@editora=\count368
+\c@savededitora=\count369
+\c@editorb=\count370
+\c@savededitorb=\count371
+\c@editorc=\count372
+\c@savededitorc=\count373
+\c@foreword=\count374
+\c@savedforeword=\count375
+\c@holder=\count376
+\c@savedholder=\count377
+\c@introduction=\count378
+\c@savedintroduction=\count379
+\c@namea=\count380
+\c@savednamea=\count381
+\c@nameb=\count382
+\c@savednameb=\count383
+\c@namec=\count384
+\c@savednamec=\count385
+\c@translator=\count386
+\c@savedtranslator=\count387
+\c@shortauthor=\count388
+\c@savedshortauthor=\count389
+\c@shorteditor=\count390
+\c@savedshorteditor=\count391
+\c@labelname=\count392
+\c@savedlabelname=\count393
+\c@institution=\count394
+\c@savedinstitution=\count395
+\c@lista=\count396
+\c@savedlista=\count397
+\c@listb=\count398
+\c@savedlistb=\count399
+\c@listc=\count400
+\c@savedlistc=\count401
+\c@listd=\count402
+\c@savedlistd=\count403
+\c@liste=\count404
+\c@savedliste=\count405
+\c@listf=\count406
+\c@savedlistf=\count407
+\c@location=\count408
+\c@savedlocation=\count409
+\c@organization=\count410
+\c@savedorganization=\count411
+\c@origlocation=\count412
+\c@savedoriglocation=\count413
+\c@origpublisher=\count414
+\c@savedorigpublisher=\count415
+\c@publisher=\count416
+\c@savedpublisher=\count417
+\c@language=\count418
+\c@savedlanguage=\count419
+\c@origlanguage=\count420
+\c@savedoriglanguage=\count421
+\c@pageref=\count422
+\c@savedpageref=\count423
+\shorthandwidth=\skip66
+\shortjournalwidth=\skip67
+\shortserieswidth=\skip68
+\shorttitlewidth=\skip69
+\shortauthorwidth=\skip70
+\shorteditorwidth=\skip71
+\locallabelnumberwidth=\skip72
+\locallabelalphawidth=\skip73
+\localshorthandwidth=\skip74
+\localshortjournalwidth=\skip75
+\localshortserieswidth=\skip76
+\localshorttitlewidth=\skip77
+\localshortauthorwidth=\skip78
+\localshorteditorwidth=\skip79
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+\c@textcitecount=\count424
+\c@textcitetotal=\count425
+\c@textcitemaxnames=\count426
+\c@biburlbigbreakpenalty=\count427
+\c@biburlbreakpenalty=\count428
+\c@biburlnumpenalty=\count429
+\c@biburlucpenalty=\count430
+\c@biburllcpenalty=\count431
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count432
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count433
+\c@bbx:relatedtotal=\count434
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-11-02 L3 programming layer (loader) 
+ (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count435
+\l__pdf_internal_box=\box58
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-11-02 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (c:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-06-22 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
+)) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
-\ttl@box=\box58
-\beforetitleunit=\skip58
-\aftertitleunit=\skip59
+\ttl@box=\box59
+\beforetitleunit=\skip80
+\aftertitleunit=\skip81
 \ttl@plus=\dimen178
 \ttl@minus=\dimen179
-\ttl@toksa=\toks26
+\ttl@toksa=\toks27
 \titlewidth=\dimen180
 \titlewidthlast=\dimen181
 \titlewidthfirst=\dimen182
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
- (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count302
-\l__pdf_internal_box=\box59
-) (./Wave-function-collapse.aux)
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+
+
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 61.
+
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
+(./Wave-function-collapse.aux)
 \openout1 = `Wave-function-collapse.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
+\scratchcounter=\count436
 \scratchdimen=\dimen183
 \scratchbox=\box60
-\nofMPsegments=\count304
-\nofMParguments=\count305
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count306
+\nofMPsegments=\count437
+\nofMParguments=\count438
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count439
 \MPscratchDim=\dimen184
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count440
+\makeMPintoPDFobject=\count441
+\everyMPtoPDFconversion=\toks29
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -415,10 +667,10 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 57.
+Package hyperref Info: Link coloring ON on input line 61.
  (./Wave-function-collapse.out) (./Wave-function-collapse.out)
-\@outlinefile=\write3
-\openout3 = `Wave-function-collapse.out'.
+\@outlinefile=\write4
+\openout4 = `Wave-function-collapse.out'.
 
 
 *geometry* driver: auto-detecting
@@ -457,7 +709,7 @@ Package hyperref Info: Link coloring ON on input line 57.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \big@size=\dimen185
-\c@lstlisting=\count309
+\c@lstlisting=\count442
 (c:/texlive/2022/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (c:/texlive/2022/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -467,48 +719,72 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 61.
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `Wave-function-collapse.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Wave-function-collapse.bbl' found.
+ (./Wave-function-collapse.bbl)
+Package biblatex Info: Reference section=0 on input line 61.
+Package biblatex Info: Reference segment=0 on input line 61.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 65.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 61.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 65.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 61.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 65.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 61.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 65.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 61.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 65.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
  [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 pdfTeX warning: pdflatex.exe (file ./Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, id=70, 597.55246pt x 845.07724pt>
+<Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, id=66, 597.55246pt x 845.07724pt>
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf  used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf  used on input line 67.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf  used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf  used on input line 67.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
@@ -516,26 +792,26 @@ pdfTeX warning: pdflatex.exe (file ./Davoud_Tavakol_Pruefungsrechtliche_Erklaeru
 
 
 pdfTeX warning: pdflatex.exe (file ./Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, id=73, page=1, 597.55246pt x 845.07724pt>
+<Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, id=69, page=1, 597.55246pt x 845.07724pt>
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, page 1>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 67.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, page 1>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 67.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, page 1>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 67.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, page 1>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 67.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf Graphic file (type pdf)
 <use Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf, page 1>
-Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 63.
+Package pdftex.def Info: Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf , page1 used on input line 67.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 [2 <./Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf>] [3] [4
 
@@ -547,8 +823,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 )
-\tf@toc=\write4
-\openout4 = `Wave-function-collapse.toc'.
+\tf@toc=\write5
+\openout5 = `Wave-function-collapse.toc'.
 
  [5] [6
 
@@ -558,365 +834,374 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-<images//texture-blocky.JPG, id=172, 192.72pt x 175.40532pt>
+<images//texture-blocky.JPG, id=168, 192.72pt x 175.40532pt>
 File: images//texture-blocky.JPG Graphic file (type jpg)
 <use images//texture-blocky.JPG>
-Package pdftex.def Info: images//texture-blocky.JPG  used on input line 102.
+Package pdftex.def Info: images//texture-blocky.JPG  used on input line 106.
 (pdftex.def)             Requested size: 173.85477pt x 158.23534pt.
-<images//texture-correct.JPG, id=173, 192.72pt x 180.675pt>
+<images//texture-correct.JPG, id=169, 192.72pt x 180.675pt>
 File: images//texture-correct.JPG Graphic file (type jpg)
 <use images//texture-correct.JPG>
-Package pdftex.def Info: images//texture-correct.JPG  used on input line 104.
+Package pdftex.def Info: images//texture-correct.JPG  used on input line 108.
 (pdftex.def)             Requested size: 173.85477pt x 162.98918pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 111.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 115.
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [9 <./images//texture-blocky.JPG> <./images//texture-correct.JPG>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
-<images/Textur-nicht-stationärlokal.JPG, id=182, 602.25pt x 401.5pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
+<images/Textur-nicht-stationärlokal.JPG, id=181, 602.25pt x 401.5pt>
 File: images/Textur-nicht-stationärlokal.JPG Graphic file (type jpg)
 <use images/Textur-nicht-stationärlokal.JPG>
-Package pdftex.def Info: images/Textur-nicht-stationärlokal.JPG  used on input line 135.
+Package pdftex.def Info: images/Textur-nicht-stationärlokal.JPG  used on input line 139.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
-<images/Textur-stationärlokal.JPG, id=183, 602.25pt x 401.5pt>
+<images/Textur-stationärlokal.JPG, id=182, 602.25pt x 401.5pt>
 File: images/Textur-stationärlokal.JPG Graphic file (type jpg)
 <use images/Textur-stationärlokal.JPG>
-Package pdftex.def Info: images/Textur-stationärlokal.JPG  used on input line 137.
+Package pdftex.def Info: images/Textur-stationärlokal.JPG  used on input line 141.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
-<images/synthezising-pixel.JPG, id=184, 602.25pt x 401.5pt>
+<images/synthezising-pixel.JPG, id=185, 602.25pt x 401.5pt>
 File: images/synthezising-pixel.JPG Graphic file (type jpg)
 <use images/synthezising-pixel.JPG>
-Package pdftex.def Info: images/synthezising-pixel.JPG  used on input line 149.
+Package pdftex.def Info: images/synthezising-pixel.JPG  used on input line 153.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
-<images/Wall-sample.JPG, id=185, 602.25pt x 401.5pt>
+<images/Wall-sample.JPG, id=186, 602.25pt x 401.5pt>
 File: images/Wall-sample.JPG Graphic file (type jpg)
 <use images/Wall-sample.JPG>
-Package pdftex.def Info: images/Wall-sample.JPG  used on input line 151.
+Package pdftex.def Info: images/Wall-sample.JPG  used on input line 155.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10 <./images/Textur-nicht-stationärlokal.JPG> <./images/Textur-stationärlokal.JPG>]
-Overfull \hbox (3.96431pt too wide) in paragraph at lines 167--175
+Overfull \hbox (3.96431pt too wide) in paragraph at lines 171--179
 \T1/ptm/m/n/12 dient da-zu Wahr-schein-lich-kei-ten zu-k�nf-ti-ger Er-eig-nis-se an-zu-ge-ben. Sie ba-siert auf die Theo-
  []
 
 
-Overfull \hbox (2.89647pt too wide) in paragraph at lines 167--175
+Overfull \hbox (2.89647pt too wide) in paragraph at lines 171--179
 \T1/ptm/m/n/12 reicht, um Pro-gno-sen f�r die zu-k�nf-ti-ge Ent-wick-lung des Sys-tems zu er-stel-len. Die Markow-
  []
 
-<images/markow-kette.png, id=195, 1027.84pt x 1027.84pt>
+<images/markow-kette.png, id=198, 1027.84pt x 1027.84pt>
 File: images/markow-kette.png Graphic file (type png)
 <use images/markow-kette.png>
-Package pdftex.def Info: images/markow-kette.png  used on input line 178.
+Package pdftex.def Info: images/markow-kette.png  used on input line 182.
 (pdftex.def)             Requested size: 108.66089pt x 108.65567pt.
-<images/Markov-netzwerk.png, id=197, 194.31085pt x 196.35623pt>
+<images/Markov-netzwerk.png, id=200, 194.31085pt x 196.35623pt>
 File: images/Markov-netzwerk.png Graphic file (type png)
 <use images/Markov-netzwerk.png>
-Package pdftex.def Info: images/Markov-netzwerk.png  used on input line 180.
+Package pdftex.def Info: images/Markov-netzwerk.png  used on input line 184.
 (pdftex.def)             Requested size: 108.66089pt x 109.80592pt.
 [11 <./images/synthezising-pixel.JPG> <./images/Wall-sample.JPG>]
-<images/pyramid.JPG, id=206, 478.78876pt x 481.04718pt>
+<images/pyramid.JPG, id=210, 478.78876pt x 481.04718pt>
 File: images/pyramid.JPG Graphic file (type jpg)
 <use images/pyramid.JPG>
-Package pdftex.def Info: images/pyramid.JPG  used on input line 202.
+Package pdftex.def Info: images/pyramid.JPG  used on input line 206.
 (pdftex.def)             Requested size: 173.85477pt x 174.67424pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./images/markow-kette.png> <./images/Markov-netzwerk.png>]
-Overfull \hbox (0.98721pt too wide) in paragraph at lines 206--212
+Overfull \hbox (0.98721pt too wide) in paragraph at lines 210--216
 \T1/ptm/m/n/12 Hi-sto-gram-m-�qua-li-sa-ti-on. Bei der Hi-sto-gram-m-�qua-li-sa-ti-on (auch Hi-sto-gram-m-aus-gleich, Hi-
  []
 
 
-Overfull \hbox (5.87225pt too wide) in paragraph at lines 206--212
+Overfull \hbox (5.87225pt too wide) in paragraph at lines 210--216
 \T1/ptm/m/n/12 sto-gramm-ein-eb-nung, Hi-sto-gram-me-ga-li-sie-rung oder Hi-sto-gram-me-qua-li-sie-rung ge-nannt) wer-
  []
 
-<images/pyramid-noise.JPG, id=215, 338.01282pt x 255.95625pt>
+<images/pyramid-noise.JPG, id=222, 338.01282pt x 255.95625pt>
 File: images/pyramid-noise.JPG Graphic file (type jpg)
 <use images/pyramid-noise.JPG>
-Package pdftex.def Info: images/pyramid-noise.JPG  used on input line 228.
+Package pdftex.def Info: images/pyramid-noise.JPG  used on input line 232.
 (pdftex.def)             Requested size: 86.92738pt x 65.82451pt.
-<images/pyramid-input.JPG, id=216, 172.39406pt x 171.64125pt>
+<images/pyramid-input.JPG, id=223, 172.39406pt x 171.64125pt>
 File: images/pyramid-input.JPG Graphic file (type jpg)
 <use images/pyramid-input.JPG>
-Package pdftex.def Info: images/pyramid-input.JPG  used on input line 230.
+Package pdftex.def Info: images/pyramid-input.JPG  used on input line 234.
 (pdftex.def)             Requested size: 86.92738pt x 86.5485pt.
-<images/pyramid-matching.JPG, id=217, 673.76718pt x 321.45094pt>
+<images/pyramid-matching.JPG, id=224, 673.76718pt x 321.45094pt>
 File: images/pyramid-matching.JPG Graphic file (type jpg)
 <use images/pyramid-matching.JPG>
-Package pdftex.def Info: images/pyramid-matching.JPG  used on input line 232.
+Package pdftex.def Info: images/pyramid-matching.JPG  used on input line 236.
 (pdftex.def)             Requested size: 130.39438pt x 62.20935pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13 <./images/pyramid.JPG>]
-<images/Pixel-based.jpg, id=227, 602.25pt x 401.5pt>
+<images/Pixel-based.jpg, id=235, 602.25pt x 401.5pt>
 File: images/Pixel-based.jpg Graphic file (type jpg)
 <use images/Pixel-based.jpg>
-Package pdftex.def Info: images/Pixel-based.jpg  used on input line 248.
+Package pdftex.def Info: images/Pixel-based.jpg  used on input line 252.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
-<images/Patch-based.jpg, id=228, 602.25pt x 401.5pt>
+<images/Patch-based.jpg, id=236, 602.25pt x 401.5pt>
 File: images/Patch-based.jpg Graphic file (type jpg)
 <use images/Patch-based.jpg>
-Package pdftex.def Info: images/Patch-based.jpg  used on input line 250.
+Package pdftex.def Info: images/Patch-based.jpg  used on input line 254.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
  [14 <./images/pyramid-noise.JPG> <./images/pyramid-input.JPG> <./images/pyramid-matching.JPG> <./images/Pixel-based.jpg> <./images/Patch-based.jpg>]
-<images/Random-blocks.jpg, id=240, 602.25pt x 401.5pt>
+<images/Random-blocks.jpg, id=250, 602.25pt x 401.5pt>
 File: images/Random-blocks.jpg Graphic file (type jpg)
 <use images/Random-blocks.jpg>
-Package pdftex.def Info: images/Random-blocks.jpg  used on input line 276.
+Package pdftex.def Info: images/Random-blocks.jpg  used on input line 280.
 (pdftex.def)             Requested size: 108.66089pt x 72.43842pt.
-<images/overlap-blocks.jpg, id=241, 602.25pt x 401.5pt>
+<images/overlap-blocks.jpg, id=251, 602.25pt x 401.5pt>
 File: images/overlap-blocks.jpg Graphic file (type jpg)
 <use images/overlap-blocks.jpg>
-Package pdftex.def Info: images/overlap-blocks.jpg  used on input line 278.
+Package pdftex.def Info: images/overlap-blocks.jpg  used on input line 282.
 (pdftex.def)             Requested size: 108.66089pt x 72.43842pt.
-<images/minimum-boundary-blocks.jpg, id=242, 602.25pt x 401.5pt>
+<images/minimum-boundary-blocks.jpg, id=252, 602.25pt x 401.5pt>
 File: images/minimum-boundary-blocks.jpg Graphic file (type jpg)
 <use images/minimum-boundary-blocks.jpg>
-Package pdftex.def Info: images/minimum-boundary-blocks.jpg  used on input line 280.
+Package pdftex.def Info: images/minimum-boundary-blocks.jpg  used on input line 284.
 (pdftex.def)             Requested size: 108.66089pt x 72.43842pt.
-<images/texture-random-block.JPG, id=243, 213.79875pt x 214.55156pt>
+<images/texture-random-block.JPG, id=253, 213.79875pt x 214.55156pt>
 File: images/texture-random-block.JPG Graphic file (type jpg)
 <use images/texture-random-block.JPG>
-Package pdftex.def Info: images/texture-random-block.JPG  used on input line 283.
+Package pdftex.def Info: images/texture-random-block.JPG  used on input line 287.
 (pdftex.def)             Requested size: 108.66089pt x 109.04335pt.
-<images/texture-overlap-blocks.jpg, id=244, 214.55156pt x 215.30438pt>
+<images/texture-overlap-blocks.jpg, id=254, 214.55156pt x 215.30438pt>
 File: images/texture-overlap-blocks.jpg Graphic file (type jpg)
 <use images/texture-overlap-blocks.jpg>
-Package pdftex.def Info: images/texture-overlap-blocks.jpg  used on input line 285.
+Package pdftex.def Info: images/texture-overlap-blocks.jpg  used on input line 289.
 (pdftex.def)             Requested size: 108.66089pt x 109.0416pt.
-<images/texture-minimum-boundary-blocks.jpg, id=245, 213.79875pt x 213.79875pt>
+<images/texture-minimum-boundary-blocks.jpg, id=255, 213.79875pt x 213.79875pt>
 File: images/texture-minimum-boundary-blocks.jpg Graphic file (type jpg)
 <use images/texture-minimum-boundary-blocks.jpg>
-Package pdftex.def Info: images/texture-minimum-boundary-blocks.jpg  used on input line 287.
+Package pdftex.def Info: images/texture-minimum-boundary-blocks.jpg  used on input line 291.
 (pdftex.def)             Requested size: 108.66089pt x 108.66075pt.
  [15 <./images/Random-blocks.jpg> <./images/overlap-blocks.jpg> <./images/minimum-boundary-blocks.jpg> <./images/texture-random-block.JPG> <./images/texture-overlap-blocks.jpg> <./images/texture-minimum-boundary-blocks.jpg>] [16
 
 ]
 Kapitel 3.
-<images/wfc-pattern.png, id=260, 532.99126pt x 144.54pt>
+<images/wfc-pattern.png, id=276, 532.99126pt x 144.54pt>
 File: images/wfc-pattern.png Graphic file (type png)
 <use images/wfc-pattern.png>
-Package pdftex.def Info: images/wfc-pattern.png  used on input line 310.
+Package pdftex.def Info: images/wfc-pattern.png  used on input line 316.
 (pdftex.def)             Requested size: 434.64355pt x 117.87292pt.
 [17 <./images/wfc-pattern.png (PNG copy)>] [18]
-<images/sudoku-superposition.png, id=271, 917.4275pt x 917.4275pt>
+<images/sudoku-superposition.png, id=296, 917.4275pt x 917.4275pt>
 File: images/sudoku-superposition.png Graphic file (type png)
 <use images/sudoku-superposition.png>
-Package pdftex.def Info: images/sudoku-superposition.png  used on input line 361.
+Package pdftex.def Info: images/sudoku-superposition.png  used on input line 367.
 (pdftex.def)             Requested size: 391.17654pt x 391.18242pt.
-<images/sudoku-observed.png, id=272, 917.4275pt x 917.4275pt>
+<images/sudoku-observed.png, id=297, 917.4275pt x 917.4275pt>
 File: images/sudoku-observed.png Graphic file (type png)
 <use images/sudoku-observed.png>
-Package pdftex.def Info: images/sudoku-observed.png  used on input line 376.
+Package pdftex.def Info: images/sudoku-observed.png  used on input line 382.
 (pdftex.def)             Requested size: 391.17654pt x 391.18242pt.
  [19 <./images/sudoku-superposition.png>]
-<images/sudoku-observed-heurisitk.png, id=284, 919.435pt x 919.435pt>
+<images/sudoku-observed-heurisitk.png, id=310, 919.435pt x 919.435pt>
 File: images/sudoku-observed-heurisitk.png Graphic file (type png)
 <use images/sudoku-observed-heurisitk.png>
-Package pdftex.def Info: images/sudoku-observed-heurisitk.png  used on input line 392.
+Package pdftex.def Info: images/sudoku-observed-heurisitk.png  used on input line 398.
 (pdftex.def)             Requested size: 391.17654pt x 391.1826pt.
 
 Underfull \vbox (badness 5161) has occurred while \output is active []
 
  [20 <./images/sudoku-observed.png>]
-<images/input-shape.JPG, id=293, 70.76437pt x 58.71938pt>
+<images/input-shape.JPG, id=319, 70.76437pt x 58.71938pt>
 File: images/input-shape.JPG Graphic file (type jpg)
 <use images/input-shape.JPG>
-Package pdftex.def Info: images/input-shape.JPG  used on input line 408.
+Package pdftex.def Info: images/input-shape.JPG  used on input line 414.
 (pdftex.def)             Requested size: 43.467pt x 36.06873pt.
-<images/Efros-Leung-1999.JPG, id=294, 295.85532pt x 293.59688pt>
+<images/Efros-Leung-1999.JPG, id=320, 295.85532pt x 293.59688pt>
 File: images/Efros-Leung-1999.JPG Graphic file (type jpg)
 <use images/Efros-Leung-1999.JPG>
-Package pdftex.def Info: images/Efros-Leung-1999.JPG  used on input line 410.
+Package pdftex.def Info: images/Efros-Leung-1999.JPG  used on input line 416.
 (pdftex.def)             Requested size: 108.66089pt x 107.83171pt.
-<images/Kwatra-2005.JPG, id=295, 298.86656pt x 285.31593pt>
+<images/Kwatra-2005.JPG, id=321, 298.86656pt x 285.31593pt>
 File: images/Kwatra-2005.JPG Graphic file (type jpg)
 <use images/Kwatra-2005.JPG>
-Package pdftex.def Info: images/Kwatra-2005.JPG  used on input line 412.
+Package pdftex.def Info: images/Kwatra-2005.JPG  used on input line 418.
 (pdftex.def)             Requested size: 108.66089pt x 103.73239pt.
  [21 <./images/sudoku-observed-heurisitk.png>]
-<images/Beispiel-textur.JPG, id=304, 66.2475pt x 49.68562pt>
+<images/Beispiel-textur.JPG, id=331, 66.2475pt x 49.68562pt>
 File: images/Beispiel-textur.JPG Graphic file (type jpg)
 <use images/Beispiel-textur.JPG>
-Package pdftex.def Info: images/Beispiel-textur.JPG  used on input line 424.
+Package pdftex.def Info: images/Beispiel-textur.JPG  used on input line 430.
 (pdftex.def)             Requested size: 43.467pt x 32.6008pt.
-<images/Efros-Leung-textur.JPG, id=305, 171.64125pt x 164.86594pt>
+<images/Efros-Leung-textur.JPG, id=332, 171.64125pt x 164.86594pt>
 File: images/Efros-Leung-textur.JPG Graphic file (type jpg)
 <use images/Efros-Leung-textur.JPG>
-Package pdftex.def Info: images/Efros-Leung-textur.JPG  used on input line 426.
+Package pdftex.def Info: images/Efros-Leung-textur.JPG  used on input line 432.
 (pdftex.def)             Requested size: 108.66089pt x 104.37172pt.
-<images/Paul-merrells-Model-synthese.JPG, id=306, 170.13562pt x 169.38281pt>
+<images/Paul-merrells-Model-synthese.JPG, id=333, 170.13562pt x 169.38281pt>
 File: images/Paul-merrells-Model-synthese.JPG Graphic file (type jpg)
 <use images/Paul-merrells-Model-synthese.JPG>
-Package pdftex.def Info: images/Paul-merrells-Model-synthese.JPG  used on input line 428.
+Package pdftex.def Info: images/Paul-merrells-Model-synthese.JPG  used on input line 434.
 (pdftex.def)             Requested size: 108.66089pt x 108.17976pt.
-<images/model-divided.JPG, id=307, 281.55188pt x 377.15906pt>
+<images/model-divided.JPG, id=336, 281.55188pt x 377.15906pt>
 File: images/model-divided.JPG Graphic file (type jpg)
 <use images/model-divided.JPG>
-Package pdftex.def Info: images/model-divided.JPG  used on input line 437.
+Package pdftex.def Info: images/model-divided.JPG  used on input line 443.
 (pdftex.def)             Requested size: 43.467pt x 58.22308pt.
-<images/seamless-model.JPG, id=308, 227.34938pt x 338.76563pt>
+<images/seamless-model.JPG, id=337, 227.34938pt x 338.76563pt>
 File: images/seamless-model.JPG Graphic file (type jpg)
 <use images/seamless-model.JPG>
-Package pdftex.def Info: images/seamless-model.JPG  used on input line 439.
+Package pdftex.def Info: images/seamless-model.JPG  used on input line 445.
 (pdftex.def)             Requested size: 108.66089pt x 161.91298pt.
-<images/modell-conflicts.JPG, id=309, 268.75406pt x 343.2825pt>
+<images/modell-conflicts.JPG, id=338, 268.75406pt x 343.2825pt>
 File: images/modell-conflicts.JPG Graphic file (type jpg)
 <use images/modell-conflicts.JPG>
-Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 441.
+Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 447.
 (pdftex.def)             Requested size: 108.66089pt x 138.79292pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 <./images/input-shape.JPG> <./images/Efros-Leung-1999.JPG> <./images/Kwatra-2005.JPG> <./images/Beispiel-textur.JPG> <./images/Efros-Leung-textur.JPG> <./images/Paul-merrells-Model-synthese.JPG>]
-<images/modules-cells.JPG, id=322, 271.0125pt x 105.39375pt>
+<images/modules-cells.JPG, id=353, 271.0125pt x 105.39375pt>
 File: images/modules-cells.JPG Graphic file (type jpg)
 <use images/modules-cells.JPG>
-Package pdftex.def Info: images/modules-cells.JPG  used on input line 451.
+Package pdftex.def Info: images/modules-cells.JPG  used on input line 457.
 (pdftex.def)             Requested size: 173.85477pt x 67.61258pt.
-<images/collapse-cells.JPG, id=323, 491.58656pt x 490.08093pt>
+<images/collapse-cells.JPG, id=354, 491.58656pt x 490.08093pt>
 File: images/collapse-cells.JPG Graphic file (type jpg)
 <use images/collapse-cells.JPG>
-Package pdftex.def Info: images/collapse-cells.JPG  used on input line 458.
+Package pdftex.def Info: images/collapse-cells.JPG  used on input line 464.
 (pdftex.def)             Requested size: 260.78877pt x 259.99591pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.JPG>] [24 <./images/collapse-cells.JPG>]
-<images/3D-model-synthese.JPG, id=343, 853.68938pt x 497.60907pt>
+<images/3D-model-synthese.JPG, id=375, 853.68938pt x 497.60907pt>
 File: images/3D-model-synthese.JPG Graphic file (type jpg)
 <use images/3D-model-synthese.JPG>
-Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 489.
+Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 495.
 (pdftex.def)             Requested size: 434.64355pt x 253.35207pt.
-<images/red-maze.jpg, id=344, 602.25pt x 602.25pt>
+<images/red-maze.jpg, id=377, 602.25pt x 602.25pt>
 File: images/red-maze.jpg Graphic file (type jpg)
 <use images/red-maze.jpg>
-Package pdftex.def Info: images/red-maze.jpg  used on input line 506.
+Package pdftex.def Info: images/red-maze.jpg  used on input line 512.
 (pdftex.def)             Requested size: 217.32178pt x 217.32445pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/3D-model-synthese.JPG>]
-<images/red-maze-modules.jpg, id=351, 1355.0625pt x 1003.75pt>
+<images/red-maze-modules.jpg, id=385, 1355.0625pt x 1003.75pt>
 File: images/red-maze-modules.jpg Graphic file (type jpg)
 <use images/red-maze-modules.jpg>
-Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 513.
+Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 519.
 (pdftex.def)             Requested size: 217.32178pt x 160.97086pt.
-<images/red-maze-offset.png, id=352, 678.28406pt x 677.53125pt>
+<images/red-maze-offset.png, id=387, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset.png Graphic file (type png)
 <use images/red-maze-offset.png>
-Package pdftex.def Info: images/red-maze-offset.png  used on input line 526.
+Package pdftex.def Info: images/red-maze-offset.png  used on input line 532.
 (pdftex.def)             Requested size: 217.32178pt x 217.07288pt.
 
 Underfull \vbox (badness 3612) has occurred while \output is active []
 
  [26 <./images/red-maze.jpg> <./images/red-maze-modules.jpg>]
-<images/red-maze-offset-example.png, id=361, 678.28406pt x 677.53125pt>
+<images/red-maze-offset-example.png, id=397, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset-example.png Graphic file (type png)
 <use images/red-maze-offset-example.png>
-Package pdftex.def Info: images/red-maze-offset-example.png  used on input line 536.
+Package pdftex.def Info: images/red-maze-offset-example.png  used on input line 542.
 (pdftex.def)             Requested size: 217.32178pt x 217.07288pt.
  [27 <./images/red-maze-offset.png> <./images/red-maze-offset-example.png>]
-<images/input-example-overlapping.png, id=368, 8.03pt x 8.03pt>
+<images/input-example-overlapping.png, id=404, 8.03pt x 8.03pt>
 File: images/input-example-overlapping.png Graphic file (type png)
 <use images/input-example-overlapping.png>
-Package pdftex.def Info: images/input-example-overlapping.png  used on input line 550.
+Package pdftex.def Info: images/input-example-overlapping.png  used on input line 556.
 (pdftex.def)             Requested size: 108.66089pt x 108.74924pt.
-<images/output-overlapping-n2.png, id=369, 48.18pt x 48.18pt>
+<images/output-overlapping-n2.png, id=405, 48.18pt x 48.18pt>
 File: images/output-overlapping-n2.png Graphic file (type png)
 <use images/output-overlapping-n2.png>
-Package pdftex.def Info: images/output-overlapping-n2.png  used on input line 556.
+Package pdftex.def Info: images/output-overlapping-n2.png  used on input line 562.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-<images/output-overlapping-n3.png, id=370, 48.18pt x 48.18pt>
+<images/output-overlapping-n3.png, id=406, 48.18pt x 48.18pt>
 File: images/output-overlapping-n3.png Graphic file (type png)
 <use images/output-overlapping-n3.png>
-Package pdftex.def Info: images/output-overlapping-n3.png  used on input line 558.
+Package pdftex.def Info: images/output-overlapping-n3.png  used on input line 564.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-<images/output-overlapping-n4.png, id=371, 48.18pt x 48.18pt>
+<images/output-overlapping-n4.png, id=407, 48.18pt x 48.18pt>
 File: images/output-overlapping-n4.png Graphic file (type png)
 <use images/output-overlapping-n4.png>
-Package pdftex.def Info: images/output-overlapping-n4.png  used on input line 560.
+Package pdftex.def Info: images/output-overlapping-n4.png  used on input line 566.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 561.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 567.
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [28 <./images/input-example-overlapping.png> <./images/output-overlapping-n2.png> <./images/output-overlapping-n3.png> <./images/output-overlapping-n4.png>]
-<images/red-maze-overlapping-step1.png, id=391, 36.135pt x 36.135pt>
+<images/red-maze-overlapping-step1.png, id=429, 36.135pt x 36.135pt>
 File: images/red-maze-overlapping-step1.png Graphic file (type png)
 <use images/red-maze-overlapping-step1.png>
-Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 595.
+Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 601.
 (pdftex.def)             Requested size: 173.85477pt x 173.9019pt.
-<images/red-maze-overlapping-steps.png, id=392, 1716.4125pt x 240.9pt>
+<images/red-maze-overlapping-steps.png, id=432, 1716.4125pt x 240.9pt>
 File: images/red-maze-overlapping-steps.png Graphic file (type png)
 <use images/red-maze-overlapping-steps.png>
-Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 607.
+Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 613.
 (pdftex.def)             Requested size: 434.64355pt x 61.00044pt.
  [29 <./images/red-maze-overlapping-step1.png> <./images/red-maze-overlapping-steps.png>]
-<images/proc-skater-ruleset.png, id=402, 696.35156pt x 517.18219pt>
+<images/proc-skater-ruleset.png, id=444, 696.35156pt x 517.18219pt>
 File: images/proc-skater-ruleset.png Graphic file (type png)
 <use images/proc-skater-ruleset.png>
-Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 620.
+Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 626.
 (pdftex.def)             Requested size: 434.64355pt x 322.81192pt.
-<images/proc-skate-level.png, id=403, 895.09406pt x 514.92375pt>
+<images/proc-skate-level.png, id=445, 895.09406pt x 514.92375pt>
 File: images/proc-skate-level.png Graphic file (type png)
 <use images/proc-skate-level.png>
-Package pdftex.def Info: images/proc-skate-level.png  used on input line 628.
+Package pdftex.def Info: images/proc-skate-level.png  used on input line 634.
 (pdftex.def)             Requested size: 434.64355pt x 250.04414pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30 <./images/proc-skater-ruleset.png>]
-<images/proc-skate-backdrop.png, id=411, 878.53218pt x 534.49687pt>
+<images/proc-skate-backdrop.png, id=453, 878.53218pt x 534.49687pt>
 File: images/proc-skate-backdrop.png Graphic file (type png)
 <use images/proc-skate-backdrop.png>
-Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 633.
+Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 639.
 (pdftex.def)             Requested size: 227.62204pt x 138.48471pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--649
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
 [][]\T1/ptm/m/n/10 Aus Forums-Korrespondenz [][]$\T1/cmtt/m/n/10 https : / / forums . somethingawful . com / showthread . php ?
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 637--650
+Underfull \hbox (badness 1365) in paragraph at lines 643--656
 [][]\T1/ptm/m/n/12 Parker ver-wen-de-te al-ler-dings nicht
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 637--650
+Underfull \hbox (badness 1371) in paragraph at lines 643--656
 \T1/ptm/m/n/12 das Over-lap-ping Mo-del in Proc Ska-
  []
 
-<images/caves-of-qud.jpg, id=415, 1557.98906pt x 1486.47978pt>
+<images/caves-of-qud.jpg, id=458, 1557.98906pt x 1486.47978pt>
 File: images/caves-of-qud.jpg Graphic file (type jpg)
 <use images/caves-of-qud.jpg>
-Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 653.
+Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 659.
 (pdftex.def)             Requested size: 434.64355pt x 414.69182pt.
 [31 <./images/proc-skate-level.png> <./images/proc-skate-backdrop.png>] [32 <./images/caves-of-qud.jpg>]
 Kapitel 4.
-Kapitel 5.
-[33] (./Wave-function-collapse.aux)
+[33] [34
+
+]
+Overfull \hbox (0.39877pt too wide) in paragraph at lines 676--676
+[]\T1/ptm/m/n/12 Alexei A. Efros und Tho-mas K. Leung. ^^R  Tex-ture Syn-the-sis by Non-parametric Samp-
+ []
+
+[35] (./Wave-function-collapse.aux)
 Package rerunfilecheck Info: File `Wave-function-collapse.out' has not changed.
-(rerunfilecheck)             Checksum: FFB3328FFE5E158AAE7DCB2006CDD57C;3026.
+(rerunfilecheck)             Checksum: 0049FB47C0CBAC3C580465686470848F;2882.
+Package logreq Info: Writing requests to 'Wave-function-collapse.run.xml'.
+\openout1 = `Wave-function-collapse.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 15378 strings out of 474971
- 254070 string characters out of 5780120
- 607286 words of memory out of 5000000
- 36451 multiletter control sequences out of 15000+600000
- 527861 words of font info for 115 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 72i,17n,79p,798b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 23504 strings out of 474971
+ 414941 string characters out of 5780120
+ 1201639 words of memory out of 5000000
+ 44489 multiletter control sequences out of 15000+600000
+ 533390 words of font info for 118 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 72i,17n,79p,854b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
 
@@ -941,11 +1226,11 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (33 pages, 5251446 bytes).
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Wave-function-collapse.pdf (35 pages, 5291155 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
- 374 compressed objects within 4 object streams
- 133 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 383 words of extra memory for PDF output out of 10000 (max. 10000000)
 
