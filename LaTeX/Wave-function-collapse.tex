@@ -192,7 +192,7 @@ wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhä
 \section{Pyramid basierende Textur Analyse / Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
-Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))}. {[AAA][EEE]}
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))}. {[EEE]}
 \newline
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der in der regel uniform Weiß ist, verwendet.
 Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
@@ -218,7 +218,7 @@ Die beiden Nachschlagetabellen Tabellen sind:
 Die CDF ist eine Nachschlagetabelle, die das Intervall {[0,256]} auf das Intervall {[0,1]} abbildet.
 Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zurückführt.
 Sie wird {(mit linearer Interpolation)} neu abgetastet,
-sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[AAA][GGG]}
+sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind.{[EEE]}
 \newline
 Während der Algorithmus weiter Iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
 Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
@@ -255,7 +255,7 @@ Ein Problem dieser Synthese im Vergleich zur Pixel-Based Synthese ist, das sich 
 Es gibt viele Methoden, um dieses Problem zu lösen.
 Eine davon ist es Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
 \textit{(Visual Masking)} reduziert werden.
-Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse.{[AAA]}
+Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse.{[QQQ]}
 
 Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
 
@@ -285,7 +285,7 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-overlap-blocks.jpg}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/texture-minimum-boundary-blocks.jpg}}%
-    \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt. Nach Alexei A. Efros and Thomas K. Leung. [BBB]}%
+    \caption{(a) Zufällige Patch Anordnung, (b) Patches eingeschränkt durch Nachbarn, (c) Minimal Fehler Randschnitt. Nach Alexei A. Efros und William T. Freeman. [QQQ]}%
 \end{figure}
 
 \chapter{Wave-Function-Collapse}
@@ -322,7 +322,9 @@ Denn nicht jede Zelle kann an jeder Position auftauchen, sobald bereits eine Zel
 {(Siehe Patch-Based Textursynthese. Nicht jeder Patch kann an einer beliebigen Position sein.
 Sie müssen sich schließlich an den Nachbarn anpassen damit die Synthese nahtlos ist.)}
 Sobald eine Zelle bekannt wird \textit{(Observation)} und damit nur einen Eigenwert besitzt,
-dann wird die Entropie aller anderen Zellen angepasst. {[KKK]}
+dann wird die Entropie aller anderen Zellen angepasst.
+\say{Nach dieser Auffassung ist der "collapse" der Wellenfunktion kein
+ein physikalischer Prozess und spiegelt lediglich eine Aktualisierung unserer Informationen über das System wider} {[KKK, S.5, 2.2 The wave function]}
 Da der WFC Algorithmus genau auf diese Art und Weise seine Synthese durchführt,
 dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.
 
@@ -337,7 +339,7 @@ Im Fall von WFC sind die Objekte, denen die Variablen zugeteilt sind, die einzel
 Jeder diese Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
 Immer, wenn einem Bereich ein wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst \textit{(Propagation)}.
 Der Gesamtprozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
-nennt sich Wave-Function-Collapse. {[MMM]}
+nennt sich Wave-Function-Collapse. {[KKK]}
 Während dem Prozess einen gültigen State für das CSP zu finden, dann gibt es immer Situationen in dem es mehrere gültige Optionen für eine Variable gibt.
 Wenn so eine Situation auftritt, dann haben verschiedene Solver verschiedene Ansätze.
 Einige Algorithmen wähle zufällig eine der möglichen Werte von momentan zulässigen Optionen.
@@ -556,7 +558,7 @@ Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu er
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n3.png}}}%
     \qquad
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/output-overlapping-n4.png}}}%
-    \caption{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model. [OOO]}%
+    \caption[test]{(a) Output mit $N = 2$, (b) Output mit $N = 3$, (c) Output mit $N = 4$. Beispiele generiert mit Kchapelier's Overlapping Model.\footnote[3]{\url{http://www.kchapelier.com/wfc-example/overlapping-model.html}}}
 \end{figure}
 
 Es ist wichtig anzumerken das viele der hier gezeigten Texturen auch mit aktuellen Textursynthese-Algorithmen generiert werden können.
@@ -578,7 +580,7 @@ Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert we
 dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. {[HHH]}
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
 alle möglichen Pixelwerte enthalten, dann führt das zu einer sehr schön anzusehenden Generierung des Outputs.
-\footnote[3]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
+\footnote[4]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
 example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
 \newline
 \url{https://twitter.com/ExUtumno/status/781833475884277760}
@@ -611,7 +613,7 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 Joseph Parker war einer der ersten, die WFC verwendet haben.
 In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
 Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. {[PPP]}
-J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[4]{Persönliche Kommunikation, 23. Mai 2023}
+J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
@@ -637,14 +639,14 @@ Der umliegende Hintergrund \textit{(backdrop)} ist mit dem Overlapping Model ers
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
 Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.
-\footnote[4]{Persönliche Kommunikation, 23. Mai 2023}}
+\footnote[5]{Persönliche Kommunikation, 23. Mai 2023}}
 \newline
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
 Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} ein Mehrfachdurchlauf \textit{(multipass)} von WFC.
 Dadruch können größere Komplexitäten bei der Generierung erreicht werden.
 Ein weiterer Vorteil, der sich dadurch ergeben hat, ist die einfache Handhabung von WFC.
 Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach Input-Images einspielen und Spielbaren Content generieren.
-\footnote[5]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} {[HHH]}
+\footnote[6]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} {[HHH]}
 
 \begin{figure}[H]
     \centering
@@ -655,7 +657,7 @@ Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach 
 Wave-Function-Collapse kann nicht nur auf flachen Ebenen mit quadratischen Zellen verwenden werden.
 Oskar Stålberg verwendete WFC nicht nur im 2D und 3D-Raum, sondern auch auf irregulären Rastern.
 In einem Beispiel implementiert Stålberg WFC auf einer Sphäre mit einem Dreiecks-Raster.
-\footnote[6]{Beispiele auf seiner Website
+\footnote[7]{Beispiele auf seiner Website
 \url{https://oskarstalberg.tumblr.com/}
 oder seinem Twitter
 \url{https://twitter.com/OskSta/status/784847588893814785}}
@@ -667,7 +669,7 @@ Wave-Function-Collapse
 
 {\let\clearpage\relax\chapter{Literaturverzeichnis}}
 
-
+\iffalse
 {[AAA]} \url{http://rajvishah.weebly.com/uploads/6/3/0/9/6309814/texture_synthesis_final_report.pdf}\\
 
 BIBTEX:
@@ -693,51 +695,132 @@ BIBTEX:
 
 {[CCC]} \url{https://de.wikipedia.org/wiki/Markow-Kette}\\
 
+
+
 {[DDD]} \url{https://en.wikipedia.org/wiki/Markov_model}\\
 
-{[EEE]} \url{https://de.wikipedia.org/wiki/Bildpyramide}\\
 
-{[FFF]} \url{https://de.wikipedia.org/wiki/Punktoperator_(Bildverarbeitung)}\\
 
-{[GGG]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
+{[EEE]} \url{https://www.cns.nyu.edu/heegerlab/content/publications/Heeger-siggraph95.pdf}\\
+
+@inproceedings{10.1145/218380.218446,
+author = {Heeger, David J. and Bergen, James R.},
+title = {Pyramid-Based Texture Analysis/Synthesis},
+year = {1995},
+isbn = {0897917014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/218380.218446},
+doi = {10.1145/218380.218446},
+booktitle = {Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques},
+pages = {229-238},
+numpages = {10},
+series = {SIGGRAPH '95}
+}
+
+{[QQQ]} \url{https://people.eecs.berkeley.edu/~efros/research/quilting/quilting.pdf}\\
+
+@inproceedings{10.1145/383259.383296,
+author = {Efros, Alexei A. and Freeman, William T.},
+title = {Image Quilting for Texture Synthesis and Transfer},
+year = {2001},
+isbn = {158113374X},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/383259.383296},
+doi = {10.1145/383259.383296},
+abstract = {We present a simple image-based method of generating novel visual appearance in which a new image is synthesized by stitching together small patches of existing images.
+We call this process image quilting. First, we use quilting as a fast and very simple texture synthesis algorithm which produces surprisingly good results for a wide range of textures.
+Second, we extend the algorithm to perform texture transfer — rendering an object with a texture taken from a different object. More generally,
+we demonstrate how an image can be re-rendered in the style of a different image. The method works directly on the images and does not require 3D information.},
+booktitle = {Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques},
+pages = {341-346},
+numpages = {6},
+keywords = {texture synthesis, image-based rendering, texture mapping},
+series = {SIGGRAPH '01}
+}
+
+{[FFF]} \url{Lehmann2013}\\
+
+@BOOK{Lehmann2013,
+	AUTHOR = {Lehmann, Thomas AND Oberschelp, Walter AND Pelikan, Erich AND Repges, Rudolf},
+	YEAR = {2013},
+	TITLE = {Bildverarbeitung für die Medizin - Grundlagen, Modelle, Methoden, Anwendungen},
+	EDITION = {},
+	ISBN = {978-3-642-60487-4},
+	PUBLISHER = {Springer-Verlag},
+	ADDRESS = {Berlin Heidelberg New York},
+}
 
 {[HHH]} \url{https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf}\\
 
+@article{Karth2017WaveFunctionCollapseIC,
+  title={WaveFunctionCollapse is constraint solving in the wild},
+  author={Isaac Karth and Adam M. Smith},
+  journal={Proceedings of the 12th International Conference on the Foundations of Digital Games},
+  year={2017}
+}
+
 {[III]} \url{https://paulmerrell.org/wp-content/uploads/2021/06/thesis.pdf}\\
+
+@phdthesis{merrell2009model,
+  title={Model synthesis},
+  author={Merrell, Paul C},
+  year={2009},
+  school={The University of North Carolina at Chapel Hill}
+}
 
 {[JJJ]} \url{https://github.com/mxgmn/WaveFunctionCollapse}\\
 
-{[KKK]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
 
-{[LLL]} \url{https://en.wikipedia.org/wiki/Constraint_satisfaction_problem}\\
 
-{[MMM]} \url{https://en.wikipedia.org/wiki/Wave_function_collapse}\\
+@software{Gumin_Wave_Function_Collapse_2016,
+author = {Gumin, Maxim},
+month = sep,
+title = {{Wave Function Collapse Algorithm}},
+url = {https://github.com/mxgmn/WaveFunctionCollapse},
+version = {1.0},
+year = {2016}
+}
+
+{[KKK]} \url{Zinkernagel}\\
+
+
+@article{Zinkernagel_2016,
+	doi = {10.1016/j.shpsb.2015.11.001},
+	url = {https://doi.org/10.1016\%2Fj.shpsb.2015.11.001},
+	year = 2016,
+	month = {feb},
+	publisher = {Elsevier {BV}
+},
+	volume = {53},
+	pages = {9--19},
+	author = {Henrik Zinkernagel},
+	title = {Niels Bohr on the wave function and the classical/quantum divide},
+	journal = {Studies in History and Philosophy of Science Part B: Studies in History and Philosophy of Modern Physics}
+}
+
+
+{[LLL]} \url{http://cse.unl.edu/~choueiry/Documents/Lecoutre-eBook-Constraint%20Networks.pdf}\\
+
+@inproceedings{Lecoutre2009ConstraintNT,
+  title={Constraint Networks: Techniques and Algorithms},
+  author={Christophe Lecoutre},
+  year={2009}
+}
 
 {[NNN]} \url{https://paulmerrell.org/wp-content/uploads/2021/07/comparison.pdf}\\
 
-
-@article{DBLP:journals/tvcg/MerrellM11,
-  author       = {Paul Merrell and
-                  Dinesh Manocha},
-  title        = {Model Synthesis: {A} General Procedural Modeling Algorithm},
-  journal      = {{IEEE} Trans. Vis. Comput. Graph.},
-  volume       = {17},
-  number       = {6},
-  pages        = {715--728},
-  year         = {2011},
-  url          = {https://doi.org/10.1109/TVCG.2010.112},
-  doi          = {10.1109/TVCG.2010.112},
-  timestamp    = {Sun, 02 Oct 2022 15:52:18 +0200},
-  biburl       = {https://dblp.org/rec/journals/tvcg/MerrellM11.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+@phdthesis{merrell2009model,
+  title={Comparing Model Synthesis and Wave Function Collapse},
+  author={Merrell, Paul C},
+  month = July,
+  year={2018},
 }
-
-{[OOO]} \url{http://www.kchapelier.com/wfc-example/overlapping-model.html}\\
 
 {[PPP]} {Joseph Parker, Ryan Jones, and Oscar Morante. 2016. Proc Skater 2016. (2016)}\\
 
-\url{https://people.eecs.berkeley.edu/~efros/research/quilting/quilting.pdf}\\
-%[AAA] ERSETZTEN MIT DEN 3 vorgeschlagenen referenzen!
 
+\fi
 
 \end{document}
