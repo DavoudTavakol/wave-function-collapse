@@ -1,4 +1,5 @@
 \documentclass[12pt, a4paper,twoside,openright]{report}
+\usepackage[utf8]{inputenc} %Standard!
 \usepackage[ngerman]{babel} %für deutsch
 % Bibliotheken und Pfade
 \usepackage{csquotes} %damit zitierung konsisntent mit sprache ist
@@ -7,7 +8,6 @@
 \usepackage{subfig} %Bilder erweiterung
 \usepackage{hyperref} %Links
 \usepackage{geometry} %margins
-\usepackage[utf8]{inputenc} %Standard!
 \usepackage{mathptmx} %Wir benutzen hier eine Mathebibiliothen um Times new Roman zu verwenden
 \usepackage[T1]{fontenc} %Standard!
 \usepackage{setspace} %zeilenabstände
@@ -41,11 +41,17 @@
 
 % Baue die Titel Struktur + Inhalt
 \title{
+{\vspace{-50mm}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/th-nuernberg-logo.jpg}%
+\end{figure}
+
 {\huge Wave-Function-Collapse}\\
 {\large Funktionsweise und Anwendungsfälle}\\
 {\vspace{10mm}}
 {\large Bachelorarbeit}\\
-{\large Betreuer: Prof. Dr. rer. nat. Hopf Matthias}\\
+{\large Betreuer: Prof. Dr. rer. nat. Matthias Hopf}\\
 {\vspace{10mm}}
 {\large Studiengang: Bachelor Media Engineering}\\
 {\large Fakultät: Elektrotechnik Feinwerktechnik Informationstechnik}\\
@@ -54,7 +60,7 @@
 \author{
     Davoud Tavakol \\ Matrikelnummer: 3540912
 }
-\date{Sommersemseter 2023 \\ Abgabedatum: 20 Juli 2023}
+\date{{\vspace*{\fill}}  \raggedright{Sommersemseter 2023 \\ Abgabedatum: 20 Juli 2023}}
 }
 
 % Start Dokument
@@ -103,9 +109,9 @@ Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke 
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{texture-blocky.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/texture-blocky.JPG}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.4\linewidth]{texture-correct.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/texture-correct.JPG}}%
     \caption{(a) Blockartige Textur, (b) Textursynthese}%
 \end{figure}
 
@@ -493,7 +499,7 @@ Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. \cite{
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/3D-model-synthese.JPG}%
-    \caption{3D-Modell generiert mit Model Synthese.}%
+    \caption{3D-Modell generiert mit Model Synthese. Aus \cite{merrell2018compare}}%
 \end{figure}
 
 Neben weiteren Unterschieden wie die Laufzeit und der Erweiterbarkeit der beiden Algorithmen so gibt es noch einen weiteren Unterschied den WFC implementiert.
@@ -510,14 +516,14 @@ Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze.jpg}%
-    \caption{$4\times 4$ Pixel Red-Maze Beispiel Input.}%
+    \caption{$4\times 4$ Pixel Red-Maze Beispiel Input. \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze-modules.jpg}%
-    \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen.}%
+    \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen. \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
 Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten wie diese übereinander liegen können.
@@ -530,7 +536,7 @@ Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze-offset.png}%
-    \caption{Die 9 Möglichkeiten wie die Patches übereinander liegen können.}%
+    \caption{Die 9 Möglichkeiten wie die Patches übereinander liegen können. Aus \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
 In Abbildung 3.11 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an seinen benachbarten $x,y$-Offsets erlaubt sind.
@@ -540,7 +546,7 @@ Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Pa
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze-offset-example.png}%
-    \caption{Ausschnitt einer Zelle. Von 12 möglichen Patches sind nur die gültigen Optionen für die benachbarten Zellen mit $x,y$-Offset möglich.}%
+    \caption{Ausschnitt einer Zelle. Von 12 möglichen Patches sind nur die gültigen Optionen für die benachbarten Zellen mit $x,y$-Offset möglich. Aus \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
 In diesem Beispiel wurden mit $N = 2$, also eine Fenstergröße von 2 Pixel, die Module aus dem Input generiert.
@@ -554,7 +560,7 @@ Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu er
 \begin{figure}[H]
     \centering
     \frame{\includegraphics[width=0.25\linewidth]{images/input-example-overlapping.png}}%
-    \caption{Beispiel Input-Image ($8\times8$ Pixel) für Overlapping Model}%
+    \caption{Beispiel Input-Image ($8\times8$ Pixel) für Overlapping Model.}%
 \end{figure}
 
 \begin{figure}[H]
