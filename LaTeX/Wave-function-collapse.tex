@@ -6,7 +6,6 @@
 \usepackage{xcolor} %Farben
 \usepackage{graphicx, wrapfig} %Bilder
 \usepackage{subfig} %Bilder erweiterung
-\usepackage{hyperref} %Links
 \usepackage{setspace, geometry} %margins
 \usepackage{mathptmx} %Wir benutzen hier eine Mathebibiliothen um Times new Roman zu verwenden
 \usepackage[T1]{fontenc} %Standard!
@@ -16,9 +15,27 @@
 \usepackage{dirtytalk} %zitieren
 \usepackage{pdfpages} %pdf hinzufügen
 \usepackage[backend=biber, style=numeric, sorting=none]{biblatex} %references
-
-
 \usepackage{titlesec} %zum entfernen der "Kapitel N" header
+
+% pdf hyperref
+\usepackage[
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+    bookmarksopenlevel=1,
+    pdfpagelabels=true,
+    colorlinks=true,
+    linkcolor={blue!80!black},
+    urlcolor={blue!80!black},
+    anchorcolor=black,
+    citecolor={blue!80!black},
+    filecolor={blue!80!black},
+    menucolor=black,
+    plainpages=false,
+    hypertexnames=true,
+    linktocpage=true,
+]{hyperref}
+
 
 %wir wollen formatieren{was genau?}[optionaler argument: im block satz.]{kapitel nummerierung und font}{der kapitelname mit angehängtem punkt .}{abstand zwischen nummer und name}{größe titel}
 \titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large}
@@ -30,13 +47,6 @@
 
 \geometry{paper=a4paper,left=2.5cm,top=3.0cm,bindingoffset=0.8cm}
 \onehalfspacing
-
-\hypersetup{
-    colorlinks,
-    linkcolor={black!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
 
 \addbibresource{refs.bib}
 
@@ -73,7 +83,7 @@
 %Eidesstaatliche Erklärung
 \includepdf[pages=-]{Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf}
 
-{\let\clearpage\relax\chapter*{Abstract}}
+\chapter*{Abstract}
 
 zum schluss..
 
@@ -458,6 +468,7 @@ Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusamm
 Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
 
 \begin{enumerate}
+    \itemsep0em
     \item Erstelle Module.
     \begin{figure}[H]
         \centering

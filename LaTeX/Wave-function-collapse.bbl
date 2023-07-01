@@ -42,6 +42,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{month}{12}
       \field{title}{Texture Synthesis}
       \field{year}{2009}
     \endentry
@@ -72,6 +73,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE International Conference on Computer Vision}
+      \field{month}{9}
       \field{title}{Texture Synthesis by Non-parametric Sampling}
       \field{year}{1999}
       \field{pages}{1033\bibrangedash 1038}
@@ -374,6 +376,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{month}{7}
       \field{title}{Comparing Model Synthesis and Wave Function Collapse}
       \field{type}{phdthesis}
       \field{year}{2018}
