@@ -381,6 +381,37 @@
       \field{type}{phdthesis}
       \field{year}{2018}
     \endentry
+    \entry{procskater2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6644b246f65da7900db3061f25e9b14d}{%
+           family={Joseph\bibnamedelima Parker},
+           familyi={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Oscar\bibnamedelima Morante},
+           giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Ryan\bibnamedelima Jones},
+           suffixi={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6644b246f65da7900db3061f25e9b14d}
+      \strng{fullhash}{6644b246f65da7900db3061f25e9b14d}
+      \strng{bibnamehash}{6644b246f65da7900db3061f25e9b14d}
+      \strng{authorbibnamehash}{6644b246f65da7900db3061f25e9b14d}
+      \strng{authornamehash}{6644b246f65da7900db3061f25e9b14d}
+      \strng{authorfullhash}{6644b246f65da7900db3061f25e9b14d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://selfsame.itch.io/unitywfc}}
+      \field{journaltitle}{Procedural Generation Jam 2016}
+      \field{note}{Accessed: 2023-05-26}
+      \field{title}{Proc Skater 2016}
+      \verb{urlraw}
+      \verb https://arcadia-clojure.itch.io/proc-skater-2016
+      \endverb
+      \verb{url}
+      \verb https://arcadia-clojure.itch.io/proc-skater-2016
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
