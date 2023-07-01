@@ -7,7 +7,7 @@
 \usepackage{graphicx, wrapfig} %Bilder
 \usepackage{subfig} %Bilder erweiterung
 \usepackage{hyperref} %Links
-\usepackage{geometry} %margins
+\usepackage{setspace, geometry} %margins
 \usepackage{mathptmx} %Wir benutzen hier eine Mathebibiliothen um Times new Roman zu verwenden
 \usepackage[T1]{fontenc} %Standard!
 \usepackage{setspace} %zeilenabstände
@@ -29,6 +29,7 @@
 \graphicspath{ {images/} }
 
 \geometry{paper=a4paper,left=2.5cm,top=3.0cm,bindingoffset=0.8cm}
+\onehalfspacing
 
 \hypersetup{
     colorlinks,
@@ -142,9 +143,9 @@ Lokal ist ein Image dann, wenn jeder Pixel allein von seinen Nachbarn bestimmt w
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Textur-nicht-stationärlokal.JPG}}%
+    \subfloat[][]{\frame{\includegraphics[width=0.45\linewidth]{images/Textur-nicht-stationärlokal.JPG}}}%
     \qquad
-    \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Textur-stationärlokal.JPG}}%
+    \subfloat[][]{\frame{\includegraphics[width=0.45\linewidth]{images/Textur-stationärlokal.JPG}}}%
     \caption{(a) Nicht stationär und lokal, (b) stationär und lokal.}%
 \end{figure}
 
