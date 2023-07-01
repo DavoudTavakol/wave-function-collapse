@@ -1,17 +1,18 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Wave-function-collapse.blg'
-[134] biber-MSWIN32:340> INFO - === 
-[179] Biber.pm:418> INFO - Reading 'Wave-function-collapse.bcf'
-[322] Biber.pm:978> INFO - Found 12 citekeys in bib section 0
-[340] Biber.pm:4401> INFO - Processing section 0
-[354] Biber.pm:4592> INFO - Looking for bibtex file 'refs.bib' for section 0
-[415] bibtex.pm:1713> INFO - LaTeX decoding ...
-[434] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
-[542] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[542] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[542] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[542] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[558] bbl.pm:654> INFO - Writing 'Wave-function-collapse.bbl' with encoding 'UTF-8'
-[565] bbl.pm:757> INFO - Output to Wave-function-collapse.bbl
-[566] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\Davoud\AppData\Local\Temp\biber_tmp_dRFO\8fe4c9854184545302f21ebf0d47516c_49500.utf8, line 26, warning: 114 characters of junk seen at toplevel
-[566] Biber.pm:132> INFO - WARNINGS: 1
+[195] biber-MSWIN32:340> INFO - === 
+[241] Biber.pm:418> INFO - Reading 'Wave-function-collapse.bcf'
+[397] Biber.pm:978> INFO - Found 14 citekeys in bib section 0
+[415] Biber.pm:4401> INFO - Processing section 0
+[431] Biber.pm:4592> INFO - Looking for bibtex file 'refs.bib' for section 0
+[493] bibtex.pm:1713> INFO - LaTeX decoding ...
+[515] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
+[636] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[636] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[636] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[636] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[652] bbl.pm:654> INFO - Writing 'Wave-function-collapse.bbl' with encoding 'UTF-8'
+[661] bbl.pm:757> INFO - Output to Wave-function-collapse.bbl
+[662] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\Davoud\AppData\Local\Temp\biber_tmp_onkB\8fe4c9854184545302f21ebf0d47516c_42632.utf8, line 21, warning: 57 characters of junk seen at toplevel
+[662] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\Davoud\AppData\Local\Temp\biber_tmp_onkB\8fe4c9854184545302f21ebf0d47516c_42632.utf8, line 31, warning: 57 characters of junk seen at toplevel
+[662] Biber.pm:132> INFO - WARNINGS: 2

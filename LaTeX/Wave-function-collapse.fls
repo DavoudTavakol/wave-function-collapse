@@ -1302,8 +1302,8 @@ INPUT ./images/caves-of-qud.jpg
 INPUT images/caves-of-qud.jpg
 INPUT ./images/caves-of-qud.jpg
 INPUT ./images/caves-of-qud.jpg
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmrc8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT Wave-function-collapse.aux

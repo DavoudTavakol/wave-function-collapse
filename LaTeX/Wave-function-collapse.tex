@@ -192,21 +192,21 @@ Eine Markow-Kette dient dazu Wahrscheinlichkeiten zukünftiger Ereignisse anzuge
 Sie basiert auf die Theorie, das bereits begrenzte Informationen über den vergangenen Zustand eines Systems ausreicht,
 um Prognosen für die zukünftige Entwicklung des Systems zu erstellen.
 Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
-\say{Der zukünftige Zustand des Prozesses ist nur durch den aktuellen Zustand bedingt und wird nicht durch vergangene Zustände beeinflusst. {[CCC]}}
+\say{Der zukünftige Zustand des Prozesses ist nur durch den aktuellen Zustand bedingt und wird nicht durch vergangene Zustände beeinflusst.} \cite{wiki:Markow-Kette}
 
 \begin{figure}[H]
     \centering
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/markow-kette.png}}}%
     \qquad
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/Markov-netzwerk.png}}}%
-    \caption{(a) Markow-Kette mit 2 möglichen Zuständen und deren Wahrscheinlichkeiten.
+    \caption{(a) Markow-Kette mit 2 möglichen Zuständen und deren Wahrscheinlichkeiten. Aus \cite{wiki:Markow-Kette}
     Beispiel: Falls zustand $E$, dann gibt es eine $30\%$ Chance das der Zustand $E$ wieder Eintritt oder eine $70\%$ Chance das $A$ Eintritt.
-    Falls wir den Zustand $A$ haben dann sind es $60\%$ für $A$ und $40\%$ für $E$. (b) Ein Markow-Netzwerk mit seinen Abhängigkeiten.
+    Falls wir den Zustand $A$ haben dann sind es $60\%$ für $A$ und $40\%$ für $E$. (b) Ein Markow-Netzwerk mit seinen Abhängigkeiten. \cite{wiki:Markov_model}
     Beispiel: $A$ ist abhängig von $B$ und $D$. $B$ von $A$ und $D$. $D$ von $A$, $B$ und $E$. $E$ von $D$ und $C$. Und zuletzt ist $C$ nur von $E$ abhängig.}%
 \end{figure}
 
 In einer Markow-Kette erster Ordnung hängt der Zustand nur vom vorhergehenden Zustand ab,
-während in einer in einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. {[DDD]}
+während in einer in einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. \cite{wiki:Markov_model}
 Ein Markow-Netzwerk kann als Feld oder Graph von Zufallsvariablen dargestellt werden,
 wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.2)}.
 

@@ -79,6 +79,50 @@
       \field{pages}{1033\bibrangedash 1038}
       \range{pages}{6}
     \endentry
+    \entry{wiki:Markow-Kette}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://de.wikipedia.org/w/index.php?title=Markow-Kette&oldid=233283844}}
+      \field{note}{[Online; accessed 26-May-2023]}
+      \field{title}{{Markow-Kette} --- {W}ikipedia{,} The Free Encyclopedia}
+      \field{year}{2023}
+    \endentry
+    \entry{wiki:Markov_model}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://en.wikipedia.org/w/index.php?title=Markov\%20model&oldid=1146951281}}
+      \field{note}{[Online; accessed 26-May-2023]}
+      \field{title}{{Markov model} --- {W}ikipedia{,} The Free Encyclopedia}
+      \field{year}{2023}
+    \endentry
     \entry{Heeger}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=a5ef994b506c088c939d5ae8a80112d8}{%
@@ -104,8 +148,8 @@
       \strng{authorbibnamehash}{433309e903e4586c7340213060a9a4a3}
       \strng{authornamehash}{433309e903e4586c7340213060a9a4a3}
       \strng{authorfullhash}{433309e903e4586c7340213060a9a4a3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques}
@@ -160,8 +204,8 @@
       \strng{authorbibnamehash}{5a24d8fcb452cf1302a2320d5bdf646d}
       \strng{authornamehash}{47c13ec1f58f980aaa7b2bda8c78b6bd}
       \strng{authorfullhash}{5a24d8fcb452cf1302a2320d5bdf646d}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-642-60487-4}
@@ -261,8 +305,8 @@
       \strng{authornamehash}{c1e8f36c537b67931de8cac36326fc96}
       \strng{authorfullhash}{c1e8f36c537b67931de8cac36326fc96}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Model synthesis}
@@ -283,8 +327,8 @@
       \strng{authorbibnamehash}{46c2caad2d1433d5a224bdbf82de6ffb}
       \strng{authornamehash}{46c2caad2d1433d5a224bdbf82de6ffb}
       \strng{authorfullhash}{46c2caad2d1433d5a224bdbf82de6ffb}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
@@ -315,8 +359,8 @@
       \strng{authorbibnamehash}{6b0de5b0d4072b7b15ff0f8a5517c249}
       \strng{authornamehash}{6b0de5b0d4072b7b15ff0f8a5517c249}
       \strng{authorfullhash}{6b0de5b0d4072b7b15ff0f8a5517c249}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Studies in History and Philosophy of Science Part B: Studies in History and Philosophy of Modern Physics}
@@ -350,8 +394,8 @@
       \strng{authorbibnamehash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
       \strng{authornamehash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
       \strng{authorfullhash}{568f5ae8ee8be960c3c35bc34a2c8f4d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Constraint Networks: Techniques and Algorithms}
@@ -372,8 +416,8 @@
       \strng{authornamehash}{c1e8f36c537b67931de8cac36326fc96}
       \strng{authorfullhash}{c1e8f36c537b67931de8cac36326fc96}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
@@ -397,8 +441,8 @@
       \strng{authorbibnamehash}{6644b246f65da7900db3061f25e9b14d}
       \strng{authornamehash}{6644b246f65da7900db3061f25e9b14d}
       \strng{authorfullhash}{6644b246f65da7900db3061f25e9b14d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://selfsame.itch.io/unitywfc}}
