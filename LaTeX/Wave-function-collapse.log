@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  1 JUL 2023 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  3 JUL 2023 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1214,7 +1214,7 @@ Kapitel 4.
 [35] [36
 
 ]
-Overfull \hbox (27.36398pt too wide) in paragraph at lines 694--694
+Overfull \hbox (27.36398pt too wide) in paragraph at lines 698--698
 []\T1/ptm/m/n/12 Wikipedia, \T1/ptm/m/it/12 Markow-Kette --- Wi-ki-pe-dia, The Free En-cy-clo-pe-dia\T1/ptm/m/n/12 , [][]$\T1/cmtt/m/n/12 http : / / de . wikipedia .
  []
 
@@ -1237,7 +1237,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (38 pages, 5361100 bytes).
+Output written on Wave-function-collapse.pdf (38 pages, 5361589 bytes).
 PDF statistics:
  630 PDF objects out of 1000 (max. 8388607)
  472 compressed objects within 5 object streams
