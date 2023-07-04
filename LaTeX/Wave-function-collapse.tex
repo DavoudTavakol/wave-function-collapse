@@ -1,6 +1,6 @@
-\documentclass[12pt, a4paper,twoside,openright]{report}
+\documentclass[12pt, a4paper,twoside,openright]{report} %oder openright dann aber mehr leere seiten!
 \usepackage[utf8]{inputenc} %Standard!
-\usepackage[ngerman]{babel} %für deutsch
+\usepackage[english,ngerman]{babel} %für deutsch
 % Bibliotheken und Pfade
 \usepackage{csquotes} %damit zitierung konsisntent mit sprache ist
 \usepackage{xcolor} %Farben
@@ -16,6 +16,7 @@
 \usepackage{pdfpages} %pdf hinzufügen
 \usepackage[backend=biber, style=ieee, sorting=none]{biblatex} %references
 \usepackage{titlesec} %zum entfernen der "Kapitel N" header
+\usepackage{abstract}
 
 % pdf hyperref
 \usepackage[
@@ -36,6 +37,13 @@
     linktocpage=true,
 ]{hyperref}
 
+%Abstract seite
+\renewenvironment{abstract}{
+  \vspace*{\fill}
+  \begin{center}%
+    \bfseries\abstractname
+  \end{center}}%
+  {\vfill}
 
 %wir wollen formatieren{was genau?}[optionaler argument: im block satz.]{kapitel nummerierung und font}{der kapitelname mit angehängtem punkt .}{abstand zwischen nummer und name}{größe titel}
 \titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large}
@@ -47,15 +55,16 @@
 
 \geometry{paper=a4paper,left=2.5cm,top=3.0cm,bindingoffset=0.8cm}
 \onehalfspacing
+\setlength{\belowcaptionskip}{-10pt}
 
 \addbibresource{refs.bib}
 
 % Baue die Titel Struktur + Inhalt
 \title{
-{\vspace{-50mm}}
+{\vspace{-20mm}}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/th-nuernberg-logo.jpg}%
+    \includegraphics[width=0.6\linewidth]{images/Ohm.png}%
 \end{figure}
 
 {\huge Wave-Function-Collapse}\\
@@ -83,11 +92,29 @@
 %Eidesstaatliche Erklärung
 \includepdf[pages=-]{Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf}
 
-\chapter*{Abstract}
+\begin{abstract}
+In dieser Bachelorarbeit wird auf Funktionsweise des Wave-Function-Collapse {(WFC)} Algorithmus von Maxim Gumin eingegangen und wie dieser für Textursynthesen sowie zur Erstellung
+von Prozedural generierten Content verwendet werden kann.
+Dazu wird zuerst auf gängige Textursynthese Algorithmen eingegangen und wie fern sich WFC von diesen Unterscheidet.
+Später wird die Model Synthese von Paul Merrell herangezogen um Ähnlichkeiten zwischen den beiden Algorithmen aufzuzeigen und zu verglichen.
+Es wird klar das beide Algorithmen sich in ihrer Methodik sogenannte Constraint-Satisfaction-Probleme {(CSP)} zu lösen als identisch erweisen.
+Danach wird auf die unterschiedlichen Implementierungen der jeweiligen Algorithmen aufgezeigt wie z.B. die Blockweise Generierung der Model Synthese das Overlapping Model von Gumin.
+Zum Schluss wird das Overlapping Model nochmal detailliert erklärt und weshalb gerade diese Implementation so großen aufsehen erlangt hat und welche Anwendungsfälle mit WFC
+generell möglich sind.
+\end{abstract}
 
-zum schluss..
+\selectlanguage{english}
+\begin{abstract}
+This bachelor thesis describes the Wave-Function-Collapse {(WFC)} algorithm by Maxim Gumin and how it can be used for texture synthesis and the creation of procedurally generated content.
+For this purpose, we will first discuss common texture synthesis algorithms and how WFC differs from them.
+Later, the model synthesis of Paul Merrell is used to show similarities between the two algorithms and to compare them.
+It becomes clear that both algorithms are identical in their methodology to solve so-called constraint satisfaction problems {(CSP)}.
+Afterwards, the different implementations of the respective algorithms are pointed out, such as the modifying on blocks generation of the model synthesis and the overlapping model of Gumin.
+Finally, the Overlapping Model is explained in detail and why this implementation has gained so much attention and which use cases are generally possible with WFC.
+\end{abstract}
 
 % Automatisches Inhaltsverzeichniss
+\selectlanguage{ngerman}
 \tableofcontents
 
 \chapter{Einleitung}
@@ -97,11 +124,11 @@ Um solche Inhalte mit vordefinierten Parametern zu erstellen, werden oft zwei Me
 AI's {(Künstliche Intelligenzen)} wie DALL-E2, Midjourney und Algorithmen wie die Patch Synthese.
 Der Vorteil von solchen Tools ist es, das diese in kurzer Zeit qualitative Resultate Generieren können und auch, wie oben erwähnt, vordefinierte Parameter als Input erhalten können
 um die Resultate für ihren gebrauch anzupassen.
-In dieser Bachelorarbeit werde ich mich auf den Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle fokussieren.
+In dieser Bachelorarbeit wird auf den von Maxim Gumin erstellten Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle eingegangen.
 Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert
 und wie Wave-Function-Collape sowie andere Textursynthesen davon inspiriert wurden.
 Daraufhin wird das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} eingegangen und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen.
-Anhand von Sudoku wird im Detail die Funktionsweise von solchen CSP's selbst aufgezeigt.
+Anhand von einem Beispiel wird im Detail die Funktionsweise zum Lösen solcher CSP's aufgezeigt.
 Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation {(PCG)} wird mit der Model Synthese von Paul Merrell verglichen und deren Unterschiede genauer betrachtet.
 Es wird deutlich, dass der Wave-Function-Collapse Algorithmus sowie die Model Synthese beide sowohl in Ihrer Verwendung von Pixelganuer / diskreten Synthese sowie im Lösen von
 CSP ähnliche Methoden verwenden und beide sich dadurch als PCG's verwenden lassen und dadurch interaktiv verwendet werden können wie beispielsweise in Videospielen.
@@ -135,7 +162,7 @@ Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke 
     \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. \cite[S.2]{GomathiShah2009}
 \end{itemize}
 
-Im Folgenden werde ich auf drei verschiedene Textursyntheseverfahren eingehen da diese sich fundamental voneinander unterscheiden und verschiedene Ansätze von Synthesen aufzeigen.
+Im Folgenden wird auf drei verschiedene Textursyntheseverfahren eingegangen da diese sich fundamental voneinander unterscheiden und verschiedene Ansätze von Synthesen aufzeigen.
 Es wird nicht in Detail auf alle verfahren eingegangen da dieser Abschnitt nur Hintergrundinformationen darlegen soll.
 
 \section{Pixel basierende Textursynthese}
@@ -186,7 +213,7 @@ Im Folgenden die Funktionsweise eines Algorithmus basierend auf Markov Random Fi
 \subsubsection{Markow-Netzwerk und Markov-Kette}
 
 Wie bereits erwähnt basieren einige Textursynthesen auf sogenannte Markow-Netwerke oder Markov-Ketten \textit{(Markov Chain)}.
-In diesem Abschnitt möchte ich kurz erklären, um was es sich genau bei diesen beiden Begriffen handelt.
+In diesem Abschnitt wird kurz erklärt, um was es sich genau bei diesen beiden Begriffen handelt.
 Ein Markow-Netwerk kann als Generalisierung einer Markow-Kette im 3D-Raum angesehen werden.
 Eine Markow-Kette dient dazu Wahrscheinlichkeiten zukünftiger Ereignisse anzugeben.
 Sie basiert auf die Theorie, das bereits begrenzte Informationen über den vergangenen Zustand eines Systems ausreicht,
@@ -242,7 +269,7 @@ Sie wird {(mit linearer Interpolation)} neu abgetastet,
 sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind. \cite{Heeger}
 \newline
 Während der Algorithmus weiter Iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
-Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht haben oder wir eine von uns festgelegte Anzahl von Iterationen erreicht haben.
+Der Prozess stoppt, wenn eine ausreichende Ähnlichkeit erreicht ist oder eine von uns festgelegte Anzahl von Iterationen erreicht wurde.
 
 \begin{figure}[H]
     \centering
@@ -255,7 +282,7 @@ Wir Stoppen die den Prozess, wenn wir eine ausreichende Ähnlichkeit erreicht ha
 \end{figure}
 
 Obwohl die Pyramid-Methode ist im Detail viel komplizierter ist,
-werde ich sie hier nicht weiter Behandeln da sie für das weitere Verständnis dieser Arbeit keine Relevanz hat und nur eine weitere Synthesemethode darstellen soll.
+wird diese hier nicht weiter behandelt da sie für das weitere Verständnis dieser Arbeit keine Relevanz hat und nur eine weitere Synthesemethode darstellen soll.
 
 \section{Patch basierende Textursynthese}
 
@@ -372,12 +399,10 @@ ungültigen Zustand zu kommen.
 Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. \cite{Karth2017WaveFunctionCollapseIC}
 
 \subsection{CSP-Beispiel an Sudoku}
-
 Es gibt viele verschiedene CSP Probleme.
 Eines der bekanntesten Probleme, welchen viele Menschen schon fast täglich selbst lösen, ist Sudoku.
 Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumins WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.
-\newline
-Wenn wir ein Sudoku Feld ohne initiale Zahlen betrachten \textit{(unobserved)}, dann kann in jedem einzelnen Feld theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
+Wenn ein Sudoku Feld ohne initiale Zahlen betrachtet \textit{(unobserved)} wird, dann kann in jedem einzelnen Feld theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
 
 \begin{figure}[H]
     \centering
@@ -406,8 +431,8 @@ Als nächsten Schritt könnte man jetzt eine beliebige Zelle auswählen und dies
 Allerdings besteht so immer die Möglichkeit, dass der Prozess an einen Punkt kommt, an dem kein gültiger Zustand erreicht werden kann.
 Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)} können wir uns Heuristiken zu nutzen machen,
 um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
-In diesem Fall können wir uns eine Zelle aussuchen die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
-Dadurch ist die Chance geringer das wir eine Zelle auf einen ungünstigen Wert setzten, der später zu einem ungültigen Endzustand führt.
+In diesem Fall wird eine Zelle ausgewählt die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
+Dadurch ist die Chance geringer das eine Zelle auf einen ungünstigen Wert gesetzt wird, der später zu einem ungültigen Endzustand führt.
 \footnote[2]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
 
 \begin{figure}[H]
@@ -420,7 +445,7 @@ Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
 
 \section{WFC und die Model Synthese}
 
-Wir hatten bereits erwähnt das Gumins Wave-Function-Collapse Algorithmus von Paul Merrell's diskreter Model Synthese inspiriert ist.
+Es wurde bereits erwähnt das Gumins Wave-Function-Collapse Algorithmus von Paul Merrell's diskreter Model Synthese inspiriert ist.
 Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch-Based Synthese inspiriert.
 Textursynthese funktionierte im Allgemeinen relativ gut in vielen Bereichen.
 Allerdings taten sich einige Synthesen schwer damit, mit festen Strukturen als Input zu arbeiten, als auch Objekte im 3D-Raum zu generieren.
@@ -436,7 +461,7 @@ Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
     \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005. \cite{merrell2009model}}%
 \end{figure}
 
-In Abbildung 3.5 können wir klar die Schwachstellen von anderen Textursynthesen erkennen.
+In Abbildung 3.5 sind die Schwachstellen von anderen Textursynthesen klar erkennbar.
 \newline
 Paul Merrell erkannte das viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
 Deswegen kam er auf die Idee, anstatt mit einzelnen Pixel, lieber mit ganzen Komponenten zu Arbeiten.
@@ -468,7 +493,7 @@ Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusamm
 Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
 
 \begin{enumerate}
-    \itemsep0em
+    \itemsep-1em
     \item Erstelle Module.
     \begin{figure}[H]
         \centering
@@ -562,9 +587,9 @@ Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Pa
 \end{figure}
 
 In diesem Beispiel wurden mit $N = 2$, also eine Fenstergröße von 2 Pixel, die Module aus dem Input generiert.
-Die Fenstergröße wir selbst von Entwickler festgelegt und hat direkten Einfluss auf den Output.
+Die Fenstergröße wird von dem Entwickler selbst festgelegt und hat direkten Einfluss auf den Output.
 Falls $N = 1$ festgelegt wird dann befinden wir uns wieder beim Simple Tile Model.
-Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem \say{Patch} wird die wir diese selbstverständlich nicht mehr überlappen können.
+Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem \say{Patch} wird die selbstverständlich nicht mehr überlappt werden können.
 Bei zu kleiner Fenstergröße kann es sein, das der Output nicht dem Input ähneln.
 Andersrum bei einer zu großen Fenstergröße dem Input zu ähnlich.
 Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu erhalten.
@@ -686,15 +711,21 @@ In einem Beispiel implementiert Stålberg WFC auf einer Sphäre mit einem Dreiec
 oder seinem Twitter
 \url{https://twitter.com/OskSta/status/784847588893814785}}
 
-{\let\clearpage\relax\chapter{Fazit}}
+\chapter{Fazit}
 
 Der Wave-Function-Collapse Algorithmus von Gumin sowie die Model Synthese von Paul Merrell haben mehr Gemeinsamkeiten als Unterschiede.
 Das liegt daran, dass beide Algorithmen denselben grundlegenden Ablauf für das Lösen von Constraint-Satisfaction-Problem verwenden, um Texturen zu generieren.
 Beide Algorithmen kann man als jeweils eine Seite derselben Münze bezeichnen.
-Wave-Function-Collapse ist fundamental \say{nur} ein Verfahren um einzelne Elemente ob Blöcke, Texte, Bilder etc. nach bestimmten Regeln aneinander zu setzten.
-Dadurch lassen sich mit beiden Algorithmen fehlerfreie Systeme automatisch Herstellen die gegebenenfalls Interaktiv verwendet werden können,
-da wir absolute Kontrolle über den Input haben und wie dieser Verarbeitet wird.
-
+Wave-Function-Collapse ist fundamental \say{nur} ein Verfahren um einzelne Elemente, ob Blöcke, Texte, Bilder etc. nach bestimmten Regeln aneinander zu setzten.
+Dadurch lassen sich mit beiden Algorithmen fehlerfreie Systeme automatisch generieren die gegebenenfalls Interaktiv verwendet werden können,
+da wir große Kontrolle über den Input haben und wie dieser Verarbeitet wird.
+Die Unterschiede zwischen den beiden Implementierungen ist Hauptsächlich in der Implementierung der einzelnen Ausführungsschritte sowie in zusätzlichen Optimierungen zu finden.
+Der WFC von Gumin verwendet das Overlapping Model, um die Generierung der Bausteine / Module zu vereinfachen.
+Die dadurch dichtere Platzierung der einzelnen Zellen führt zu einem etwas einheitlicherem Output, kann aber zur Folge haben das Artefakte entstehen,
+sollte die Fenstergröße für die Analyse nicht korrekt gewählt worden sein.
+Die Model Synthese von Paul Merrell hingegen besitzt Fehlerbehandlungen wie die Blockweise Generierung bei der Ausführung des Algorithmus, um größere Outputs zu erzielen und die
+Fehlerrate zu reduzieren.
+Beide Implementierungen können jedoch nach Belieben erweitert werden, um dieselben oder mehr Funktionalitäten zu haben.
 
 \printbibliography
 
