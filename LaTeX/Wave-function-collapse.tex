@@ -93,13 +93,13 @@
 \includepdf[pages=-]{Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf}
 
 \begin{abstract}
-In dieser Bachelorarbeit wird auf Funktionsweise des Wave-Function-Collapse {(WFC)} Algorithmus von Maxim Gumin eingegangen und wie dieser für Textursynthesen sowie zur Erstellung
+In dieser Bachelorarbeit wird auf die Funktionsweise des Wave-Function-Collapse {(WFC)} Algorithmus von Maxim Gumin eingegangen und wie dieser für Textursynthesen sowie zur Erstellung
 von Prozedural generierten Content verwendet werden kann.
-Dazu wird zuerst auf gängige Textursynthese Algorithmen eingegangen und wie fern sich WFC von diesen Unterscheidet.
+Dazu wird zuerst auf gängige Textursynthese Algorithmen eingegangen und inwiefern sich WFC von diesen Unterscheidet.
 Später wird die Model Synthese von Paul Merrell herangezogen um Ähnlichkeiten zwischen den beiden Algorithmen aufzuzeigen und zu verglichen.
 Es wird klar das beide Algorithmen sich in ihrer Methodik sogenannte Constraint-Satisfaction-Probleme {(CSP)} zu lösen als identisch erweisen.
-Danach wird auf die unterschiedlichen Implementierungen der jeweiligen Algorithmen aufgezeigt wie z.B. die Blockweise Generierung der Model Synthese das Overlapping Model von Gumin.
-Zum Schluss wird das Overlapping Model nochmal detailliert erklärt und weshalb gerade diese Implementation so großen aufsehen erlangt hat und welche Anwendungsfälle mit WFC
+Danach werden die unterschiede der jeweiligen Implementierungen der Algorithmen aufgezeigt wie z.B. die Blockweise Generierung der Model Synthese und das Overlapping Model von Gumin.
+Zum Schluss wird das Overlapping Model nochmal detailliert erklärt und weshalb gerade diese Implementation so großes aufsehen erlangt hat und welche Anwendungsfälle mit WFC
 generell möglich sind.
 \end{abstract}
 
@@ -107,10 +107,10 @@ generell möglich sind.
 \begin{abstract}
 This bachelor thesis describes the Wave-Function-Collapse {(WFC)} algorithm by Maxim Gumin and how it can be used for texture synthesis and the creation of procedurally generated content.
 For this purpose, we will first discuss common texture synthesis algorithms and how WFC differs from them.
-Later, the model synthesis of Paul Merrell is used to show similarities between the two algorithms and to compare them.
+Later, the model synthesis of Paul Merrell is used to show similarities between the two algorithms and compare them.
 It becomes clear that both algorithms are identical in their methodology to solve so-called constraint satisfaction problems {(CSP)}.
-Afterwards, the different implementations of the respective algorithms are pointed out, such as the modifying on blocks generation of the model synthesis and the overlapping model of Gumin.
-Finally, the Overlapping Model is explained in detail and why this implementation has gained so much attention and which use cases are generally possible with WFC.
+Afterwards, the different implementations of the respective algorithms are pointed out, such as the modifying in blocks generation of the model synthesis and the overlapping model of Gumin.
+Finally, the Overlapping Model is explained in detail and why this implementation has gained so much attention lately and which use cases are generally possible with WFC.
 \end{abstract}
 
 % Automatisches Inhaltsverzeichniss
@@ -127,11 +127,12 @@ um die Resultate für ihren gebrauch anzupassen.
 In dieser Bachelorarbeit wird auf den von Maxim Gumin erstellten Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle eingegangen.
 Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert
 und wie Wave-Function-Collape sowie andere Textursynthesen davon inspiriert wurden.
-Daraufhin wird das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} eingegangen und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen.
-Anhand von einem Beispiel wird im Detail die Funktionsweise zum Lösen solcher CSP's aufgezeigt.
+Daraufhin wird auf das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} eingegangen und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen.
+Anhand eines Beispiels wird im Detail die Funktionsweise zum Lösen solcher CSP's aufgezeigt.
 Wave-Function-Collapse als Algorithmus für Procedural-Content-Generation {(PCG)} wird mit der Model Synthese von Paul Merrell verglichen und deren Unterschiede genauer betrachtet.
 Es wird deutlich, dass der Wave-Function-Collapse Algorithmus sowie die Model Synthese beide sowohl in Ihrer Verwendung von Pixelganuer / diskreten Synthese sowie im Lösen von
-CSP ähnliche Methoden verwenden und beide sich dadurch als PCG's verwenden lassen und dadurch interaktiv verwendet werden können wie beispielsweise in Videospielen.
+CSP ähnliche Methoden verwenden und beide sich dadurch als PCG's verwenden lassen.
+Dadurch kann der Output dieser Algorithmen interaktiv als Content verwendet werden wie beispielsweise für Videospiele etc.
 
 \chapter{Textursynthesen im Vergleich}
 
@@ -156,7 +157,7 @@ Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke 
 \noindent Dadurch ergeben sich folgende Metriken die erfüllt werden müssen.
 
 \begin{itemize}
-    \item Wenn Texturprobe gegeben, generiere eine neue Textur, die der Probe gleicht.
+    \item Wenn eine Texturprobe gegeben, generiere eine neue Textur, die der Probe gleicht.
     \item Die neue Textur kann eine beliebige Größe haben die vom Benutzer festgelegt wird.
     \item Es sollen keine sichtbaren Übergänge, Artefakte oder fehlerhafte Kanten sichtbar sein.
     \item Dasselbe Muster soll nicht mehrfach in der neuen Textur vorkommen. \cite[S.2]{GomathiShah2009}
@@ -169,7 +170,7 @@ Es wird nicht in Detail auf alle verfahren eingegangen da dieser Abschnitt nur H
 
 Bei dieser Methode werden neue Texturen Pixel für Pixel generiert.
 Jeder neue Pixelwert wird von seinen lokalen Nachbarn festgelegt.
-Dieser verfahren verwenden meistens Markow-Netzwerke \textit{(Markov Random Field)}
+Diese Verfahren verwenden meistens Markow-Netzwerke \textit{(Markov Random Field)}
 \footnote[1]{Auf Markow-Netzwerke und Markow-Ketten wird am Ende dieses Abschnitts genauer eingegangen.}
 die relativ gute Resultate liefern mit wenig Rechenlast.
 Markov Random Fields Methoden beurteilen jeden Pixel nach einer kleinen Menge von Nachbarn.
@@ -216,7 +217,7 @@ Wie bereits erwähnt basieren einige Textursynthesen auf sogenannte Markow-Netwe
 In diesem Abschnitt wird kurz erklärt, um was es sich genau bei diesen beiden Begriffen handelt.
 Ein Markow-Netwerk kann als Generalisierung einer Markow-Kette im 3D-Raum angesehen werden.
 Eine Markow-Kette dient dazu Wahrscheinlichkeiten zukünftiger Ereignisse anzugeben.
-Sie basiert auf die Theorie, das bereits begrenzte Informationen über den vergangenen Zustand eines Systems ausreicht,
+Sie basiert auf die Theorie, das bereits begrenzte Informationen über den vergangenen Zustand eines Systems ausreichen,
 um Prognosen für die zukünftige Entwicklung des Systems zu erstellen.
 Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
 \say{Der zukünftige Zustand des Prozesses ist nur durch den aktuellen Zustand bedingt und wird nicht durch vergangene Zustände beeinflusst.} \cite{wiki:Markow-Kette}
@@ -233,7 +234,7 @@ Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
 \end{figure}
 
 In einer Markow-Kette erster Ordnung hängt der Zustand nur vom vorhergehenden Zustand ab,
-während in einer in einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. \cite{wiki:Markov_model}
+während bei einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. \cite{wiki:Markov_model}
 Ein Markow-Netzwerk kann als Feld oder Graph von Zufallsvariablen dargestellt werden,
 wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.2)}.
 
@@ -281,14 +282,14 @@ Der Prozess stoppt, wenn eine ausreichende Ähnlichkeit erreicht ist oder eine v
     \caption{(a) Projektion der Bildpyramide, (b) Input-Image, (c) Teilband-Bilder vom Input-Image.}%
 \end{figure}
 
-Obwohl die Pyramid-Methode ist im Detail viel komplizierter ist,
-wird diese hier nicht weiter behandelt da sie für das weitere Verständnis dieser Arbeit keine Relevanz hat und nur eine weitere Synthesemethode darstellen soll.
+Obwohl die Pyramid-Methode im Detail viel komplizierter ist,
+wird diese hier nicht weiter behandelt da sie für das weitere Verständnis dieser Arbeit keine Relevanz hat und nur eine weitere übliche Synthesemethode darstellen soll.
 
 \section{Patch basierende Textursynthese}
 
 Die Patch-Based Textursynthese \textit{(auch Quilten genannt)} ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
 Hier werden statt einzelne Pixel gleich direkt ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abbildung 2.7)}.
-Auch hier werden die Patches mithilfe ihrer benachbarten Pixel bestimmt und ausgewertet.
+Auch hier werden die Patches mithilfe ihrer Nachbarn bestimmt und ausgewertet.
 Dadurch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
 
 \begin{figure}[H]
@@ -318,7 +319,6 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
     \end{itemize}
 \end{enumerate}
 
-%Images basteln
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.25\linewidth]{images/Random-blocks.jpg}%
@@ -352,7 +352,7 @@ Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der 
 Gumin hat sich von der Arbeit von Paul Merrell Inspirieren lassen, obwohl dieser sich Hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
 Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
 Das ist dahingehen wichtig da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden können.
-Dieser Verhalten ist bei WFC und dem Verfahren von Paul Merrell nicht möglich da es sich um eine diskrete Synthese handelt.
+Dieses Verhalten ist bei WFC und dem Verfahren von Paul Merrell nicht möglich da es sich um eine diskrete Synthese handelt.
 Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)}. \cite{Karth2017WaveFunctionCollapseIC, merrell2009model, Gumin_Wave_Function_Collapse_2016}
 
 \begin{figure}[H]
@@ -374,7 +374,7 @@ Sie müssen sich schließlich an den Nachbarn anpassen damit die Synthese nahtlo
 Sobald eine Zelle bekannt wird \textit{(Observation)} und damit nur einen Eigenwert besitzt,
 dann wird die Entropie aller anderen Zellen angepasst.
 \say{Nach dieser Auffassung ist der "collapse" der Wellenfunktion kein
-ein physikalischer Prozess und spiegelt lediglich eine Aktualisierung unserer Informationen über das System wider} \cite[S.5, 2.2 The wave function]{Zinkernagel_2016}
+physikalischer Prozess und spiegelt lediglich eine Aktualisierung unserer Informationen über das System wider} \cite[S.5, 2.2 The wave function]{Zinkernagel_2016}
 Da der WFC Algorithmus genau auf diese Art und Weise seine Synthese durchführt,
 dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.
 
