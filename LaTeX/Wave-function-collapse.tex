@@ -71,7 +71,7 @@
 {\large Funktionsweise und Anwendungsfälle}\\
 {\vspace{10mm}}
 {\large Bachelorarbeit}\\
-{\large Betreuer: Prof. Dr. rer. nat. Matthias Hopf}\\
+{\large Betreuer: Prof. Dr. Matthias Hopf}\\
 {\vspace{10mm}}
 {\large Studiengang: Bachelor Media Engineering}\\
 {\large Fakultät: Elektrotechnik Feinwerktechnik Informationstechnik}\\
@@ -345,7 +345,7 @@ Bei den verfahren, wo die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau statt
 werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
 Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen wo das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
-Gerade bei PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
+Gerade für PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
 \cite{Karth2017WaveFunctionCollapseIC}
 Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der Patch-Based Methode am ähnlichsten.
 \newline
@@ -381,28 +381,28 @@ dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme 
 \subsection{Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}
 %hier weiter!
 Grundsätzlich beschreiben CSP's Gruppen von Objekten denen Variablen zugeteilt sind.
-Diesen Variablen sind Regeln, sogenannte \textit{(constraints)}, auferlegt die erfüllt werden müssen.
-Jeder dieser Variablen hat zu Beginn eine Superposition und kann damit jeden wert enthalten.
-Die Aufgabe von Algorithmen zum Lösen von CSP's \textit{(solver)} ist es einen Zustand \textit{(State)} zu finden in denen alle constraints erfüllt sind und jeder Variable nur noch ein wert zugeordnet ist.
+Diesen Objekten sind Regeln, sogenannte \textit{(constraints)}, auferlegt die erfüllt werden müssen.
+Jeder dieser Objekte hat zu Beginn eine Superposition und kann somit grundsätzlich jeden Wert enthalten.
+Die Aufgabe von Algorithmen zum Lösen von CSP's \textit{(solver)} ist es einen Zustand \textit{(State)} zu finden in denen alle constraints erfüllt sind und jedem Objekt nur noch ein Wert zugeordnet ist.
 Für solche Probleme finden sich oft bei der Künstlichen Intelligenz und aus dem Operations Research. \cite{Lecoutre2009ConstraintNT}
 Im Fall von WFC sind die Objekte, denen die Variablen zugeteilt sind, die einzelnen Bereiche im Output-Image.
 Jeder diese Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
-Immer, wenn einem Bereich ein wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst \textit{(Propagation)}.
+Immer, wenn einem Bereich ein Wert zugeordnet wird, dann werden auch die benachbarten Bereiche damit beeinflusst \textit{(Propagation)}.
 Der Gesamtprozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
 nennt sich Wave-Function-Collapse. \cite{Zinkernagel_2016}
-Während dem Prozess einen gültigen State für das CSP zu finden, dann gibt es immer Situationen in dem es mehrere gültige Optionen für eine Variable gibt.
+Während dem Prozess einen gültigen State für das CSP zu finden, so gibt es immer Situationen in dem es mehrere gültige Optionen für einen der Objekte gibt.
 Wenn so eine Situation auftritt, dann haben verschiedene Solver verschiedene Ansätze.
-Einige Algorithmen wähle zufällig eine der möglichen Werte von momentan zulässigen Optionen.
+Einige Algorithmen wähle zufällig eine der möglichen Werte von den momentan zulässigen Optionen.
 Bei so einem Ansatz kann es sein das der Algorithmus nicht auf einen Zustand kommen kann, in dem alle constraints erfüllt werden können.
-In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)} bei dem der Algorithmus zu seinem letzten Ergebnis zurückfällt und ein anderen Wert für die Variable setzt, um aus dem
-ungültigen Zustand zu kommen.
+In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)} bei dem der Algorithmus zu seinem letzten Ergebnis zurückfällt und einen anderen Wert für die Variable setzt, um aus dem
+ungültigen Zustand zu kommen und es neu zu versuchen.
 Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. \cite{Karth2017WaveFunctionCollapseIC}
 
 \subsection{CSP-Beispiel an Sudoku}
-Es gibt viele verschiedene CSP Probleme.
+Es gibt viele verschiedene CSP Probleme in der Wissenschaft.
 Eines der bekanntesten Probleme, welchen viele Menschen schon fast täglich selbst lösen, ist Sudoku.
-Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumins WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.
-Wenn ein Sudoku Feld ohne initiale Zahlen betrachtet \textit{(unobserved)} wird, dann kann in jedem einzelnen Feld theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
+Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumin's WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.
+Wenn ein Sudoku Feld ohne initiale Zahlen betrachtet \textit{(unobserved)} wird, dann kann in jedem einzelnen Objekt, in diesem Fall auch Zelle, theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
 
 \begin{figure}[H]
     \centering
@@ -416,8 +416,8 @@ Die Regeln \textit{(constraints)} dieses CSP sind wie folgt:
     \item Keine Zahl innerhalb der Zeile, Spalte oder des Quadrats darf sich wiederholen.
 \end{enumerate}
 
-Der nächste Schritt ist die \textit{Observation}, sprich das erste Feld mit seinen vielen Eigenwerten einen festen wert Zuordnen.
-Dadurch treten für die benachbarten die Constraints ein, die bestimmen welche Werte sie nun noch einnehmen können.
+Der nächste Schritt ist die \textit{Observation}, sprich das erste Feld mit seinen vielen Eigenwerten auf einen festen Wert zu kollabieren.
+Dadurch treten für die benachbarten Zellen die Constraints ein, die bestimmen welche Werte sie nun noch einnehmen können.
 
 \begin{figure}[H]
     \centering
@@ -431,7 +431,7 @@ Als nächsten Schritt könnte man jetzt eine beliebige Zelle auswählen und dies
 Allerdings besteht so immer die Möglichkeit, dass der Prozess an einen Punkt kommt, an dem kein gültiger Zustand erreicht werden kann.
 Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)} können wir uns Heuristiken zu nutzen machen,
 um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
-In diesem Fall wird eine Zelle ausgewählt die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat.
+In diesem Fall wird eine Zelle ausgewählt die Bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat, bzw. eine sehr niedrige Entropie besitzt.
 Dadurch ist die Chance geringer das eine Zelle auf einen ungünstigen Wert gesetzt wird, der später zu einem ungültigen Endzustand führt.
 \footnote[2]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
 
@@ -445,8 +445,9 @@ Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
 
 \section{WFC und die Model Synthese}
 
-Es wurde bereits erwähnt das Gumins Wave-Function-Collapse Algorithmus von Paul Merrell's diskreter Model Synthese inspiriert ist.
-Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch-Based Synthese inspiriert.
+Es wurde bereits erwähnt das Gumin's Wave-Function-Collapse Algorithmus sehr von Paul Merrell's diskreter Model Synthese inspiriert ist.
+Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch-Based Textursynthese inspiriert.
+\newline
 Textursynthese funktionierte im Allgemeinen relativ gut in vielen Bereichen.
 Allerdings taten sich einige Synthesen schwer damit, mit festen Strukturen als Input zu arbeiten, als auch Objekte im 3D-Raum zu generieren.
 Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
@@ -465,7 +466,7 @@ In Abbildung 3.5 sind die Schwachstellen von anderen Textursynthesen klar erkenn
 \newline
 Paul Merrell erkannte das viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
 Deswegen kam er auf die Idee, anstatt mit einzelnen Pixel, lieber mit ganzen Komponenten zu Arbeiten.
-Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
+Dadurch konnte er neue Objekte sowohl in 2D als auch im 3D-Raum generieren.
 
 \begin{figure}[H]
     \centering
@@ -478,11 +479,11 @@ Dadurch konnte er neue Objekte sowohl in 2D als auch in 3D-Raum generieren.
 \end{figure}
 
 Anders als bei Sudoku, gibt es hier die Regel der Adjazenz-Bedingung \textit{(adjacency constraint)}.
-Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusammenpassen und dass das neue Modell dem Input ähnelt.
+Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusammenpassen und dass das neue Modell dem Input ähnlich ist.
 
 \begin{figure}[H]
     \centering
-    \subfloat[][]{\includegraphics[width=0.1\linewidth]{images/model-divided.JPG}}%
+    \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/model-divided.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/seamless-model.JPG}}%
     \qquad
@@ -510,27 +511,29 @@ Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
 \end{enumerate}
 
 An diesem Punkt ist es wichtig zu erwähnen,
-dass es sich hierbei bereits um die \say{Simple Tile Model} des WFC Algorithmus handelt.
+dass es sich hierbei bereits um das \say{Simple Tile Model} des WFC Algorithmus handelt.
 
 \subsection{Unterschiede zwischen WFC und Model Synthese}
 
 Tatsächlich ist der WFC Algorithmus von Gumin und die Model Synthese von Merrell, in der Ausführung der oben genannten Schritte, exakt derselbe Algorithmus.
 
 Der Unterschied zwischen den beiden Algorithmen besteht lediglich in der Implementierung der einzelnen Schritte sowie in zusätzlichen Optimierungen,
-die die Model Synthese im Vergleich zu WFC besitzt.
+die die Model Synthese und der WFC besitzen.
 Laut Paul Merrell gibt es mehrere Unterschiede in der Implementierung.
 \newline
 Eine davon ist die Reihenfolge der Auswahl der nächsten Zelle.
 Während WFC nach der niedrigsten Entropie Heuristik seine Zelle auswählt,
-wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zelle aus.
+wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zellen aus.
 Interessanterweise verursacht die Zellenauswahl von WFC mehr Fehlerzustände bei großen Output-Images.
-Auch die Komplexität des Inputs kann dazu beitragen das WFC nicht zu einem Ergebnis kommt, während das bei der Model Synthese wesentlich unwahrscheinlicher ist.
+Auch die Komplexität des Inputs kann dazu beitragen das WFC nicht zu einem Ergebnis kommt.
+Obwohl das ebenfalls der Fall für Merrell's Implementierung ist, so ist es bei der Model Synthese wesentlich wahrscheinlicher das ein gültiges Ergebnis zustande kommt,
+da die Model Synthese Fehlerbehandlungen besitzt die bei WFC fehlen.
 \newline
-Ein weiterer Grund warum die Model Synthese gerade bei großen Modellen wesentlich öfter zu Ergebnissen kommt, ist die Blockweise Generierung vom Output-Image.
-In Paul Merrells Model Synthese wird der Output Blockweise generiert und nicht komplett in einem Durchgang.
+Einer dieser Fehlerbehandlungen, ist die Blockweise Generierung vom Output-Image.
+In der Model Synthese wird der Output Blockweise generiert und nicht komplett in einem Durchgang.
 Das ist für die Generierung von großen Outputs, vor allem bei 3D-Modellen, von großer Bedeutung da dadurch die Fehlerquote bei einigen Inputs signifikant reduziert wird.
 WFC teilt sein CSP nicht in kleinere Blöcke auf, da der Output von WFC in der Regel kleiner ist, und die Verarbeitung im 2D-Raum wesentlich einfacher.
-Das bedeutet nicht das WFC von so einer Implementierung nicht profitieren würde, vor allem wenn man WFC im 3D-Raum verwenden möchte.
+Das bedeutet nicht das WFC von so einer Implementierung nicht profitieren würde, vor allem wenn man WFC im 3D-Raum verwenden möchte oder größere Outputs erzielen möchte.
 Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. \cite{merrell2018compare}
 
 \begin{figure}[H]
@@ -539,8 +542,8 @@ Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. \cite{
     \caption{3D-Modell generiert mit Model Synthese. Aus \cite{merrell2018compare}}%
 \end{figure}
 
-Neben weiteren Unterschieden wie die Laufzeit und der Erweiterbarkeit der beiden Algorithmen so gibt es noch einen weiteren Unterschied den WFC implementiert.
-Das sogenannte Overlapping Model von WFC, das in der Originalversion von Gumin vorkommt, ist das, was WFC initial so bekannt gemacht hat.
+Neben weiteren Unterschieden wie die Laufzeit und der Erweiterbarkeit der beiden Algorithmen so gibt es noch einen weiteren Unterschied den Gumin's WFC implementiert.
+Das sogenannte Overlapping Model, das in der Originalversion von Gumin vorkommt, ist das, was WFC initial so bekannt gemacht hat.
 
 \subsection{Simple Tile Model und Overlapping Model}
 
@@ -548,7 +551,8 @@ Anders als bei der Simple Tile Model von WFC, wo die einzelnen Module / Patches 
 benötigt das Overlapping Model von WFC ein komplettes Input-Image welches Analysiert wird.
 Aus dieser Analyse werden die Module automatisch generiert.
 Zudem haben sich die Patches bei der Simple Tile Model nicht überschnitten was bei dem Overlapping Model, offensichtlich, der Fall ist.
-Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden können und der Output sieht dem Input ähnlicher da die Patches enger aneinander liegen. \cite{merrell2018compare}
+Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden können.
+Zudem kann der Output dem Input ähnlicher sein da die Patches enger aneinander liegen. \cite{merrell2018compare}
 
 \begin{figure}[H]
     \centering
@@ -565,8 +569,8 @@ Das hat den Vorteil das die Patches ganz einfach aus dem Input errechnet werden 
 
 Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten wie diese übereinander liegen können.
 {(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}
-Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschriebt, wie ein die Muster nebeneinander platziert werden können.
-Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Patches, die an einem anderen Index mit $x,y$-Offset platziert werden darf. 
+Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschriebt, wie die Muster nebeneinander platziert werden können.
+Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Patches, die an einem anderen Index mit $x,y$-Offset platziert werden dürfen. 
 Man kann sich vorstellen das jede Zelle im Sudoku Feld ein bestimmte $x,y$ Koordinate besitzt damit durch diese Iteriert werden kann.
 Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die Patches entfernt, die nicht nutzbar sind. \cite{Karth2017WaveFunctionCollapseIC}
 
@@ -586,12 +590,13 @@ Angemerkt sei das bei offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Pa
     \caption{Ausschnitt einer Zelle. Von 12 möglichen Patches sind nur die gültigen Optionen für die benachbarten Zellen mit $x,y$-Offset möglich. Aus \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
-In diesem Beispiel wurden mit $N = 2$, also eine Fenstergröße von 2 Pixel, die Module aus dem Input generiert.
+In diesem Beispiel wurden mit $N = 2$, also eine Fenstergröße von 2 Pixel, die einzelnen Module aus dem Input generiert.
 Die Fenstergröße wird von dem Entwickler selbst festgelegt und hat direkten Einfluss auf den Output.
 Falls $N = 1$ festgelegt wird dann befinden wir uns wieder beim Simple Tile Model.
-Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem \say{Patch} wird die selbstverständlich nicht mehr überlappt werden können.
-Bei zu kleiner Fenstergröße kann es sein, das der Output nicht dem Input ähneln.
-Andersrum bei einer zu großen Fenstergröße dem Input zu ähnlich.
+Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem \say{Patch} wird die selbstverständlich nicht mehr überlappt werden können,
+außer $N = 1$ repräsentiert eine Menge an Pixeln.
+Bei zu kleiner Fenstergröße kann es sein, das der Output nicht dem Input ähnelt.
+Andersrum bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein, da ganze Gruppen von Strukturen einfach kopiert und eingefügt werden.
 Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu erhalten.
 
 \begin{figure}[H]
@@ -612,23 +617,23 @@ Man muss aufpassen welche Größe man wählt, um ein gewünschtes Ergebnis zu er
 
 Es ist wichtig anzumerken das viele der hier gezeigten Texturen auch mit aktuellen Textursynthese-Algorithmen generiert werden können.
 Der Vorteil von Model Synthese und WFC im Vergleich zu anderen Synthesen ist das der generierte Content auch Interaktiv genutzt werden kann,
-da wir vollen Kontrolle über die lokalen Muster des Outputs haben.
-Gerade der Simple Tile Model bietet sich deswegen für Procedural-Content-Generation {(PCG)} an, da wir hier auch volle Kontrolle über die einzelnen Module / Patches haben,
-dann zusammengesetzt werden für den Output.
-Dadurch bietet sich WFC gerade für die Spiele-Entwicklung an, da dadurch keine unvorhersehbaren Artefakte entstehen können.
-Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 2.3)} Input ein Foto verwendet wird,
+da wir vollen Kontrolle über die lokalen Muster des Outputs haben und dass das Endergebnis alle von uns auferlegten Constraints erfüllt.
+Gerade der Simple Tile Model bietet sich deswegen für PCG an, da wir hier auch volle Kontrolle über die einzelnen Module / Patches haben,
+die dann für das Output zusammengesetzt werden.
+Dadurch qualifiziert sich WFC gerade für die Spiele-Entwicklung, da dadurch keine unvorhersehbaren Artefakte entstehen können.
+Andersrum hingegen wenn statt einem lokalen und stationären {(siehe Abbildung 2.3)} Input bspw. ein Foto verwendet wird,
 dann würden die anderen Synthesemethoden passendere Ergebnisse liefern im Gegensatz zur Model Synthese und WFC.
-Es sei erwähnt das der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.3 {(b)} sein muss.
+Es sei erwähnt, das der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.3 {(b)} sein muss.
 Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.
 \newline
-Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler bereits begonnen mit diesem Algorithmus zu experimentieren.
+Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler begonnen mit diesem Algorithmus zu experimentieren.
 Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
 sondern auch die live Generierung des Outputs selbst.
 Viele PCG's Methoden variieren in ihrer Laufzeit bei der Generierung ihres Outputs.
 Dies führt dazu das manchmal bereits Großteile des Outputs sofort generiert werden,
 dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. \cite{Karth2017WaveFunctionCollapseIC}
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
-alle möglichen Pixelwerte enthalten, dann führt das zu einer sehr schön anzusehenden Generierung des Outputs.
+als gemischte Pixelwerte aller möglichen Optionen innerhalb der Zellen darstellt, dann führt das zu einer schön anzusehenden Generierung des Outputs.
 \footnote[4]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
 example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
 \newline
@@ -659,14 +664,14 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 
 \section{Beispiel Implementierung}
 
-Joseph Parker war einer der ersten, die WFC verwendet haben.
-In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity um einzigartige 3D Skateparks zu generieren.
-Er verwendete selbst erstellte Blöcke, aus denen die Karten generiert werden sollen, anstatt sie automatisch aus einem Input zu analysieren. \cite{procskater2016}
-J. Parker zufolge benutzt er das Simple Tile Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
+Joseph Parker war einer der ersten, der WFC verwendet hat.
+In seinem \textit{Proc Skater 2016} verwendet er den Algorithmus in Unity, um einzigartige 3D Skateparks zu generieren.
+Er verwendete selbst erstellte Blöcke, aus denen die Karte generiert werden soll, anstatt sie automatisch aus einem Input zu analysieren. \cite{procskater2016}
+J. Parker zufolge benutzt er das Simple Tile Model als auch das Overlapping Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{images/proc-skater-ruleset.png}%
+    \includegraphics[width=0.9\linewidth]{images/proc-skater-ruleset.png}%
     \caption{Blöcke zu Generierung des Skateparks in \textit{Proc Skater 2016.} \cite{procskater2016}}%
 \end{figure}
 
@@ -674,17 +679,18 @@ Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ aus
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{images/proc-skate-level.png}%
+    \includegraphics[width=0.9\linewidth]{images/proc-skate-level.png}%
     \caption{Typisches Level in \textit{Proc Skater 2016.} \cite{procskater2016}}%
 \end{figure}
+
+\pagebreak
 
 \begin{wrapfigure}{r}{8cm}
     \includegraphics[width=1\linewidth]{images/proc-skate-backdrop.png}%
     \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016.} \cite{procskater2016}}%
 \end{wrapfigure}
 
-Parker verwendete allerdings nicht nur das Simple Tile Model, sondern auch das Overlapping Model in Proc Skater 2016.
-Der umliegende Hintergrund \textit{(backdrop)} ist mit dem Overlapping Model erstellt.
+Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark zu erstellen.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
 Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.
@@ -699,7 +705,7 @@ Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach 
 
 \begin{figure}[H]
     \centering
-    \frame{\includegraphics[width=1\linewidth]{images/caves-of-qud.jpg}}%
+    \frame{\includegraphics[width=0.9\linewidth]{images/caves-of-qud.jpg}}%
     \caption{Zwei Spielbare Karten von \textit{Caves of Qud.} \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
@@ -714,7 +720,7 @@ oder seinem Twitter
 \chapter{Fazit}
 
 Der Wave-Function-Collapse Algorithmus von Gumin sowie die Model Synthese von Paul Merrell haben mehr Gemeinsamkeiten als Unterschiede.
-Das liegt daran, dass beide Algorithmen denselben grundlegenden Ablauf für das Lösen von Constraint-Satisfaction-Problem verwenden, um Texturen zu generieren.
+Das liegt daran, dass beide Algorithmen denselben grundlegenden Ablauf für das Lösen von Constraint-Satisfaction-Problem verwenden, um Texturen, Content oder ähnliches zu generieren.
 Beide Algorithmen kann man als jeweils eine Seite derselben Münze bezeichnen.
 Wave-Function-Collapse ist fundamental \say{nur} ein Verfahren um einzelne Elemente, ob Blöcke, Texte, Bilder etc. nach bestimmten Regeln aneinander zu setzten.
 Dadurch lassen sich mit beiden Algorithmen fehlerfreie Systeme automatisch generieren die gegebenenfalls Interaktiv verwendet werden können,
