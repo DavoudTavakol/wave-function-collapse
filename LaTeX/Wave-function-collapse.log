@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  7 JUL 2023 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  9 JUL 2023 13:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -899,320 +899,320 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 16
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [9 <./images/texture-blocky.JPG> <./images/texture-correct.JPG>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 175.
 <images/Textur-nicht-stationärlokal.JPG, id=184, 602.25pt x 401.5pt>
 File: images/Textur-nicht-stationärlokal.JPG Graphic file (type jpg)
 <use images/Textur-nicht-stationärlokal.JPG>
-Package pdftex.def Info: images/Textur-nicht-stationärlokal.JPG  used on input line 184.
+Package pdftex.def Info: images/Textur-nicht-stationärlokal.JPG  used on input line 185.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
 <images/Textur-stationärlokal.JPG, id=185, 602.25pt x 401.5pt>
 File: images/Textur-stationärlokal.JPG Graphic file (type jpg)
 <use images/Textur-stationärlokal.JPG>
-Package pdftex.def Info: images/Textur-stationärlokal.JPG  used on input line 186.
+Package pdftex.def Info: images/Textur-stationärlokal.JPG  used on input line 187.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
 <images/synthezising-pixel.JPG, id=188, 602.25pt x 401.5pt>
 File: images/synthezising-pixel.JPG Graphic file (type jpg)
 <use images/synthezising-pixel.JPG>
-Package pdftex.def Info: images/synthezising-pixel.JPG  used on input line 198.
+Package pdftex.def Info: images/synthezising-pixel.JPG  used on input line 199.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
 <images/Wall-sample.JPG, id=189, 602.25pt x 401.5pt>
 File: images/Wall-sample.JPG Graphic file (type jpg)
 <use images/Wall-sample.JPG>
-Package pdftex.def Info: images/Wall-sample.JPG  used on input line 200.
+Package pdftex.def Info: images/Wall-sample.JPG  used on input line 201.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
  [10 <./images/Textur-nicht-stationärlokal.JPG> <./images/Textur-stationärlokal.JPG>]
 <images/markow-kette.png, id=202, 1027.84pt x 1027.84pt>
 File: images/markow-kette.png Graphic file (type png)
 <use images/markow-kette.png>
-Package pdftex.def Info: images/markow-kette.png  used on input line 227.
+Package pdftex.def Info: images/markow-kette.png  used on input line 228.
 (pdftex.def)             Requested size: 108.66089pt x 108.65567pt.
 <images/Markov-netzwerk.png, id=203, 194.31085pt x 196.35623pt>
 File: images/Markov-netzwerk.png Graphic file (type png)
 <use images/Markov-netzwerk.png>
-Package pdftex.def Info: images/Markov-netzwerk.png  used on input line 229.
+Package pdftex.def Info: images/Markov-netzwerk.png  used on input line 230.
 (pdftex.def)             Requested size: 108.66089pt x 109.80592pt.
  [11 <./images/synthezising-pixel.JPG> <./images/Wall-sample.JPG>]
 <images/pyramid.JPG, id=220, 478.78876pt x 481.04718pt>
 File: images/pyramid.JPG Graphic file (type jpg)
 <use images/pyramid.JPG>
-Package pdftex.def Info: images/pyramid.JPG  used on input line 251.
+Package pdftex.def Info: images/pyramid.JPG  used on input line 252.
 (pdftex.def)             Requested size: 173.85477pt x 174.67424pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./images/markow-kette.png> <./images/Markov-netzwerk.png>]
-Overfull \hbox (0.98721pt too wide) in paragraph at lines 255--261
+Overfull \hbox (0.98721pt too wide) in paragraph at lines 256--262
 \T1/ptm/m/n/12 Hi-sto-gram-m-�qua-li-sa-ti-on. Bei der Hi-sto-gram-m-�qua-li-sa-ti-on (auch Hi-sto-gram-m-aus-gleich, Hi-
  []
 
 
-Overfull \hbox (5.87225pt too wide) in paragraph at lines 255--261
+Overfull \hbox (5.87225pt too wide) in paragraph at lines 256--262
 \T1/ptm/m/n/12 sto-gramm-ein-eb-nung, Hi-sto-gram-me-ga-li-sie-rung oder Hi-sto-gram-me-qua-li-sie-rung ge-nannt) wer-
  []
 
 <images/pyramid-noise.JPG, id=233, 338.01282pt x 255.95625pt>
 File: images/pyramid-noise.JPG Graphic file (type jpg)
 <use images/pyramid-noise.JPG>
-Package pdftex.def Info: images/pyramid-noise.JPG  used on input line 277.
+Package pdftex.def Info: images/pyramid-noise.JPG  used on input line 278.
 (pdftex.def)             Requested size: 86.92738pt x 65.82451pt.
 <images/pyramid-input.JPG, id=234, 172.39406pt x 171.64125pt>
 File: images/pyramid-input.JPG Graphic file (type jpg)
 <use images/pyramid-input.JPG>
-Package pdftex.def Info: images/pyramid-input.JPG  used on input line 279.
+Package pdftex.def Info: images/pyramid-input.JPG  used on input line 280.
 (pdftex.def)             Requested size: 86.92738pt x 86.5485pt.
 <images/pyramid-matching.JPG, id=235, 673.76718pt x 321.45094pt>
 File: images/pyramid-matching.JPG Graphic file (type jpg)
 <use images/pyramid-matching.JPG>
-Package pdftex.def Info: images/pyramid-matching.JPG  used on input line 281.
+Package pdftex.def Info: images/pyramid-matching.JPG  used on input line 282.
 (pdftex.def)             Requested size: 130.39438pt x 62.20935pt.
 
 Underfull \vbox (badness 1430) has occurred while \output is active []
 
  [13 <./images/pyramid.JPG>]
-<images/Pixel-based.jpg, id=246, 602.25pt x 401.5pt>
+<images/Pixel-based.jpg, id=244, 602.25pt x 401.5pt>
 File: images/Pixel-based.jpg Graphic file (type jpg)
 <use images/Pixel-based.jpg>
-Package pdftex.def Info: images/Pixel-based.jpg  used on input line 297.
+Package pdftex.def Info: images/Pixel-based.jpg  used on input line 298.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
-<images/Patch-based.jpg, id=247, 602.25pt x 401.5pt>
+<images/Patch-based.jpg, id=245, 602.25pt x 401.5pt>
 File: images/Patch-based.jpg Graphic file (type jpg)
 <use images/Patch-based.jpg>
-Package pdftex.def Info: images/Patch-based.jpg  used on input line 299.
+Package pdftex.def Info: images/Patch-based.jpg  used on input line 300.
 (pdftex.def)             Requested size: 195.58827pt x 130.39404pt.
  [14 <./images/pyramid-noise.JPG> <./images/pyramid-input.JPG> <./images/pyramid-matching.JPG> <./images/Pixel-based.jpg> <./images/Patch-based.jpg>]
-<images/Random-blocks.jpg, id=260, 602.25pt x 401.5pt>
+<images/Random-blocks.jpg, id=258, 602.25pt x 401.5pt>
 File: images/Random-blocks.jpg Graphic file (type jpg)
 <use images/Random-blocks.jpg>
-Package pdftex.def Info: images/Random-blocks.jpg  used on input line 324.
+Package pdftex.def Info: images/Random-blocks.jpg  used on input line 325.
 (pdftex.def)             Requested size: 108.66089pt x 72.43842pt.
-<images/overlap-blocks.jpg, id=261, 602.25pt x 401.5pt>
+<images/overlap-blocks.jpg, id=259, 602.25pt x 401.5pt>
 File: images/overlap-blocks.jpg Graphic file (type jpg)
 <use images/overlap-blocks.jpg>
-Package pdftex.def Info: images/overlap-blocks.jpg  used on input line 326.
+Package pdftex.def Info: images/overlap-blocks.jpg  used on input line 327.
 (pdftex.def)             Requested size: 108.66089pt x 72.43842pt.
-<images/minimum-boundary-blocks.jpg, id=262, 602.25pt x 401.5pt>
+<images/minimum-boundary-blocks.jpg, id=260, 602.25pt x 401.5pt>
 File: images/minimum-boundary-blocks.jpg Graphic file (type jpg)
 <use images/minimum-boundary-blocks.jpg>
-Package pdftex.def Info: images/minimum-boundary-blocks.jpg  used on input line 328.
+Package pdftex.def Info: images/minimum-boundary-blocks.jpg  used on input line 329.
 (pdftex.def)             Requested size: 108.66089pt x 72.43842pt.
-<images/texture-random-block.JPG, id=263, 213.79875pt x 214.55156pt>
+<images/texture-random-block.JPG, id=261, 213.79875pt x 214.55156pt>
 File: images/texture-random-block.JPG Graphic file (type jpg)
 <use images/texture-random-block.JPG>
-Package pdftex.def Info: images/texture-random-block.JPG  used on input line 331.
+Package pdftex.def Info: images/texture-random-block.JPG  used on input line 332.
 (pdftex.def)             Requested size: 108.66089pt x 109.04335pt.
-<images/texture-overlap-blocks.jpg, id=264, 214.55156pt x 215.30438pt>
+<images/texture-overlap-blocks.jpg, id=262, 214.55156pt x 215.30438pt>
 File: images/texture-overlap-blocks.jpg Graphic file (type jpg)
 <use images/texture-overlap-blocks.jpg>
-Package pdftex.def Info: images/texture-overlap-blocks.jpg  used on input line 333.
+Package pdftex.def Info: images/texture-overlap-blocks.jpg  used on input line 334.
 (pdftex.def)             Requested size: 108.66089pt x 109.0416pt.
-<images/texture-minimum-boundary-blocks.jpg, id=265, 213.79875pt x 213.79875pt>
+<images/texture-minimum-boundary-blocks.jpg, id=263, 213.79875pt x 213.79875pt>
 File: images/texture-minimum-boundary-blocks.jpg Graphic file (type jpg)
 <use images/texture-minimum-boundary-blocks.jpg>
-Package pdftex.def Info: images/texture-minimum-boundary-blocks.jpg  used on input line 335.
+Package pdftex.def Info: images/texture-minimum-boundary-blocks.jpg  used on input line 336.
 (pdftex.def)             Requested size: 108.66089pt x 108.66075pt.
  [15 <./images/Random-blocks.jpg> <./images/overlap-blocks.jpg> <./images/minimum-boundary-blocks.jpg> <./images/texture-random-block.JPG> <./images/texture-overlap-blocks.jpg> <./images/texture-minimum-boundary-blocks.jpg>] [16
 
 ]
 Kapitel 3.
-<images/wfc-pattern.png, id=286, 532.99126pt x 144.54pt>
+<images/wfc-pattern.png, id=284, 532.99126pt x 144.54pt>
 File: images/wfc-pattern.png Graphic file (type png)
 <use images/wfc-pattern.png>
-Package pdftex.def Info: images/wfc-pattern.png  used on input line 360.
+Package pdftex.def Info: images/wfc-pattern.png  used on input line 361.
 (pdftex.def)             Requested size: 434.64355pt x 117.87292pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./images/wfc-pattern.png (PNG copy)>] [18]
-<images/sudoku-superposition.png, id=306, 917.4275pt x 917.4275pt>
+<images/sudoku-superposition.png, id=303, 917.4275pt x 917.4275pt>
 File: images/sudoku-superposition.png Graphic file (type png)
 <use images/sudoku-superposition.png>
-Package pdftex.def Info: images/sudoku-superposition.png  used on input line 409.
+Package pdftex.def Info: images/sudoku-superposition.png  used on input line 411.
 (pdftex.def)             Requested size: 391.17654pt x 391.18242pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-<images/sudoku-observed.png, id=312, 917.4275pt x 917.4275pt>
+<images/sudoku-observed.png, id=310, 917.4275pt x 917.4275pt>
 File: images/sudoku-observed.png Graphic file (type png)
 <use images/sudoku-observed.png>
-Package pdftex.def Info: images/sudoku-observed.png  used on input line 424.
+Package pdftex.def Info: images/sudoku-observed.png  used on input line 426.
 (pdftex.def)             Requested size: 391.17654pt x 391.18242pt.
 
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
  [20 <./images/sudoku-superposition.png>]
-<images/sudoku-observed-heurisitk.png, id=323, 919.435pt x 919.435pt>
+<images/sudoku-observed-heurisitk.png, id=321, 919.435pt x 919.435pt>
 File: images/sudoku-observed-heurisitk.png Graphic file (type png)
 <use images/sudoku-observed-heurisitk.png>
-Package pdftex.def Info: images/sudoku-observed-heurisitk.png  used on input line 440.
+Package pdftex.def Info: images/sudoku-observed-heurisitk.png  used on input line 442.
 (pdftex.def)             Requested size: 391.17654pt x 391.1826pt.
  [21 <./images/sudoku-observed.png>]
-<images/input-shape.JPG, id=332, 70.76437pt x 58.71938pt>
+<images/input-shape.JPG, id=330, 70.76437pt x 58.71938pt>
 File: images/input-shape.JPG Graphic file (type jpg)
 <use images/input-shape.JPG>
-Package pdftex.def Info: images/input-shape.JPG  used on input line 457.
+Package pdftex.def Info: images/input-shape.JPG  used on input line 459.
 (pdftex.def)             Requested size: 43.467pt x 36.06873pt.
-<images/Efros-Leung-1999.JPG, id=333, 295.85532pt x 293.59688pt>
+<images/Efros-Leung-1999.JPG, id=331, 295.85532pt x 293.59688pt>
 File: images/Efros-Leung-1999.JPG Graphic file (type jpg)
 <use images/Efros-Leung-1999.JPG>
-Package pdftex.def Info: images/Efros-Leung-1999.JPG  used on input line 459.
+Package pdftex.def Info: images/Efros-Leung-1999.JPG  used on input line 461.
 (pdftex.def)             Requested size: 108.66089pt x 107.83171pt.
-<images/Kwatra-2005.JPG, id=334, 298.86656pt x 285.31593pt>
+<images/Kwatra-2005.JPG, id=332, 298.86656pt x 285.31593pt>
 File: images/Kwatra-2005.JPG Graphic file (type jpg)
 <use images/Kwatra-2005.JPG>
-Package pdftex.def Info: images/Kwatra-2005.JPG  used on input line 461.
+Package pdftex.def Info: images/Kwatra-2005.JPG  used on input line 463.
 (pdftex.def)             Requested size: 108.66089pt x 103.73239pt.
  [22 <./images/sudoku-observed-heurisitk.png>]
-<images/Beispiel-textur.JPG, id=344, 66.2475pt x 49.68562pt>
+<images/Beispiel-textur.JPG, id=342, 66.2475pt x 49.68562pt>
 File: images/Beispiel-textur.JPG Graphic file (type jpg)
 <use images/Beispiel-textur.JPG>
-Package pdftex.def Info: images/Beispiel-textur.JPG  used on input line 473.
+Package pdftex.def Info: images/Beispiel-textur.JPG  used on input line 475.
 (pdftex.def)             Requested size: 43.467pt x 32.6008pt.
-<images/Efros-Leung-textur.JPG, id=345, 171.64125pt x 164.86594pt>
+<images/Efros-Leung-textur.JPG, id=343, 171.64125pt x 164.86594pt>
 File: images/Efros-Leung-textur.JPG Graphic file (type jpg)
 <use images/Efros-Leung-textur.JPG>
-Package pdftex.def Info: images/Efros-Leung-textur.JPG  used on input line 475.
+Package pdftex.def Info: images/Efros-Leung-textur.JPG  used on input line 477.
 (pdftex.def)             Requested size: 108.66089pt x 104.37172pt.
-<images/Paul-merrells-Model-synthese.JPG, id=346, 170.13562pt x 169.38281pt>
+<images/Paul-merrells-Model-synthese.JPG, id=344, 170.13562pt x 169.38281pt>
 File: images/Paul-merrells-Model-synthese.JPG Graphic file (type jpg)
 <use images/Paul-merrells-Model-synthese.JPG>
-Package pdftex.def Info: images/Paul-merrells-Model-synthese.JPG  used on input line 477.
+Package pdftex.def Info: images/Paul-merrells-Model-synthese.JPG  used on input line 479.
 (pdftex.def)             Requested size: 108.66089pt x 108.17976pt.
-<images/model-divided.JPG, id=349, 281.55188pt x 377.15906pt>
+<images/model-divided.JPG, id=347, 281.55188pt x 377.15906pt>
 File: images/model-divided.JPG Graphic file (type jpg)
 <use images/model-divided.JPG>
-Package pdftex.def Info: images/model-divided.JPG  used on input line 486.
+Package pdftex.def Info: images/model-divided.JPG  used on input line 488.
 (pdftex.def)             Requested size: 108.66089pt x 145.56061pt.
-<images/seamless-model.JPG, id=350, 227.34938pt x 338.76563pt>
+<images/seamless-model.JPG, id=348, 227.34938pt x 338.76563pt>
 File: images/seamless-model.JPG Graphic file (type jpg)
 <use images/seamless-model.JPG>
-Package pdftex.def Info: images/seamless-model.JPG  used on input line 488.
+Package pdftex.def Info: images/seamless-model.JPG  used on input line 490.
 (pdftex.def)             Requested size: 108.66089pt x 161.91298pt.
-<images/modell-conflicts.JPG, id=351, 268.75406pt x 343.2825pt>
+<images/modell-conflicts.JPG, id=349, 268.75406pt x 343.2825pt>
 File: images/modell-conflicts.JPG Graphic file (type jpg)
 <use images/modell-conflicts.JPG>
-Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 490.
+Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 492.
 (pdftex.def)             Requested size: 108.66089pt x 138.79292pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23 <./images/input-shape.JPG> <./images/Efros-Leung-1999.JPG> <./images/Kwatra-2005.JPG> <./images/Beispiel-textur.JPG> <./images/Efros-Leung-textur.JPG> <./images/Paul-merrells-Model-synthese.JPG>]
-<images/modules-cells.JPG, id=367, 271.0125pt x 105.39375pt>
+<images/modules-cells.JPG, id=365, 271.0125pt x 105.39375pt>
 File: images/modules-cells.JPG Graphic file (type jpg)
 <use images/modules-cells.JPG>
-Package pdftex.def Info: images/modules-cells.JPG  used on input line 501.
+Package pdftex.def Info: images/modules-cells.JPG  used on input line 503.
 (pdftex.def)             Requested size: 173.85477pt x 67.61258pt.
-<images/collapse-cells.JPG, id=368, 491.58656pt x 490.08093pt>
+<images/collapse-cells.JPG, id=366, 491.58656pt x 490.08093pt>
 File: images/collapse-cells.JPG Graphic file (type jpg)
 <use images/collapse-cells.JPG>
-Package pdftex.def Info: images/collapse-cells.JPG  used on input line 508.
+Package pdftex.def Info: images/collapse-cells.JPG  used on input line 510.
 (pdftex.def)             Requested size: 260.78877pt x 259.99591pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.JPG>] [25 <./images/collapse-cells.JPG>]
-<images/3D-model-synthese.JPG, id=390, 853.68938pt x 497.60907pt>
+<images/3D-model-synthese.JPG, id=388, 853.68938pt x 497.60907pt>
 File: images/3D-model-synthese.JPG Graphic file (type jpg)
 <use images/3D-model-synthese.JPG>
-Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 541.
+Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 543.
 (pdftex.def)             Requested size: 434.64355pt x 253.35207pt.
  [26 <./images/3D-model-synthese.JPG>]
-<images/red-maze.jpg, id=400, 602.25pt x 602.25pt>
+<images/red-maze.jpg, id=398, 602.25pt x 602.25pt>
 File: images/red-maze.jpg Graphic file (type jpg)
 <use images/red-maze.jpg>
-Package pdftex.def Info: images/red-maze.jpg  used on input line 559.
+Package pdftex.def Info: images/red-maze.jpg  used on input line 561.
 (pdftex.def)             Requested size: 217.32178pt x 217.32445pt.
-<images/red-maze-modules.jpg, id=403, 1355.0625pt x 1003.75pt>
+<images/red-maze-modules.jpg, id=401, 1355.0625pt x 1003.75pt>
 File: images/red-maze-modules.jpg Graphic file (type jpg)
 <use images/red-maze-modules.jpg>
-Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 566.
+Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 568.
 (pdftex.def)             Requested size: 217.32178pt x 160.97086pt.
-<images/red-maze-offset.png, id=407, 678.28406pt x 677.53125pt>
+ [27 <./images/red-maze.jpg> <./images/red-maze-modules.jpg>]
+<images/red-maze-offset.png, id=413, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset.png Graphic file (type png)
 <use images/red-maze-offset.png>
-Package pdftex.def Info: images/red-maze-offset.png  used on input line 579.
+Package pdftex.def Info: images/red-maze-offset.png  used on input line 581.
 (pdftex.def)             Requested size: 217.32178pt x 217.07288pt.
- [27 <./images/red-maze.jpg> <./images/red-maze-modules.jpg>]
-<images/red-maze-offset-example.png, id=419, 678.28406pt x 677.53125pt>
+<images/red-maze-offset-example.png, id=417, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset-example.png Graphic file (type png)
 <use images/red-maze-offset-example.png>
-Package pdftex.def Info: images/red-maze-offset-example.png  used on input line 589.
+Package pdftex.def Info: images/red-maze-offset-example.png  used on input line 591.
 (pdftex.def)             Requested size: 217.32178pt x 217.07288pt.
  [28 <./images/red-maze-offset.png> <./images/red-maze-offset-example.png>]
-<images/input-example-overlapping.png, id=428, 8.03pt x 8.03pt>
+<images/input-example-overlapping.png, id=426, 8.03pt x 8.03pt>
 File: images/input-example-overlapping.png Graphic file (type png)
 <use images/input-example-overlapping.png>
-Package pdftex.def Info: images/input-example-overlapping.png  used on input line 604.
+Package pdftex.def Info: images/input-example-overlapping.png  used on input line 606.
 (pdftex.def)             Requested size: 108.66089pt x 108.74924pt.
-<images/output-overlapping-n2.png, id=429, 48.18pt x 48.18pt>
+<images/output-overlapping-n2.png, id=427, 48.18pt x 48.18pt>
 File: images/output-overlapping-n2.png Graphic file (type png)
 <use images/output-overlapping-n2.png>
-Package pdftex.def Info: images/output-overlapping-n2.png  used on input line 610.
+Package pdftex.def Info: images/output-overlapping-n2.png  used on input line 612.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-<images/output-overlapping-n3.png, id=430, 48.18pt x 48.18pt>
+<images/output-overlapping-n3.png, id=428, 48.18pt x 48.18pt>
 File: images/output-overlapping-n3.png Graphic file (type png)
 <use images/output-overlapping-n3.png>
-Package pdftex.def Info: images/output-overlapping-n3.png  used on input line 612.
+Package pdftex.def Info: images/output-overlapping-n3.png  used on input line 614.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-<images/output-overlapping-n4.png, id=431, 48.18pt x 48.18pt>
+<images/output-overlapping-n4.png, id=429, 48.18pt x 48.18pt>
 File: images/output-overlapping-n4.png Graphic file (type png)
 <use images/output-overlapping-n4.png>
-Package pdftex.def Info: images/output-overlapping-n4.png  used on input line 614.
+Package pdftex.def Info: images/output-overlapping-n4.png  used on input line 616.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 615.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 617.
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [29 <./images/input-example-overlapping.png> <./images/output-overlapping-n2.png> <./images/output-overlapping-n3.png> <./images/output-overlapping-n4.png>]
-<images/red-maze-overlapping-step1.png, id=453, 36.135pt x 36.135pt>
+<images/red-maze-overlapping-step1.png, id=451, 36.135pt x 36.135pt>
 File: images/red-maze-overlapping-step1.png Graphic file (type png)
 <use images/red-maze-overlapping-step1.png>
-Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 649.
+Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 651.
 (pdftex.def)             Requested size: 173.85477pt x 173.9019pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-<images/red-maze-overlapping-steps.png, id=462, 1716.4125pt x 240.9pt>
+<images/red-maze-overlapping-steps.png, id=460, 1716.4125pt x 240.9pt>
 File: images/red-maze-overlapping-steps.png Graphic file (type png)
 <use images/red-maze-overlapping-steps.png>
-Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 661.
+Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 663.
 (pdftex.def)             Requested size: 434.64355pt x 61.00044pt.
-<images/proc-skater-ruleset.png, id=467, 696.35156pt x 517.18219pt>
+<images/proc-skater-ruleset.png, id=465, 696.35156pt x 517.18219pt>
 File: images/proc-skater-ruleset.png Graphic file (type png)
 <use images/proc-skater-ruleset.png>
-Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 674.
+Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 676.
 (pdftex.def)             Requested size: 391.17654pt x 290.52757pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31 <./images/red-maze-overlapping-step1.png> <./images/red-maze-overlapping-steps.png>]
-<images/proc-skate-level.png, id=480, 895.09406pt x 514.92375pt>
+<images/proc-skate-level.png, id=478, 895.09406pt x 514.92375pt>
 File: images/proc-skate-level.png Graphic file (type png)
 <use images/proc-skate-level.png>
-Package pdftex.def Info: images/proc-skate-level.png  used on input line 682.
+Package pdftex.def Info: images/proc-skate-level.png  used on input line 684.
 (pdftex.def)             Requested size: 391.17654pt x 225.035pt.
 
 Underfull \vbox (badness 1509) has occurred while \output is active []
 
  [32 <./images/proc-skater-ruleset.png> <./images/proc-skate-level.png>]
-<images/proc-skate-backdrop.png, id=491, 878.53218pt x 534.49687pt>
+<images/proc-skate-backdrop.png, id=489, 878.53218pt x 534.49687pt>
 File: images/proc-skate-backdrop.png Graphic file (type png)
 <use images/proc-skate-backdrop.png>
-Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 689.
+Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 691.
 (pdftex.def)             Requested size: 227.62204pt x 138.48471pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 704--704
+Underfull \hbox (badness 10000) in paragraph at lines 706--706
 [][][]\T1/ptm/m/n/10 Aus Forums-Korrespondenz [][]$\T1/cmtt/m/n/10 https : / / forums . somethingawful . com / showthread . php ?
  []
 
-<images/caves-of-qud.jpg, id=498, 1557.98906pt x 1486.47978pt>
+<images/caves-of-qud.jpg, id=496, 1557.98906pt x 1486.47978pt>
 File: images/caves-of-qud.jpg Graphic file (type jpg)
 <use images/caves-of-qud.jpg>
-Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 708.
+Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 710.
 (pdftex.def)             Requested size: 391.17654pt x 373.20676pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1224,7 +1224,7 @@ Kapitel 4.
 ] [36
 
 ]
-Overfull \hbox (27.36398pt too wide) in paragraph at lines 737--737
+Overfull \hbox (27.36398pt too wide) in paragraph at lines 739--739
 []\T1/ptm/m/n/12 Wikipedia, \T1/ptm/m/it/12 Markow-Kette --- Wi-ki-pe-dia, The Free En-cy-clo-pe-dia\T1/ptm/m/n/12 , [][]$\T1/cmtt/m/n/12 http : / / de . wikipedia .
  []
 
@@ -1236,9 +1236,9 @@ Package logreq Info: Writing requests to 'Wave-function-collapse.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23655 strings out of 474971
- 419462 string characters out of 5780120
- 1225453 words of memory out of 5000000
+ 23653 strings out of 474971
+ 419448 string characters out of 5780120
+ 1226453 words of memory out of 5000000
  44609 multiletter control sequences out of 15000+600000
  533390 words of font info for 118 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1247,10 +1247,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (38 pages, 5325572 bytes).
+Output written on Wave-function-collapse.pdf (38 pages, 5325583 bytes).
 PDF statistics:
- 630 PDF objects out of 1000 (max. 8388607)
- 471 compressed objects within 5 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 628 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 151 named destinations out of 1000 (max. 500000)
  388 words of extra memory for PDF output out of 10000 (max. 10000000)
 
