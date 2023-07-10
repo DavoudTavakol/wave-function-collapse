@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { Tile } from './tile';
 import { Cell } from './cell';
+import { landTiles } from './data/land';
 
 @Component({
   selector: 'app-frame',
@@ -19,11 +20,13 @@ export class FrameComponent implements AfterViewInit {
   ctx: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
 
-  tiles: Tile[] = [];
+  //tiles: Tile[] = [];
 
   @Input() DIM: number = 9;
   @Input() SLEEP: number = 0;
   @Input() showOption: boolean = false;
+  @Input() tiles: Tile[] = landTiles;
+
   tileSize: number = 50;
   grid: Cell[] = [];
   ready: boolean = false;
@@ -42,7 +45,6 @@ export class FrameComponent implements AfterViewInit {
     this.drawGrid(this.ctx);
 
     console.dir('STARTING..');
-    this.preload(this.tiles);
 
     //Filling Grid
     for (let i = 0; i < this.DIM * this.DIM; i++) {
@@ -54,138 +56,6 @@ export class FrameComponent implements AfterViewInit {
     console.dir('ONCHANGE..');
     console.log('DIM: ' + this.DIM);
     this.ngAfterViewInit();
-  }
-
-  preload(tiles: any) {
-    //TODO: LOOP TO CREATE NEW TILES
-    //create tiles with sockets
-    tiles[0] = new Tile(
-      0,
-      'assets/images/circuit/0.png',
-      'AAA',
-      'AAA',
-      'AAA',
-      'AAA'
-    );
-    tiles[1] = new Tile(
-      1,
-      'assets/images/circuit/1.png',
-      'BBB',
-      'BBB',
-      'BBB',
-      'BBB'
-    );
-    tiles[2] = new Tile(
-      2,
-      'assets/images/circuit/2.png',
-      'BBB',
-      'BCB',
-      'BBB',
-      'BBB'
-    );
-    tiles[3] = new Tile(
-      3,
-      'assets/images/circuit/3.png',
-      'BBB',
-      'BDB',
-      'BBB',
-      'BDB'
-    );
-    tiles[4] = new Tile(
-      4,
-      'assets/images/circuit/4.png',
-      'ABB',
-      'BCB',
-      'BBA',
-      'AAA'
-    );
-    tiles[5] = new Tile(
-      5,
-      'assets/images/circuit/5.png',
-      'ABB',
-      'BBB',
-      'BBB',
-      'BBA'
-    );
-    tiles[6] = new Tile(
-      6,
-      'assets/images/circuit/6.png',
-      'BBB',
-      'BCB',
-      'BBB',
-      'BCB'
-    );
-    tiles[7] = new Tile(
-      7,
-      'assets/images/circuit/7.png',
-      'BDB',
-      'BCB',
-      'BDB',
-      'BCB'
-    );
-    tiles[8] = new Tile(
-      8,
-      'assets/images/circuit/8.png',
-      'BDB',
-      'BBB',
-      'BCB',
-      'BBB'
-    );
-    tiles[9] = new Tile(
-      9,
-      'assets/images/circuit/9.png',
-      'BCB',
-      'BCB',
-      'BBB',
-      'BCB'
-    );
-    tiles[10] = new Tile(
-      10,
-      'assets/images/circuit/10.png',
-      'BCB',
-      'BCB',
-      'BCB',
-      'BCB'
-    );
-    tiles[11] = new Tile(
-      11,
-      'assets/images/circuit/11.png',
-      'BCB',
-      'BCB',
-      'BBB',
-      'BBB'
-    );
-    tiles[12] = new Tile(
-      12,
-      'assets/images/circuit/12.png',
-      'BBB',
-      'BCB',
-      'BBB',
-      'BCB'
-    );
-    tiles[13] = tiles[2].rotateTile(13, 90);
-    tiles[14] = tiles[2].rotateTile(14, 180);
-    tiles[15] = tiles[2].rotateTile(15, 270);
-    tiles[16] = tiles[3].rotateTile(16, 90);
-    tiles[17] = tiles[4].rotateTile(17, 90);
-    tiles[18] = tiles[4].rotateTile(18, 180);
-    tiles[19] = tiles[4].rotateTile(19, 270);
-    tiles[20] = tiles[5].rotateTile(20, 90);
-    tiles[21] = tiles[5].rotateTile(21, 180);
-    tiles[22] = tiles[5].rotateTile(22, 270);
-    tiles[23] = tiles[6].rotateTile(23, 90);
-    tiles[24] = tiles[7].rotateTile(24, 90);
-    tiles[25] = tiles[8].rotateTile(25, 90);
-    tiles[26] = tiles[8].rotateTile(26, 180);
-    tiles[27] = tiles[8].rotateTile(27, 270);
-    tiles[28] = tiles[9].rotateTile(28, 90);
-    tiles[29] = tiles[9].rotateTile(29, 180);
-    tiles[30] = tiles[9].rotateTile(30, 270);
-    tiles[31] = tiles[10].rotateTile(31, 90);
-    tiles[32] = tiles[11].rotateTile(32, 90);
-    tiles[33] = tiles[11].rotateTile(33, 180);
-    tiles[34] = tiles[11].rotateTile(34, 270);
-    tiles[35] = tiles[12].rotateTile(35, 90);
   }
 
   /////

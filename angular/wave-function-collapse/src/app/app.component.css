@@ -26,6 +26,8 @@ mat-slider {
 }
 
 .text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: rgb(214, 214, 214);
 }
 
@@ -35,4 +37,23 @@ mat-slider {
 
 #startButton {
   background-color: rgb(214, 214, 214);
+}
+
+#menuButton {
+  background-color: rgb(214, 214, 214);
+}
+
+/* indigo pink pallete
+#f8bbd0
+#f48fb1
+#ec407a
+*/
+
+::ng-deep .mat-option-text {
+  color: #ec407a !important;
+}
+
+::ng-deep .mat-select-value-text {
+  font-weight: bold;
+  color: #ec407a !important;
 }

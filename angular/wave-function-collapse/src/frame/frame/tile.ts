@@ -24,7 +24,7 @@ class Tile {
   }
 
   rotateTile(id: number, rotation: number) {
-    let newTile;
+    let newTile: Tile;
     switch (rotation) {
       case 90:
         newTile = new Tile(
@@ -60,7 +60,7 @@ class Tile {
         this.checkRotation(newTile, rotation);
         break;
     }
-    return newTile;
+    return newTile!;
   }
 
   checkRotation(newTile: Tile, rotation: number) {

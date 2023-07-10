@@ -8,7 +8,7 @@
       <mat-slider (change)="updateDIM($event)" min="2" max="18" step="1" value="9">
         <input matSliderThumb />
       </mat-slider>
-      <div class="text" >DIM: {{value}}</div>
+      <div class="text" >DIM: {{dim}}</div>
       <mat-slider (change)="updateSLEEP($event)" min="0" max="2000" step="100">
         <input matSliderThumb />
       </mat-slider>
@@ -17,13 +17,23 @@
       <mat-checkbox  class="checkbox" (change)="updateCHECK($event)">Show possible options</mat-checkbox>
       
       <button id="startButton" (click)="do()" mat-raised-button>START</button>
-      
+
+      <h4 class="text">Tile selection</h4>
+      <mat-form-field >
+        <mat-label class="text">Tileset</mat-label>
+        <mat-select [(value)]="currentTiles" (selectionChange)="updateCurrentTiles($event)">
+          <mat-option *ngFor="let tiles of tileOptions" [value]="tiles.tileData">
+              {{tiles.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
     </div>
 
   </mat-sidenav>
 
   <mat-sidenav-content class="main-container">
-    <app-frame #frame [showOption]="showOption" [DIM]="value" [SLEEP]="sleep" id="wfc-container"></app-frame>
+    <app-frame #frame [showOption]="showOption" [tiles]= "currentTiles" [DIM]="dim" [SLEEP]="sleep" id="wfc-container"></app-frame>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
