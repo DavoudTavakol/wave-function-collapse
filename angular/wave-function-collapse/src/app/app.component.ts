@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { FrameComponent } from 'src/frame/frame/frame.component';
+import { Tile } from '../frame/frame/tile';
 import { landTiles } from '../frame/frame/data/land';
 import { circuitTiles } from '../frame/frame/data/circuit';
-import { Tile } from '../frame/frame/tile';
+import { mazeTiles } from 'src/frame/frame/data/maze';
 
 export interface TileOption {
   name: String;
@@ -34,6 +35,10 @@ export class AppComponent {
       {
         name: 'Circuit',
         tileData: circuitTiles,
+      },
+      {
+        name: 'Maze',
+        tileData: mazeTiles,
       },
     ];
   }
