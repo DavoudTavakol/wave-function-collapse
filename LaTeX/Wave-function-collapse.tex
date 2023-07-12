@@ -235,17 +235,17 @@ Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
 \end{figure}
 
 In einer Markow-Kette erster Ordnung hängt der Zustand nur vom vorhergehenden Zustand ab,
-während bei einer Markow-Kette höherer Ordnung, ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. \cite{wiki:Markov_model}
+während bei einer Markow-Kette höherer Ordnung, somit ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt. \cite{wiki:Markov_model}
 Ein Markow-Netzwerk kann als Feld oder Graph von Zufallsvariablen dargestellt werden,
 wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.2)}.
 
-\section{Pyramid basierende Textur Analyse / Synthese}
+\section{Pyramid basierte Textur Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
 Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))}. \cite{Heeger}
 \newline
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der i.d.R uniform weiß ist, verwendet.
-Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
+Das Noise-Image wir dann durch von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
 
 \begin{figure}[H]
     \centering
@@ -253,14 +253,15 @@ Das Noise-Image wir dann mithilfe von Histogram-Matching und der Image-Pyramid s
     \caption{(a) Bildpyramide}%
 \end{figure}
 
-Histogram-Matching ist die Generalisierung des Punktoperators, mehr spezifisch der Histogrammäqualisation.
-Bei der Histogrammäqualisation {(auch Histogrammausgleich, Histogrammeinebnung, Histogrammegalisierung oder Histogrammequalisierung genannt)}
-werden die Kontraste von Grauwertbildern derart verbessert, sodass sie über eine bloße Kontrastverstärkung hinausgeht.
+Histogram-Matching ist die Generalisierung des Punktoperators, mehr spezifisch, der Histogrammäqualisation.
+Bei der Histogrammäqualisation {(auch Histogrammausgleich, Histogrammegalisierung oder Histogrammequalisierung genannt)}
+werden die Kontraste von Grauwertbildern derart verbessert, sodass diese über eine bloße Kontrastverstärkung hinausgeht.
 Dabei wird die Gleichverteilung mithilfe der Grauwertverteilung berechnet, damit der gesamte zur Verfügung stehende Wertebereich optimal ausgenutzt wird. \cite{Lehmann2013}
 Bei dem Fall der Pyramid-Methode nimmt der Algorithmus ein Input-Image und bildet ein bestimmtes Histogramm, indem das Bild mit mehreren Nachschlagetabellen verarbeitet wird.
 Die beiden Nachschlagetabellen Tabellen sind:
 
 \begin{itemize}
+    \itemsep-0.5em
     \item Die kumulative Verteilungsfunktion \textit{(cumulative distribution function (CDF))} eines Bildes und
     \item die inverse kumulative Verteilungsfunktion eines Bildes.
 \end{itemize} 
@@ -271,7 +272,7 @@ Sie wird {(mit linearer Interpolation)} neu abgetastet,
 sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind. \cite{Heeger}
 \newline
 Während der Algorithmus weiter iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
-Der Prozess stoppt, wenn eine ausreichende Ähnlichkeit erreicht ist oder eine von uns festgelegte Anzahl von Iterationen erreicht wurde.
+Der Prozess stoppt, wenn eine ausreichende Ähnlichkeit erreicht ist oder eine festgelegte Anzahl von Iterationen erreicht wurde.
 
 \begin{figure}[H]
     \centering
@@ -283,29 +284,29 @@ Der Prozess stoppt, wenn eine ausreichende Ähnlichkeit erreicht ist oder eine v
     \caption{(a) Projektion der Bildpyramide, (b) Input-Image, (c) Teilband-Bilder vom Input-Image.}%
 \end{figure}
 
-Die Pyramid-Methode ist im Detail viel komplizierter,
-wird hier aber nicht weiter behandelt, da sie für das weitere Verständnis dieser Arbeit keine Relevanz hat und nur eine weitere übliche Synthesemethode darstellen soll.
+Die Pyramid-Methode ist eine weitere übliche Synthesemethode die, im Detail, sehr komplex ist und für das weitere Verständnis in dieser Arbeit keine Relevanz hat.
+Daher wird sie nicht näher betrachtet.
 
-\section{Patch basierende Textursynthese}
+\section{Patch basierte Textursynthese}
 
-Die Patch-Based Textursynthese \textit{(auch Quilten genannt)} ist gewissermaßen eine Erweiterung der Pixel basierende Textursynthese.
-Hier werden statt einzelne Pixel ganze Felder \textit{(Patches)}, verglichen und generiert {(siehe Abbildung 2.7)}.
-Auch hier werden die Patches mithilfe ihrer Nachbarn bestimmt und ausgewertet.
-Dadurch erhöht sich die Qualität und die Geschwindigkeit des Algorithmus.
+Die Patch basierte Textursynthese \textit{(auch Quilten genannt)} ist eine Erweiterung der Pixel basierten Textursynthese.
+Hier werden statt einzelnen Pixeln ganze Felder \textit{(Patches)} verglichen und generiert {(siehe Abbildung 2.7)}.
+Dabei werden die Patches mithilfe ihrer Nachbarn bestimmt und ausgewertet.
+Dies hat zur Folge, dass sich die Qualität und die Geschwindigkeit des Algorithmus erhöht.
 
 \begin{figure}[H]
     \centering
     \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Pixel-based.jpg}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.45\linewidth]{images/Patch-based.jpg}}%
-    \caption{(a) Pixel-Based, (b) Patch-Based.}%
+    \caption{(a) Pixel basiert, (b) Patch basiert.}%
 \end{figure}
 
-Ein Problem dieser Synthese im Vergleich zur Pixel-Based Synthese ist, dass sich hier die neuen Patches mit bereits vorhandenen Patches überschneiden.
+Ein Problem dieser Synthese im Vergleich zur Pixel basierten Synthese ist, dass sich hier die neuen Patches mit bereits vorhandenen Patches überschneiden.
 Es gibt viele Methoden, um dieses Problem zu lösen.
-Eine davon ist es Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
+Eine davon ist es, Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
 \textit{(Visual Masking)} reduziert werden.
-Gerade bei stationären Texturen erreicht diese Methode gute Ergebnisse. \cite{EfrosQuilt}
+Insbesondere bei stationären Texturen erreicht diese Methode gute Ergebnisse. \cite{EfrosQuilt}
 
 Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
 
@@ -313,10 +314,10 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
     \item Generierung des ersten Patches in der oberen-linken Ecke des Output-Images. Der Patch wird zufällig aus dem Input-Image ausgewählt.
     \item Von links-nach-rechts und von oben-nach-unten werden im Output-Image folgende Aufgaben ausgeführt.
     \begin{itemize}
-        \item Auswahl des nächsten hinzuzufügenden Feldes aus dem Input-Image aus den am besten passenden Patches.
+        \item Auswahl des nächsten hinzuzufügenden Feldes aus dem Input-Image aus einem der am besten passenden Patches.
         \item Berechnen der Fehlerfläche zwischen diesem neuen Patch und seinem Überlappungsbereich mit bereits
         verarbeiteten Patches.
-        \item Berechnen des Pfades mit den geringsten Kosten durch die Fehlerfläche, um die Patch grenze zu bestimmen, und fügen Sie dann den neuen Patch zum Output-Image hinzu.
+        \item Berechnen des Pfades mit den geringsten Kosten durch die Fehlerfläche, um die Patch-Grenze zu bestimmen, und fügen Sie dann den neuen Patch zum Output-Image hinzu.
     \end{itemize}
 \end{enumerate}
 
@@ -340,19 +341,19 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
 \chapter{Wave-Function-Collapse}
 
 Wichtig bei allen Textursynthesen ist,
-dass die Muster des Output-Images immer lokal ähnlich oder gleich dem des Input-Images sind.
+dass die Muster des Output-Images immer lokal ähnlich oder gleich dem des Input-Images sein müssen.
 Das wird größtenteils dadurch erzielt, dass aus dem Input-Image kleinere Subimages, Patches oder Pixel extrahiert werden.
-Bei den verfahren, bei dem die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet,
+Bei den Verfahren, bei denen die lokale Ähnlichkeit nicht 1-zu-1 bzw. pixelgenau stattfindet,
 werden die Pixel und deren Farbwert oft nach Grundlage der Abstandsmetrik {(z.B. dem euklidischen Abstand von Pixelfarbvektoren)} beurteilt.
-Solche Verfahren finden meistens in der rein visuellen Computergrafik Anwendung.
+Solche Verfahren finden meistens in der visuellen Computergrafik Anwendung.
 Diese Methodiken haben große Nachteile im Gegensatz zu Algorithmen, bei denen das lokale Muster des Outputs pixelgenau dem Input-Image gleicht.
-Gerade für PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großen Nutzen sein, da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
+Gerade für PCG {(Procedural-Content-Generation)} kann die Pixelgenauigkeit von großem Nutzen sein, da dadurch Abgrenzungen der Pixel innerhalb des Output-Images klar definiert sein können.
 \cite{Karth2017WaveFunctionCollapseIC}
-Von allen oben beschriebenen Textursynthese Methoden ist WFC wahrscheinlich der Patch-Based Methode am ähnlichsten.
+Von allen oben beschriebenen Textursynthese-Methoden ist der WFC der Patch basierten Methode am ähnlichsten.
 \newline
-Gumin hat sich von der Arbeit von Paul Merrell inspirieren lassen, obwohl dieser sich hauptsächlich mit der Generierung von 3D-Modellen befasst hatte.
-Bei seinem Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
-Das ist dahingehen wichtig, da in vielen Textursynthesen gerade bei den Übergängen die Pixel sich Mischen und somit sich Artefakte bilden können.
+Gumin hat von Paul Merrell's Arbeit inspirieren lassen, obwohl dieser sich hauptsächlich mit der Generierung von 3D-Modellen beschäftigte.
+Bei Merrell's Verfahren werden die Modelle mithilfe von bereits erstellten Bausteinen zusammengesetzt.
+Das ist dahingehen von Vorteil, da sich in vielen Textursynthesen die Übergänge der Pixel vermischen und sich somit Artefakte bilden können.
 Dieses Verhalten ist bei WFC und dem Verfahren von Paul Merrell nicht möglich, da es sich um eine diskrete Synthese handelt.
 Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)}. \cite{Karth2017WaveFunctionCollapseIC, merrell2009model, Gumin_Wave_Function_Collapse_2016}
 
@@ -362,42 +363,42 @@ Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)}. \
     \caption{(a) WFC generiertes Muster.}%
 \end{figure}
 
-\section{Constraint-Satisfaction-Problem}
+\section{Constraint-Satisfaction-Problem {(CSP)}}
 
 Der WFC von Gumin ist lose an der Quantenmechanik angelehnt.
-Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / Pixelwert vorkommen kann, bevor sie final festgelegt werden.
+Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / jeder Pixelwert vorkommen kann, bevor dies final festgelegt werden.
 Dieser Zustand nennt sich \textit{Superposition}.
 Jede Zelle hat mehrere Eigenwerte \textit{(eigenstates)} und somit auch eine maximale Entropie bzw. einen maximalen Informationsgehalt.
-Auch hat jede Zelle bestimmte Regeln, bestimmt durch ihre Nachbarn, die erfüllt werden müssen.
-Denn nicht jede Zelle kann an jeder Position auftauchen, sobald bereits eine Zelle ein Eigenwert erhält.
-{(Siehe Patch-Based Textursynthese. Nicht jeder Patch kann an einer beliebigen Position sein.
-Sie müssen sich schließlich an den Nachbarn anpassen, damit die Synthese nahtlos ist.)}
-Sobald eine Zelle bekannt wird \textit{(Observation)} und damit nur einen Eigenwert besitzt,
-dann wird die Entropie aller anderen Zellen angepasst.
+Auch hat jede Zelle bestimmte Regeln, die sich aus deren Nachbarzellen ergeben und erfüllt werden müssen.
+Denn nicht jede Zelle kann an jeder Position auftauchen, sobald bereits eine Zelle ein Eigenwert erhält
+{(siehe Patch basierte Textursynthese. Nicht jeder Patch kann an einer beliebigen Position sein,
+da sie sich den Nachbarn anpassen müssen, damit die Synthese nahtlos ist.)}
+Sobald eine Zelle bekannt wird \textit{(Observation)} und nur einen Eigenwert besitzt,
+wird die Entropie aller anderen Zellen angepasst.
 \say{Nach dieser Auffassung ist der "collapse" der Wellenfunktion kein
 physikalischer Prozess und spiegelt lediglich eine Aktualisierung unserer Informationen über das System wider.} \cite[S.5, 2.2 The wave function]{Zinkernagel_2016}
-Da der WFC Algorithmus genau auf diese Art und Weise seine Synthese durchführt,
-dann kann man den WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwenden.
+Da der WFC Algorithmus genau auf diese Art und Weise die Synthese durchführt,
+kann der WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwendet werden.
 
-\subsection{Was ist ein Constraint-Satisfaction-Problem {(CSP)}?}
+\subsection{Das Constraint-Satisfaction-Problem im Detail}
 %hier weiter!
 Grundsätzlich beschreiben CSP's Gruppen von Objekten, denen Variablen zugeteilt sind.
 Diesen Objekten sind Regeln, sogenannte \textit{(constraints)} auferlegt, die erfüllt werden müssen.
 Jeder dieser Objekte hat zu Beginn eine Superposition und kann somit grundsätzlich jeden Wert enthalten.
 Die Aufgabe von Algorithmen zum Lösen von CSP's \textit{(solver)} ist es einen Zustand \textit{(State)} zu finden,
-in dem alle constraints erfüllt sind und jedem Objekt nur noch ein Wert zugeordnet ist.
-Für solche Probleme finden sich oft bei der Künstlichen Intelligenz und aus dem Operations Research. \cite{Lecoutre2009ConstraintNT}
+in dem alle constraints erfüllt sind und jedem Objekt nur noch ein Wert zugeordnet ist. \cite{Lecoutre2009ConstraintNT}
+Solche Probleme finden sich oft bei der Künstlichen Intelligenz und bei Operations Researchs wieder.
 Im Fall von WFC sind die Objekte, denen die Variablen zugeteilt sind, die einzelnen Bereiche im Output-Image.
 Jedem dieser Bereiche muss ein lokales Muster aus dem Input zugeordnet werden.
 Immer, wenn einem Bereich ein Wert zugeordnet wird, werden auch die benachbarten Bereiche damit beeinflusst \textit{(Propagation)}.
 Der Gesamtprozess, wenn sich eine Gruppe aus Superpositionen mit mehreren Eigenwerten zu einem einzelnen Eigenwert aufgrund von Interaktion mit der Außenwelt \textit{(Observation)} reduziert,
 nennt sich Wave-Function-Collapse. \cite{Zinkernagel_2016}
 Während dem Prozess einen gültigen State für das CSP zu finden, so kann es immer Situationen geben, in dem es mehrere gültige Optionen / Eigenwerte für ein Objekt gibt.
-Wenn eine solche Situation auftritt, dann haben verschiedene Solver verschiedene Ansätze.
+Wenn eine solche Situation auftritt, dann haben verschiedene Solver verschiedene Lösungsansätze.
 Einige Algorithmen wählen zufällig einen der möglichen Werte aus den momentan zulässigen Optionen.
-Bei diesem Ansatz kann es sein, dass der Algorithmus nicht auf einen Zustand kommen kann, in dem alle constraints erfüllt werden können.
+Bei diesem Ansatz kann es sein, dass der Algorithmus nicht auf einen Zustand kommen kann, bei dem alle constraints erfüllt werden können.
 In so einem Fall gibt es Rücksetzverfahren \textit{(Backtracking)}, bei dem der Algorithmus zu seinem letzten Ergebnis zurückfällt und einen anderen Wert für die Variable setzt,
-um den ungültigen Zustand zu verlassen und es neu zu versuchen.
+um den ungültigen Zustand zu verlassen und diesen neu zu berechnen.
 Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits bekannten constraints, um die Möglichkeit eines ungültigen Zustandes zu reduzieren. \cite{Karth2017WaveFunctionCollapseIC}
 \pagebreak
 
@@ -449,7 +450,7 @@ Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
 \section{WFC und die Model Synthese}
 
 Es wurde bereits erwähnt, dass Gumin's Wave-Function-Collapse Algorithmus sehr von Paul Merrell's diskreter Model Synthese inspiriert ist.
-Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch-Based Textursynthese inspiriert.
+Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch basierten Textursynthese inspiriert.
 \newline
 Textursynthese funktionierte im Allgemeinen relativ gut in vielen Bereichen.
 Allerdings sind nicht alle Synthesemethoden geeignet dazu, mit festen Strukturen als Input zu arbeiten, als auch Objekte im 3D-Raum zu generieren.
