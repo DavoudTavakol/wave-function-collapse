@@ -381,7 +381,7 @@ Da der WFC Algorithmus genau auf diese Art und Weise die Synthese durchführt,
 kann der WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwendet werden.
 
 \subsection{Das Constraint-Satisfaction-Problem im Detail}
-%hier weiter!
+
 Grundsätzlich beschreiben CSP's Gruppen von Objekten, denen Variablen zugeteilt sind.
 Diesen Objekten sind Regeln, sogenannte \textit{(constraints)} auferlegt, die erfüllt werden müssen.
 Jeder dieser Objekte hat zu Beginn eine Superposition und kann somit grundsätzlich jeden Wert enthalten.
@@ -406,7 +406,7 @@ Andere Algorithmen verwenden zusätzliche Heuristiken abgesehen von den bereits 
 Es gibt viele verschiedene CSP Probleme in der Wissenschaft.
 Eines der bekanntesten Probleme, welches Menschen nahezu täglich unbewusst lösen, ist Sudoku.
 Sudoku ist ein CSP welcher am besten auch die Funktionsweise von Gumin's WFC aufzeigt, da die Constraints der Probleme sehr ähnlich sein können.
-Wenn ein Sudoku Feld ohne initiale Zahlen betrachtet \textit{(unobserved)} wird, dann kann in jedem einzelnen Objekt, in diesem Fall auch Zelle, theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
+Wenn ein Sudoku Feld ohne initiale Zahlen betrachtet \textit{(unobserved)} wird, kann in jedem einzelnen Objekt, in diesem Fall auch Zelle, theoretisch jede Zahl vorhanden sein \textit{(Superposition)}.
 
 \begin{figure}[H]
     \centering
@@ -420,8 +420,8 @@ Die Regeln \textit{(constraints)} dieses CSP sind wie folgt:
     \item Keine Zahl innerhalb der Zeile, Spalte oder des Quadrats darf sich wiederholen.
 \end{enumerate}
 
-Der nächste Schritt ist die \textit{Observation}, sprich das erste Feld mit seinen vielen Eigenwerten auf einen festen Wert zu kollabieren.
-Dadurch treten für die benachbarten Zellen die Constraints ein, die bestimmen, welche Werte sie nun noch einnehmen können.
+Der erste Schritt ist die initiale \textit{Observation}, dabei wird das erste Feld mit seinen vielen Eigenwerten auf einen festen Wert kollabiert.
+Dadurch treten für die benachbarten Zellen die Constraints ein, die bestimmen, welche Werte diese noch einnehmen können.
 
 \begin{figure}[H]
     \centering
@@ -431,12 +431,12 @@ Dadurch treten für die benachbarten Zellen die Constraints ein, die bestimmen, 
 
 Nach dem ersten Input reduziert sich die Entropie aller Zellen in jeder betroffenen Zeile,
 Spalte und Quadrat bzw. ihre Anzahl an möglichen Eigenwerten reduziert sich.
-Als nächsten Schritt könnte man jetzt eine beliebige Zelle auswählen und diese auf einen ihrer zufälligen, möglichen Eigenwert setzten.
-Allerdings besteht so immer die Möglichkeit, dass der Prozess an einen Punkt kommt, an dem kein gültiger Zustand erreicht werden kann.
-Um dieses Szenario unwahrscheinlicher zu machen {(aber immer noch möglich!)}, können wir uns Heuristiken zu nutzen machen,
-um eine Auswahl zu treffend die uns wahrscheinlicher zu einem gültigen Endzustand bringt.
+Als nächsten Schritt könnte jetzt eine beliebige Zelle ausgewählt und diese auf einen ihrer zufälligen möglichen Eigenwerte gesetzt werden.
+Allerdings besteht dabei immer die Möglichkeit, dass der Prozess einen Zustand erreicht, an dem kein gültiger Zustand erreicht werden kann.
+Um die Wahrscheinlichkeit dieses Szenarios zu reduzieren, können Heuristiken eingesetzt werden,
+um eine Auswahl zu treffend die zu einem gültigen Endzustand führt.
 In diesem Fall wird eine Zelle ausgewählt, die bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat, bzw. eine sehr niedrige Entropie besitzt.
-Dadurch ist die Chance geringer, dass eine Zelle auf einen ungünstigen Wert gesetzt wird, der später zu einem ungültigen Endzustand führt.
+Dadurch ist die Wahrscheinlichkeit geringer, dass eine Zelle auf einen nachteiligen Wert gesetzt wird, der später zu einem ungültigen Endzustand führt.
 \footnote[2]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
 
 \begin{figure}[H]
@@ -449,12 +449,13 @@ Dieser Zyklus wiederholt sich so lange, bis alle Zellen ausgefüllt sind.
 
 \section{WFC und die Model Synthese}
 
-Es wurde bereits erwähnt, dass Gumin's Wave-Function-Collapse Algorithmus sehr von Paul Merrell's diskreter Model Synthese inspiriert ist.
-Die Model Synthese hingegen ist nicht nur ein Löser für CSP's wie WFC, sondern ebenfalls auch von der Patch basierten Textursynthese inspiriert.
+Wie bereits erwähnt, wurde der WFC Algorithmus von Gumin durch Paul Merrell's diskreter Model Synthese inspiriert.
+Die Model Synthese wurde durch die Patch basierte Textursynthese inspiriert und ist, wie WFC, ebenfalls ein Lösungsalgorithmus für CSP's.
 \newline
-Textursynthese funktionierte im Allgemeinen relativ gut in vielen Bereichen.
-Allerdings sind nicht alle Synthesemethoden geeignet dazu, mit festen Strukturen als Input zu arbeiten, als auch Objekte im 3D-Raum zu generieren.
-Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
+Eine Textursynthese kann in vielen Bereichen angewendet werden.
+Ausgenommen, wenn im Input-Image feste Strukturen vorkommen oder eine Synthese im 3D-Raum generiert werden soll,
+dann sind nicht alle Synthesemethoden anwendbar.
+Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen. \cite{merrell2009model}
 
 \begin{figure}[H]
     \centering
@@ -466,11 +467,12 @@ Diese Probleme wollte Paul Merrell mit seiner Model Synthese lösen.
     \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung 1999, (c) Kwatra et al., 2005. \cite{merrell2009model}}%
 \end{figure}
 
-In Abbildung 3.5 sind die Schwachstellen von anderen Textursynthesen klar erkennbar.
+Viele dieser gängigen Textursynthesen scheitern an Strukturen, da diese Aufgelöst werden nicht als geschlossenes Objekt erkannt werden.
+In Abbildung 3.5 sind genannte Schwachstellen von den anderen Textursynthesen klar erkennbar.
 \newline
 Paul Merrell erkannte, dass viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
-Dies führte zu dem Ansatz, statt mit einzelnen Pixel, lieber mit ganzen Komponenten zu arbeiten.
-Dadurch konnte er neue Objekte sowohl im zweidimensionalen als auch im dreidimensionalen Raum generieren.
+Dies führte zu dem Ansatz, mit ganzen Komponenten, statt mit einzelnen Pixel zu arbeiten.
+Dadurch können neue Objekte sowohl im 2D als auch im 3D-Raum generiert werden. \cite{merrell2009model}
 
 \begin{figure}[H]
     \centering
@@ -482,7 +484,7 @@ Dadurch konnte er neue Objekte sowohl im zweidimensionalen als auch im dreidimen
     \caption{(a) Input Struktur, (b) Alexei A. Efros and Thomas K. Leung, (c) Paul Merrell Model Synthese. \cite{merrell2009model}}%
 \end{figure}
 
-Anders als bei Sudoku, gilt hier jedoch die Regel der Adjazenz-Bedingung \textit{(adjacency constraint)}.
+Anders als bei Sudoku, gilt bei der Model Synthese jedoch die Regel der Adjazenz-Bedingung \textit{(adjacency constraint)}.
 Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusammenpassen und dass das neue Modell dem Input ähnlich ist.
 
 \begin{figure}[H]
@@ -492,10 +494,10 @@ Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusamm
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/seamless-model.JPG}}%
     \qquad
     \subfloat[][]{\includegraphics[width=0.25\linewidth]{images/modell-conflicts.JPG}}%
-    \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingung nicht ein. \cite{merrell2009model}}%
+    \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingungen nicht ein. \cite{merrell2009model}}%
 \end{figure}
 
-Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
+Der grundsätzliche Ablauf der Model Synthese im 2D-Raum ist wie folgt:
 
 \begin{enumerate}
     \itemsep-1em
@@ -504,14 +506,14 @@ Der Grundsätzliche ablauf der Model Synthese, im 2D-Raum, ist wie folgt:
         \centering
         \includegraphics[width=0.4\linewidth]{images/modules-cells.JPG}
     \end{figure}
-    \item Wähle Zelle unter eventueller Berücksichtigung von Heuristiken.
-    \item Kollabiere Zelle auf einen Eigenwert.
+    \item Wähle eine Zelle unter eventueller Berücksichtigung von Heuristiken.
+    \item Kollabiere die Zelle auf einen Eigenwert.
     \item Errechne neue mögliche Eigenwerte der benachbarten Zellen \textit{(Propagation)}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\linewidth]{images/collapse-cells.JPG}
     \end{figure}
-    \item Wiederhole Schritte 2 - 4.
+    \item Wiederhole Schritte 2 bis 4.
 \end{enumerate}
 
 An diesem Punkt ist es wichtig zu erwähnen,
@@ -520,18 +522,16 @@ dass es sich hierbei bereits um das \say{Simple Tile Model} des WFC Algorithmus 
 \subsection{Unterschiede zwischen WFC und Model Synthese}
 
 Tatsächlich ist der WFC Algorithmus von Gumin und die Model Synthese von Merrell, in der Ausführung der oben genannten Schritte, nahezu identisch.
-
-Der Unterschied zwischen den beiden Algorithmen besteht lediglich in der Implementierung der einzelnen Schritte sowie in zusätzlichen Optimierungen,
-die die Model Synthese und der WFC besitzen.
+Der Unterschied zwischen den beiden Algorithmen besteht lediglich in der Implementierung der einzelnen Schritte, sowie in zusätzlichen Optimierungen.
 Laut Paul Merrell gibt es mehrere Unterschiede in der Implementierung.
-\newline
-Eine davon ist die Reihenfolge der Auswahl der nächsten Zelle.
+Ein Unterschied ist die Reihenfolge der Auswahl der nächsten Zelle.
 Während WFC nach der niedrigsten Entropie Heuristik seine Zelle auswählt,
 wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zellen aus.
-Interessanterweise verursacht die Zellenauswahl von WFC mehr Fehlerzustände bei großen Output-Images.
+Die Zellenauswahl von WFC verursacht mehr Fehlerzustände bei großen Output-Images als die von Paul Merrell's Model Synthese.
 Auch die Komplexität des Inputs kann dazu beitragen, dass WFC nicht zu einem Ergebnis kommt.
 Obwohl das ebenfalls der Fall für Merrell's Implementierung ist, so ist es bei der Model Synthese wesentlich wahrscheinlicher, dass ein gültiges Ergebnis zustande kommt,
 da die Model Synthese Fehlerbehandlungen besitzt, die bei WFC fehlen.
+%HIER VERGLEICH TIMING / SUCCESS
 \newline
 Einer dieser Fehlerbehandlungen, ist die Blockweise Generierung vom Output-Image.
 In der Model Synthese wird der Output Blockweise generiert und nicht komplett in einem Durchgang.
