@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  13 JUL 2023 20:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  13 JUL 2023 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1114,18 +1114,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/3D-model-synthese.JPG, id=390, 853.68938pt x 497.60907pt>
 File: images/3D-model-synthese.JPG Graphic file (type jpg)
 <use images/3D-model-synthese.JPG>
-Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 545.
+Package pdftex.def Info: images/3D-model-synthese.JPG  used on input line 544.
 (pdftex.def)             Requested size: 434.64355pt x 253.35207pt.
 <images/red-maze.jpg, id=394, 602.25pt x 602.25pt>
 File: images/red-maze.jpg Graphic file (type jpg)
 <use images/red-maze.jpg>
-Package pdftex.def Info: images/red-maze.jpg  used on input line 563.
+Package pdftex.def Info: images/red-maze.jpg  used on input line 562.
 (pdftex.def)             Requested size: 217.32178pt x 217.32445pt.
  [26 <./images/3D-model-synthese.JPG>]
 <images/red-maze-modules.jpg, id=403, 1355.0625pt x 1003.75pt>
 File: images/red-maze-modules.jpg Graphic file (type jpg)
 <use images/red-maze-modules.jpg>
-Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 570.
+Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 569.
 (pdftex.def)             Requested size: 217.32178pt x 160.97086pt.
 <images/red-maze-offset.png, id=407, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset.png Graphic file (type png)
@@ -1237,7 +1237,7 @@ Package logreq Info: Writing requests to 'Wave-function-collapse.run.xml'.
 Here is how much of TeX's memory you used:
  23653 strings out of 474971
  419448 string characters out of 5780120
- 1225453 words of memory out of 5000000
+ 1226453 words of memory out of 5000000
  44609 multiletter control sequences out of 15000+600000
  533390 words of font info for 118 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1246,7 +1246,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (38 pages, 5324881 bytes).
+Output written on Wave-function-collapse.pdf (38 pages, 5324950 bytes).
 PDF statistics:
  630 PDF objects out of 1000 (max. 8388607)
  471 compressed objects within 5 object streams

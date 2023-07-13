@@ -228,7 +228,7 @@ Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/markow-kette.png}}}%
     \qquad
     \subfloat[][]{\frame{\includegraphics[width=0.25\linewidth]{images/Markov-netzwerk.png}}}%
-    \caption{(a) Markow-Kette mit 2 möglichen Zuständen und deren Wahrscheinlichkeiten. Aus \cite{wiki:Markow-Kette}
+    \caption{(a) Markow-Kette mit 2 möglichen Zuständen und deren Wahrscheinlichkeiten. \cite{wiki:Markow-Kette}
     Beispiel: Falls zustand $E$, dann gibt es eine $30\%$ Chance das der Zustand $E$ wieder Eintritt oder eine $70\%$ Chance das $A$ Eintritt.
     Falls wir den Zustand $A$ haben dann sind es $60\%$ für $A$ und $40\%$ für $E$. (b) Ein Markow-Netzwerk mit seinen Abhängigkeiten. \cite{wiki:Markov_model}
     Beispiel: $A$ ist abhängig von $B$ und $D$. $B$ von $A$ und $D$. $D$ von $A$, $B$ und $E$. $E$ von $D$ und $C$. Und zuletzt ist $C$ nur von $E$ abhängig.}%
@@ -529,34 +529,33 @@ Während WFC nach der niedrigsten Entropie Heuristik seine Zelle auswählt,
 wählt die Model Synthese nach der Scanline-Methode, in der erst Reihe für Reihe durch das Modell / Bild iteriert wird, seine Zellen aus.
 Die Zellenauswahl von WFC verursacht mehr Fehlerzustände bei großen Output-Images als die von Paul Merrell's Model Synthese.
 Auch die Komplexität des Inputs kann dazu beitragen, dass WFC nicht zu einem Ergebnis kommt.
-Obwohl das ebenfalls der Fall für Merrell's Implementierung ist, so ist es bei der Model Synthese wesentlich wahrscheinlicher, dass ein gültiges Ergebnis zustande kommt,
+Obwohl das ebenfalls der Fall bei Merrell's Implementierung ist, ist es bei der Model Synthese wesentlich wahrscheinlicher, dass ein gültiges Ergebnis zustande kommt,
 da die Model Synthese Fehlerbehandlungen besitzt, die bei WFC fehlen.
 %HIER VERGLEICH TIMING / SUCCESS
 \newline
-Einer dieser Fehlerbehandlungen, ist die Blockweise Generierung vom Output-Image.
-In der Model Synthese wird der Output Blockweise generiert und nicht komplett in einem Durchgang.
+Einer dieser Fehlerbehandlungen ist die Blockweise Generierung vom Output-Image.
+In der Model Synthese wird der Output blockweise generiert und nicht komplett in einem Durchgang.
 Das ist für die Generierung von großen Outputs, vor allem bei 3D-Modellen, von großer Bedeutung, da dadurch die Fehlerquote bei einigen Inputs signifikant reduziert wird.
 WFC teilt sein CSP nicht in kleinere Blöcke auf, da der Output von WFC in der Regel kleiner ist, und die Verarbeitung im 2D-Raum wesentlich einfacher.
-Das bedeutet nicht, dass WFC von so einer Implementierung nicht profitieren würde, wenn man WFC im 3D-Raum verwenden möchte oder größere Outputs erzielen möchte.
-Jedoch kann ab diesen Punkt einfach die Model Synthese verwendend werden. \cite{merrell2018compare}
+Dennoch kann das WFC von einer solchen Implementierung profitieren, wenn man WFC im 3D-Raum verwenden möchte oder größere Outputs erzielen möchte. \cite{merrell2018compare}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{images/3D-model-synthese.JPG}%
-    \caption{3D-Modell generiert mit Model Synthese. Aus \cite{merrell2018compare}}%
+    \caption{3D-Modell generiert mit Model Synthese. \cite{merrell2018compare}}%
 \end{figure}
 
-Neben weiteren Unterschieden, wie der Laufzeit und der Erweiterbarkeit der beiden Algorithmen so gibt es noch einen weiteren Unterschied den Gumin's WFC implementiert.
-Das sogenannte Overlapping Model, das in der Originalversion von Gumin vorkommt, ist das, was WFC initial so bekannt gemacht hat.
+Neben weiteren Unterschieden, wie der Laufzeit und der Erweiterbarkeit der beiden Algorithmen, gibt es noch einen weiteren Unterschied den Gumin's WFC implementiert.
+Das sogenannte Overlapping Model, das in der Originalversion von Gumin vorkommt, ist das, was WFC initial bekannt gemacht hat.
 
 \subsection{Simple Tile Model und Overlapping Model}
 
-Anders als bei der Simple Tile Model von WFC, bei der einzelnen Module / Patches für die Synthese einzeln bereitgestellt werden,
-benötigt das Overlapping Model von WFC ein komplettes Input-Image, welches analysiert wird.
+Anders als bei dem Simple Tile Model von WFC, bei dem einzelne Patches für die Synthese bereitgestellt werden,
+benötigt das Overlapping Model von WFC ein komplettes Input-Image, das daraufhin analysiert wird.
 Aus dieser Analyse werden die Module automatisch generiert.
-Zudem haben sich die Patches bei der Simple Tile Model nicht überschnitten, was bei dem Overlapping Model der Fall ist.
+Zudem haben sich die Patches bei dem Simple Tile Model nicht überschnitten, wie es bei dem Overlapping Model der Fall ist.
 Das hat den Vorteil, dass die Patches direkt aus dem Input errechnet werden können.
-Zudem kann der Output dem Input ähnlicher sein, da die Patches enger aneinander liegen. \cite{merrell2018compare}
+Zudem kann der Output dem Input ähnlicher sein, da die Patches näher aneinander liegen. \cite{merrell2018compare}
 
 \begin{figure}[H]
     \centering
@@ -573,40 +572,41 @@ Zudem kann der Output dem Input ähnlicher sein, da die Patches enger aneinander
 
 Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten, wie diese übereinander liegen können.
 {(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}
-Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschriebt, wie die Muster nebeneinander platziert werden können.
+Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschreibt, wie die Muster nebeneinander platziert werden können.
 Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Patches, die an einem anderen Index mit $x,y$-Offset platziert werden dürfen. 
-Man kann sich vorstellen, dass jede Zelle im Sudoku Feld ein bestimmte $x,y$ Koordinate besitzt damit durch diese iteriert werden kann.
-Sobald ein Feld einen Wert besitzt, dann werden in allen benachbarten Zellen die Patches entfernt, die nicht nutzbar sind. \cite{Karth2017WaveFunctionCollapseIC}
+Bei dem in Kapitel 3.1.2 beschriebenen Sudoku-Beispiel, könnte dies angewendet werden,
+indem jede Zelle im Feld eine bestimmte $x,y$ Koordinate besitzt, damit durch diese iteriert werden kann.
+Sobald ein Feld einen Wert besitzt, werden in allen benachbarten Zellen Patches entfernt, die nicht nutzbar sind. \cite{Karth2017WaveFunctionCollapseIC}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze-offset.png}%
-    \caption{Die 9 Möglichkeiten wie die Patches übereinander liegen können. Aus \cite{Karth2017WaveFunctionCollapseIC}}%
+    \caption{Die 9 Möglichkeiten wie die Patches übereinander liegen können. \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
-In Abbildung 3.11 sehen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches die an ihren benachbarten $x,y$-Offsets erlaubt sind.
-Angemerkt sei das bei Offset $(0,0)$ {(kein Offset)} immer nur ein möglicher Patch nutzbar ist, der betrachtete Patch {(bzw. die Zelle mit bereits einzelnem Eigenwert)} selbst.
-{(Siehe z.B. Offset $(-1,0)$. Dort sind nur Patches möglich die Rechts 2 weiße Pixel besitzen damit sie sich nahtlos mit den 2 weißen Pixel bei $(0,0)$ überlappen können)} \cite{Karth2017WaveFunctionCollapseIC}
+In Abbildung 3.11 erkennen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Patches, die an ihren benachbarten $x,y$-Offsets erlaubt sind, dargestellt.
+Dabei ist bei einem Offset mit den Werten $(0,0)$ {(kein Offset)} immer nur der betrachtete Patch nutzbar {(bzw. die Zelle mit bereits einzelnem Eigenwert)}.
+Als Beispiel Offset $(-1,0)$. Da sind nur Patches möglich, die Rechts zwei weiße Pixel besitzen damit sie sich nahtlos mit den zwei weißen Pixel bei $(0,0)$ überlappen können. \cite{Karth2017WaveFunctionCollapseIC}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/red-maze-offset-example.png}%
-    \caption{Ausschnitt einer Zelle. Von 12 möglichen Patches sind nur die gültigen Optionen für die benachbarten Zellen mit $x,y$-Offset möglich. Aus \cite{Karth2017WaveFunctionCollapseIC}}%
+    \caption{Ausschnitt einer Zelle. Von 12 möglichen Patches sind nur die gültigen Optionen für die benachbarten Zellen mit $x,y$-Offset möglich. \cite{Karth2017WaveFunctionCollapseIC}}%
 \end{figure}
 
-In diesem Beispiel wurden mit $N = 2$, also einer Fenstergröße von 2 Pixel, die einzelnen Module aus dem Input generiert.
-Die Fenstergröße wird vom dem Entwickler selbst festgelegt und hat direkten Einfluss auf den Output.
-Falls $N = 1$ festgelegt wird, dann befinden wir uns wieder beim Simple Tile Model.
-Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem \say{Patch} wird, die selbstverständlich nicht mehr überlappt werden können,
+In diesem Beispiel wurden mit $N = 2$, dies Entspricht in diesem Fall einer Fenstergröße von zwei Pixeln, die einzelnen Module aus dem Input generiert.
+Die Fenstergröße wird von dem Entwickler festgelegt und hat direkten Einfluss auf den Output.
+Falls $N = 1$ gesetzt wird, und somit nur einzelne Pixel verarbeitet werden, dann befinden wir uns wieder beim Simple Tile Model.
+Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem Patch wird, da diese nicht mehr überlappt werden können,
 es sei denn $N = 1$ repräsentiert eine Menge an Pixeln.
-Bei zu kleiner Fenstergröße kann es sein, dass der Output nicht dem Input ähnelt.
-Auf der anderen Seite bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein, da ganze Gruppen von Strukturen einfach kopiert und eingefügt werden.
-Die Wahl der Größe ist deshalb wichtig, um das gewünschtes Ergebnis zu erhalten.
+Bei einer zu kleinen Fenstergröße kann es vorkommen, dass der Output nicht dem Input ähnelt.
+Bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein, da ganze Gruppen von Strukturen kopiert und eingefügt werden.
+Daher hat die Wahl der Größe, Einfluss auf das Ergebnis.
 
 \begin{figure}[H]
     \centering
     \frame{\includegraphics[width=0.25\linewidth]{images/input-example-overlapping.png}}%
-    \caption{Beispiel Input-Image ($8\times8$ Pixel) für Overlapping Model.}%
+    \caption{Beispiel Input-Image ($8\times8$ Pixel) für ein Overlapping Model.}%
 \end{figure}
 
 \begin{figure}[H]
@@ -621,12 +621,12 @@ Die Wahl der Größe ist deshalb wichtig, um das gewünschtes Ergebnis zu erhalt
 
 Es ist wichtig anzumerken, dass viele der hier gezeigten Texturen auch mit aktuellen Textursynthese-Algorithmen generiert werden können.
 Der Vorteil von Model Synthese und WFC im Vergleich zu anderen Synthesen ist, dass der generierte Content auch Interaktiv genutzt werden kann,
-da wir vollen Kontrolle über die lokalen Muster des Outputs haben und dass das Endergebnis alle von uns auferlegten Constraints erfüllt.
-Gerade der Simple Tile Model bietet sich deswegen für PCG an, da wir hier auch volle Kontrolle über die einzelnen Module / Patches haben,
+da wir bei diesen Verfahren der Entwickler die gesamte Kontrolle über die lokalen Muster des Outputs hat und das Endergebnis alle auferlegten Constraints erfüllt.
+Gerade der Simple Tile Model Algorithmus bietet sich deswegen für PCG an, da der Entwickler die Kontrolle über die einzelnen Patches hat,
 die dann für das Output zusammengesetzt werden.
-Dadurch qualifiziert sich WFC gerade für die Spiele-Entwicklung, da dadurch keine unvorhersehbaren Artefakte entstehen können.
-Wenn hingegen statt einem lokalen und stationären {(siehe Abbildung 2.3)} Input bspw. ein Foto verwendet wird,
-dann würden die anderen Synthesemethoden passendere Ergebnisse liefern im Gegensatz zur Model Synthese und WFC.
+Dadurch, und das keine unvorhersehbaren Artefakte entstehen können, qualifiziert den WFC für den Einsatz in der Spiele-Entwicklung.
+Wird statt einem lokalen und stationären Input {(siehe Abbildung 2.3)} bspw. ein Foto verwendet,
+dann würden die anderen Synthesemethoden, im Gegensatz zur Model Synthese und WFC, passendere Ergebnisse liefern, sofern diese mit der Verwendung von KI dafür ausgelegt sind.
 Es sei erwähnt, dass der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.3 {(b)} sein muss.
 Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.
 \newline
