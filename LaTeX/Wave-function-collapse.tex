@@ -80,7 +80,7 @@
 \author{
     Davoud Tavakol \\ Matrikelnummer: 3540912
 }
-\date{{\vspace*{\fill}}  \raggedright{Sommersemseter 2023 \\ Abgabedatum: 20 Juli 2023}}
+\date{{\vspace*{\fill}}  \raggedright{Sommersemseter 2023 \\ Abgabedatum: 20. Juli 2023}}
 }
 
 % Start Dokument
@@ -378,9 +378,7 @@ wird die Entropie aller anderen Zellen angepasst.
 \say{Nach dieser Auffassung ist der "collapse" der Wellenfunktion kein
 physikalischer Prozess und spiegelt lediglich eine Aktualisierung unserer Informationen über das System wider.} \cite[S.5, 2.2 The wave function]{Zinkernagel_2016}
 Da der WFC Algorithmus genau auf diese Art und Weise die Synthese durchführt,
-kann der WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwendet werden.
-
-\subsection{Das Constraint-Satisfaction-Problem im Detail}
+kann der WFC auch als Löser für solche Bedingungserfüllungsprobleme \textit{(Constraint-Satisfaction-Problem)} verwendet werden.\par
 
 Grundsätzlich beschreiben CSP's Gruppen von Objekten, denen Variablen zugeteilt sind.
 Diesen Objekten sind Regeln, sogenannte \textit{(constraints)} auferlegt, die erfüllt werden müssen.
@@ -531,7 +529,6 @@ Die Zellenauswahl von WFC verursacht mehr Fehlerzustände bei großen Output-Ima
 Auch die Komplexität des Inputs kann dazu beitragen, dass WFC nicht zu einem Ergebnis kommt.
 Obwohl das ebenfalls der Fall bei Merrell's Implementierung ist, ist es bei der Model Synthese wesentlich wahrscheinlicher, dass ein gültiges Ergebnis zustande kommt,
 da die Model Synthese Fehlerbehandlungen besitzt, die bei WFC fehlen.
-%HIER VERGLEICH TIMING / SUCCESS
 \newline
 Einer dieser Fehlerbehandlungen ist die Blockweise Generierung vom Output-Image.
 In der Model Synthese wird der Output blockweise generiert und nicht komplett in einem Durchgang.
@@ -539,14 +536,22 @@ Das ist für die Generierung von großen Outputs, vor allem bei 3D-Modellen, von
 WFC teilt sein CSP nicht in kleinere Blöcke auf, da der Output von WFC in der Regel kleiner ist, und die Verarbeitung im 2D-Raum wesentlich einfacher.
 Dennoch kann das WFC von einer solchen Implementierung profitieren, wenn man WFC im 3D-Raum verwenden möchte oder größere Outputs erzielen möchte \cite{merrell2018compare}.
 
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \includegraphics[width=1\linewidth]{images/3D-model-synthese.JPG}%
-    \caption{3D-Modell generiert mit Model Synthese \cite{merrell2018compare}.}%
-\end{figure}
+    \includegraphics[width=1\linewidth]{images/timing-and-success-comparison.png}%
+    \caption{Paul Merrell's Vergleich zwischen WFC und seiner Model Synthese \cite{merrell2018compare}.}%
+\end{table}
+
+In Tabelle 3.8 wird die Erfolgsquote sowie die benötigte Zeit zur Generierung der genannten Inputs verglichen.
+Die Resultate können in Abbildungen 5.1 bis 5.4 betrachtet werden.
+Der WFC kommt aufgrund der Größe des Outputs als auch der Komplexität des Inputs nicht immer auf gültige Ergebnisse.
+Es wird deutlich, dass die Model Synthese fast immer zu einem erfolgreichen Resultat kommt,
+da die Größe der einzelnen Blöcke einfach reduziert werden kann, um die Erfolgsquote zu steigern \cite{merrell2018compare}.\par
 
 Neben weiteren Unterschieden, wie der Laufzeit und der Erweiterbarkeit der beiden Algorithmen, gibt es noch einen weiteren Unterschied den Gumin's WFC implementiert.
 Das sogenannte Overlapping Model, das in der Originalversion von Gumin vorkommt, ist das, was WFC initial bekannt gemacht hat.
+
+\pagebreak
 
 \subsection{Simple Tile Model und Overlapping Model}
 
@@ -625,9 +630,9 @@ da wir bei diesen Verfahren der Entwickler die gesamte Kontrolle über die lokal
 Gerade der Simple Tile Model Algorithmus bietet sich deswegen für PCG an, da der Entwickler die Kontrolle über die einzelnen Module hat,
 die dann für das Output zusammengesetzt werden.
 Dadurch, und das keine unvorhersehbaren Artefakte entstehen können, qualifiziert den WFC für den Einsatz in der Spiele-Entwicklung.
-Wird statt einem lokalen und stationären Input {(siehe Abbildung 2.3)} bspw. ein Foto verwendet,
+Wird statt einem lokalen und stationären Input {(siehe Abbildung 2.2)} bspw. ein Foto verwendet,
 dann würden die anderen Synthesemethoden, im Gegensatz zur Model Synthese und WFC, passendere Ergebnisse liefern, sofern diese mit der Verwendung von KI dafür ausgelegt sind.
-Es sei erwähnt, dass der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.3 {(b)} sein muss.
+Es sei erwähnt, dass der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.2 {(b)} sein muss.
 Diese Texturen sollten allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.
 Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler begonnen mit diesem Algorithmus zu experimentieren \cite{Karth2017WaveFunctionCollapseIC}.
 Ein Grund für die große Beliebtheit von Gumin's WFC Algorithmus ist neben der bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
@@ -736,5 +741,59 @@ Fehlerrate zu reduzieren.
 Beide Implementierungen können um weitere Funktionalitäten erweitert werden, um dieselben oder mehr Funktionalitäten zu erhalten.
 
 \printbibliography
+
+\chapter{Anhang}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/summer-modelsynthesis.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/summer-wfc.png}%
+    \vspace{1em}
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/castle-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/kein-resultat.png}%
+    \caption{Texturen Links mit Model Synthese generiert. Texturen Rechts mit WFC. \cite[S.10]{merrell2018compare}.}%
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-1-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-1-wfc.png}%
+    \vspace{1em}
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-2-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/kein-resultat.png}%
+    \caption{Texturen Links mit Model Synthese generiert. Texturen Rechts mit WFC. \cite[S.11]{merrell2018compare}.}%
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-3-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-3-wfc.png}%
+    \vspace{1em}
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-4-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/knot-4-wfc.png}%
+    \caption{Texturen Links mit Model Synthese generiert. Texturen Rechts mit WFC. \cite[S.12]{merrell2018compare}.}%
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/red-dot-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/kein-resultat.png}%
+    \vspace{1em}
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/shrew-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/kein-resultat.png}%
+    \vspace{1em}
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/cat-model.png}%
+    \qquad
+    \includegraphics[width=0.45\linewidth]{images/wfc-model-comparison/kein-resultat.png}%
+    \caption{Texturen Links mit Model Synthese generiert. Texturen Rechts mit WFC. \cite[S.13]{merrell2018compare}.}%
+\end{figure}
 
 \end{document}
