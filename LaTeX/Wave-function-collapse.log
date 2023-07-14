@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  13 JUL 2023 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  14 JUL 2023 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1166,52 +1166,45 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 61
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [29 <./images/input-example-overlapping.png> <./images/output-overlapping-n2.png> <./images/output-overlapping-n3.png> <./images/output-overlapping-n4.png>]
-<images/red-maze-overlapping-step1.png, id=453, 36.135pt x 36.135pt>
+<images/red-maze-overlapping-step1.png, id=454, 36.135pt x 36.135pt>
 File: images/red-maze-overlapping-step1.png Graphic file (type png)
 <use images/red-maze-overlapping-step1.png>
-Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 653.
+Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 652.
 (pdftex.def)             Requested size: 173.85477pt x 173.9019pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-<images/red-maze-overlapping-steps.png, id=462, 1716.4125pt x 240.9pt>
+<images/red-maze-overlapping-steps.png, id=457, 1716.4125pt x 240.9pt>
 File: images/red-maze-overlapping-steps.png Graphic file (type png)
 <use images/red-maze-overlapping-steps.png>
-Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 665.
+Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 664.
 (pdftex.def)             Requested size: 434.64355pt x 61.00044pt.
-<images/proc-skater-ruleset.png, id=467, 696.35156pt x 517.18219pt>
+ [30 <./images/red-maze-overlapping-step1.png>]
+<images/proc-skater-ruleset.png, id=470, 696.35156pt x 517.18219pt>
 File: images/proc-skater-ruleset.png Graphic file (type png)
 <use images/proc-skater-ruleset.png>
-Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 678.
+Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 677.
 (pdftex.def)             Requested size: 391.17654pt x 290.52757pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31 <./images/red-maze-overlapping-step1.png> <./images/red-maze-overlapping-steps.png>]
-<images/proc-skate-level.png, id=480, 895.09406pt x 514.92375pt>
+<images/proc-skate-level.png, id=473, 895.09406pt x 514.92375pt>
 File: images/proc-skate-level.png Graphic file (type png)
 <use images/proc-skate-level.png>
-Package pdftex.def Info: images/proc-skate-level.png  used on input line 686.
+Package pdftex.def Info: images/proc-skate-level.png  used on input line 685.
 (pdftex.def)             Requested size: 391.17654pt x 225.035pt.
+ [31 <./images/red-maze-overlapping-steps.png> <./images/proc-skater-ruleset.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 1509) has occurred while \output is active []
-
- [32 <./images/proc-skater-ruleset.png> <./images/proc-skate-level.png>]
-<images/proc-skate-backdrop.png, id=491, 878.53218pt x 534.49687pt>
+ [32 <./images/proc-skate-level.png>]
+<images/proc-skate-backdrop.png, id=492, 878.53218pt x 534.49687pt>
 File: images/proc-skate-backdrop.png Graphic file (type png)
 <use images/proc-skate-backdrop.png>
-Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 693.
+Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 692.
 (pdftex.def)             Requested size: 227.62204pt x 138.48471pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 708--708
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 [][][]\T1/ptm/m/n/10 Aus Forums-Korrespondenz [][]$\T1/cmtt/m/n/10 https : / / forums . somethingawful . com / showthread . php ?
  []
 
-<images/caves-of-qud.jpg, id=498, 1557.98906pt x 1486.47978pt>
+<images/caves-of-qud.jpg, id=499, 1557.98906pt x 1486.47978pt>
 File: images/caves-of-qud.jpg Graphic file (type jpg)
 <use images/caves-of-qud.jpg>
-Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 712.
+Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 711.
 (pdftex.def)             Requested size: 391.17654pt x 373.20676pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1223,7 +1216,7 @@ Kapitel 4.
 ] [36
 
 ]
-Overfull \hbox (27.36398pt too wide) in paragraph at lines 741--741
+Overfull \hbox (27.36398pt too wide) in paragraph at lines 739--739
 []\T1/ptm/m/n/12 Wikipedia, \T1/ptm/m/it/12 Markow-Kette --- Wi-ki-pe-dia, The Free En-cy-clo-pe-dia\T1/ptm/m/n/12 , [][]$\T1/cmtt/m/n/12 http : / / de . wikipedia .
  []
 
@@ -1246,10 +1239,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (38 pages, 5324950 bytes).
+Output written on Wave-function-collapse.pdf (38 pages, 5324820 bytes).
 PDF statistics:
- 630 PDF objects out of 1000 (max. 8388607)
- 471 compressed objects within 5 object streams
+ 631 PDF objects out of 1000 (max. 8388607)
+ 472 compressed objects within 5 object streams
  151 named destinations out of 1000 (max. 500000)
  388 words of extra memory for PDF output out of 10000 (max. 10000000)
 

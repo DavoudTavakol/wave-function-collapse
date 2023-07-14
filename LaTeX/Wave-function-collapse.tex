@@ -628,16 +628,15 @@ Dadurch, und das keine unvorhersehbaren Artefakte entstehen können, qualifizier
 Wird statt einem lokalen und stationären Input {(siehe Abbildung 2.3)} bspw. ein Foto verwendet,
 dann würden die anderen Synthesemethoden, im Gegensatz zur Model Synthese und WFC, passendere Ergebnisse liefern, sofern diese mit der Verwendung von KI dafür ausgelegt sind.
 Es sei erwähnt, dass der Input für WFC nicht \say{strikt} eine Textur wie in Abbildung 2.3 {(b)} sein muss.
-Sie sollte allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.
-\newline
-Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler begonnen mit diesem Algorithmus zu experimentieren.
-Grund für die große Beliebtheit dafür ist nicht nur die bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
-sondern auch die live Generierung des Outputs selbst.
-Viele PCG's Methoden variieren in ihrer Laufzeit bei der Generierung ihres Outputs.
-Dies führt dazu, dass manchmal bereits Großteile des Outputs sofort generiert werden,
-dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht. \cite{Karth2017WaveFunctionCollapseIC}
+Diese Texturen sollten allerdings Selbstähnlichkeit besitzen und nur wenige unterschiedliche Pixelfarben verwenden.
+Bereits ein Tag nach der Veröffentlichung von Gumin's WFC am 30. September 2016 haben viele Entwickler begonnen mit diesem Algorithmus zu experimentieren \cite{Karth2017WaveFunctionCollapseIC}.
+Ein Grund für die große Beliebtheit von Gumin's WFC Algorithmus ist neben der bereits erwähnten Pixelgenauigkeit und die damit einhergehende Möglichkeit den Output Interaktiv zu nutzen,
+auch die Echtzeit Generierung des Outputs.
+Viele PCG's Methoden variieren bei der Generierung ihres Outputs in ihrer Laufzeit.
+Dies führt dazu, dass großteile des Outputs sofort generiert werden können,
+dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht \cite{Karth2017WaveFunctionCollapseIC}.
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
-als gemischte Pixelwerte aller möglichen Optionen innerhalb der Zellen darstellt, dann führt das zu einer ästhetisch wahrgenommenen Generierung des Outputs.
+als gemischte Pixelwerte aller möglichen Optionen innerhalb der Zellen darstellt, führt dies zu einer ästhetisch wahrgenommenen Generierung des Outputs.
 \footnote[4]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
 example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
 \newline
@@ -653,10 +652,10 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
     \frame{\includegraphics[width=0.4\linewidth]{images/red-maze-overlapping-step1.png}}%
     \caption{
         Resultat des ersten Zyklus mit dem Red-Maze Input. Da am Anfang die Entropie überall gleich ist, wird die Anfangszelle zufällig gewählt.
-        Da der Algorithmus bereits die möglichen Patches der benachbarten Zellen ausgewertet hat, werden die Zellen mit allen verwendbaren Patches eingefärbt.
-        {(Die Pixelfarben werden dann gemischt)}.
-        Dadurch ist der Bereich direkt um der Anfangszelle nicht in einer einheitlichen Farbe dargestellt, da es dort bereits weniger Optionen gibt die verwendet werden können.
-        {(Siehe Abbildung 3.12)} \cite{Karth2017WaveFunctionCollapseIC}.
+        Wenn der Algorithmus bereits die möglichen Patches der benachbarten Zellen ausgewertet hat, dann werden die Zellen mit allen verwendbaren Patches eingefärbt
+        {(die Pixelfarben werden dann gemischt)}.
+        Der direkt umliegende Bereich der Anfangszelle nicht in einer einheitlichen Farbe dargestellt, da es dort bereits weniger Optionen gibt die verwendet werden können
+        {(siehe Abbildung 3.12)}. \cite{Karth2017WaveFunctionCollapseIC}.
     }%
 \end{figure}
 
@@ -669,9 +668,9 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 \section{Beispiel Implementierung}
 
 Joseph Parker war einer der ersten Entwickler, der WFC verwendet hat.
-In seinem in der Unity Engine entwickelten Spiel \textit{Proc Skater 2016} verwendet er den Algorithmus, um einzigartige 3D Skateparks zu generieren.
+In seinem in der Unity Engine entwickeltem Spiel \textit{Proc Skater 2016} verwendet er den Algorithmus, um einzigartige 3D Skateparks zu generieren.
 Er verwendete selbst erstellte Blöcke, aus denen die Karte generiert werden soll, anstatt sie automatisch aus einem Input zu analysieren. \cite{procskater2016}
-J. Parker zufolge benutzt er das Simple Tile Model als auch das Overlapping Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
+J. Parker zufolge benutzt er das Simple Tile Model, als auch das Overlapping Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
     \centering
@@ -697,14 +696,14 @@ Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ aus
 Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark zu erstellen.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
-Overlapping Model für Plattform-artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.}
+Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.}
 \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 \newline
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
-Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} ein Mehrfachdurchlauf \textit{(multipass)} von WFC.
+Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} einen Mehrfachdurchlauf \textit{(multipass)} von WFC.
 Dadurch können größere Komplexitäten bei der Generierung erreicht werden.
-Ein weiterer Vorteil, der sich dadurch ergeben hat, ist die einfache Handhabung von WFC.
-Sobald das zugrundeliegende System vorhanden ist, kann jeder Entwickler einfach Input-Images einspielen und spielbaren Content generieren.
+Ein weiterer Vorteil, der sich durch WFC ergeben hat, ist die einfache Handhabung.
+Sobald das zugrunde liegende System vorhanden ist, kann jeder Entwickler Input-Images einspielen und spielbaren Content generieren.
 \footnote[6]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} \cite{Karth2017WaveFunctionCollapseIC}
 
 \begin{figure}[H]
@@ -724,18 +723,17 @@ oder seinem Twitter
 \chapter{Fazit}
 
 Der Wave-Function-Collapse Algorithmus von Gumin sowie die Model Synthese von Paul Merrell haben mehr Gemeinsamkeiten als Unterschiede.
-Das liegt daran, dass beide Algorithmen denselben grundlegenden Ablauf für das Lösen von Constraint-Satisfaction-Problem verwenden, um Texturen, Content oder ähnliches zu generieren.
+Das liegt daran, dass beide Algorithmen denselben grundlegenden Ablauf für das Lösen von Constraint-Satisfaction-Problem verwenden.
 Beide Algorithmen kann man als jeweils eine Seite derselben Münze bezeichnen.
-Wave-Function-Collapse ist fundamental \say{nur} ein Verfahren um einzelne Elemente, ob Blöcke, Texte, Bilder etc. nach bestimmten Regeln aneinander zu setzten.
-Dadurch lassen sich mit beiden Algorithmen fehlerfreie Systeme automatisch generieren die gegebenenfalls Interaktiv verwendet werden können,
-da wir große Kontrolle über den Input haben und wie dieser Verarbeitet wird.
-Die Unterschiede zwischen den beiden Implementierungen sind hauptsächlich in der Implementierung der einzelnen Ausführungsschritte sowie in zusätzlichen Optimierungen zu finden.
+Wave-Function-Collapse ist essenziell ein Verfahren um einzelne Elemente, ob Blöcke, Texte, Bilder etc. nach bestimmten Regeln aneinander zu setzten.
+Dadurch lassen sich mit beiden Algorithmen fehlerfreie Systeme, die gegebenenfalls Interaktiv verwendet werden können, automatisch generieren.
+Die Unterschiede zwischen den beiden Algorithmen sind hauptsächlich in der Implementierung der einzelnen Ausführungsschritte sowie in zusätzlichen Optimierungen zu finden.
 Der WFC von Gumin verwendet das Overlapping Model, um die Generierung der Bausteine / Module zu vereinfachen.
-Die dadurch dichtere Platzierung der einzelnen Zellen führt zu einem etwas einheitlicherem Output, kann aber zur Folge haben das Artefakte entstehen,
+Die dadurch dichtere Platzierung der einzelnen Zellen führt zu einem einheitlicherem Output, kann aber zur Folge haben das Artefakte entstehen,
 sollte die Fenstergröße für die Analyse nicht korrekt gewählt worden sein.
-Die Model Synthese von Paul Merrell hingegen besitzt Fehlerbehandlungen wie die Blockweise Generierung bei der Ausführung des Algorithmus, um größere Outputs zu erzielen und die
+Die Model Synthese von Paul Merrell hingegen besitzt Fehlerbehandlungen wie die blockweise Generierung bei der Ausführung des Algorithmus, um größere Outputs zu erzielen und die
 Fehlerrate zu reduzieren.
-Beide Implementierungen können jedoch nach Belieben erweitert werden, um dieselben oder mehr Funktionalitäten zu haben.
+Beide Implementierungen können um weitere Funktionalitäten erweitert werden, um dieselben oder mehr Funktionalitäten zu erhalten.
 
 \printbibliography
 
