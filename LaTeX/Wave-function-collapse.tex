@@ -16,7 +16,9 @@
 \usepackage{pdfpages} %pdf hinzufügen
 \usepackage[backend=biber, style=ieee, sorting=none]{biblatex} %references
 \usepackage{titlesec} %zum entfernen der "Kapitel N" header
-\usepackage{abstract}
+\usepackage{abstract} %zusammenfassung / Abstract
+\usepackage{listings} %zum code darstellen
+\usepackage{courier} %textstyle
 
 % pdf hyperref
 \usepackage[
@@ -36,6 +38,10 @@
     hypertexnames=true,
     linktocpage=true,
 ]{hyperref}
+
+%code darstellung
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{framextopmargin=10pt,framexbottommargin=10pt,frame=lines}
 
 %Abstract seite
 \renewenvironment{abstract}{
@@ -674,16 +680,27 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 
 \section{Beispiel Implementierung}
 
-In diesem Kapitel wird eine einfache Implementierung des WFC Algorithmus im Simple Tiled Model dargestellt.
+In diesem Kapitel wird eine einfache Implementierung des WFC Algorithmus im Simple Tile Model als pseudocode dargestellt.
 Diese Implementierung wir dann um eine Optimierung erweitert und mit der ursprünglichen verglichen.
 
+\begin{lstlisting}
+    init() {
+        ladeModule();
+        erstelleOutputZellen();
+        fuelleOutputZellen();
+        while(!alleZellenKollabiert) {
+            kollabiereZelle();
+            berechneNachbarOptionen();
+        }
+        zeichneOutput();
+    }
+\end{lstlisting}
 
-
-\section{Weitere Implementierungen von WFC}
+\subsection{Weitere Implementierungen von WFC}
 
 Joseph Parker war einer der ersten Entwickler, der WFC verwendet hat.
 In seinem in der Unity Engine entwickeltem Spiel \textit{Proc Skater 2016} verwendet er den Algorithmus, um einzigartige 3D Skateparks zu generieren.
-Er verwendete selbst erstellte Blöcke, aus denen die Karte generiert werden soll, anstatt sie automatisch aus einem Input zu analysieren \cite{procskater2016}.
+In Abbildung 3.16 dargestellt seine selbst erstellten Blöcke, aus denen die Karte generiert werden soll {(Abbildung 3.17)}, anstatt sie automatisch aus einem Input zu analysieren \cite{procskater2016}.
 J. Parker zufolge benutzt er das Simple Tile Model, als auch das Overlapping Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
@@ -707,9 +724,9 @@ Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ aus
     \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016} \cite{procskater2016}.}%
 \end{wrapfigure}
 
-Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark zu erstellen.
+Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark in Abbildung 3.18 zu erstellen.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
-\say{Das Tiled Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
+\say{Das Tile Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
 Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.}
 \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 \newline
