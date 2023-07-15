@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper,twoside,openright]{report} %oder openright dann aber mehr leere seiten!
+\documentclass[12pt, a4paper,twoside,openany]{report} %openany= standard openright=für druck
 \usepackage[utf8]{inputenc} %Standard!
 \usepackage[english,ngerman]{babel} %für deutsch
 % Bibliotheken und Pfade
@@ -211,9 +211,9 @@ Im Folgenden ist die Funktionsweise eines Algorithmus basierend auf Markov Rando
 
 \begin{itemize}
     \item Zuerst wird vom Input-Image eine Teiltextur einer bestimmten Größe {(z.B. $5\times 5$ Pixel Fenster)} ausgewählt. Von diesem Feld aus werden Spiralförmig neue Pixel generiert.
-    \item Für jeden Pixel der betrachtet wird, wird ein Fenster einer selbst bestimmten Größe zentral über das Pixel gelegt.
-    Die Größe des Fensters muss nach Größe der einzelnen Elemente der Textur gewählt werden.
-    \item Mit dieser Gruppe von Pixel {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht.
+    \item Für jeden Pixel der betrachtet wird, wird ein Fenster einer selbst bestimmten Größe zentral über das Pixel gelegt. 
+    Die Größe des Fensters muss nach Größe der einzelnen Elemente der Textur gewählt werden  {(siehe Abbildung 2.3 (a))}.
+    \item Mit dieser Gruppe von Pixel {(der Zentrale Pixel und alle seiner Nachbarn im Fenster)} werden nun alle im Input-Image ähnlichen $N$ Kandidaten gesucht {(siehe Abbildung 2.3 (b))}.
     \item Danach wird zufällig aus einer dieser möglichen Kandidaten einer ausgewählt und der betrachtete Pixel im Output wird aus diesem Kandidaten kopiert.
     \item Dieser Prozess wiederholt sich so lange, bis alle nicht bekannten Pixel generiert wurden \cite[S.4]{GomathiShah2009}.
 \end{itemize}
@@ -243,12 +243,12 @@ Die Markow-Kette, oder auch Markow-Kette erster Ordnung, beschreibt konkret:
 In einer Markow-Kette erster Ordnung hängt der Zustand nur vom vorhergehenden Zustand ab,
 während bei einer Markow-Kette höherer Ordnung, somit ein Markov-Netzwerk, jeder Zustand von seinen Nachbarn in einer von mehreren Richtungen abhängt \cite{wiki:Markov_model}.
 Ein Markow-Netzwerk kann als Feld oder Graph von Zufallsvariablen dargestellt werden,
-wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.2)}.
+wobei die Verteilung jeder Zufallsvariablen von den benachbarten Variablen abhängt, mit denen sie verbunden ist {(siehe Abbildung 2.4)}.
 
 \section{Pyramid basierte Textur Synthese}
 
 Bei der Pyramid-Methode wird das Verfahren der Bildpyramide verwendet.
-Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5 (a))} \cite{Heeger}.
+Hierbei werden aus dem Input-Image mehrere Output-Images in verschiedenen Auflösungen mithilfe von Glättung und Downsampling generiert {(siehe Abbildung 2.5)} \cite{Heeger}.
 \newline
 Zudem wird ein Bildrauschen, \textit{(Noise-Image)} der i.d.R uniform weiß ist, verwendet.
 Das Noise-Image wir dann durch von Histogram-Matching und der Image-Pyramid so verändert, das es dem Input-Image ähnlich ist.
@@ -277,7 +277,7 @@ Die inverse CDF ist eine Nachschlagetabelle, die von {[0, 1]} auf {[0, 256]} zur
 Sie wird {(mit linearer Interpolation)} neu abgetastet,
 sodass die Stichproben gleichmäßig auf dem Intervall {[0, 1]} verteilt sind \cite{Heeger}.
 \newline
-Während der Algorithmus weiter iteriert, beginnt das Noise-Image dem Input-Image zu ähneln.
+Während der Algorithmus weiter iteriert, beginnt das Noise-Image dem Input-Image zu ähneln wie wir Abbildung 2.6 {(c)} erkennen können.
 Der Prozess stoppt, wenn eine ausreichende Ähnlichkeit erreicht ist oder eine festgelegte Anzahl von Iterationen erreicht wurde.
 
 \begin{figure}[H]
@@ -309,7 +309,7 @@ Dies hat zur Folge, dass sich die Qualität und die Geschwindigkeit des Algorith
 \end{figure}
 
 Ein Problem dieser Synthese im Vergleich zur Pixel basierten Synthese ist, dass sich hier die neuen Patches mit bereits vorhandenen Patches überschneiden.
-Es gibt viele Methoden, um dieses Problem zu lösen.
+Es gibt viele Methoden, um dieses Problem zu lösen {(siehe Abbildung 2.8)}.
 Eine davon ist es, Patches mit verschiedenen Größen zu verwenden, damit die Konfliktbereiche zwischen den Patches durch das Phänomen der visuellen Maskierung
 \textit{(Visual Masking)} reduziert werden.
 Insbesondere bei stationären Texturen erreicht diese Methode gute Ergebnisse \cite{EfrosQuilt}.
@@ -323,7 +323,7 @@ Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
         \item Auswahl des nächsten hinzuzufügenden Feldes aus dem Input-Image aus einem der am besten passenden Patches.
         \item Berechnen der Fehlerfläche zwischen diesem neuen Patch und seinem Überlappungsbereich mit bereits
         verarbeiteten Patches.
-        \item Berechnen des Pfades mit den geringsten Kosten durch die Fehlerfläche, um die Patch-Grenze zu bestimmen, und fügen Sie dann den neuen Patch zum Output-Image hinzu.
+        \item Berechnen des Pfades mit den geringsten Kosten durch die Fehlerfläche, um die Patch-Grenze zu bestimmen, und fügen Sie dann den neuen Patch zum Output-Image hinzu {(siehe Abbildung 2.8 (c))}.
     \end{itemize}
 \end{enumerate}
 
@@ -373,7 +373,7 @@ Jedes lokale Muster ist immer im Input wiederzufinden {(siehe Abbildung 3.1)} \c
 
 Der WFC von Gumin ist lose an der Quantenmechanik angelehnt.
 Das liegt daran, dass bei der Synthese von WFC in jeder Zelle des $N\times N$ Output-Images theoretisch jedes Muster / jeder Pixelwert vorkommen kann, bevor dies final festgelegt werden.
-Dieser Zustand nennt sich \textit{Superposition}.
+Dieser Zustand nennt sich \textit{Superposition} {(siehe Abbildung 3.2)}.
 Jede Zelle hat mehrere Eigenwerte \textit{(eigenstates)} und somit auch eine maximale Entropie bzw. einen maximalen Informationsgehalt.
 Auch hat jede Zelle bestimmte Regeln, die sich aus deren Nachbarzellen ergeben und erfüllt werden müssen.
 Denn nicht jede Zelle kann an jeder Position auftauchen, sobald bereits eine Zelle ein Eigenwert erhält
@@ -424,7 +424,7 @@ Die Regeln \textit{(constraints)} dieses CSP sind wie folgt:
     \item Keine Zahl innerhalb der Zeile, Spalte oder des Quadrats darf sich wiederholen.
 \end{enumerate}
 
-Der erste Schritt ist die initiale \textit{Observation}, dabei wird das erste Feld mit seinen vielen Eigenwerten auf einen festen Wert kollabiert.
+In Abbildung 3.3 erkennen wir den ersten Schritt der initiale \textit{Observation}, dabei wird das erste Feld mit seinen vielen Eigenwerten auf einen festen Wert kollabiert.
 Dadurch treten für die benachbarten Zellen die Constraints ein, die bestimmen, welche Werte diese noch einnehmen können.
 
 \begin{figure}[H]
@@ -440,7 +440,7 @@ Allerdings besteht dabei immer die Möglichkeit, dass der Prozess einen Zustand 
 Um die Wahrscheinlichkeit dieses Szenarios zu reduzieren, können Heuristiken eingesetzt werden,
 um eine Auswahl zu treffend die zu einem gültigen Endzustand führt.
 In diesem Fall wird eine Zelle ausgewählt, die bereits eine sehr niedrige Anzahl an möglichen Eigenwerten hat, bzw. eine sehr niedrige Entropie besitzt.
-Dadurch ist die Wahrscheinlichkeit geringer, dass eine Zelle auf einen nachteiligen Wert gesetzt wird, der später zu einem ungültigen Endzustand führt.
+Dadurch ist die Wahrscheinlichkeit geringer, dass eine Zelle auf einen nachteiligen Wert gesetzt wird, der später zu einem ungültigen Endzustand führt {(siehe Abbildung 3.4)}.
 \footnote[2]{Dies ist nicht zwingend der fall für WFC. Dazu später mehr.}
 
 \begin{figure}[H]
@@ -476,7 +476,7 @@ In Abbildung 3.5 sind genannte Schwachstellen von den anderen Textursynthesen kl
 \newline
 Paul Merrell erkannte, dass viele natürliche und künstliche Objekte aus sich immer wiederholenden Komponenten bestehen.
 Dies führte zu dem Ansatz, mit ganzen Komponenten, statt mit einzelnen Pixel zu arbeiten.
-Dadurch können neue Objekte sowohl im 2D als auch im 3D-Raum generiert werden \cite{merrell2009model}.
+Dadurch können neue Objekte sowohl im 2D als auch im 3D-Raum generiert werden {(siehe Abbildung 3.6 (c))} \cite{merrell2009model}.
 
 \begin{figure}[H]
     \centering
@@ -489,7 +489,7 @@ Dadurch können neue Objekte sowohl im 2D als auch im 3D-Raum generiert werden \
 \end{figure}
 
 Anders als bei Sudoku, gilt bei der Model Synthese jedoch die Regel der Adjazenz-Bedingung \textit{(adjacency constraint)}.
-Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusammenpassen und dass das neue Modell dem Input ähnlich ist.
+Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusammenpassen und dass das neue Modell dem Input ähnlich ist {(siehe Abbildung 3.7)}.
 
 \begin{figure}[H]
     \centering
@@ -548,7 +548,7 @@ Dennoch kann das WFC von einer solchen Implementierung profitieren, wenn man WFC
     \caption{Paul Merrell's Vergleich zwischen WFC und seiner Model Synthese \cite{merrell2018compare}.}%
 \end{table}
 
-In Tabelle 3.8 wird die Erfolgsquote sowie die benötigte Zeit zur Generierung der genannten Inputs verglichen.
+In Tabelle 3.1 wird die Erfolgsquote sowie die benötigte Zeit zur Generierung der genannten Inputs verglichen.
 Die Resultate können in Abbildungen 5.1 bis 5.4 betrachtet werden.
 Der WFC kommt aufgrund der Größe des Outputs als auch der Komplexität des Inputs nicht immer auf gültige Ergebnisse.
 Es wird deutlich, dass die Model Synthese fast immer zu einem erfolgreichen Resultat kommt,
@@ -565,7 +565,7 @@ Anders als bei dem Simple Tile Model von WFC, bei dem einzelne Module für die S
 benötigt das Overlapping Model von WFC ein komplettes Input-Image, das daraufhin analysiert wird.
 Aus dieser Analyse werden die Module automatisch generiert.
 Zudem haben sich die Module bei dem Simple Tile Model nicht überschnitten, wie es bei dem Overlapping Model der Fall ist.
-Das hat den Vorteil, dass die Module direkt aus dem Input errechnet werden können.
+Das hat den Vorteil, dass die Module direkt aus dem Input errechnet werden können {(siehe Abbildung 3.8 und 3.9)}.
 Zudem kann der Output dem Input ähnlicher sein, da die Module näher aneinander liegen \cite{merrell2018compare}.
 
 \begin{figure}[H]
@@ -581,7 +581,7 @@ Zudem kann der Output dem Input ähnlicher sein, da die Module näher aneinander
     \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen \cite{Karth2017WaveFunctionCollapseIC}.}%
 \end{figure}
 
-Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten, wie diese übereinander liegen können.
+Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten, wie diese übereinander liegen können {(siehe Abbildung 3.10)}.
 {(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}
 Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschreibt, wie die Muster nebeneinander platziert werden können.
 Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Module, die an einem anderen Index mit $x,y$-Offset platziert werden dürfen. 
@@ -612,7 +612,7 @@ Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem Pa
 es sei denn $N = 1$ repräsentiert eine Menge an Pixeln.
 Bei einer zu kleinen Fenstergröße kann es vorkommen, dass der Output nicht dem Input ähnelt.
 Bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein, da ganze Gruppen von Strukturen kopiert und eingefügt werden.
-Daher hat die Wahl der Größe, Einfluss auf das Ergebnis.
+Daher hat die Wahl der Größe, Einfluss auf das Ergebnis {(siehe Abbildung 3.12 und 3.13)}.
 
 \begin{figure}[H]
     \centering
@@ -648,6 +648,7 @@ Dies führt dazu, dass großteile des Outputs sofort generiert werden können,
 dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht \cite{Karth2017WaveFunctionCollapseIC}.
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
 als gemischte Pixelwerte aller möglichen Optionen innerhalb der Zellen darstellt, führt dies zu einer ästhetisch wahrgenommenen Generierung des Outputs.
+Abbildung 3.14 zeigt die erste kollabierte Zelle im Overlapping Model mit dem Red-Maze als Input und Abbildung 3.15 weitere zustände des Zyklus nach der niedrigst Entropie Heuristik.
 \footnote[4]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
 example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
 \newline
@@ -665,8 +666,7 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
         Resultat des ersten Zyklus mit dem Red-Maze Input. Da am Anfang die Entropie überall gleich ist, wird die Anfangszelle zufällig gewählt.
         Wenn der Algorithmus bereits die möglichen Module der benachbarten Zellen ausgewertet hat, dann werden die Zellen mit allen Farben der verwendbaren Modulen eingefärbt
         {(die Pixelfarben werden dann gemischt)}.
-        Der direkt umliegende Bereich der Anfangszelle nicht in einer einheitlichen Farbe dargestellt, da es dort bereits weniger Optionen gibt die verwendet werden können
-        {(siehe Abbildung 3.12)} \cite{Karth2017WaveFunctionCollapseIC}.
+        Der direkt umliegende Bereich der Anfangszelle nicht in einer einheitlichen Farbe dargestellt, da es dort bereits weniger Optionen gibt die verwendet werden können \cite{Karth2017WaveFunctionCollapseIC}.
     }%
 \end{figure}
 

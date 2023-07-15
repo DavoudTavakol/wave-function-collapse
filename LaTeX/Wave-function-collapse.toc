@@ -1,19 +1,19 @@
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{7}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Textursynthesen im Vergleich}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Pixel basierende Textursynthese}{10}{section.2.1}%
-\contentsline {subsubsection}{Markow-Netzwerk und Markov-Kette}{11}{subsubsection*.6}%
-\contentsline {section}{\numberline {2.2}Pyramid basierte Textur Synthese}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Patch basierte Textursynthese}{14}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Wave-Function-Collapse}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Constraint-Satisfaction-Problem {(CSP)}}{18}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}CSP-Beispiel an Sudoku}{20}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}WFC und die Model Synthese}{23}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Unterschiede zwischen WFC und Model Synthese}{25}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Simple Tile Model und Overlapping Model}{27}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Beispiel Implementierung}{32}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Weitere Implementierungen von WFC}{32}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {4}Fazit}{37}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Anhang}{41}{chapter.5}%
+\contentsline {chapter}{\numberline {1}Einleitung}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Textursynthesen im Vergleich}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pixel basierende Textursynthese}{7}{section.2.1}%
+\contentsline {subsubsection}{Markow-Netzwerk und Markov-Kette}{8}{subsubsection*.6}%
+\contentsline {section}{\numberline {2.2}Pyramid basierte Textur Synthese}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Patch basierte Textursynthese}{11}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Wave-Function-Collapse}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Constraint-Satisfaction-Problem {(CSP)}}{14}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}CSP-Beispiel an Sudoku}{16}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}WFC und die Model Synthese}{19}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Unterschiede zwischen WFC und Model Synthese}{21}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Simple Tile Model und Overlapping Model}{23}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Beispiel Implementierung}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Weitere Implementierungen von WFC}{28}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Fazit}{32}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Anhang}{35}{chapter.5}%
