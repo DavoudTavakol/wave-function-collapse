@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  15 JUL 2023 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  15 JUL 2023 11:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1030,204 +1030,204 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-<images/sudoku-superposition.png, id=296, 917.4275pt x 917.4275pt>
+<images/sudoku-superposition.png, id=297, 917.4275pt x 917.4275pt>
 File: images/sudoku-superposition.png Graphic file (type png)
 <use images/sudoku-superposition.png>
-Package pdftex.def Info: images/sudoku-superposition.png  used on input line 417.
+Package pdftex.def Info: images/sudoku-superposition.png  used on input line 418.
 (pdftex.def)             Requested size: 391.17654pt x 391.18242pt.
  [16 <./images/sudoku-superposition.png>]
-<images/sudoku-observed.png, id=305, 917.4275pt x 917.4275pt>
+<images/sudoku-observed.png, id=309, 917.4275pt x 917.4275pt>
 File: images/sudoku-observed.png Graphic file (type png)
 <use images/sudoku-observed.png>
-Package pdftex.def Info: images/sudoku-observed.png  used on input line 432.
+Package pdftex.def Info: images/sudoku-observed.png  used on input line 433.
 (pdftex.def)             Requested size: 391.17654pt x 391.18242pt.
  [17 <./images/sudoku-observed.png>]
-<images/sudoku-observed-heurisitk.png, id=316, 919.435pt x 919.435pt>
+<images/sudoku-observed-heurisitk.png, id=320, 919.435pt x 919.435pt>
 File: images/sudoku-observed-heurisitk.png Graphic file (type png)
 <use images/sudoku-observed-heurisitk.png>
-Package pdftex.def Info: images/sudoku-observed-heurisitk.png  used on input line 448.
+Package pdftex.def Info: images/sudoku-observed-heurisitk.png  used on input line 450.
 (pdftex.def)             Requested size: 391.17654pt x 391.1826pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18 <./images/sudoku-observed-heurisitk.png>]
-<images/input-shape.JPG, id=326, 70.76437pt x 58.71938pt>
+<images/input-shape.JPG, id=330, 70.76437pt x 58.71938pt>
 File: images/input-shape.JPG Graphic file (type jpg)
 <use images/input-shape.JPG>
-Package pdftex.def Info: images/input-shape.JPG  used on input line 466.
+Package pdftex.def Info: images/input-shape.JPG  used on input line 468.
 (pdftex.def)             Requested size: 43.467pt x 36.06873pt.
-<images/Efros-Leung-1999.JPG, id=327, 295.85532pt x 293.59688pt>
+<images/Efros-Leung-1999.JPG, id=331, 295.85532pt x 293.59688pt>
 File: images/Efros-Leung-1999.JPG Graphic file (type jpg)
 <use images/Efros-Leung-1999.JPG>
-Package pdftex.def Info: images/Efros-Leung-1999.JPG  used on input line 468.
+Package pdftex.def Info: images/Efros-Leung-1999.JPG  used on input line 470.
 (pdftex.def)             Requested size: 108.66089pt x 107.83171pt.
-<images/Kwatra-2005.JPG, id=328, 298.86656pt x 285.31593pt>
+<images/Kwatra-2005.JPG, id=332, 298.86656pt x 285.31593pt>
 File: images/Kwatra-2005.JPG Graphic file (type jpg)
 <use images/Kwatra-2005.JPG>
-Package pdftex.def Info: images/Kwatra-2005.JPG  used on input line 470.
+Package pdftex.def Info: images/Kwatra-2005.JPG  used on input line 472.
 (pdftex.def)             Requested size: 108.66089pt x 103.73239pt.
 
-Overfull \hbox (8.51297pt too wide) in paragraph at lines 474--480
+Overfull \hbox (8.51297pt too wide) in paragraph at lines 476--482
 \T1/ptm/m/n/12 den nicht als ge-schlos-se-nes Ob-jekt er-kannt wer-den. In Ab-bil-dung 3.5 sind ge-nann-te Schwach-
  []
 
-<images/Beispiel-textur.JPG, id=332, 66.2475pt x 49.68562pt>
+<images/Beispiel-textur.JPG, id=336, 66.2475pt x 49.68562pt>
 File: images/Beispiel-textur.JPG Graphic file (type jpg)
 <use images/Beispiel-textur.JPG>
-Package pdftex.def Info: images/Beispiel-textur.JPG  used on input line 483.
+Package pdftex.def Info: images/Beispiel-textur.JPG  used on input line 485.
 (pdftex.def)             Requested size: 43.467pt x 32.6008pt.
-<images/Efros-Leung-textur.JPG, id=333, 171.64125pt x 164.86594pt>
+<images/Efros-Leung-textur.JPG, id=337, 171.64125pt x 164.86594pt>
 File: images/Efros-Leung-textur.JPG Graphic file (type jpg)
 <use images/Efros-Leung-textur.JPG>
-Package pdftex.def Info: images/Efros-Leung-textur.JPG  used on input line 485.
+Package pdftex.def Info: images/Efros-Leung-textur.JPG  used on input line 487.
 (pdftex.def)             Requested size: 108.66089pt x 104.37172pt.
-<images/Paul-merrells-Model-synthese.JPG, id=334, 170.13562pt x 169.38281pt>
+<images/Paul-merrells-Model-synthese.JPG, id=338, 170.13562pt x 169.38281pt>
 File: images/Paul-merrells-Model-synthese.JPG Graphic file (type jpg)
 <use images/Paul-merrells-Model-synthese.JPG>
-Package pdftex.def Info: images/Paul-merrells-Model-synthese.JPG  used on input line 487.
+Package pdftex.def Info: images/Paul-merrells-Model-synthese.JPG  used on input line 489.
 (pdftex.def)             Requested size: 108.66089pt x 108.17976pt.
 [19 <./images/input-shape.JPG> <./images/Efros-Leung-1999.JPG> <./images/Kwatra-2005.JPG> <./images/Beispiel-textur.JPG> <./images/Efros-Leung-textur.JPG> <./images/Paul-merrells-Model-synthese.JPG>]
-<images/model-divided.JPG, id=351, 281.55188pt x 377.15906pt>
+<images/model-divided.JPG, id=355, 281.55188pt x 377.15906pt>
 File: images/model-divided.JPG Graphic file (type jpg)
 <use images/model-divided.JPG>
-Package pdftex.def Info: images/model-divided.JPG  used on input line 496.
+Package pdftex.def Info: images/model-divided.JPG  used on input line 498.
 (pdftex.def)             Requested size: 108.66089pt x 145.56061pt.
-<images/seamless-model.JPG, id=352, 227.34938pt x 338.76563pt>
+<images/seamless-model.JPG, id=356, 227.34938pt x 338.76563pt>
 File: images/seamless-model.JPG Graphic file (type jpg)
 <use images/seamless-model.JPG>
-Package pdftex.def Info: images/seamless-model.JPG  used on input line 498.
+Package pdftex.def Info: images/seamless-model.JPG  used on input line 500.
 (pdftex.def)             Requested size: 108.66089pt x 161.91298pt.
-<images/modell-conflicts.JPG, id=353, 268.75406pt x 343.2825pt>
+<images/modell-conflicts.JPG, id=357, 268.75406pt x 343.2825pt>
 File: images/modell-conflicts.JPG Graphic file (type jpg)
 <use images/modell-conflicts.JPG>
-Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 500.
+Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 502.
 (pdftex.def)             Requested size: 108.66089pt x 138.79292pt.
-<images/modules-cells.JPG, id=356, 271.0125pt x 105.39375pt>
+<images/modules-cells.JPG, id=360, 271.0125pt x 105.39375pt>
 File: images/modules-cells.JPG Graphic file (type jpg)
 <use images/modules-cells.JPG>
-Package pdftex.def Info: images/modules-cells.JPG  used on input line 511.
+Package pdftex.def Info: images/modules-cells.JPG  used on input line 513.
 (pdftex.def)             Requested size: 173.85477pt x 67.61258pt.
-<images/collapse-cells.JPG, id=357, 491.58656pt x 490.08093pt>
+<images/collapse-cells.JPG, id=361, 491.58656pt x 490.08093pt>
 File: images/collapse-cells.JPG Graphic file (type jpg)
 <use images/collapse-cells.JPG>
-Package pdftex.def Info: images/collapse-cells.JPG  used on input line 518.
+Package pdftex.def Info: images/collapse-cells.JPG  used on input line 520.
 (pdftex.def)             Requested size: 260.78877pt x 259.99591pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.JPG>] [21 <./images/collapse-cells.JPG>]
-<images/timing-and-success-comparison.png, id=378, 565.36218pt x 302.63063pt>
+<images/timing-and-success-comparison.png, id=382, 565.36218pt x 302.63063pt>
 File: images/timing-and-success-comparison.png Graphic file (type png)
 <use images/timing-and-success-comparison.png>
-Package pdftex.def Info: images/timing-and-success-comparison.png  used on input line 547.
+Package pdftex.def Info: images/timing-and-success-comparison.png  used on input line 549.
 (pdftex.def)             Requested size: 434.64355pt x 232.6615pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 <./images/timing-and-success-comparison.png>]
-<images/red-maze.jpg, id=389, 602.25pt x 602.25pt>
+<images/red-maze.jpg, id=393, 602.25pt x 602.25pt>
 File: images/red-maze.jpg Graphic file (type jpg)
 <use images/red-maze.jpg>
-Package pdftex.def Info: images/red-maze.jpg  used on input line 573.
+Package pdftex.def Info: images/red-maze.jpg  used on input line 575.
 (pdftex.def)             Requested size: 217.32178pt x 217.32445pt.
-<images/red-maze-modules.jpg, id=392, 1355.0625pt x 1003.75pt>
+<images/red-maze-modules.jpg, id=396, 1355.0625pt x 1003.75pt>
 File: images/red-maze-modules.jpg Graphic file (type jpg)
 <use images/red-maze-modules.jpg>
-Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 580.
+Package pdftex.def Info: images/red-maze-modules.jpg  used on input line 582.
 (pdftex.def)             Requested size: 217.32178pt x 160.97086pt.
  [23 <./images/red-maze.jpg> <./images/red-maze-modules.jpg>]
-<images/red-maze-offset.png, id=403, 678.28406pt x 677.53125pt>
+<images/red-maze-offset.png, id=407, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset.png Graphic file (type png)
 <use images/red-maze-offset.png>
-Package pdftex.def Info: images/red-maze-offset.png  used on input line 594.
+Package pdftex.def Info: images/red-maze-offset.png  used on input line 596.
 (pdftex.def)             Requested size: 217.32178pt x 217.07288pt.
-<images/red-maze-offset-example.png, id=407, 678.28406pt x 677.53125pt>
+<images/red-maze-offset-example.png, id=411, 678.28406pt x 677.53125pt>
 File: images/red-maze-offset-example.png Graphic file (type png)
 <use images/red-maze-offset-example.png>
-Package pdftex.def Info: images/red-maze-offset-example.png  used on input line 604.
+Package pdftex.def Info: images/red-maze-offset-example.png  used on input line 606.
 (pdftex.def)             Requested size: 217.32178pt x 217.07288pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./images/red-maze-offset.png>]
-<images/input-example-overlapping.png, id=416, 8.03pt x 8.03pt>
+<images/input-example-overlapping.png, id=420, 8.03pt x 8.03pt>
 File: images/input-example-overlapping.png Graphic file (type png)
 <use images/input-example-overlapping.png>
-Package pdftex.def Info: images/input-example-overlapping.png  used on input line 619.
+Package pdftex.def Info: images/input-example-overlapping.png  used on input line 621.
 (pdftex.def)             Requested size: 108.66089pt x 108.74924pt.
-<images/output-overlapping-n2.png, id=417, 48.18pt x 48.18pt>
+<images/output-overlapping-n2.png, id=421, 48.18pt x 48.18pt>
 File: images/output-overlapping-n2.png Graphic file (type png)
 <use images/output-overlapping-n2.png>
-Package pdftex.def Info: images/output-overlapping-n2.png  used on input line 625.
+Package pdftex.def Info: images/output-overlapping-n2.png  used on input line 627.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-<images/output-overlapping-n3.png, id=418, 48.18pt x 48.18pt>
+<images/output-overlapping-n3.png, id=422, 48.18pt x 48.18pt>
 File: images/output-overlapping-n3.png Graphic file (type png)
 <use images/output-overlapping-n3.png>
-Package pdftex.def Info: images/output-overlapping-n3.png  used on input line 627.
+Package pdftex.def Info: images/output-overlapping-n3.png  used on input line 629.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-<images/output-overlapping-n4.png, id=419, 48.18pt x 48.18pt>
+<images/output-overlapping-n4.png, id=423, 48.18pt x 48.18pt>
 File: images/output-overlapping-n4.png Graphic file (type png)
 <use images/output-overlapping-n4.png>
-Package pdftex.def Info: images/output-overlapping-n4.png  used on input line 629.
+Package pdftex.def Info: images/output-overlapping-n4.png  used on input line 631.
 (pdftex.def)             Requested size: 108.66089pt x 108.66124pt.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 630.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 632.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/red-maze-offset-example.png> <./images/input-example-overlapping.png>] [26 <./images/output-overlapping-n2.png> <./images/output-overlapping-n3.png> <./images/output-overlapping-n4.png>]
-<images/red-maze-overlapping-step1.png, id=448, 36.135pt x 36.135pt>
+<images/red-maze-overlapping-step1.png, id=452, 36.135pt x 36.135pt>
 File: images/red-maze-overlapping-step1.png Graphic file (type png)
 <use images/red-maze-overlapping-step1.png>
-Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 664.
+Package pdftex.def Info: images/red-maze-overlapping-step1.png  used on input line 666.
 (pdftex.def)             Requested size: 173.85477pt x 173.9019pt.
-<images/red-maze-overlapping-steps.png, id=451, 1716.4125pt x 240.9pt>
+<images/red-maze-overlapping-steps.png, id=455, 1716.4125pt x 240.9pt>
 File: images/red-maze-overlapping-steps.png Graphic file (type png)
 <use images/red-maze-overlapping-steps.png>
-Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 675.
+Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input line 677.
 (pdftex.def)             Requested size: 434.64355pt x 61.00044pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./images/red-maze-overlapping-step1.png> <./images/red-maze-overlapping-steps.png>]
-<images/proc-skater-ruleset.png, id=464, 696.35156pt x 517.18219pt>
+<images/proc-skater-ruleset.png, id=469, 696.35156pt x 517.18219pt>
 File: images/proc-skater-ruleset.png Graphic file (type png)
 <use images/proc-skater-ruleset.png>
-Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 708.
+Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 710.
 (pdftex.def)             Requested size: 391.17654pt x 290.52757pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
-<images/proc-skate-level.png, id=485, 895.09406pt x 514.92375pt>
+<images/proc-skate-level.png, id=489, 895.09406pt x 514.92375pt>
 File: images/proc-skate-level.png Graphic file (type png)
 <use images/proc-skate-level.png>
-Package pdftex.def Info: images/proc-skate-level.png  used on input line 716.
+Package pdftex.def Info: images/proc-skate-level.png  used on input line 718.
 (pdftex.def)             Requested size: 391.17654pt x 225.035pt.
 
 Underfull \vbox (badness 1509) has occurred while \output is active []
 
  [29 <./images/proc-skater-ruleset.png> <./images/proc-skate-level.png>]
-<images/proc-skate-backdrop.png, id=496, 878.53218pt x 534.49687pt>
+<images/proc-skate-backdrop.png, id=500, 878.53218pt x 534.49687pt>
 File: images/proc-skate-backdrop.png Graphic file (type png)
 <use images/proc-skate-backdrop.png>
-Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 723.
+Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 725.
 (pdftex.def)             Requested size: 227.62204pt x 138.48471pt.
 
-Underfull \hbox (badness 1297) in paragraph at lines 738--738
+Underfull \hbox (badness 1297) in paragraph at lines 740--740
 [][][]\T1/ptm/m/n/10 Aus Forums-Korrespondenz [][]$\T1/pcr/m/n/10 https : / / forums . somethingawful . com / showthread . php ?
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 727--739
+Underfull \hbox (badness 2027) in paragraph at lines 729--741
 \T1/ptm/m/n/12 ter-schied-li-che Be-rei-che gut an-wen-den
  []
 
-<images/caves-of-qud.jpg, id=503, 1557.98906pt x 1486.47978pt>
+<images/caves-of-qud.jpg, id=507, 1557.98906pt x 1486.47978pt>
 File: images/caves-of-qud.jpg Graphic file (type jpg)
 <use images/caves-of-qud.jpg>
-Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 742.
+Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 744.
 (pdftex.def)             Requested size: 391.17654pt x 373.20676pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1240,44 +1240,44 @@ Kapitel 4.
 
 ] [34]
 Kapitel 5.
-<images/wfc-model-comparison/summer-modelsynthesis.png, id=559, 602.25pt x 602.25pt>
+<images/wfc-model-comparison/summer-modelsynthesis.png, id=565, 602.25pt x 602.25pt>
 File: images/wfc-model-comparison/summer-modelsynthesis.png Graphic file (type png)
 <use images/wfc-model-comparison/summer-modelsynthesis.png>
-Package pdftex.def Info: images/wfc-model-comparison/summer-modelsynthesis.png  used on input line 775.
+Package pdftex.def Info: images/wfc-model-comparison/summer-modelsynthesis.png  used on input line 777.
 (pdftex.def)             Requested size: 195.58827pt x 195.59108pt.
-<images/wfc-model-comparison/summer-wfc.png, id=560, 602.25pt x 602.25pt>
+<images/wfc-model-comparison/summer-wfc.png, id=566, 602.25pt x 602.25pt>
 File: images/wfc-model-comparison/summer-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/summer-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/summer-wfc.png  used on input line 777.
+Package pdftex.def Info: images/wfc-model-comparison/summer-wfc.png  used on input line 779.
 (pdftex.def)             Requested size: 195.58827pt x 195.59108pt.
-<images/wfc-model-comparison/castle-model.png, id=561, 526.96875pt x 526.96875pt>
+<images/wfc-model-comparison/castle-model.png, id=567, 526.96875pt x 526.96875pt>
 File: images/wfc-model-comparison/castle-model.png Graphic file (type png)
 <use images/wfc-model-comparison/castle-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/castle-model.png  used on input line 779.
+Package pdftex.def Info: images/wfc-model-comparison/castle-model.png  used on input line 781.
 (pdftex.def)             Requested size: 195.58827pt x 195.58649pt.
-<images/wfc-model-comparison/kein-resultat.png, id=562, 528.47438pt x 526.96875pt>
+<images/wfc-model-comparison/kein-resultat.png, id=568, 528.47438pt x 526.96875pt>
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 781.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 783.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
-<images/wfc-model-comparison/knot-1-model.png, id=565, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-1-model.png, id=571, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-1-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-1-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-1-model.png  used on input line 787.
+Package pdftex.def Info: images/wfc-model-comparison/knot-1-model.png  used on input line 789.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-1-wfc.png, id=566, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-1-wfc.png, id=572, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-1-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-1-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-1-wfc.png  used on input line 789.
+Package pdftex.def Info: images/wfc-model-comparison/knot-1-wfc.png  used on input line 791.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-2-model.png, id=567, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-2-model.png, id=573, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-2-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-2-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-2-model.png  used on input line 791.
+Package pdftex.def Info: images/wfc-model-comparison/knot-2-model.png  used on input line 793.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 793.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 795.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1285,56 +1285,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [35
 
  <./images/wfc-model-comparison/summer-modelsynthesis.png> <./images/wfc-model-comparison/summer-wfc.png> <./images/wfc-model-comparison/castle-model.png> <./images/wfc-model-comparison/kein-resultat.png>]
-<images/wfc-model-comparison/knot-3-model.png, id=575, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-3-model.png, id=582, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-3-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-3-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-3-model.png  used on input line 799.
+Package pdftex.def Info: images/wfc-model-comparison/knot-3-model.png  used on input line 801.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-3-wfc.png, id=576, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-3-wfc.png, id=583, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-3-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-3-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-3-wfc.png  used on input line 801.
+Package pdftex.def Info: images/wfc-model-comparison/knot-3-wfc.png  used on input line 803.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-4-model.png, id=577, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-4-model.png, id=584, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-4-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-4-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-4-model.png  used on input line 803.
+Package pdftex.def Info: images/wfc-model-comparison/knot-4-model.png  used on input line 805.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-4-wfc.png, id=578, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-4-wfc.png, id=585, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-4-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-4-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-4-wfc.png  used on input line 805.
+Package pdftex.def Info: images/wfc-model-comparison/knot-4-wfc.png  used on input line 807.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36 <./images/wfc-model-comparison/knot-1-model.png> <./images/wfc-model-comparison/knot-1-wfc.png> <./images/wfc-model-comparison/knot-2-model.png>]
-<images/wfc-model-comparison/red-dot-model.png, id=587, 150.5625pt x 150.5625pt>
+<images/wfc-model-comparison/red-dot-model.png, id=593, 150.5625pt x 150.5625pt>
 File: images/wfc-model-comparison/red-dot-model.png Graphic file (type png)
 <use images/wfc-model-comparison/red-dot-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/red-dot-model.png  used on input line 811.
+Package pdftex.def Info: images/wfc-model-comparison/red-dot-model.png  used on input line 813.
 (pdftex.def)             Requested size: 195.58827pt x 195.60715pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 813.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 815.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
-<images/wfc-model-comparison/shrew-model.png, id=588, 150.5625pt x 150.5625pt>
+<images/wfc-model-comparison/shrew-model.png, id=594, 150.5625pt x 150.5625pt>
 File: images/wfc-model-comparison/shrew-model.png Graphic file (type png)
 <use images/wfc-model-comparison/shrew-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/shrew-model.png  used on input line 815.
+Package pdftex.def Info: images/wfc-model-comparison/shrew-model.png  used on input line 817.
 (pdftex.def)             Requested size: 195.58827pt x 195.60715pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 817.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 819.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
-<images/wfc-model-comparison/cat-model.png, id=589, 301.125pt x 301.125pt>
+<images/wfc-model-comparison/cat-model.png, id=595, 301.125pt x 301.125pt>
 File: images/wfc-model-comparison/cat-model.png Graphic file (type png)
 <use images/wfc-model-comparison/cat-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/cat-model.png  used on input line 819.
+Package pdftex.def Info: images/wfc-model-comparison/cat-model.png  used on input line 821.
 (pdftex.def)             Requested size: 195.58827pt x 195.59567pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 821.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 823.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1347,10 +1347,10 @@ Package logreq Info: Writing requests to 'Wave-function-collapse.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24066 strings out of 474971
- 426620 string characters out of 5780120
- 1238514 words of memory out of 5000000
- 44987 multiletter control sequences out of 15000+600000
+ 24070 strings out of 474971
+ 426745 string characters out of 5780120
+ 1238554 words of memory out of 5000000
+ 44990 multiletter control sequences out of 15000+600000
  534006 words of font info for 120 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,17n,79p,1179b,2379s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1358,10 +1358,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (38 pages, 7849659 bytes).
+Output written on Wave-function-collapse.pdf (38 pages, 7850292 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 167 named destinations out of 1000 (max. 500000)
+ 680 PDF objects out of 1000 (max. 8388607)
+ 504 compressed objects within 6 object streams
+ 168 named destinations out of 1000 (max. 500000)
  466 words of extra memory for PDF output out of 10000 (max. 10000000)
 

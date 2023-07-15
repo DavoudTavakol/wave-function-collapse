@@ -401,6 +401,35 @@
       \field{title}{Constraint Networks: Techniques and Algorithms}
       \field{year}{2009}
     \endentry
+    \entry{boris}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=179eef1dd184860352a13e017cc7c223}{%
+           family={Brave},
+           familyi={B\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           prefix={the},
+           prefixi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{179eef1dd184860352a13e017cc7c223}
+      \strng{fullhash}{179eef1dd184860352a13e017cc7c223}
+      \strng{bibnamehash}{179eef1dd184860352a13e017cc7c223}
+      \strng{authorbibnamehash}{179eef1dd184860352a13e017cc7c223}
+      \strng{authornamehash}{179eef1dd184860352a13e017cc7c223}
+      \strng{authorfullhash}{179eef1dd184860352a13e017cc7c223}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2023-04-13}
+      \field{title}{Wave Function Collapse Explained}
+      \verb{urlraw}
+      \verb https://www.boristhebrave.com/2020/04/13/wave-function-collapse-explained/
+      \endverb
+      \verb{url}
+      \verb https://www.boristhebrave.com/2020/04/13/wave-function-collapse-explained/
+      \endverb
+    \endentry
     \entry{merrell2018compare}{thesis}{}
       \name{author}{1}{}{%
         {{hash=c1e8f36c537b67931de8cac36326fc96}{%
