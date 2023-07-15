@@ -682,21 +682,24 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 
 \section{Beispiel Implementierung}
 
-In diesem Kapitel wird eine einfache Implementierung des WFC Algorithmus im Simple Tile Model als pseudocode dargestellt.
+In diesem Kapitel wird eine einfache Implementierung des WFC Algorithmus im Simple Tile Model stellenweise als Pseudocode dargestellt als auch Programmcode.
 Diese Implementierung wir dann um eine Optimierung erweitert und mit der ursprünglichen verglichen.
 
 \begin{lstlisting}
     init() {
-        ladeModule();
-        erstelleOutputZellen();
-        fuelleOutputZellen();
+        ladeModule(); //eigenwerte
+        erstelleOutputZellen(); 
+        fuelleOutputZellen(); //superpositions
         while(!alleZellenKollabiert) {
-            kollabiereZelle();
-            berechneNachbarOptionen();
+            kollabiereZelle(); //observation
+            berechneNachbarOptionen(); /propagation
         }
         zeichneOutput();
     }
 \end{lstlisting}
+
+In Kapitel 3.2 wurde bereits der Ablauf von WFC aufgezeigt.
+In diesem Beispiel sehen wir eine mögliche Implementierung 
 
 \subsection{Weitere Implementierungen von WFC}
 
