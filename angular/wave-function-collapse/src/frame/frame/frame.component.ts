@@ -27,14 +27,14 @@ export class FrameComponent implements AfterViewInit {
 
   tileSize: number = 50;
   grid: Cell[] = [];
-  ready: boolean = false;
+  running: boolean = false;
 
   constructor() {}
   //YOU CANT DRAW IMAGES HERE SINCE NOT PRELOADED
   //BUT YOU CAN DO LOGIC
   ngAfterViewInit(): void {
     this.grid = [];
-    this.ready = false;
+    this.running = false;
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.canvas.width = this.DIM * this.tileSize;
@@ -62,12 +62,6 @@ export class FrameComponent implements AfterViewInit {
     //sort grid by # of options
     let gridCopy = [...this.grid];
     gridCopy = gridCopy.filter((a) => !a.collapsed);
-
-    //all is collapsed
-    if (gridCopy.length === 1) {
-      console.log('ALL COLAB');
-      return;
-    }
 
     gridCopy.sort((a: any, b: any) => {
       return a.options.length - b.options.length;
@@ -184,10 +178,17 @@ export class FrameComponent implements AfterViewInit {
         }
       }
     }
+
     this.grid = nextGrid;
 
     //go through all of the grid and draw cell IF its collapsed!
     this.draw();
+    
+    //when all cells are collapsed
+    if (this.grid.filter((a) => !a.collapsed).length === 0) {
+      console.log('ALL COLAB');
+      this.running = false;
+    }
 
     function checkValid(allOpt: number[], validOptions: number[]) {
       for (let i = allOpt.length - 1; i >= 0; i--) {
@@ -199,17 +200,18 @@ export class FrameComponent implements AfterViewInit {
   }
 
   onClickStart() {
-    if(!this.ready) {
-      this.ready = true;
+    if(this.running === false) {
+      this.running = true;
       const sleep = (time: number) => {
         return new Promise((resolve) => setTimeout(resolve, time));
       };
       const doSomething = async () => {
         for (let i = 0; i < this.DIM * this.DIM; i++) {
           await sleep(this.SLEEP);
-          if (this.ready) {
+          if (this.running) {
             this.startwfc();
           }
+          console.log(this.running);
         }
       };
       doSomething();
@@ -217,7 +219,7 @@ export class FrameComponent implements AfterViewInit {
   }
 
   onClickStop() {
-    this.ready = false;
+    this.running = false;
   }
 
   draw() {
