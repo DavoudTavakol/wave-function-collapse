@@ -20,8 +20,6 @@ export class FrameComponent implements AfterViewInit {
   ctx: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
 
-  //tiles: Tile[] = [];
-
   @Input() DIM: number = 9;
   @Input() SLEEP: number = 0;
   @Input() showOption: boolean = false;
@@ -37,14 +35,13 @@ export class FrameComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.grid = [];
     this.ready = false;
-    console.log('INITITAL DIM: ' + this.DIM);
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.canvas.width = this.DIM * this.tileSize;
     this.canvas.height = this.DIM * this.tileSize;
     this.drawGrid(this.ctx);
 
-    console.dir('STARTING..');
+    console.dir('Ready...');
 
     //Filling Grid
     for (let i = 0; i < this.DIM * this.DIM; i++) {
@@ -54,7 +51,6 @@ export class FrameComponent implements AfterViewInit {
 
   ngOnChanges(): void {
     console.dir('ONCHANGE..');
-    console.log('DIM: ' + this.DIM);
     this.ngAfterViewInit();
   }
 
@@ -68,7 +64,7 @@ export class FrameComponent implements AfterViewInit {
     gridCopy = gridCopy.filter((a) => !a.collapsed);
 
     //all is collapsed
-    if (gridCopy.length === 0) {
+    if (gridCopy.length === 1) {
       console.log('ALL COLAB');
       return;
     }
@@ -202,20 +198,26 @@ export class FrameComponent implements AfterViewInit {
     }
   }
 
-  onClick() {
-    this.ready = true;
-    const sleep = (time: number) => {
-      return new Promise((resolve) => setTimeout(resolve, time));
-    };
-    const doSomething = async () => {
-      for (let i = 0; i < this.DIM * this.DIM; i++) {
-        await sleep(this.SLEEP);
-        if(this.ready) {
-        this.startwfc();
+  onClickStart() {
+    if(!this.ready) {
+      this.ready = true;
+      const sleep = (time: number) => {
+        return new Promise((resolve) => setTimeout(resolve, time));
+      };
+      const doSomething = async () => {
+        for (let i = 0; i < this.DIM * this.DIM; i++) {
+          await sleep(this.SLEEP);
+          if (this.ready) {
+            this.startwfc();
+          }
         }
-      }
-    };
-    doSomething();
+      };
+      doSomething();
+    }
+  }
+
+  onClickStop() {
+    this.ready = false;
   }
 
   draw() {
