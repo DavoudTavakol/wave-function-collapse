@@ -33,7 +33,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="main-container">
-    <app-frame #frame [showOption]="showOption" [tiles]= "currentTiles" [DIM]="dim" [SLEEP]="sleep" id="wfc-container"></app-frame>
+    <app-frame #frame [showOption]="showOption" [tiles]= "currentTiles" [DIM]="dim" [SLEEP]="sleep" id="wfc-container" (statusEvent)="updateStatus($event)"></app-frame>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

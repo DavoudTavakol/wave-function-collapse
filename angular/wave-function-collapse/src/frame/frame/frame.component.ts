@@ -4,6 +4,7 @@ import {
   ViewChild,
   ElementRef,
   Input,
+  Output, EventEmitter
 } from '@angular/core';
 import { Tile } from './tile';
 import { Cell } from './cell';
@@ -19,7 +20,7 @@ export class FrameComponent implements AfterViewInit {
 
   ctx: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
-
+  @Output() statusEvent = new EventEmitter<boolean>();
   @Input() DIM: number = 9;
   @Input() SLEEP: number = 0;
   @Input() showOption: boolean = false;
@@ -28,6 +29,7 @@ export class FrameComponent implements AfterViewInit {
   tileSize: number = 50;
   grid: Cell[] = [];
   running: boolean = false;
+  done: boolean = false;
 
   constructor() {}
   //YOU CANT DRAW IMAGES HERE SINCE NOT PRELOADED
@@ -35,6 +37,8 @@ export class FrameComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.grid = [];
     this.running = false;
+    this.done = false;
+    this.statusEvent.emit(this.done);
     this.canvas = this.myCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.canvas.width = this.DIM * this.tileSize;
@@ -187,7 +191,8 @@ export class FrameComponent implements AfterViewInit {
     //when all cells are collapsed
     if (this.grid.filter((a) => !a.collapsed).length === 0) {
       console.log('ALL COLAB');
-      this.running = false;
+      this.done = true;
+      this.statusEvent.emit(this.done);
     }
 
     function checkValid(allOpt: number[], validOptions: number[]) {
@@ -211,7 +216,6 @@ export class FrameComponent implements AfterViewInit {
           if (this.running) {
             this.startwfc();
           }
-          console.log(this.running);
         }
       };
       doSomething();

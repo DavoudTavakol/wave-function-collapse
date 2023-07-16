@@ -27,6 +27,7 @@ export class AppComponent {
   currentTiles: Tile[] = landTiles;
   tileOptions: TileOption[];
   buttonName: String = 'START';
+  done: boolean = false;;
 
   constructor() {
     this.tileOptions = [
@@ -49,35 +50,44 @@ export class AppComponent {
     ];
   }
 
+  updateStatus(newStatus: boolean) {
+    this.done = newStatus;
+    if(this.done){
+      this.buttonName = "START";
+    } else {
+      this.buttonName = "START";
+    }
+  }
+
   updateDIM($event: any) {
-    this.buttonName = 'START'
     this.dim = $event.value;
     console.log(this.dim);
   }
 
   updateSLEEP($event: any) {
-    this.buttonName = 'START'
     this.sleep = $event.value;
     console.log(this.sleep);
   }
 
   updateCHECK($event: any) {
-    this.buttonName = 'START'
     this.showOption = $event.checked;
     console.log($event.checked);
   }
 
   updateCurrentTiles($event: any) {
-    this.buttonName = 'START'
     this.currentTiles = $event.value;
     console.log(this.currentTiles);
   }
 
   do() {
     if (this.buttonName === 'START') {
+      if(this.done) {
+        this.frame.ngAfterViewInit();
+      }
       this.frame.onClickStart();
       this.buttonName = 'STOP';
     } else {
+      this.done = false;
       this.frame.onClickStop();
       this.buttonName = 'START';
     }
