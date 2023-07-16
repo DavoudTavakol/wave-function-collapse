@@ -54,7 +54,6 @@ export class FrameComponent implements AfterViewInit {
   }
 
   ngOnChanges(): void {
-    console.dir('ONCHANGE..');
     this.ngAfterViewInit();
   }
 
@@ -70,7 +69,7 @@ export class FrameComponent implements AfterViewInit {
     gridCopy.sort((a: any, b: any) => {
       return a.options.length - b.options.length;
     });
-
+    
     //find index with all the lowest entropy cells
     //gridcopy[0] because we sorted it and the first cell should habe the fewest options.
     let lowestOptionNr = gridCopy[0].options.length;
@@ -93,7 +92,7 @@ export class FrameComponent implements AfterViewInit {
     let pick = cell.options[this.getRandomInt(cell.options.length)];
 
     if (pick === undefined) {
-      console.log('UNDEFINED PICK');
+      console.log('Failure...');
       this.ngAfterViewInit();
       return;
     }
@@ -190,7 +189,7 @@ export class FrameComponent implements AfterViewInit {
     
     //when all cells are collapsed
     if (this.grid.filter((a) => !a.collapsed).length === 0) {
-      console.log('ALL COLAB');
+      console.log('Done!');
       this.done = true;
       this.statusEvent.emit(this.done);
     }
@@ -213,7 +212,7 @@ export class FrameComponent implements AfterViewInit {
       const doSomething = async () => {
         for (let i = 0; i < this.DIM * this.DIM; i++) {
           await sleep(this.SLEEP);
-          if (this.running) {
+          if (this.running && !this.done) {
             this.startwfc();
           }
         }

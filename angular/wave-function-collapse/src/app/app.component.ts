@@ -76,7 +76,6 @@ export class AppComponent {
 
   updateCurrentTiles($event: any) {
     this.currentTiles = $event.value;
-    console.log(this.currentTiles);
   }
 
   do() {
