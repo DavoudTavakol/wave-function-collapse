@@ -41,7 +41,7 @@
 
 %code darstellung
 \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
-\lstset{framextopmargin=10pt,framexbottommargin=10pt,frame=lines}
+\lstset{framextopmargin=10pt,framexbottommargin=10pt,frame=lines,numbers=left,}
 
 %Abstract seite
 \renewenvironment{abstract}{
@@ -682,24 +682,52 @@ by @OskSta and based on @ExUtumno work \#screenshotsaturday \#gamedev \#indiedev
 
 \section{Beispiel Implementierung}
 
-In diesem Kapitel wird eine einfache Implementierung des WFC Algorithmus im Simple Tile Model stellenweise als Pseudocode dargestellt als auch Programmcode.
-Diese Implementierung wir dann um eine Optimierung erweitert und mit der ursprünglichen verglichen.
+In diesem Kapitel wird eine einfache Implementierung des WFC Algorithmus im Simple Tile Model, stellenweise als Pseudocode als auch als Programmcode, dargestellt.
+Diese Implementierung wir dann um zwei Optimierungen erweitert.
+Auf eine dieser Optimierungen wird mit Programmcode genauer erläutert, während die andere nicht implementiert, aber auf dessen Vorteile eingegangen wird.
 
 \begin{lstlisting}
     init() {
-        ladeModule(); //eigenwerte
+        ladeModule();
         erstelleOutputZellen(); 
-        fuelleOutputZellen(); //superpositions
+        fuelleOutputZellen();
         while(!alleZellenKollabiert) {
-            kollabiereZelle(); //observation
-            berechneNachbarOptionen(); /propagation
+            sortiereZellenNachEntropie();
+            kollabiereZelleMitNiedrigsterEntropy();
+            for(jedeZelleImOutput) {
+                berechneNachbarOptionen();
+            }
+            zeichneKollabierteZellen();
         }
-        zeichneOutput();
     }
 \end{lstlisting}
 
-In Kapitel 3.2 wurde bereits der Ablauf von WFC aufgezeigt.
-In diesem Beispiel sehen wir eine mögliche Implementierung 
+Zuerst werden die selbst erstellten Module geladen und in jeder einzelnen Zelle des Outputs werden alle Module hinzugefügt.
+Dadruch erstellen wir ein CSP in der jede Zelle eine \textit{Superposition} besitzt.
+In den Zeilen 5 bis 11 wird der Hauptteil von WFC ausgeführt.
+Dort werden erst alle Zellen nach ihrer Entropie sortiert, sodass dann zufällig aus einer der niedrigsten Zellen ausgewählt werden kann.
+Diese Zelle wir dann auf einen ihrer möglichen Eigenwerte kollabiert.
+Damit haben wir den initialen \textit{Observation} Schritt.
+Anschließend beginnt die \textit{Propagation}.
+Hier wird durch jede nicht kollabierte Zelle Iteriert und die neuen möglichen Eigenwerte nach den bestimmten \textit{Constraints} errechnet.
+Diese Zellen werden mit diesen neuen Eigenwerten aktualisiert.\par
+Um die Optimierung, die gleich vorgestellt wird, zu verdeutlichen wird auf die Funktion \texttt{ladeModule()} genauer eingegangen.
+
+\begin{lstlisting}
+    ladeModule() {
+       modul[0]=new Tile(0,new Image(),[0,1,4],[0,1,2],[0,2,3],[0,3,4]);
+       modul[1]=new Tile(1,new Image(),[2,3],[3,4],[0,2,3],[0,3,4]);
+       modul[2]=new Tile(2,new Image(),[0,1,4],[3,4],[1,4],[0,3,4]);
+       modul[3]=new Tile(3,new Image(),[0,1,4],[0,1,2],[1,4],[1,2]);
+       modul[4]=new Tile(4,new Image(),[2,3],[0,1,2],[0,2,3],[1,2]);
+    }
+\end{lstlisting}
+
+Die \texttt{ladeModule()} Funktion dient als Mapping der einzelnen Module.
+Hier werden jedem Modul zusätzlich noch alle anderen Module, die an dieses Modul angrenzen können, festgelegt.
+Die Reihenfolge der Optionen beginnt von Oben und rotiert im Uhrzeigersinn herum, damit alle vier Richtungen abgedeckt sind.
+Das Problem an dieser Implementierung ist das mit Zunahme der Anzahl der Module auch die Komplexität und die Größe des Mappings zunimmt.
+
 
 \subsection{Weitere Implementierungen von WFC}
 

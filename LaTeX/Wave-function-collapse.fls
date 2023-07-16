@@ -1319,6 +1319,9 @@ INPUT ./images/red-maze-overlapping-steps.png
 INPUT ./images/red-maze-overlapping-steps.png
 INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT ./images/proc-skater-ruleset.png
 INPUT ./images/proc-skater-ruleset.png
 INPUT images/proc-skater-ruleset.png
@@ -1339,10 +1342,7 @@ INPUT ./images/caves-of-qud.jpg
 INPUT images/caves-of-qud.jpg
 INPUT ./images/caves-of-qud.jpg
 INPUT ./images/caves-of-qud.jpg
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmrc8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT ./images/wfc-model-comparison/summer-modelsynthesis.png
