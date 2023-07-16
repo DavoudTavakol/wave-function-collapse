@@ -160,7 +160,7 @@ Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke 
     \caption{(a) Blockartige Textur, (b) Textursynthese}%
 \end{figure}
 
-\noindent Dadurch ergeben sich folgende Metriken, die erfüllt werden müssen.
+\paragraph{Dadurch ergeben sich folgende Metriken, die erfüllt werden müssen.}
 
 \begin{itemize}
     \item Bei gegebener Texturprobe, generiere eine neue Textur, die der Probe gleicht.
@@ -264,8 +264,7 @@ Bei der Histogrammäqualisation {(auch Histogrammausgleich, Histogrammegalisieru
 werden die Kontraste von Grauwertbildern derart verbessert, sodass diese über eine bloße Kontrastverstärkung hinausgeht.
 Dabei wird die Gleichverteilung mithilfe der Grauwertverteilung berechnet, damit der gesamte zur Verfügung stehende Wertebereich optimal ausgenutzt wird \cite{Lehmann2013}.
 Bei dem Fall der Pyramid-Methode nimmt der Algorithmus ein Input-Image und bildet ein bestimmtes Histogramm, indem das Bild mit mehreren Nachschlagetabellen verarbeitet wird.
-Die beiden Nachschlagetabellen Tabellen sind:
-
+\paragraph{Die beiden Nachschlagetabellen Tabellen sind:}
 \begin{itemize}
     \itemsep-0.5em
     \item Die kumulative Verteilungsfunktion \textit{(cumulative distribution function (CDF))} eines Bildes und
@@ -314,7 +313,7 @@ Eine davon ist es, Patches mit verschiedenen Größen zu verwenden, damit die Ko
 \textit{(Visual Masking)} reduziert werden.
 Insbesondere bei stationären Texturen erreicht diese Methode gute Ergebnisse \cite{EfrosQuilt}.
 
-Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:
+\paragraph{Die Funktionsweise des Algorithmus nach D.Gomathi und Rajvi Shah:}
 
 \begin{enumerate}
     \item Generierung des ersten Patches in der oberen-linken Ecke des Output-Images. Der Patch wird zufällig aus dem Input-Image ausgewählt.
@@ -419,7 +418,7 @@ in diesem Fall auch Zelle, theoretisch jede Zahl vorhanden sein \textit{(Superpo
     \caption{(a) Sudoku Feld unbeobachtet in einer Superposition.}%
 \end{figure}
 
-Die Regeln \textit{(constraints)} dieses CSP sind wie folgt:
+\paragraph{Die Regeln \textit{(constraints)} dieses CSP sind wie folgt:}
 \begin{enumerate}
     \item Jede Zeile, Spalte und jedes Quadrat {(je 9 Felder)} muss mit den Zahlen 1-9 ausgefüllt werden.
     \item Keine Zahl innerhalb der Zeile, Spalte oder des Quadrats darf sich wiederholen.
@@ -503,24 +502,24 @@ Die Adjazenz-Bedingung stellt sicher, dass alle Teile des Modells nahtlos zusamm
     \caption{(a) 3D-Modell in Komponenten aufgeteilt, (b) Komponente nahtlos zusammengesetzt, (c) Komponente halten Adjazenz-Bedingungen nicht ein \cite{merrell2009model}.}%
 \end{figure}
 
-Der grundsätzliche Ablauf der Model Synthese im 2D-Raum ist wie folgt:
+\paragraph{Der grundsätzliche Ablauf der Model Synthese im 2D-Raum ist wie folgt:}
 
 \begin{enumerate}
     \itemsep-1em
-    \item Erstelle Module.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\linewidth]{images/modules-cells.png}
-    \end{figure}
+    \item Erstelle Module {(siehe Abbildung 3.8 (a))}.
     \item Wähle eine Zelle unter eventueller Berücksichtigung von Heuristiken.
     \item Kollabiere die Zelle auf einen Eigenwert.
-    \item Errechne neue mögliche Eigenwerte der benachbarten Zellen \textit{(Propagation)}.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\linewidth]{images/collapse-cells.JPG}
-    \end{figure}
+    \item Errechne neue mögliche Eigenwerte der benachbarten Zellen \textit{(Propagation)}  {(siehe Abbildung 3.8 (b))}.
     \item Wiederhole Schritte 2 bis 4.
 \end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.4\linewidth]{images/modules-cells.png}}%
+    \qquad
+    \subfloat[][]{\includegraphics[width=0.5\linewidth]{images/collapse-cells.JPG}}%
+    \caption{(a) Module, (b) Möglicher Output mit möglichen Optionen pro Zelle.}%
+\end{figure}
 
 An diesem Punkt ist es wichtig zu erwähnen,
 dass es sich hierbei bereits um das \say{Simple Tile Model} des WFC Algorithmus handelt.
@@ -567,7 +566,7 @@ Anders als bei dem Simple Tile Model von WFC, bei dem einzelne Module für die S
 benötigt das Overlapping Model von WFC ein komplettes Input-Image, das daraufhin analysiert wird.
 Aus dieser Analyse werden die Module automatisch generiert.
 Zudem haben sich die Module bei dem Simple Tile Model nicht überschnitten, wie es bei dem Overlapping Model der Fall ist.
-Das hat den Vorteil, dass die Module direkt aus dem Input errechnet werden können {(siehe Abbildung 3.8 und 3.9)}.
+Das hat den Vorteil, dass die Module direkt aus dem Input errechnet werden können {(siehe Abbildung 3.9 und 3.10)}.
 Zudem kann der Output dem Input ähnlicher sein, da die Module näher aneinander liegen \cite{merrell2018compare}.
 
 \begin{figure}[H]
@@ -583,7 +582,7 @@ Zudem kann der Output dem Input ähnlicher sein, da die Module näher aneinander
     \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen \cite{Karth2017WaveFunctionCollapseIC}.}%
 \end{figure}
 
-Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten, wie diese übereinander liegen können {(siehe Abbildung 3.10)}.
+Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten, wie diese übereinander liegen können {(siehe Abbildung 3.11)}.
 {(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}
 Der WFC Algorithmus legt eine Indexstruktur an, die die Möglichkeiten beschreibt, wie die Muster nebeneinander platziert werden können.
 Bei diesem Model enthält der Index die vorberechnete Anzahl an gültigen Module, die an einem anderen Index mit $x,y$-Offset platziert werden dürfen. 
@@ -597,7 +596,7 @@ Sobald ein Feld einen Wert besitzt, werden in allen benachbarten Zellen Module e
     \caption{Die 9 Möglichkeiten wie die Module übereinander liegen können \cite{Karth2017WaveFunctionCollapseIC}.}%
 \end{figure}
 
-In Abbildung 3.11 erkennen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Module, die an ihren benachbarten $x,y$-Offsets erlaubt sind, dargestellt.
+In Abbildung 3.12 erkennen wir einen Ausschnitt einer einzelnen Zelle mit allen möglichen Module, die an ihren benachbarten $x,y$-Offsets erlaubt sind, dargestellt.
 Dabei ist bei einem Offset mit den Werten $(0,0)$ {(kein Offset)} immer nur der betrachtete Patch nutzbar {(bzw. die Zelle mit bereits einzelnem Eigenwert)}.
 Als Beispiel Offset $(-1,0)$. Da sind nur Module möglich, die Rechts zwei weiße Pixel besitzen damit sie sich nahtlos mit den zwei weißen Pixel bei $(0,0)$ überlappen können \cite{Karth2017WaveFunctionCollapseIC}.
 
@@ -614,7 +613,7 @@ Allerdings funktioniert $N = 1$ in diesem Fall nicht, da jeder Pixel zu einem Pa
 es sei denn $N = 1$ repräsentiert eine Menge an Pixeln.
 Bei einer zu kleinen Fenstergröße kann es vorkommen, dass der Output nicht dem Input ähnelt.
 Bei einer zu großen Fenstergröße kann der Output dem Input zu ähnlich sein, da ganze Gruppen von Strukturen kopiert und eingefügt werden.
-Daher hat die Wahl der Größe, Einfluss auf das Ergebnis {(siehe Abbildung 3.12 und 3.13)}.
+Daher hat die Wahl der Größe, Einfluss auf das Ergebnis {(siehe Abbildung 3.13 und 3.14)}.
 
 \begin{figure}[H]
     \centering
@@ -650,7 +649,7 @@ Dies führt dazu, dass großteile des Outputs sofort generiert werden können,
 dafür aber der Abschluss aufgrund von komplexen constraint solving Algorithmen nicht gleichmäßig entsteht \cite{Karth2017WaveFunctionCollapseIC}.
 Da WFC nach der niedrigsten Entropie Heuristik seine nächste Zelle auswählt und im Overlapping Model alle benachbarten Zellen, die nicht kollabiert sind,
 als gemischte Pixelwerte aller möglichen Optionen innerhalb der Zellen darstellt, führt dies zu einer ästhetisch wahrgenommenen Generierung des Outputs.
-Abbildung 3.14 zeigt die erste kollabierte Zelle im Overlapping Model mit dem Red-Maze als Input und Abbildung 3.15 weitere zustände des Zyklus nach der niedrigst Entropie Heuristik.
+Abbildung 3.15 zeigt die erste kollabierte Zelle im Overlapping Model mit dem Red-Maze als Input und Abbildung 3.16 weitere zustände des Zyklus nach der niedrigst Entropie Heuristik.
 \footnote[4]{Maxim Gumin’s erster WFC tweet \say{Procedural generation from a single
 example by wave function collapse https://github.com/mxgmn/WaveFunctionCollapse}
 \newline
@@ -726,7 +725,7 @@ Um die Optimierung, die gleich vorgestellt wird, zu verdeutlichen wird auf die F
 
 Die \texttt{ladeModule()} Funktion dient als Mapping der einzelnen Module.
 Hier werden jedem Modul zusätzlich noch alle anderen Module, die an dieses Modul angrenzen können, festgelegt.
-Die Reihenfolge der Optionen beginnt von Oben und rotiert im Uhrzeigersinn herum, damit alle vier Richtungen abgedeckt sind {(siehe Abbildung 3.16)}.
+Die Reihenfolge der Optionen beginnt von Oben und rotiert im Uhrzeigersinn herum, damit alle vier Richtungen abgedeckt sind {(siehe Abbildung 3.17)}.
 Das Problem an dieser Implementierung ist das mit Zunahme der Anzahl der Module auch die Komplexität und die Größe des Mappings zunimmt \cite{Shiffman}.
 
 \begin{figure}[H]
@@ -753,7 +752,7 @@ indem die Sockets miteinander verglichen werden und nur Module mit identischen S
 
 Die Sockets werden hier ebenfalls beginnend von Oben und rotierend im Uhrzeigersinn zugewiesen.
 Es muss darauf geachtet werden das die Sockets konsistent für alle Module nach demselben Prinzip zugewiesen werden.
-In diesem fall werden sie strikt um Uhrzeigersinn ungeachtet der natürlichen Schreibrichtung zugewiesen {(siehe Abbildung 3.17)}.
+In diesem fall werden sie strikt um Uhrzeigersinn ungeachtet der natürlichen Schreibrichtung zugewiesen {(siehe Abbildung 3.18)}.
 Durch die Verwendung von Sockets lässt sich die Komplexität und somit die Erstellung des Mappings stark reduzieren \cite{Shiffman}.
 
 \begin{figure}[H]
@@ -784,7 +783,7 @@ Diese Optimierung erhöht die Geschwindigkeit von WFC maßgeblich \cite{boris}.
 
 Joseph Parker war einer der ersten Entwickler, der WFC verwendet hat.
 In seinem in der Unity Engine entwickeltem Spiel \textit{Proc Skater 2016} verwendet er den Algorithmus, um einzigartige 3D Skateparks zu generieren.
-In Abbildung 3.18 dargestellt seine selbst erstellten Blöcke, aus denen die Karte generiert werden soll {(Abbildung 3.19)}, anstatt sie automatisch aus einem Input zu analysieren \cite{procskater2016}.
+In Abbildung 3.19 dargestellt seine selbst erstellten Blöcke, aus denen die Karte generiert werden soll {(Abbildung 3.20)}, anstatt sie automatisch aus einem Input zu analysieren \cite{procskater2016}.
 J. Parker zufolge benutzt er das Simple Tile Model, als auch das Overlapping Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
@@ -807,7 +806,7 @@ Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ aus
     \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016} \cite{procskater2016}.}%
 \end{wrapfigure}
 
-Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark in Abbildung 3.20 zu erstellen.
+Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark in Abbildung 3.21 zu erstellen.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tile Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
 Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.}
@@ -815,7 +814,7 @@ Overlapping Model für Plattform artige Situationen, in denen man eher eine Art 
 \newline
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
 Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} einen Mehrfachdurchlauf \textit{(multipass)} von WFC.
-Dadurch können größere Komplexitäten bei der Generierung von Karten erreicht werden wie in Abbildung 3.21.
+Dadurch können größere Komplexitäten bei der Generierung von Karten erreicht werden wie in Abbildung 3.22.
 Ein weiterer Vorteil, der sich durch WFC ergeben hat, ist die einfache Handhabung.
 Sobald das zugrunde liegende System vorhanden ist, kann jeder Entwickler Input-Images einspielen und spielbaren Content generieren.
 \footnote[6]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} \cite{Karth2017WaveFunctionCollapseIC}
