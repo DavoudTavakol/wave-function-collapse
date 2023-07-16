@@ -14,6 +14,6 @@
 \contentsline {subsection}{\numberline {3.2.1}Unterschiede zwischen WFC und Model Synthese}{21}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Simple Tile Model und Overlapping Model}{23}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Beispiel Implementierung}{28}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Weitere Implementierungen von WFC}{29}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {4}Fazit}{33}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Anhang}{36}{chapter.5}%
+\contentsline {subsection}{\numberline {3.3.1}Weitere Implementierungen von WFC}{31}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Fazit}{34}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Anhang}{37}{chapter.5}%

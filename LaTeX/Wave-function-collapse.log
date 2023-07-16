@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  16 JUL 2023 14:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  16 JUL 2023 17:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1102,20 +1102,20 @@ File: images/modell-conflicts.JPG Graphic file (type jpg)
 <use images/modell-conflicts.JPG>
 Package pdftex.def Info: images/modell-conflicts.JPG  used on input line 502.
 (pdftex.def)             Requested size: 108.66089pt x 138.79292pt.
-<images/modules-cells.JPG, id=360, 271.0125pt x 105.39375pt>
-File: images/modules-cells.JPG Graphic file (type jpg)
-<use images/modules-cells.JPG>
-Package pdftex.def Info: images/modules-cells.JPG  used on input line 513.
+<images/modules-cells.png, id=360, 271.0125pt x 105.39375pt>
+File: images/modules-cells.png Graphic file (type png)
+<use images/modules-cells.png>
+Package pdftex.def Info: images/modules-cells.png  used on input line 513.
 (pdftex.def)             Requested size: 173.85477pt x 67.61258pt.
-<images/collapse-cells.JPG, id=361, 491.58656pt x 490.08093pt>
+<images/collapse-cells.JPG, id=361, 454.69875pt x 455.45157pt>
 File: images/collapse-cells.JPG Graphic file (type jpg)
 <use images/collapse-cells.JPG>
 Package pdftex.def Info: images/collapse-cells.JPG  used on input line 520.
-(pdftex.def)             Requested size: 260.78877pt x 259.99591pt.
+(pdftex.def)             Requested size: 260.78877pt x 261.2224pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.JPG>] [21 <./images/collapse-cells.JPG>]
+ [20 <./images/model-divided.JPG> <./images/seamless-model.JPG> <./images/modell-conflicts.JPG> <./images/modules-cells.png>] [21 <./images/collapse-cells.JPG>]
 <images/timing-and-success-comparison.png, id=382, 565.36218pt x 302.63063pt>
 File: images/timing-and-success-comparison.png Graphic file (type png)
 <use images/timing-and-success-comparison.png>
@@ -1191,152 +1191,168 @@ Package pdftex.def Info: images/red-maze-overlapping-steps.png  used on input li
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./images/red-maze-overlapping-step1.png> <./images/red-maze-overlapping-steps.png>] [28]
-<images/proc-skater-ruleset.png, id=494, 696.35156pt x 517.18219pt>
+<images/simple-tile-mapping.png, id=486, 1505.625pt x 301.125pt>
+File: images/simple-tile-mapping.png Graphic file (type png)
+<use images/simple-tile-mapping.png>
+Package pdftex.def Info: images/simple-tile-mapping.png  used on input line 734.
+(pdftex.def)             Requested size: 434.64355pt x 86.92885pt.
+ [29 <./images/simple-tile-mapping.png>]
+<images/simple-tile-sockets.png, id=511, 1355.0625pt x 301.125pt>
+File: images/simple-tile-sockets.png Graphic file (type png)
+<use images/simple-tile-sockets.png>
+Package pdftex.def Info: images/simple-tile-sockets.png  used on input line 761.
+(pdftex.def)             Requested size: 434.64355pt x 96.5871pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 <./images/simple-tile-sockets.png>]
+<images/proc-skater-ruleset.png, id=520, 696.35156pt x 517.18219pt>
 File: images/proc-skater-ruleset.png Graphic file (type png)
 <use images/proc-skater-ruleset.png>
-Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 741.
+Package pdftex.def Info: images/proc-skater-ruleset.png  used on input line 792.
 (pdftex.def)             Requested size: 391.17654pt x 290.52757pt.
- [29 <./images/proc-skater-ruleset.png>]
-<images/proc-skate-level.png, id=506, 895.09406pt x 514.92375pt>
+<images/proc-skate-level.png, id=523, 895.09406pt x 514.92375pt>
 File: images/proc-skate-level.png Graphic file (type png)
 <use images/proc-skate-level.png>
-Package pdftex.def Info: images/proc-skate-level.png  used on input line 749.
+Package pdftex.def Info: images/proc-skate-level.png  used on input line 800.
 (pdftex.def)             Requested size: 391.17654pt x 225.035pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30 <./images/proc-skate-level.png>]
-<images/proc-skate-backdrop.png, id=515, 878.53218pt x 534.49687pt>
+ [31 <./images/proc-skater-ruleset.png>]
+<images/proc-skate-backdrop.png, id=535, 878.53218pt x 534.49687pt>
 File: images/proc-skate-backdrop.png Graphic file (type png)
 <use images/proc-skate-backdrop.png>
-Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 756.
+Package pdftex.def Info: images/proc-skate-backdrop.png  used on input line 806.
 (pdftex.def)             Requested size: 227.62204pt x 138.48471pt.
 
-Underfull \hbox (badness 1297) in paragraph at lines 771--771
+Underfull \hbox (badness 1297) in paragraph at lines 821--821
 [][][]\T1/ptm/m/n/10 Aus Forums-Korrespondenz [][]$\T1/pcr/m/n/10 https : / / forums . somethingawful . com / showthread . php ?
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 760--772
+Underfull \hbox (badness 2027) in paragraph at lines 810--822
 \T1/ptm/m/n/12 ter-schied-li-che Be-rei-che gut an-wen-den
  []
 
-<images/caves-of-qud.jpg, id=522, 1557.98906pt x 1486.47978pt>
+<images/caves-of-qud.jpg, id=542, 1557.98906pt x 1486.47978pt>
 File: images/caves-of-qud.jpg Graphic file (type jpg)
 <use images/caves-of-qud.jpg>
-Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 775.
+Package pdftex.def Info: images/caves-of-qud.jpg  used on input line 825.
 (pdftex.def)             Requested size: 391.17654pt x 373.20676pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31 <./images/proc-skate-backdrop.png>] [32 <./images/caves-of-qud.jpg>]
+[32 <./images/proc-skate-level.png> <./images/proc-skate-backdrop.png>] [33 <./images/caves-of-qud.jpg>]
 Kapitel 4.
-[33
+[34
 
-] [34
+] [35
 
-] [35]
+]
+Overfull \hbox (4.79807pt too wide) in paragraph at lines 853--853
+\T1/pcr/m/n/12 thecodingtrain . com / challenges / 171 -[] wave -[] function -[] collapse$[][]\T1/ptm/m/n/12 . 
+ []
+
+[36]
 Kapitel 5.
-<images/wfc-model-comparison/summer-modelsynthesis.png, id=581, 602.25pt x 602.25pt>
+<images/wfc-model-comparison/summer-modelsynthesis.png, id=605, 602.25pt x 602.25pt>
 File: images/wfc-model-comparison/summer-modelsynthesis.png Graphic file (type png)
 <use images/wfc-model-comparison/summer-modelsynthesis.png>
-Package pdftex.def Info: images/wfc-model-comparison/summer-modelsynthesis.png  used on input line 808.
+Package pdftex.def Info: images/wfc-model-comparison/summer-modelsynthesis.png  used on input line 858.
 (pdftex.def)             Requested size: 195.58827pt x 195.59108pt.
-<images/wfc-model-comparison/summer-wfc.png, id=582, 602.25pt x 602.25pt>
+<images/wfc-model-comparison/summer-wfc.png, id=606, 602.25pt x 602.25pt>
 File: images/wfc-model-comparison/summer-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/summer-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/summer-wfc.png  used on input line 810.
+Package pdftex.def Info: images/wfc-model-comparison/summer-wfc.png  used on input line 860.
 (pdftex.def)             Requested size: 195.58827pt x 195.59108pt.
-<images/wfc-model-comparison/castle-model.png, id=583, 526.96875pt x 526.96875pt>
+<images/wfc-model-comparison/castle-model.png, id=607, 526.96875pt x 526.96875pt>
 File: images/wfc-model-comparison/castle-model.png Graphic file (type png)
 <use images/wfc-model-comparison/castle-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/castle-model.png  used on input line 812.
+Package pdftex.def Info: images/wfc-model-comparison/castle-model.png  used on input line 862.
 (pdftex.def)             Requested size: 195.58827pt x 195.58649pt.
-<images/wfc-model-comparison/kein-resultat.png, id=584, 528.47438pt x 526.96875pt>
+<images/wfc-model-comparison/kein-resultat.png, id=608, 528.47438pt x 526.96875pt>
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 814.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 864.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
-<images/wfc-model-comparison/knot-1-model.png, id=587, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-1-model.png, id=611, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-1-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-1-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-1-model.png  used on input line 820.
+Package pdftex.def Info: images/wfc-model-comparison/knot-1-model.png  used on input line 870.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-1-wfc.png, id=588, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-1-wfc.png, id=612, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-1-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-1-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-1-wfc.png  used on input line 822.
+Package pdftex.def Info: images/wfc-model-comparison/knot-1-wfc.png  used on input line 872.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-2-model.png, id=589, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-2-model.png, id=613, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-2-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-2-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-2-model.png  used on input line 824.
+Package pdftex.def Info: images/wfc-model-comparison/knot-2-model.png  used on input line 874.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 826.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 876.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36
+ [37
 
  <./images/wfc-model-comparison/summer-modelsynthesis.png> <./images/wfc-model-comparison/summer-wfc.png> <./images/wfc-model-comparison/castle-model.png> <./images/wfc-model-comparison/kein-resultat.png>]
-<images/wfc-model-comparison/knot-3-model.png, id=597, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-3-model.png, id=622, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-3-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-3-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-3-model.png  used on input line 832.
+Package pdftex.def Info: images/wfc-model-comparison/knot-3-model.png  used on input line 882.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-3-wfc.png, id=598, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-3-wfc.png, id=623, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-3-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-3-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-3-wfc.png  used on input line 834.
+Package pdftex.def Info: images/wfc-model-comparison/knot-3-wfc.png  used on input line 884.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-4-model.png, id=599, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-4-model.png, id=624, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-4-model.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-4-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-4-model.png  used on input line 836.
+Package pdftex.def Info: images/wfc-model-comparison/knot-4-model.png  used on input line 886.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
-<images/wfc-model-comparison/knot-4-wfc.png, id=600, 752.8125pt x 752.8125pt>
+<images/wfc-model-comparison/knot-4-wfc.png, id=625, 752.8125pt x 752.8125pt>
 File: images/wfc-model-comparison/knot-4-wfc.png Graphic file (type png)
 <use images/wfc-model-comparison/knot-4-wfc.png>
-Package pdftex.def Info: images/wfc-model-comparison/knot-4-wfc.png  used on input line 838.
+Package pdftex.def Info: images/wfc-model-comparison/knot-4-wfc.png  used on input line 888.
 (pdftex.def)             Requested size: 195.58827pt x 195.58879pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./images/wfc-model-comparison/knot-1-model.png> <./images/wfc-model-comparison/knot-1-wfc.png> <./images/wfc-model-comparison/knot-2-model.png>]
-<images/wfc-model-comparison/red-dot-model.png, id=609, 150.5625pt x 150.5625pt>
+ [38 <./images/wfc-model-comparison/knot-1-model.png> <./images/wfc-model-comparison/knot-1-wfc.png> <./images/wfc-model-comparison/knot-2-model.png>]
+<images/wfc-model-comparison/red-dot-model.png, id=633, 150.5625pt x 150.5625pt>
 File: images/wfc-model-comparison/red-dot-model.png Graphic file (type png)
 <use images/wfc-model-comparison/red-dot-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/red-dot-model.png  used on input line 844.
+Package pdftex.def Info: images/wfc-model-comparison/red-dot-model.png  used on input line 894.
 (pdftex.def)             Requested size: 195.58827pt x 195.60715pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 846.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 896.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
-<images/wfc-model-comparison/shrew-model.png, id=610, 150.5625pt x 150.5625pt>
+<images/wfc-model-comparison/shrew-model.png, id=634, 150.5625pt x 150.5625pt>
 File: images/wfc-model-comparison/shrew-model.png Graphic file (type png)
 <use images/wfc-model-comparison/shrew-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/shrew-model.png  used on input line 848.
+Package pdftex.def Info: images/wfc-model-comparison/shrew-model.png  used on input line 898.
 (pdftex.def)             Requested size: 195.58827pt x 195.60715pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 850.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 900.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
-<images/wfc-model-comparison/cat-model.png, id=611, 301.125pt x 301.125pt>
+<images/wfc-model-comparison/cat-model.png, id=635, 301.125pt x 301.125pt>
 File: images/wfc-model-comparison/cat-model.png Graphic file (type png)
 <use images/wfc-model-comparison/cat-model.png>
-Package pdftex.def Info: images/wfc-model-comparison/cat-model.png  used on input line 852.
+Package pdftex.def Info: images/wfc-model-comparison/cat-model.png  used on input line 902.
 (pdftex.def)             Requested size: 195.58827pt x 195.59567pt.
 File: images/wfc-model-comparison/kein-resultat.png Graphic file (type png)
 <use images/wfc-model-comparison/kein-resultat.png>
-Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 854.
+Package pdftex.def Info: images/wfc-model-comparison/kein-resultat.png  used on input line 904.
 (pdftex.def)             Requested size: 195.58827pt x 195.03166pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./images/wfc-model-comparison/knot-3-model.png> <./images/wfc-model-comparison/knot-3-wfc.png> <./images/wfc-model-comparison/knot-4-model.png> <./images/wfc-model-comparison/knot-4-wfc.png>] [39 <./images/wfc-model-comparison/red-dot-model.png> <./images/wfc-model-comparison/shrew-model.png> <./images/wfc-model-comparison/cat-model.png>] (./Wave-function-collapse.aux)
+ [39 <./images/wfc-model-comparison/knot-3-model.png> <./images/wfc-model-comparison/knot-3-wfc.png> <./images/wfc-model-comparison/knot-4-model.png> <./images/wfc-model-comparison/knot-4-wfc.png>] [40 <./images/wfc-model-comparison/red-dot-model.png> <./images/wfc-model-comparison/shrew-model.png> <./images/wfc-model-comparison/cat-model.png>] (./Wave-function-collapse.aux)
 Package rerunfilecheck Info: File `Wave-function-collapse.out' has not changed.
 (rerunfilecheck)             Checksum: DAB1265594C0130F06603ADC8A540BAE;3155.
 Package logreq Info: Writing requests to 'Wave-function-collapse.run.xml'.
@@ -1344,10 +1360,10 @@ Package logreq Info: Writing requests to 'Wave-function-collapse.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24082 strings out of 474971
- 426910 string characters out of 5780120
- 1281566 words of memory out of 5000000
- 44990 multiletter control sequences out of 15000+600000
+ 24113 strings out of 474971
+ 427699 string characters out of 5780120
+ 1310612 words of memory out of 5000000
+ 45007 multiletter control sequences out of 15000+600000
  534006 words of font info for 120 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,17n,79p,1179b,2379s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1355,10 +1371,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Wave-function-collapse.pdf (39 pages, 7853053 bytes).
+Output written on Wave-function-collapse.pdf (40 pages, 7852111 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
- 180 named destinations out of 1000 (max. 500000)
- 466 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 724 PDF objects out of 1000 (max. 8388607)
+ 544 compressed objects within 6 object streams
+ 192 named destinations out of 1000 (max. 500000)
+ 476 words of extra memory for PDF output out of 10000 (max. 10000000)
 

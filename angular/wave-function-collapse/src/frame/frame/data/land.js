@@ -74,24 +74,33 @@ export let landTiles = []
       'BC',
       'CB'
     );
+
+    landTiles[9] = new Tile(
+      9,
+      'assets/images/land/9.png',
+      'BB',
+      'BB',
+      'BB',
+      'BB'
+    );
     
-    landTiles[9] = landTiles[1].rotateTile(9, 90);
-    landTiles[10] = landTiles[1].rotateTile(10, 180);
-    landTiles[11] = landTiles[1].rotateTile(11, 270);
-    landTiles[12] = landTiles[2].rotateTile(12, 90);
-    landTiles[13] = landTiles[2].rotateTile(13, 180);
-    landTiles[14] = landTiles[2].rotateTile(14, 270);
-    landTiles[15] = landTiles[5].rotateTile(15, 90);
-    landTiles[16] = landTiles[5].rotateTile(16, 180);
-    landTiles[17] = landTiles[5].rotateTile(17, 270);
-    landTiles[18] = landTiles[6].rotateTile(18, 90);
-    landTiles[19] = landTiles[6].rotateTile(19, 180);
-    landTiles[20] = landTiles[6].rotateTile(20, 270);
-    landTiles[21] = landTiles[7].rotateTile(21, 90);
-    landTiles[22] = landTiles[7].rotateTile(22, 180);
-    landTiles[23] = landTiles[7].rotateTile(23, 270);
-    landTiles[24] = landTiles[8].rotateTile(24, 90);
-    landTiles[25] = landTiles[8].rotateTile(25, 180);
-    landTiles[26] = landTiles[8].rotateTile(26, 270);
+    landTiles[10] = landTiles[1].rotateTile(10, 90);
+    landTiles[11] = landTiles[1].rotateTile(11, 180);
+    landTiles[12] = landTiles[1].rotateTile(12, 270);
+    landTiles[13] = landTiles[2].rotateTile(13, 90);
+    landTiles[14] = landTiles[2].rotateTile(14, 180);
+    landTiles[15] = landTiles[2].rotateTile(15, 270);
+    landTiles[16] = landTiles[5].rotateTile(16, 90);
+    landTiles[17] = landTiles[5].rotateTile(17, 180);
+    landTiles[18] = landTiles[5].rotateTile(18, 270);
+    landTiles[19] = landTiles[6].rotateTile(19, 90);
+    landTiles[20] = landTiles[6].rotateTile(20, 180);
+    landTiles[21] = landTiles[6].rotateTile(21, 270);
+    landTiles[22] = landTiles[7].rotateTile(22, 90);
+    landTiles[23] = landTiles[7].rotateTile(23, 180);
+    landTiles[24] = landTiles[7].rotateTile(24, 270);
+    landTiles[25] = landTiles[8].rotateTile(25, 90);
+    landTiles[26] = landTiles[8].rotateTile(26, 180);
+    landTiles[27] = landTiles[8].rotateTile(27, 270);
 
     

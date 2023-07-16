@@ -454,6 +454,33 @@
       \field{type}{phdthesis}
       \field{year}{2018}
     \endentry
+    \entry{Shiffman}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=462edbbbf0e67b9184c8162731cda879}{%
+           family={Shiffman},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{462edbbbf0e67b9184c8162731cda879}
+      \strng{fullhash}{462edbbbf0e67b9184c8162731cda879}
+      \strng{bibnamehash}{462edbbbf0e67b9184c8162731cda879}
+      \strng{authorbibnamehash}{462edbbbf0e67b9184c8162731cda879}
+      \strng{authornamehash}{462edbbbf0e67b9184c8162731cda879}
+      \strng{authorfullhash}{462edbbbf0e67b9184c8162731cda879}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2023-03-30}
+      \field{title}{Wave Function Collapse}
+      \verb{urlraw}
+      \verb https://thecodingtrain.com/challenges/171-wave-function-collapse
+      \endverb
+      \verb{url}
+      \verb https://thecodingtrain.com/challenges/171-wave-function-collapse
+      \endverb
+    \endentry
     \entry{procskater2016}{misc}{}
       \name{author}{1}{}{%
         {{hash=6644b246f65da7900db3061f25e9b14d}{%
@@ -470,8 +497,8 @@
       \strng{authorbibnamehash}{6644b246f65da7900db3061f25e9b14d}
       \strng{authornamehash}{6644b246f65da7900db3061f25e9b14d}
       \strng{authorfullhash}{6644b246f65da7900db3061f25e9b14d}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://selfsame.itch.io/unitywfc}}

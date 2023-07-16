@@ -510,7 +510,7 @@ Der grundsätzliche Ablauf der Model Synthese im 2D-Raum ist wie folgt:
     \item Erstelle Module.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.4\linewidth]{images/modules-cells.JPG}
+        \includegraphics[width=0.4\linewidth]{images/modules-cells.png}
     \end{figure}
     \item Wähle eine Zelle unter eventueller Berücksichtigung von Heuristiken.
     \item Kollabiere die Zelle auf einen Eigenwert.
@@ -711,6 +711,7 @@ Damit haben wir den initialen \textit{Observation} Schritt.
 Anschließend beginnt die \textit{Propagation}.
 Hier wird durch jede nicht kollabierte Zelle Iteriert und die neuen möglichen Eigenwerte nach den bestimmten \textit{Constraints} errechnet.
 Diese Zellen werden mit diesen neuen Eigenwerten aktualisiert.\par
+\newpage
 Um die Optimierung, die gleich vorgestellt wird, zu verdeutlichen wird auf die Funktion \texttt{ladeModule()} genauer eingegangen.
 
 \begin{lstlisting}
@@ -720,20 +721,70 @@ Um die Optimierung, die gleich vorgestellt wird, zu verdeutlichen wird auf die F
        modul[2]=new Tile(2,new Image(),[0,1,4],[3,4],[1,4],[0,3,4]);
        modul[3]=new Tile(3,new Image(),[0,1,4],[0,1,2],[1,4],[1,2]);
        modul[4]=new Tile(4,new Image(),[2,3],[0,1,2],[0,2,3],[1,2]);
-    }
+       }
 \end{lstlisting}
 
 Die \texttt{ladeModule()} Funktion dient als Mapping der einzelnen Module.
 Hier werden jedem Modul zusätzlich noch alle anderen Module, die an dieses Modul angrenzen können, festgelegt.
-Die Reihenfolge der Optionen beginnt von Oben und rotiert im Uhrzeigersinn herum, damit alle vier Richtungen abgedeckt sind.
-Das Problem an dieser Implementierung ist das mit Zunahme der Anzahl der Module auch die Komplexität und die Größe des Mappings zunimmt.
+Die Reihenfolge der Optionen beginnt von Oben und rotiert im Uhrzeigersinn herum, damit alle vier Richtungen abgedeckt sind {(siehe Abbildung 3.16)}.
+Das Problem an dieser Implementierung ist das mit Zunahme der Anzahl der Module auch die Komplexität und die Größe des Mappings zunimmt \cite{Shiffman}.
 
+\begin{figure}[H]
+    \centering
+    \frame{\includegraphics[width=1\linewidth]{images/simple-tile-mapping.png}}%
+    \caption{Visualisierung eines Mappings der Module.}%
+\end{figure}
 
+Um das Mapping zu vereinfach können sogenannte \say{Sockets} verwendet werden.
+Anstelle selbst zu entscheiden, welche Module an welche Module angeschlossen werden dürfen,
+werden den Modulen an jeder Kante Sockets zugewiesen.
+Dadurch können die Module selbst entscheiden welche Module an diese gesetzt werden dürfen,
+indem die Sockets miteinander verglichen werden und nur Module mit identischen Sockets eine gültige Verbindung sind \cite{Shiffman}.
+
+\begin{lstlisting}
+    ladeModule() {
+       modul[0]= new Tile(0,'/maze/0.png','AAA','AAA','AAA','AAA');
+       modul[1]= new Tile(1,'/maze/1.png','ABA','ABA','AAA','AAA');
+       modul[2]= new Tile(2,'/maze/2.png','AAA','ABA','ABA','AAA');
+       modul[3]= new Tile(3,'/maze/3.png','AAA','AAA','ABA','ABA');
+       modul[4]= new Tile(4,'/maze/4.png','ABA','AAA','AAA','ABA');
+       }
+\end{lstlisting}
+
+Die Sockets werden hier ebenfalls beginnend von Oben und rotierend im Uhrzeigersinn zugewiesen.
+Es muss darauf geachtet werden das die Sockets konsistent für alle Module nach demselben Prinzip zugewiesen werden.
+In diesem fall werden sie strikt um Uhrzeigersinn ungeachtet der natürlichen Schreibrichtung zugewiesen {(siehe Abbildung 3.17)}.
+Durch die Verwendung von Sockets lässt sich die Komplexität und somit die Erstellung des Mappings stark reduzieren \cite{Shiffman}.
+
+\begin{figure}[H]
+    \centering
+    \frame{\includegraphics[width=1\linewidth]{images/simple-tile-sockets.png}}%
+    \caption{Visualisierung eines Mappings mit Sockets.}%
+\end{figure}
+
+Wenn Sockets verwendet werden, dann müssen auch dazu passende Module verwendet werden.
+Werden einfarbige Module verwendet, wie z.B. Module für Wald, Wiese, Strand und Meer,
+dann können die Sockets das Mapping verkomplizieren anstatt zu vereinfachen.
+In diesen Fällen benötigen die Module Verbindungsmodule und Eckmodule, um alle nötigen Kombinationen zu ermöglichen.
+Dadurch verändert sich der Output dahingehen, das "Halbe" Terrains zustande kommen.
+
+Eine weitere Optimierung vorgeschlagen von Boris ist, das nur die Zellen auf Constaints geprüft werden,
+die durch den Propagation Vorgang zu anderen Ergebnissen führen können.
+Das bedeutet, wenn eine Zelle aktualisiert wird, dann fügen wir sie einer Warteschlange ausstehender Zellen hinzu.
+Dann werden die ausstehenden Zellen einer nach der anderen aus der Warteschlange entfernt und auf ihren Nachbarzellen geprüft.
+Sollten die Nachbarzellen dazu führen, dass weitere Zellen aktualisiert werden müssen, dann werden diese ebenfalls zu Warteschlange hinzugefügt.
+Dieser Vorgang wird so lange wiederholt bis die Warteschlange leer ist.
+Dadruch haben wir sichergestellt,
+dass jeder Constraint vollständig ausgewertet wurde, aber wir überprüfen nie ein Constraint,
+es sei denn, eine der mit ihr verbundenen Zellen hat ihren Eigenwert geändert.
+Diese Optimierung erhöht die Geschwindigkeit von WFC maßgeblich \cite{boris}.
+
+\pagebreak
 \subsection{Weitere Implementierungen von WFC}
 
 Joseph Parker war einer der ersten Entwickler, der WFC verwendet hat.
 In seinem in der Unity Engine entwickeltem Spiel \textit{Proc Skater 2016} verwendet er den Algorithmus, um einzigartige 3D Skateparks zu generieren.
-In Abbildung 3.16 dargestellt seine selbst erstellten Blöcke, aus denen die Karte generiert werden soll {(Abbildung 3.17)}, anstatt sie automatisch aus einem Input zu analysieren \cite{procskater2016}.
+In Abbildung 3.18 dargestellt seine selbst erstellten Blöcke, aus denen die Karte generiert werden soll {(Abbildung 3.19)}, anstatt sie automatisch aus einem Input zu analysieren \cite{procskater2016}.
 J. Parker zufolge benutzt er das Simple Tile Model, als auch das Overlapping Model für den Skatepark. \footnote[5]{Persönliche Kommunikation, 23. Mai 2023}
 
 \begin{figure}[H]
@@ -750,14 +801,13 @@ Die adjacency constraints für diese Blöcke werden aus einer ruleset $.xml$ aus
     \caption{Typisches Level in \textit{Proc Skater 2016} \cite{procskater2016}.}%
 \end{figure}
 
-\pagebreak
 
 \begin{wrapfigure}{r}{8cm}
     \includegraphics[width=1\linewidth]{images/proc-skate-backdrop.png}%
     \caption{Overlapping Model für das Backdrop in \textit{Proc Skater 2016} \cite{procskater2016}.}%
 \end{wrapfigure}
 
-Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark in Abbildung 3.18 zu erstellen.
+Das Overlapping Model verwendete er um den umliegenden Hintergrund \textit{(backdrop)} für seinen Skatepark in Abbildung 3.20 zu erstellen.
 Weiter erklärte Parker, dass das Tile Model und das Overlapping Model sich jeweils für unterschiedliche Bereiche gut anwenden lassen.
 \say{Das Tile Model ist besser für Straßen, Labyrinthe oder alles mit formalen Übergängen.
 Overlapping Model für Plattform artige Situationen, in denen man eher eine Art Markow-Kette für die Größe der Features haben möchte.}
@@ -765,7 +815,7 @@ Overlapping Model für Plattform artige Situationen, in denen man eher eine Art 
 \newline
 Eine weitere kommerzielle Implementierung von WFC ist \textit{Caves of Qud}, entwickelt von Freehold Games.
 Laut Brian Bucklew, einem der Entwickler bei Freehold Games, verwendet \textit{Caves of Qud} einen Mehrfachdurchlauf \textit{(multipass)} von WFC.
-Dadurch können größere Komplexitäten bei der Generierung erreicht werden.
+Dadurch können größere Komplexitäten bei der Generierung von Karten erreicht werden wie in Abbildung 3.21.
 Ein weiterer Vorteil, der sich durch WFC ergeben hat, ist die einfache Handhabung.
 Sobald das zugrunde liegende System vorhanden ist, kann jeder Entwickler Input-Images einspielen und spielbaren Content generieren.
 \footnote[6]{Aus Forums-Korrespondenz \url{https://forums.somethingawful.com/showthread.php?threadid=3563643&userid=68893&perpage=40&pagenumber=23\#post467126402}} \cite{Karth2017WaveFunctionCollapseIC}
@@ -776,7 +826,7 @@ Sobald das zugrunde liegende System vorhanden ist, kann jeder Entwickler Input-I
     \caption{Zwei Spielbare Karten von \textit{Caves of Qud} \cite{Karth2017WaveFunctionCollapseIC}.}%
 \end{figure}
 
-Wave-Function-Collapse kann nicht nur auf flachen Ebenen mit quadratischen Zellen verwenden werden.
+Wave-Function-Collapse kann nicht nur auf flachen Ebenen mit quadratischen Zellen verwenden werden \cite{boris}.
 Oskar Stålberg verwendete WFC nicht nur im 2D und 3D-Raum, sondern auch auf irregulären Rastern.
 In einem Beispiel implementiert Stålberg WFC auf einer Sphäre mit einem Dreiecks-Raster.
 \footnote[7]{Beispiele auf seiner Website
