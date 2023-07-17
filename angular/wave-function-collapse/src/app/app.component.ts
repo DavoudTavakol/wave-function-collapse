@@ -5,6 +5,7 @@ import { landTiles } from '../frame/frame/data/land';
 import { circuitTiles } from '../frame/frame/data/circuit';
 import { mazeTiles } from 'src/frame/frame/data/maze';
 import { circleTiles } from 'src/frame/frame/data/circles';
+import { roomTiles } from 'src/frame/frame/data/rooms';
 
 export interface TileOption {
   name: String;
@@ -46,6 +47,10 @@ export class AppComponent {
       {
         name: 'Circles',
         tileData: circleTiles,
+      },
+      {
+        name: 'Rooms',
+        tileData: roomTiles,
       },
     ];
   }
