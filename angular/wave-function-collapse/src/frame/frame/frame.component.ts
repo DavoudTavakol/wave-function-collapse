@@ -27,6 +27,7 @@ export class FrameComponent implements AfterViewInit {
   ctx: CanvasRenderingContext2D;
   canvas: HTMLCanvasElement;
   @Output() statusEvent = new EventEmitter<boolean>();
+  @Output() resultEvent = new EventEmitter<boolean>();
   @Input() DIM: number = 9;
   @Input() tileSize: number = 50;
   @Input() SLEEP: number = 0;
@@ -108,6 +109,7 @@ export class FrameComponent implements AfterViewInit {
 
     if (pick === undefined) {
       console.log('Failure...');
+      this.resultEvent.emit(false);
       this.ngAfterViewInit();
       return;
     }
@@ -206,6 +208,7 @@ export class FrameComponent implements AfterViewInit {
     if (this.grid.filter((a) => !a.collapsed).length === 0) {
       console.log('Done!');
       this.done = true;
+      this.resultEvent.emit(true);
       this.statusEvent.emit(this.done);
     }
 

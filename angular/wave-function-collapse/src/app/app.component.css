@@ -60,6 +60,26 @@ mat-slider {
   color: rgb(214, 214, 214);
 }
 
+.failureText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(204, 35, 35);
+  text-align: center;
+}
+
+.successText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(25, 255, 25);
+  text-align: center;
+}
+
+.standardResultText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ec407a;
+  text-align: center;
+}
 
 mat-form-field {
   padding: 1em;

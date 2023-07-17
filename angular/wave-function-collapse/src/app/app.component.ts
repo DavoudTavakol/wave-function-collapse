@@ -38,6 +38,7 @@ export class AppComponent {
   done: boolean = false;
   mode: string[] = [];
   currentMode: string = Mode.LOW;
+  result: string = 'Hello world!'
 
   constructor() {
     this.tileOptions = [
@@ -84,6 +85,14 @@ export class AppComponent {
     }
   }
 
+  updateResultStatus(newResult: boolean) {
+    if(newResult) {
+      this.result = 'FINISHED'
+    } else {
+      this.result = 'FAILURE'
+    }
+  }
+
   updateDIM($event: any) {
     this.dim = $event.value;
     console.log(this.dim);
@@ -114,10 +123,12 @@ export class AppComponent {
         this.frame.ngAfterViewInit();
       }
       this.frame.onClickStart();
+      this.result = 'processing...'
       this.buttonName = 'STOP';
     } else {
       this.done = false;
       this.frame.onClickStop();
+      this.result = 'stopped...'
       this.buttonName = 'START';
     }
   }

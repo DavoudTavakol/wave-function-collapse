@@ -42,12 +42,17 @@
         </mat-select>
       </mat-form-field>
 
+      <div id="resultText" [ngClass]="{
+        'failureText' : result === 'FAILURE',
+        'successText' : result === 'FINISHED',
+        'standardResultText' : result !== 'FAILURE' && result !== 'FINISHED'
+      }">{{result}}</div>
     </div>
 
   </mat-sidenav>
 
   <mat-sidenav-content class="main-container">
-    <app-frame #frame [showOption]="showOption" [MODE]="currentMode" [tiles]= "currentTiles" [DIM]="dim" [SLEEP]="sleep" [tileSize]="size" id="wfc-container" (statusEvent)="updateStatus($event)"></app-frame>
+    <app-frame #frame [showOption]="showOption" [MODE]="currentMode" [tiles]= "currentTiles" [DIM]="dim" [SLEEP]="sleep" [tileSize]="size" id="wfc-container" (resultEvent)="updateResultStatus($event)" (statusEvent)="updateStatus($event)"></app-frame>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
