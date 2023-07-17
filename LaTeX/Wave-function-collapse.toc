@@ -4,7 +4,7 @@
 \contentsline {chapter}{\numberline {1}Einleitung}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Textursynthesen im Vergleich}{6}{chapter.2}%
 \contentsline {paragraph}{Dadurch ergeben sich folgende Metriken, die erfüllt werden müssen.}{6}{paragraph*.4}%
-\contentsline {section}{\numberline {2.1}Pixel basierende Textursynthese}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Pixel basierte Textursynthese}{7}{section.2.1}%
 \contentsline {subsubsection}{Markow-Netzwerk und Markov-Kette}{8}{subsubsection*.7}%
 \contentsline {section}{\numberline {2.2}Pyramid basierte Textur Synthese}{9}{section.2.2}%
 \contentsline {paragraph}{Die beiden Nachschlagetabellen Tabellen sind:}{10}{paragraph*.10}%

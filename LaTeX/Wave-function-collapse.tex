@@ -131,7 +131,7 @@ AI's {(Künstliche Intelligenzen)} wie DALL-E2, Midjourney und Algorithmen wie d
 Vorteile dieser Werkzeuge ist es, dass sie in kurzer Zeit qualitativ hochwertige Resultate Generieren können und auch, wie oben erwähnt,
 vordefinierte Parameter als Input erhalten können, um die Resultate für ihren Gebrauch anzupassen.
 In dieser Bachelorarbeit wird auf den von Maxim Gumin erstellten Wave-Function-Collapse Algorithmus, dessen Herkunft, Funktionsweise und Anwendungsfälle eingegangen.
-Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierende Textursynthese, Pyramid basierende Textursynthese und der Patch basierende Textursynthese erläutert
+Zuerst werden gängige nicht interaktive Textursynthesen wie die Pixel basierte Textursynthese, Pyramid basierte Textursynthese und der Patch basierte Textursynthese erläutert
 und wie Wave-Function-Collape sowie andere Textursynthesen davon inspiriert wurden.
 Daraufhin wird das Konzept zum Lösen von Constraint-Satisfaction-Problemen {(CSP)} und die Funktionsweise vom WFC Algorithmus, solche Probleme zu lösen, dargestellt.
 Anhand eines Beispiels wird im Detail die Funktionsweise zum Lösen solcher CSP's aufgezeigt.
@@ -173,7 +173,7 @@ Im Folgenden soll auf drei in ihrem Prinzip und ihrer Wirkungsweise unterschiedl
 um damit verschiedene Ansätze von Synthesen aufzuzeigen.
 Da eine vertiefte Diskussion für diese Arbeit nicht relevant ist, werden hierbei lediglich die groben Prinzipien / Hintergrundinformationen geklärt.
 
-\section{Pixel basierende Textursynthese}
+\section{Pixel basierte Textursynthese}
 
 Bei dieser Methode werden neue Texturen Pixel für Pixel generiert.
 Jeder neue Pixelwert wird von seinen lokalen Nachbarn festgelegt.
@@ -581,6 +581,8 @@ Zudem kann der Output dem Input ähnlicher sein, da die Module näher aneinander
     \includegraphics[width=0.5\linewidth]{images/red-maze-modules.jpg}%
     \caption{Alle Red-Maze Module der Größe $N = 2$ mit Spiegelungen und Rotationen \cite{Karth2017WaveFunctionCollapseIC}.}%
 \end{figure}
+
+\newpage
 
 Bei einem $N = 2$ Patch gibt es insgesamt 9 verschiedene Möglichkeiten, wie diese übereinander liegen können {(siehe Abbildung 3.11)}.
 {(Wenn $N = 3$ dann $(2(N - 1) + 1)^2 = 36$ offsets.)}

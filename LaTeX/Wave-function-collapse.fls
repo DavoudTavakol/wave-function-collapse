@@ -1272,9 +1272,6 @@ INPUT ./images/red-maze-modules.jpg
 INPUT images/red-maze-modules.jpg
 INPUT ./images/red-maze-modules.jpg
 INPUT ./images/red-maze-modules.jpg
-INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./images/red-maze-offset.png
 INPUT ./images/red-maze-offset.png
 INPUT images/red-maze-offset.png
@@ -1285,6 +1282,9 @@ INPUT ./images/red-maze-offset-example.png
 INPUT images/red-maze-offset-example.png
 INPUT ./images/red-maze-offset-example.png
 INPUT ./images/red-maze-offset-example.png
+INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./images/input-example-overlapping.png
 INPUT ./images/input-example-overlapping.png
 INPUT images/input-example-overlapping.png
