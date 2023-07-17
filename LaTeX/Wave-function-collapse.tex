@@ -99,14 +99,14 @@
 \includepdf[pages=-]{Davoud_Tavakol_Pruefungsrechtliche_Erklaerung.pdf}
 
 \begin{abstract}
-In dieser Bachelorarbeit wird auf die Funktionsweise des Wave-Function-Collapse {(WFC)} Algorithmus von Maxim Gumin eingegangen und wie dieser für Textursynthesen sowie zur Erstellung
+In dieser Bachelorarbeit wird die Funktionsweise des Wave-Function-Collapse {(WFC)} Algorithmus von Maxim Gumin betrachtet und wie dieser für Textursynthesen sowie zur Erstellung
 von prozedural generierten Content verwendet werden kann.
-Dazu wird zuerst auf gängige Textursynthese Algorithmen eingegangen und inwiefern sich WFC von diesen Unterscheidet.
-Später wird die Model Synthese von Paul Merrell herangezogen um Ähnlichkeiten zwischen den beiden Algorithmen aufzuzeigen und zu verglichen.
-Es wird klar das beide Algorithmen sich in ihrer Methodik sogenannte Constraint-Satisfaction-Probleme {(CSP)} zu lösen als identisch erweisen.
-Danach werden die Unterschiede der jeweiligen Implementierungen der Algorithmen aufgezeigt, wie z.B. die Blockweise Generierung der Model Synthese und das Overlapping Model von Gumin.
-Zum Schluss wird das Overlapping Modell detailliert dargestellt und darauf eingegangen, weshalb diese Implementation zu Bekanntheit gelangt ist und welche Anwendungsfälle mit WFC
-generell möglich sind.
+Dazu wird zuerst auf gängige Textursynthese Algorithmen eingegangen und inwiefern sich WFC von diesen unterscheidet.
+Später wird die Model Synthese von Paul Merrell herangezogen, um Ähnlichkeiten zwischen den beiden Algorithmen aufzuzeigen und zu vergleichen.
+Danach werden die Unterschiede zwischen den Implementierungen der jeweiligen Algorithmen aufgezeigt,
+wie z.B. die blockweise Generierung der Model Synthese und das Overlapping Model von Gumin.
+Zum Schluss wird das Overlapping Modell detailliert dargestellt und darauf eingegangen und,
+weshalb diese Implementation zu Bekanntheit gelangt ist und welche Anwendungsfälle mit WFC möglich sind.
 \end{abstract}
 
 \selectlanguage{english}
@@ -114,7 +114,6 @@ generell möglich sind.
 This bachelor thesis describes the Wave-Function-Collapse {(WFC)} algorithm by Maxim Gumin and how it can be used for texture synthesis and the creation of procedurally generated content.
 Firstly, common texture synthesis algorithms and how WFC differs from them are discussed.
 Later, the model synthesis of Paul Merrell is used to show similarities between the two algorithms and compare them.
-It becomes clear that both algorithms are identical in their methodology to solve so-called constraint satisfaction problems {(CSP)}.
 Afterwards, the different implementations of the respective algorithms are pointed out, such as the modifying in blocks generation of the model synthesis and the overlapping model of Gumin.
 Finally, the Overlapping Model is explained in detail and why this implementation has gained so much attention lately and which use cases are generally possible with WFC.
 \end{abstract}
@@ -142,14 +141,13 @@ Dadurch kann der Output dieser Algorithmen interaktiv als Content verwendet werd
 
 \chapter{Textursynthesen im Vergleich}
 
-Es gibt viele Möglichkeiten Textursynthese mit Algorithmen zu erzielen.
+Es gibt viele Möglichkeiten eine Textursynthese durch Algorithmen zu erzielen.
 Die meisten dieser Methoden basieren auf demselben Grundprinzip, aus kleineren Input-Images größere oder gleich große Output-Images zu generieren.
-Nach D.Gomathi und Rajvi Shah \cite[S.1]{GomathiShah2009}, kann die Textursynthese wie folgt definiert werden.
-\newline
-Ziel einer Textursynthese ist es aus einer Texturprobe eine neue Textur zu generieren, die, \say{wenn sie von einem menschlichen Beobachter wahrgenommen wird,
+Nach D.Gomathi und Rajvi Shah \cite[S.1]{GomathiShah2009}, kann die Textursynthese wie folgt definiert werden.\par
+Ziel einer Textursynthese ist es, aus einer Texturprobe eine neue Textur zu generieren, \say{wenn sie von einem menschlichen Beobachter wahrgenommen wird,
 durch denselben zugrundeliegenden Prozess erzeugt wird.}
 Das Ergebnis muss der Texturprobe ähnlich sein aber dennoch in der Wahrnehmung genügend Variation enthalten.
-Eine solche Synthese ist nicht möglich, wenn man die Eingabetextur einfach mehrfach kachelt.
+Eine solche Synthese ist nicht möglich, wenn man die Eingabetextur mehrfach kachelt.
 Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke sind klar erkennbar {(siehe Abbildung 2.1)}.
 
 \begin{figure}[H]
@@ -160,7 +158,7 @@ Dadurch erhält man keine \say{sauberen} Übergänge, und die einzelnen Blöcke 
     \caption{(a) Blockartige Textur, (b) Textursynthese}%
 \end{figure}
 
-\paragraph{Dadurch ergeben sich folgende Metriken, die erfüllt werden müssen.}
+\paragraph{Folgende Metriken die erfüllt werden müssen, lassen sich daraus erschließen.}
 
 \begin{itemize}
     \item Bei gegebener Texturprobe, generiere eine neue Textur, die der Probe gleicht.
