@@ -4,11 +4,17 @@ import {
   ViewChild,
   ElementRef,
   Input,
-  Output, EventEmitter
+  Output,
+  EventEmitter,
 } from '@angular/core';
 import { Tile } from './tile';
 import { Cell } from './cell';
 import { landTiles } from './data/land';
+
+enum Mode {
+  SCANLINE = 'SCANLINE',
+  LOW = 'LOWESTENTROPY',
+}
 
 @Component({
   selector: 'app-frame',
@@ -22,11 +28,12 @@ export class FrameComponent implements AfterViewInit {
   canvas: HTMLCanvasElement;
   @Output() statusEvent = new EventEmitter<boolean>();
   @Input() DIM: number = 9;
+  @Input() tileSize: number = 50;
   @Input() SLEEP: number = 0;
   @Input() showOption: boolean = false;
   @Input() tiles: Tile[] = landTiles;
+  @Input() MODE: string = Mode.LOW;
 
-  tileSize: number = 50;
   grid: Cell[] = [];
   running: boolean = false;
   done: boolean = false;
@@ -66,10 +73,11 @@ export class FrameComponent implements AfterViewInit {
     let gridCopy = [...this.grid];
     gridCopy = gridCopy.filter((a) => !a.collapsed);
 
-    gridCopy.sort((a: any, b: any) => {
-      return a.options.length - b.options.length;
-    });
-    
+    if (this.MODE === Mode.LOW) {
+      gridCopy.sort((a: any, b: any) => {
+        return a.options.length - b.options.length;
+      });
+    }
     //find index with all the lowest entropy cells
     //gridcopy[0] because we sorted it and the first cell should habe the fewest options.
     let lowestOptionNr = gridCopy[0].options.length;
@@ -84,8 +92,15 @@ export class FrameComponent implements AfterViewInit {
 
     //remove all other cells
     if (cellPick > 0) gridCopy.splice(cellPick);
+
+    var cell: Cell = gridCopy[this.getRandomInt(gridCopy.length)];
     //pick random cell
-    const cell: Cell = gridCopy[this.getRandomInt(gridCopy.length)];
+    if (this.MODE === Mode.LOW) {
+      cell = gridCopy[this.getRandomInt(gridCopy.length)];
+    } else if(this.MODE === Mode.SCANLINE) {
+      cell = gridCopy[0];
+    }
+
     //collapse cell
     cell.collapsed = true;
     //pick random option
@@ -186,7 +201,7 @@ export class FrameComponent implements AfterViewInit {
 
     //go through all of the grid and draw cell IF its collapsed!
     this.draw();
-    
+
     //when all cells are collapsed
     if (this.grid.filter((a) => !a.collapsed).length === 0) {
       console.log('Done!');
@@ -204,7 +219,7 @@ export class FrameComponent implements AfterViewInit {
   }
 
   onClickStart() {
-    if(this.running === false) {
+    if (this.running === false) {
       this.running = true;
       const sleep = (time: number) => {
         return new Promise((resolve) => setTimeout(resolve, time));

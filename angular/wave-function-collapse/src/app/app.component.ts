@@ -6,10 +6,16 @@ import { circuitTiles } from '../frame/frame/data/circuit';
 import { mazeTiles } from 'src/frame/frame/data/maze';
 import { circleTiles } from 'src/frame/frame/data/circles';
 import { roomTiles } from 'src/frame/frame/data/rooms';
+import { purpleMazeTiles } from 'src/frame/frame/data/purpleMaze';
 
 export interface TileOption {
   name: String;
   tileData: Tile[];
+}
+
+enum Mode {
+  SCANLINE = "SCANLINE",
+  LOW = "LOWESTENTROPY"
 }
 
 @Component({
@@ -23,12 +29,15 @@ export class AppComponent {
   title = 'wave-function-collapse';
 
   dim: number = 9;
+  size: number = 50;
   sleep: number = 0;
   showOption: boolean = false;
   currentTiles: Tile[] = landTiles;
   tileOptions: TileOption[];
   buttonName: String = 'START';
-  done: boolean = false;;
+  done: boolean = false;
+  mode: string[] = [];
+  currentMode: string = Mode.LOW;
 
   constructor() {
     this.tileOptions = [
@@ -52,7 +61,18 @@ export class AppComponent {
         name: 'Rooms',
         tileData: roomTiles,
       },
+      {
+        name: 'Purple-Maze',
+        tileData: purpleMazeTiles,
+      },
     ];
+
+    this.mode = [Mode.SCANLINE, Mode.LOW]
+  }
+
+  getMultipleChoiceAnswer($event: any) {
+    this.currentMode = $event.value;
+    console.log($event.value);
   }
 
   updateStatus(newStatus: boolean) {
@@ -67,6 +87,11 @@ export class AppComponent {
   updateDIM($event: any) {
     this.dim = $event.value;
     console.log(this.dim);
+  }
+
+  updateSIZE($event: any) {
+    this.size = $event.value;
+    console.log(this.size);
   }
 
   updateSLEEP($event: any) {

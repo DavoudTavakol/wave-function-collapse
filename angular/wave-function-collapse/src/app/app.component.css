@@ -2,13 +2,6 @@
   background-color: rgb(27, 27, 27);
 }
 
-#side-nav {
-  padding-left: 1em;
-  background-color: rgb(27, 27, 27);
-  height: inherit;
-  width: 250px;
-}
-
 #wfc-container {
   min-height: 100vh;
   display: flex;
@@ -16,33 +9,64 @@
   align-items: center;
 }
 
+#side-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(27, 27, 27);
+  height: inherit;
+  width: 250px;
+}
+
 mat-slider {
   width: 200px;
 }
 
 .checkbox {
+  padding: 1em;
   color: rgb(214, 214, 214);
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .text {
-  padding-top: 1em;
+  padding-left: 1em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgb(214, 214, 214);
 }
 
 #title {
+  font-size: 15px;
+  padding: 1em;
+  padding-bottom: 5em;
   text-align: center;
 }
 
 #startButton {
+  margin: 1em;
+  float: left;
   background-color: rgb(214, 214, 214);
 }
 
 #menuButton {
   background-color: rgb(214, 214, 214);
+}
+
+#radioLabel {
+  padding: 5px;
+}
+
+#radioGroup {
+  display: flex;
+  flex-direction: column;
+  color: rgb(214, 214, 214);
+}
+
+
+mat-form-field {
+  padding: 1em;
+}
+
+mat-radio-button {
+  padding: 5px;
 }
 
 /* indigo pink pallete
